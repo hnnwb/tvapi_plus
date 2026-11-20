@@ -1,0 +1,7 @@
+# Local/user-provided files in the workspace
+/*.apk
+/aliascheck.m
+
+# Python cache
+__pycache__/
+*.py[cod]

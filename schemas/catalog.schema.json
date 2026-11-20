@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/tvbox-resource-catalog.schema.json",
+  "title": "TVBox Resource Catalog Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "url", "format", "source", "license", "notes", "clients"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "name": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "format": "uri" },
+    "format": { "type": "string" },
+    "source": { "type": "string", "format": "uri" },
+    "license": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" },
+    "clients": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["status", "tested_version", "tested_at"],
+        "properties": {
+          "status": { "enum": ["unknown", "format-claimed", "import-tested", "playback-tested", "incompatible"] },
+          "tested_version": { "type": ["string", "null"] },
+          "tested_at": { "type": ["string", "null"], "format": "date" }
+        }
+      }
+    }
+  }
+}

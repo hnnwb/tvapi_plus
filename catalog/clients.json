@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "clients": [
+    {
+      "id": "yingxia",
+      "name": "Yingxia",
+      "formats": ["tvbox-json", "tvbox-multi", "m3u", "txt", "epg-xml"],
+      "plugin_runtimes": ["jar", "javascript", "python"],
+      "notes": "Client capability reference only. Validate source-specific behavior and platform runtime support before claiming compatibility."
+    },
+    {
+      "id": "yingshicang",
+      "name": "影视仓",
+      "formats": ["tvbox-json", "tvbox-multi", "m3u", "txt", "epg-xml"],
+      "plugin_runtimes": ["jar", "javascript", "python"],
+      "notes": "Capabilities vary by app build and embedded runtime; record tested version on each catalog entry."
+    }
+  ]
+}

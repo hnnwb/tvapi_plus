@@ -1,0 +1,57 @@
+name: Catalog checks
+
+on:
+  push:
+    paths:
+      - "catalog/**"
+      - "schemas/**"
+      - "scripts/check_catalog.py"
+      - ".github/workflows/catalog-check.yml"
+  pull_request:
+    paths:
+      - "catalog/**"
+      - "schemas/**"
+      - "scripts/check_catalog.py"
+      - ".github/workflows/catalog-check.yml"
+  workflow_dispatch:
+    inputs:
+      check_urls:
+        description: Probe catalog URLs (contacts third-party hosts)
+        required: false
+        type: boolean
+        default: false
+  schedule:
+    - cron: "23 5 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate catalog metadata
+        run: python scripts/check_catalog.py
+
+  probe:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.check_urls)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe URLs and formats
+        run: python scripts/check_catalog.py --check-urls --report probe-report.json
+      - name: Upload probe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-probe-report
+          path: probe-report.json
+          if-no-files-found: ignore
+          retention-days: 14
