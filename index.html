@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f4">
+  <meta name="description" content="可追溯、可验证的 TVBox 配置源、直播源与 EPG 资源目录。">
+  <title>TVBox 资源目录</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="TVBox 资源目录首页"><span class="brand-mark">TV</span><span>资源目录</span></a>
+    <nav aria-label="主导航">
+      <a href="#catalog">目录</a>
+      <a href="#quality">收录标准</a>
+      <a href="https://github.com/hnnwb/tvapi_plus" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+    <button class="lang-toggle" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow" data-i18n="eyebrow">TVBOX · 开源资源目录</p>
+        <h1 id="page-title" data-i18n="title">好源有据，逐条验证。</h1>
+        <p class="intro-text" data-i18n="subtitle">集中查找配置、直播与节目单资源。每条目标明来源、可用性检查和 Yingxia / 影视仓的实际测试状态。</p>
+      </div>
+      <div class="summary" aria-live="polite">
+        <div><strong id="total-count">—</strong><span data-i18n="total">目录条目</span></div>
+        <div><strong id="verified-count">—</strong><span data-i18n="verified">播放实测</span></div>
+        <div><strong id="checked-at">—</strong><span data-i18n="checked">最近探测</span></div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section" aria-labelledby="catalog-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="browse">BROWSE</p><h2 id="catalog-heading" data-i18n="catalogTitle">资源目录</h2></div>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
+      </div>
+      <div class="filters">
+        <label class="search-box"><span class="sr-only" data-i18n="searchLabel">搜索资源</span><span aria-hidden="true">⌕</span><input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="搜索名称、格式或来源" autocomplete="off"></label>
+        <label class="select-wrap"><span class="sr-only" data-i18n="categoryLabel">资源类别</span><select id="category-filter"><option value="all" data-i18n="allCategories">所有类别</option><option value="vod-single" data-i18n="single">单仓配置</option><option value="vod-multi" data-i18n="multi">多仓配置</option><option value="live" data-i18n="live">直播</option><option value="epg" data-i18n="epg">节目单与台标</option><option value="tools" data-i18n="tools">工具与文档</option></select></label>
+        <label class="select-wrap"><span class="sr-only" data-i18n="clientLabel">客户端测试状态</span><select id="client-filter"><option value="all" data-i18n="allClients">所有客户端状态</option><option value="playback-tested" data-i18n="playbackTested">播放实测</option><option value="import-tested" data-i18n="importTested">导入实测</option><option value="format-claimed" data-i18n="formatClaimed">格式声称兼容</option><option value="unknown" data-i18n="unknown">未验证</option><option value="incompatible" data-i18n="incompatible">不兼容</option></select></label>
+      </div>
+      <div id="catalog-list" class="catalog-list" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-symbol" aria-hidden="true">0</span>
+        <h3 data-i18n="emptyTitle">目录仍在建设中</h3>
+        <p data-i18n="emptyText">目前没有已审核的资源条目。我们不会用未测试的链接填充数量；提交资源前请先阅读收录标准。</p>
+        <a class="text-link" href="https://github.com/hnnwb/tvapi_plus/blob/main/README.md" target="_blank" rel="noreferrer" data-i18n="contribute">查看收录说明 ↗</a>
+      </div>
+      <p id="no-results" class="no-results" hidden data-i18n="noResults">没有符合条件的条目。试试其他关键词或筛选条件。</p>
+    </section>
+
+    <section id="quality" class="quality-section" aria-labelledby="quality-title">
+      <div class="quality-intro"><p class="eyebrow" data-i18n="trustEyebrow">QUALITY CONTROL</p><h2 id="quality-title" data-i18n="qualityTitle">数量不替代验证。</h2><p data-i18n="qualityText">可访问不代表能播放；格式声明也不代表客户端兼容。状态按证据分级，测试记录包含客户端版本与日期。</p></div>
+      <div class="quality-grid">
+        <article><span class="quality-index">01</span><h3 data-i18n="quality1Title">来源可追溯</h3><p data-i18n="quality1Text">记录上游出处与许可信息，不镜像或重发第三方配置。</p></article>
+        <article><span class="quality-index">02</span><h3 data-i18n="quality2Title">可用性有时效</h3><p data-i18n="quality2Text">定时有限探测只代表当时网络结果，不保证持续可用。</p></article>
+        <article><span class="quality-index">03</span><h3 data-i18n="quality3Title">兼容性靠实测</h3><p data-i18n="quality3Text">分别标注格式声明、导入成功和实际播放，不把它们混为一谈。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>TVBox Resource Catalog</span><span data-i18n="footerNote">由社区维护 · 条目链接指向上游 · 请遵守当地法律及上游条款</span><a href="https://github.com/hnnwb/tvapi_plus" target="_blank" rel="noreferrer">Source ↗</a></footer>
+</body>
+</html>

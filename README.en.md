@@ -86,7 +86,9 @@ See [`.github/workflows/catalog-check.yml`](.github/workflows/catalog-check.yml)
 
 ## Publishing
 
-The catalog JSON files are the canonical data and can be read from GitHub Raw URLs. The repository does not currently generate a website, publish GitHub Pages, or produce client-specific filtered outputs. A Pages directory UI or Yingxia/影视仓-specific views can be implemented later. Catalog URLs point to upstream resources; they are not mirrored by this repository.
+The catalog JSON files are the canonical data and also drive the bilingual static catalog site. The site searches names, formats, and sources, and filters by category and client test status. It displays probe and hands-on test states but never runs source plugins. A GitHub Pages workflow deploys on pushes to `main`; before the first deployment, a repository administrator must set Settings → Pages → Source to GitHub Actions. Catalog URLs point to upstream resources; they are not mirrored by this repository.
+
+“Broad coverage” is an ongoing collection and review process, not indiscriminate copying. Entries need traceable provenance, a basis for linking, and a stated format; playback-tested status requires a client version and date. Scheduled probes are bounded observations of reachability, not guarantees of channel quality or continued availability. Do not label unauthorized, dead, duplicate, or unverified links as quality sources just to inflate the list.
 
 ## Legal and safety
 
