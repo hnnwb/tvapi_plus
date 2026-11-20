@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "iptv-org-epg-toolkit",
+    "name": "iptv-org EPG Toolkit",
+    "url": "https://github.com/iptv-org/epg",
+    "format": "documentation",
+    "source": "https://github.com/iptv-org/epg",
+    "license": "Unlicense applies to upstream software; EPG data and source-site content have separate rights and terms",
+    "notes": "Reference tooling for generating XMLTV guides from supported broadcaster/provider websites; not a direct guide feed. Guide endpoints were not verified here; do not infer redistribution permission or client compatibility. Checked upstream README and LICENSE on 2026-11-20.",
+    "clients": {
+      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
+      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
+    }
+  },
+  {
+    "id": "fongmi-config-reference",
+    "name": "FongMi TV Configuration Dictionary",
+    "url": "https://fongmi.github.io/TV/config/",
+    "format": "documentation",
+    "source": "https://github.com/FongMi/TV",
+    "license": "Documentation copyright and software repository licensing are governed by upstream terms; linked sample/provider data remains third-party.",
+    "notes": "Primary compatibility reference for TVBox/FongMi configuration fields, including urls (depot), Site types 0/1/3/4, parses and live/EPG. Documentation page returned HTTP 200 and distinguishes configuration syntax from app content; it does not provide licensed VOD services. Useful for validating interface shape and future Mac client implementation. Checked 2026-11-20.",
+    "clients": {
+      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
+      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
+    }
+  },
+  {
+    "id": "bbb-hls-playback-test",
+    "name": "Big Buck Bunny HLS Playback Test Asset",
+    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "format": "utility",
+    "source": "https://peach.blender.org/about/",
+    "license": "Creative Commons Attribution 3.0 (CC BY 3.0) for the Blender Foundation's Big Buck Bunny film; Mux hosts the HLS test rendition. Preserve film attribution/credits and verify Mux hosting terms before redistribution.",
+    "notes": "Playback/test reference, not a TVBox VOD catalog source or a claim that Mux grants mirroring rights. Blender's official site states the film is CC BY 3.0 and specifies attribution; Mux's HLS test rendition returned HTTP 206 with audio/mpegurl and valid #EXTM3U/#EXT-X-STREAM-INF on 2026-11-20. No client import/playback test performed; not a TV channel.",
+    "clients": {
+      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
+      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
+    }
+  }
+]

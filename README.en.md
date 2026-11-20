@@ -11,7 +11,7 @@ A resource directory and format checker for the TVBox ecosystem, including Yingx
 - Validate catalog metadata automatically, with optional bounded HTTP and basic format checks.
 - No automatic decryption, rewriting, proxying, or republication of third-party configurations; no JS, Python, or JAR plugin execution in CI.
 
-The resource catalogs are intentionally empty until entries are reviewed. Do not copy every link from Awesome TVBox or another directory. Add only links you are authorized to publish. Public reachability is not proof of copyright permission, safety, compatibility, or playback quality. Never commit credentials, private URLs, tokens, or account data.
+The catalogs currently contain a small set of live playlists, VOD configuration indexes, EPG feeds, and tooling references with recorded provenance and bounded accessibility/structure checks; this is not a complete review. Do not copy every link from Awesome TVBox or another directory. Add only links you are authorized to publish. Public reachability is not proof of copyright permission, safety, compatibility, or playback quality. Malformed, unclear-provenance, or rights-unclear configurations (such as the currently invalid XYQ JSON) are not listed as usable interfaces. Never commit credentials, private URLs, tokens, or account data.
 
 ## Repository layout
 

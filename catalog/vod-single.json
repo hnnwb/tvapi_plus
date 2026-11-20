@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "xiaoma-tvbox-config",
+    "name": "小马 TVBox Configuration",
+    "url": "https://szyyds.cn/tv/x.json",
+    "format": "tvbox-json",
+    "source": "https://j.szyyds.cn/",
+    "license": "The interface references third-party media providers and executable Spider/parser resources; their individual licenses, redistribution rights and content authorization are not established by the public endpoint. Treat this as an interface compatibility sample, not a lawful content source endorsement.",
+    "notes": "Listed as a general VOD interface in the original awesome-tvbox collection. Bounded response returned HTTP 206 and parsed as JSON object with sites, parses and other expected TVBox fields (30,571 bytes). Endpoint/config shape only; no nested API, playback, safety or client import tested. Review remote Spider/parser references before use. Checked 2026-11-20.",
+    "clients": {
+      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
+      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
+    }
+  }
+]
