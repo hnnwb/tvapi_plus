@@ -9,6 +9,10 @@ on:
       - "app.js"
       - "catalog/**"
       - "probe-report.json"
+      - "scripts/refresh_status.py"
+      - "schemas/probe-report.schema.json"
+      - "scripts/check_catalog.py"
+      - ".github/workflows/catalog-check.yml"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -26,8 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble Pages artifact
+      - name: Validate catalog and assemble Pages artifact
         run: |
+          python3 scripts/check_catalog.py
           mkdir -p _site
           cp index.html styles.css app.js _site/
           cp -R catalog _site/catalog

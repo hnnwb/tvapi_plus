@@ -24,9 +24,11 @@ catalog/
   epg.json           # EPG and logo resources
   tools.json         # Developer documentation and utilities
 schemas/
-  catalog.schema.json  # Reference entry structure
+  catalog.schema.json       # Reference catalog entry structure
+  probe-report.schema.json   # Availability report structure
 scripts/
-  check_catalog.py     # Metadata checks and optional URL probes
+  check_catalog.py           # Metadata checks and optional URL probes
+  refresh_status.py          # Scheduled retry/fallback status refresh
 .github/workflows/
   catalog-check.yml
 ```
@@ -72,17 +74,33 @@ Requires Python 3.10+ and no third-party Python packages:
 ```sh
 python3 scripts/check_catalog.py
 python3 scripts/check_catalog.py --check-urls --report probe-report.json
+python3 scripts/refresh_status.py --report /tmp/probe-report.json --retries 0 --delay 0
 ```
 
-The default command performs offline metadata validation. `--check-urls` contacts third-party hosts using GET requests with timeouts and a response-size limit. Redirects are restricted to HTTP(S), and response content is never executed. Basic structural checks cover TVBox JSON, multi-repository `urls`, M3U/TXT, live JSON, and EPG XML. Probe failures are written to the report; they do not delete or rewrite catalog entries. Results can differ by network, location, User-Agent, or upstream policy.
+The default command performs offline metadata validation. `--check-urls` contacts only public third-party hosts using GET requests with timeouts and a response-size limit. Redirects are restricted to public HTTP(S) targets, and response content is never executed. Basic structural checks cover TVBox JSON, multi-repository `urls`, M3U/TXT, live JSON, and EPG XML. Probe failures are written to the report; they do not delete or rewrite catalog entries. Results can differ by network, location, User-Agent, or upstream policy.
 
 ## GitHub Actions
 
 - Pushes and pull requests affecting catalog, schema, checker, or workflow files run offline metadata checks.
-- The daily schedule and manual URL-check runs perform bounded URL/format probes and upload `probe-report.json` as an artifact retained for 14 days.
-- Workflows never automatically commit, delete, or rewrite catalog data.
+- Twice-daily scheduled runs and manually requested URL checks perform bounded probes with short retries. Optional `fallback_urls` must be reviewed and explicitly added; the job never discovers or writes them automatically.
+- The job atomically updates and commits only `probe-report.json`, preserving the previous successful timestamp and marking current failures as failed/stale. The checked-in empty report is a first-run baseline, not a passing probe. It does not delete catalog entries or overwrite resource configurations. The scheduled job deploys Pages in the same run so its status commit is published despite GitHub's `GITHUB_TOKEN` workflow-trigger restrictions.
+- It does not download/mirror third-party configurations or execute Spider/JS/Python/JAR code. Availability probes are not client playback tests. Detailed failures are also uploaded as a 14-day artifact.
 
-See [`.github/workflows/catalog-check.yml`](.github/workflows/catalog-check.yml). The scheduled run is set to `05:23 UTC` and may be delayed by GitHub Actions scheduling.
+See [`.github/workflows/catalog-check.yml`](.github/workflows/catalog-check.yml). The scheduled runs are set to `05:23` and `17:23 UTC` and may be delayed by GitHub Actions scheduling.
+
+## Playback verification
+
+The current checker covers metadata, bounded HTTP access and basic configuration structure only. It does not run Spider/JS/Python/JAR code, resolve playback URLs or decode media. HTTP 200 is not a playback pass.
+
+1. Record the client/version, OS, network, timestamp, config URL and selected site/type. Confirm the complete config is readable; wrapped or encrypted responses require a trusted client's supported parser, not an arbitrary online decoder.
+2. In the actual client, verify search and details using content you are authorized to access. CMS list JSON alone does not verify client search, details or playback.
+3. Select an episode/line and determine from redacted client logs whether playback URL resolution completed. Never publish tokens, credentials or signed media URLs.
+4. Verify picture and sound for at least 30 seconds. Record buffering and errors. Only actual successful client playback supports playback-tested, scoped to that client/version and sample. This duration is this project's proposed smoke-test threshold, not an upstream standard.
+5. Repeat with another site/content item and on another date; keep failures. One passing sample does not establish whole-config quality.
+
+For an endless spinner, first identify whether loading stalls at search, details, URL resolution or player startup. Search failures suggest checking the site API/network; details failures suggest checking the detail API or Spider compatibility; startup failures require checking the resolved URL, redirects/headers/TLS and decoder errors. These are diagnostic hypotheses, not established causes. Compare with a known authorized test asset in the same player.
+
+Do not execute unknown plugins in this repository or CI. Without the selected site and redacted client logs, configuration JSON cannot establish the cause of a spinner. This is a manual protocol, not an implemented end-to-end test runner.
 
 ## Publishing
 

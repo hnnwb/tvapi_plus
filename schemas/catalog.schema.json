@@ -7,6 +7,11 @@
   "required": ["id", "name", "url", "format", "source", "license", "notes", "clients"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "fallback_urls": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "format": "uri" }
+    },
     "name": { "type": "string", "minLength": 1 },
     "url": { "type": "string", "format": "uri" },
     "format": { "type": "string" },

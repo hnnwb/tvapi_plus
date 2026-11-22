@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -36,8 +37,26 @@ def fail(errors: list[str], where: str, message: str) -> None:
 def is_http_url(value: object) -> bool:
     if not isinstance(value, str):
         return False
-    parsed = urllib.parse.urlparse(value)
-    return parsed.scheme in {"http", "https"} and bool(parsed.hostname) and not parsed.username and not parsed.password
+    try:
+        parsed = urllib.parse.urlparse(value)
+        return parsed.scheme in {"http", "https"} and bool(parsed.hostname) and not parsed.username and not parsed.password and parsed.port != 0
+    except ValueError:
+        return False
+
+
+def validate_public_target(url: str) -> None:
+    parsed = urllib.parse.urlparse(url)
+    host = parsed.hostname
+    if not host:
+        raise ValueError("URL has no hostname")
+    try:
+        import ipaddress
+        import socket
+        addresses = {item[4][0] for item in socket.getaddrinfo(host, parsed.port or (443 if parsed.scheme == "https" else 80), type=socket.SOCK_STREAM)}
+        if not addresses or any(not ipaddress.ip_address(address.split("%", 1)[0]).is_global for address in addresses):
+            raise ValueError("URL resolves to a non-public network address")
+    except (OSError, ValueError) as exc:
+        raise ValueError("URL hostname did not resolve to a safe public address") from exc
 
 
 def load_json(path: Path, errors: list[str]):
@@ -73,11 +92,17 @@ def validate_catalog(errors: list[str]) -> list[tuple[str, dict]]:
                 fail(errors, where, "expected an object")
                 continue
             missing = required - entry.keys()
-            extra = entry.keys() - required
             if missing:
                 fail(errors, where, f"missing keys: {', '.join(sorted(missing))}")
+            allowed = required | {"fallback_urls"}
+            extra = entry.keys() - allowed
             if extra:
                 fail(errors, where, f"unexpected keys: {', '.join(sorted(extra))}")
+            fallback_urls = entry.get("fallback_urls", [])
+            if not isinstance(fallback_urls, list) or any(not isinstance(url, str) or not is_http_url(url) for url in fallback_urls):
+                fail(errors, where, "fallback_urls must be an array of credential-free http(s) URLs")
+            elif len(set(fallback_urls)) != len(fallback_urls) or entry.get("url") in fallback_urls:
+                fail(errors, where, "fallback_urls must be unique and different from url")
             entry_id = entry.get("id")
             if not isinstance(entry_id, str) or not ID_RE.fullmatch(entry_id):
                 fail(errors, where, "id must match ^[a-z0-9][a-z0-9-]{1,63}$")
@@ -118,9 +143,20 @@ def validate_catalog(errors: list[str]) -> list[tuple[str, dict]]:
     return entries
 
 
-def fetch_bounded(url: str) -> tuple[bytes, str, int]:
+class PublicRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, request, response, code, message, headers, new_url):
+        if not is_http_url(new_url):
+            raise ValueError("redirected to a non-http(s) URL")
+        validate_public_target(new_url)
+        if len(getattr(request, "redirect_history", [])) >= 4:
+            raise ValueError("too many redirects")
+        return super().redirect_request(request, response, code, message, headers, new_url)
+
+
+def fetch_bounded(url: str, opener=None) -> tuple[bytes, str, int]:
+    validate_public_target(url)
     request = urllib.request.Request(url, headers={"User-Agent": "tvbox-resource-catalog-check/1.0", "Accept": "*/*"})
-    with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+    with (opener.open(request, timeout=TIMEOUT) if opener else urllib.request.urlopen(request, timeout=TIMEOUT)) as response:
         final = urllib.parse.urlparse(response.geturl())
         if final.scheme not in {"http", "https"}:
             raise ValueError("redirected to a non-http(s) URL")
@@ -130,8 +166,8 @@ def fetch_bounded(url: str) -> tuple[bytes, str, int]:
         return body, response.headers.get_content_type(), response.status
 
 
-def validate_remote(category: str, entry: dict) -> str:
-    body, _content_type, status = fetch_bounded(entry["url"])
+def validate_remote(category: str, entry: dict, opener=None) -> str:
+    body, _content_type, status = fetch_bounded(entry["url"], opener=opener)
     if not 200 <= status < 300:
         raise ValueError(f"HTTP status {status}")
     fmt = entry["format"]
@@ -180,9 +216,10 @@ def main() -> int:
     entries = validate_catalog(errors)
     probes = []
     if args.check_urls:
+        opener = urllib.request.build_opener(PublicRedirectHandler())
         for category, entry in entries:
             try:
-                validate_remote(category, entry)
+                validate_remote(category, entry, opener=opener)
                 probes.append({"id": entry.get("id"), "status": "ok", "checked_at": dt.datetime.now(dt.timezone.utc).isoformat()})
             except (OSError, urllib.error.URLError, TimeoutError, ValueError, UnicodeError, json.JSONDecodeError, ET.ParseError) as exc:
                 probes.append({"id": entry.get("id"), "status": "failed", "error": str(exc), "checked_at": dt.datetime.now(dt.timezone.utc).isoformat()})
@@ -191,7 +228,13 @@ def main() -> int:
         print(f"ERROR {message}", file=sys.stderr)
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text(json.dumps({"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "probes": probes}, indent=2) + "\n", encoding="utf-8")
+        report = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "probes": probes}
+        temp = args.report.with_suffix(args.report.suffix + f".{os.getpid()}.tmp")
+        try:
+            temp.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            temp.replace(args.report)
+        finally:
+            temp.unlink(missing_ok=True)
     failed = sum(item["status"] == "failed" for item in probes)
     print(f"Catalog validation: {len(entries)} entries, {len(errors)} metadata errors, {len(probes)} URL probes, {failed} probe failures")
     return 1 if errors else 0

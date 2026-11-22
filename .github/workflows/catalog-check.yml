@@ -2,16 +2,23 @@ name: Catalog checks
 
 on:
   push:
+    branches: [main]
     paths:
       - "catalog/**"
       - "schemas/**"
+      - "probe-report.json"
       - "scripts/check_catalog.py"
+      - "scripts/refresh_status.py"
+      - "tests/**"
       - ".github/workflows/catalog-check.yml"
   pull_request:
     paths:
       - "catalog/**"
       - "schemas/**"
+      - "probe-report.json"
       - "scripts/check_catalog.py"
+      - "scripts/refresh_status.py"
+      - "tests/**"
       - ".github/workflows/catalog-check.yml"
   workflow_dispatch:
     inputs:
@@ -22,9 +29,14 @@ on:
         default: false
   schedule:
     - cron: "23 5 * * *"
+    - cron: "23 17 * * *"
 
 permissions:
   contents: read
+
+concurrency:
+  group: catalog-refresh
+  cancel-in-progress: false
 
 jobs:
   validate:
@@ -39,15 +51,58 @@ jobs:
 
   probe:
     if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.check_urls)
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Probe URLs and formats
-        run: python scripts/check_catalog.py --check-urls --report probe-report.json
-      - name: Upload probe report
+      - name: Refresh bounded availability evidence
+        run: python scripts/refresh_status.py --report probe-report.json
+      - name: Commit updated status only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! git ls-files --error-unmatch probe-report.json >/dev/null 2>&1; then
+            echo "Status report is untracked; refusing to publish before it is reviewed"
+            exit 1
+          fi
+          if git diff --quiet -- probe-report.json && git diff --cached --quiet -- probe-report.json; then
+            echo "No status changes"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add probe-report.json
+            git commit -m "chore: refresh catalog status"
+            gh auth setup-git
+            git -c credential.helper='!gh auth git-credential' push origin HEAD:${{ github.event.repository.default_branch }}
+          fi
+      - name: Prepare Pages artifact from checked-out commit
+        run: |
+          mkdir -p _site
+          cp index.html styles.css app.js _site/
+          cp -R catalog _site/catalog
+          cp probe-report.json _site/probe-report.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy updated catalog site
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Upload detailed probe report
         if: always()
         uses: actions/upload-artifact@v4
         with:
