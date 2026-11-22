@@ -9,6 +9,7 @@ on:
       - "app.js"
       - "catalog/**"
       - "probe-report.json"
+      - "reports/verification-report.json"
       - "scripts/refresh_status.py"
       - "scripts/build_subscriptions.py"
       - "scripts/check_catalog.py"
@@ -42,6 +43,8 @@ jobs:
           cp index.html styles.css app.js _site/
           cp -R catalog _site/catalog
           if [ -f probe-report.json ]; then cp probe-report.json _site/; fi
+          mkdir -p _site/reports
+          cp reports/verification-report.json _site/reports/
           python3 scripts/build_subscriptions.py --output-dir _site
       - uses: actions/upload-pages-artifact@v3
         with:

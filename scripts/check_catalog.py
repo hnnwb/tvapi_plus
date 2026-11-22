@@ -27,6 +27,8 @@ ALLOWED_FORMATS = {
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}
 MIN_PLAYBACK_SECONDS = 30
+VERIFICATION_CHECK_FIELDS = {"id", "subject", "subject_zh", "kind", "status", "method", "method_zh", "snapshot", "limitations"}
+VERIFICATION_STATUSES = {"passed", "failed", "not-tested"}
 MAX_BODY = 512 * 1024
 TIMEOUT = 12
 
@@ -134,6 +136,62 @@ def validate_playback_evidence(catalog_entries: list[tuple[str, dict]], errors: 
     return verified
 
 
+def validate_verification_report(errors: list[str], report_path: Path | None = None) -> None:
+    report_path = report_path or (ROOT / "reports" / "verification-report.json")
+    report = load_json(report_path, errors)
+    label = "reports/verification-report.json"
+    if not isinstance(report, dict):
+        fail(errors, label, "expected an object")
+        return
+    if report.get("schema_version") != 1:
+        fail(errors, label, "schema_version must be 1")
+    generated_at = report.get("generated_at")
+    try:
+        if not isinstance(generated_at, str):
+            raise ValueError("not a timestamp")
+        dt.datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
+    except ValueError:
+        fail(errors, label, "generated_at must be an ISO timestamp")
+    summary = report.get("summary")
+    if not isinstance(summary, dict):
+        fail(errors, label, "summary must be an object")
+    else:
+        for field in ("client_playback_verified", "true_4k_verified"):
+            if not isinstance(summary.get(field), bool):
+                fail(errors, label, f"summary.{field} must be a boolean")
+        count = summary.get("local_unit_tests_passed")
+        if isinstance(count, bool) or not isinstance(count, int) or count < 0:
+            fail(errors, label, "summary.local_unit_tests_passed must be a non-negative integer")
+    checks = report.get("checks")
+    if not isinstance(checks, list) or not checks:
+        fail(errors, label, "checks must be a non-empty array")
+        return
+    seen: set[str] = set()
+    for index, check in enumerate(checks):
+        where = f"{label}.checks[{index}]"
+        if not isinstance(check, dict):
+            fail(errors, where, "expected an object")
+            continue
+        missing = VERIFICATION_CHECK_FIELDS - check.keys()
+        extra = check.keys() - VERIFICATION_CHECK_FIELDS
+        if missing:
+            fail(errors, where, f"missing keys: {', '.join(sorted(missing))}")
+        if extra:
+            fail(errors, where, f"unexpected keys: {', '.join(sorted(extra))}")
+        check_id = check.get("id")
+        if not isinstance(check_id, str) or not ID_RE.fullmatch(check_id):
+            fail(errors, where, "id must match catalog ID pattern")
+        elif check_id in seen:
+            fail(errors, where, f"duplicate id: {check_id}")
+        else:
+            seen.add(check_id)
+        if check.get("status") not in VERIFICATION_STATUSES:
+            fail(errors, where, f"status must be one of: {', '.join(sorted(VERIFICATION_STATUSES))}")
+        for field in VERIFICATION_CHECK_FIELDS - {"status"}:
+            if not isinstance(check.get(field), str) or not check[field].strip():
+                fail(errors, where, f"{field} must be a non-empty string")
+
+
 def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, catalog_dir: Path = CATALOG) -> list[tuple[str, dict]]:
     seen: set[str] = set()
     entries: list[tuple[str, dict]] = []
@@ -186,6 +244,7 @@ def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, ca
                     fail(errors, where, f"{field} must be a non-empty string" if field != "notes" else "notes must be a string")
             entries.append((category, entry))
     verified = validate_playback_evidence(entries, errors, evidence_path=catalog_dir / "playback-evidence.json")
+    validate_verification_report(errors)
     if playback_ids is not None:
         playback_ids.update(verified)
     return entries

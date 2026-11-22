@@ -7,6 +7,7 @@ on:
       - "catalog/**"
       - "schemas/**"
       - "probe-report.json"
+      - "reports/verification-report.json"
       - "scripts/check_catalog.py"
       - "scripts/refresh_status.py"
       - "scripts/build_subscriptions.py"
@@ -17,6 +18,7 @@ on:
       - "catalog/**"
       - "schemas/**"
       - "probe-report.json"
+      - "reports/verification-report.json"
       - "scripts/check_catalog.py"
       - "scripts/refresh_status.py"
       - "scripts/build_subscriptions.py"
@@ -99,6 +101,8 @@ jobs:
           cp index.html styles.css app.js _site/
           cp -R catalog _site/catalog
           cp probe-report.json _site/probe-report.json
+          mkdir -p _site/reports
+          cp reports/verification-report.json _site/reports/
           python3 scripts/build_subscriptions.py --output-dir _site
       - uses: actions/upload-pages-artifact@v3
         with:

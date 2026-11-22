@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-22T16:36:36+08:00",
+  "summary": {
+    "client_playback_verified": false,
+    "true_4k_verified": false,
+    "local_unit_tests_passed": 26
+  },
+  "checks": [
+    {
+      "id": "tvapi-plus-fallback-fixture",
+      "subject": "tvapi_plus status refresh",
+      "subject_zh": "本仓库状态刷新器",
+      "kind": "loopback-integration",
+      "status": "passed",
+      "method": "Temporary local HTTP server: primary endpoint returned 503; configured fallback returned a valid TVBox configuration. Refresher parsed it and recorded used_fallback=true.",
+      "method_zh": "临时本机 HTTP 服务：主地址返回 503，配置的备用地址返回合法 TVBox 配置；刷新器成功解析并记录 used_fallback=true。",
+      "snapshot": "tvapi_plus main 09002d7",
+      "limitations": "Validates fetch/fallback/parse/report behavior only; no third-party Spider execution or client import/playback."
+    },
+    {
+      "id": "lightconer-fetch-fallback-cache",
+      "subject": "Lightconer/tvbox-ysc-config updater",
+      "subject_zh": "Lightconer/tvbox-ysc-config 更新器",
+      "kind": "loopback-integration",
+      "status": "passed",
+      "method": "Called the repository's fetch_config on Xiaoma: parsed 62 sites and 10 live entries. In an isolated temporary output directory, a local primary returned 503 then a local fallback returned a valid config; a subsequent all-failure run reused the cached payload and generated single/multi outputs.",
+      "method_zh": "调用仓库 fetch_config 抓取小马配置，解析出 62 个站点、10 个直播项。随后在隔离临时输出目录中用本机服务模拟主地址 503、备用地址成功；再次让地址全部失败时成功复用缓存并生成单仓/多仓产物。",
+      "snapshot": "tvbox-ysc-config 0e6901e",
+      "limitations": "Temporary fixtures validate updater behavior; not a TVBox client playback test."
+    },
+    {
+      "id": "lubin-fetch-fallback-parse",
+      "subject": "lubin776/tvbox-api-backup downloader",
+      "subject_zh": "lubin776/tvbox-api-backup 下载器",
+      "kind": "loopback-integration",
+      "status": "passed",
+      "method": "Repository check-config reported 71 interface groups. With the repository's loopback-only CI guard bypassed in memory for the isolated fixture, process() used a local primary returning 503 then a local fallback returning a valid TVBox config and emitted one site. Separately, try_fetch_all fetched a public fallback after a deliberately failing GitHub URL and parsed 27 sites and 12 live entries.",
+      "method_zh": "仓库 check-config 列出 71 个接口分组。在隔离夹具中仅以内存方式绕过仓库对 loopback 的 CI 保护，process() 经历本机主地址 503、备用地址成功并输出 1 个站点。另一次 try_fetch_all 在 GitHub 地址故意失败后获取公开备用配置，解析出 27 个站点、12 个直播项。",
+      "snapshot": "tvbox-api-backup c934adf",
+      "limitations": "Loopback guard was not changed on disk. Upstream downloader configures TLS verification off; this is a security concern, not an endorsement. No client playback test."
+    },
+    {
+      "id": "mux-hls-decode-1080p",
+      "subject": "Mux public HLS test stream",
+      "subject_zh": "Mux 公开 HLS 测试流",
+      "kind": "media-decode",
+      "status": "passed",
+      "method": "ffprobe identified H.264/AAC at 1920x1080; ffmpeg decoded a 30-second sample successfully.",
+      "method_zh": "ffprobe 识别到 H.264/AAC、1920×1080；ffmpeg 成功解码 30 秒样本。",
+      "snapshot": "https://test-streams.mux.dev/x36xhzz/url_8/193039199_mp4_h264_aac_fhd_7.m3u8",
+      "limitations": "Generic test media only; not a TVBox client, catalog source, channel quality, or 4K verification."
+    },
+    {
+      "id": "liangzi-claimed-4k-sample",
+      "subject": "Liangzi CMS result labeled 天书奇谭4K重置版",
+      "subject_zh": "量子 CMS 标记为《天书奇谭4K重置版》的样本",
+      "kind": "sample-media-check",
+      "status": "failed",
+      "method": "The CMS detail request returned HTTP 200, but the extracted HLS URL returned HTTP 404.",
+      "method_zh": "CMS 详情请求返回 HTTP 200，但抽取出的 HLS 地址返回 HTTP 404。",
+      "snapshot": "CMS sample; no media URL published",
+      "limitations": "A title containing 4K is not proof of resolution. No true 4K media was verified."
+    },
+    {
+      "id": "tvbox-client-playback",
+      "subject": "TVBox client import and playback",
+      "subject_zh": "TVBox 客户端导入与播放",
+      "kind": "client-playback",
+      "status": "not-tested",
+      "method": "No TVBox client was launched for this verification run.",
+      "method_zh": "本轮验证未启动 TVBox 客户端。",
+      "snapshot": "Not applicable",
+      "limitations": "No claim of successful import, search, playback, buffering quality, or client compatibility."
+    }
+  ]
+}

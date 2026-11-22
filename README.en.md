@@ -103,6 +103,10 @@ The catalog JSON files are the canonical data and also drive the bilingual stati
 
 “Broad coverage” is an ongoing collection and review process, not indiscriminate copying. Entries need traceable provenance, a basis for linking, and a stated format; actual playback claims require client test evidence.
 
+## Verification Record
+
+The published page's “Reproducible verification” panel reads [`reports/verification-report.json`](reports/verification-report.json). It distinguishes fetch/fallback integration, media decoding, and client playback. A fallback exercised with a temporary local server is not evidence of client compatibility. `passed` applies only to the named step; `failed` applies to that sample step; `not-tested` means it was not run. The current report explicitly marks TVBox client playback and true 4K as unverified. When refreshing it, retain the tested snapshot, method, and limitations, and update the bilingual page data consistently.
+
 ## Self-hosted subscriptions
 
 This project can generate its own multi-repository subscription, but by default it publishes only upstream URLs from reviewed catalog entries; it does not download or mirror remote configurations. This differs from merging the `sites` arrays into one single-source config, which copies and rewrites third-party data. Some sources also reference Spider, JS, JAR, Python, or other remote resources, so redistribution rights and execution risks need separate review. We therefore do not generate an “all sources” merged config by default.
