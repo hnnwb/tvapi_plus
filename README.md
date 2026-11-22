@@ -95,9 +95,9 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 ## 自建订阅
 
-本项目会生成自己的多仓订阅入口，并筛查可解析的单仓配置中声明的 type-1 CMS 接口，按有界 list/search/detail 检查结果生成独立的自建单仓。它不会下载/镜像整个第三方配置，也不执行 Spider、JS、JAR、Python。当前筛查覆盖受前置配置审计可解析性与网络安全策略限制；只有至少一个接口通过当前 CMS 检查并返回直接 HTTP(S) 播放地址时，才会在 `configs.json` 索引里显示自建单仓。该门槛不表示媒体成功或客户端实播。
+本项目会生成自己的多仓订阅入口与独立自建单仓。自建单仓优先采用当前筛查通过 list/search/detail 且详情返回直链的 CMS；若当前严格筛查为空，则回退汇总历史结构审计里可读配置的 type-1 API 候选，生成明确标注“候选未实播”的配置供用户导入试用。回退候选并不表示 API 当前可达、搜索成功或能播放。不会下载/镜像整个第三方配置，也不执行 Spider、JS、JAR、Python。
 
-`scripts/build_subscriptions.py` 将经过目录校验的数据生成到指定输出根目录：`configs.json` 是配置索引，`subscriptions/tvbox-multi.json` 是本站多仓 JSON，`subscriptions/tvbox-custom-single.json` 则在筛查报告有合格 CMS 样本时生成。自建单仓仅包含报告中当前 list/search/detail 检查通过且详情出现直链的 type-1 接口；它不含远程 Spider/脚本，也不做媒体探测或客户端实播。筛查覆盖受前置配置审计子集和网络安全策略限制，报告会保留配置来源、时间与失败原因，不应把空结果解释为上游全失效。多仓订阅清单仅包含 `catalog/playback-evidence.json` 中有合格实播证据的 VOD 配置；证据需记录客户端、版本、日期、测试范围及至少 30 秒成功播放。当前证据表为空，因此多仓订阅清单为空。输出不含直播、EPG、工具文档或未经审核的备用地址。Pages 发布后地址为 `https://hnnwb.github.io/tvapi_plus/configs.json`、`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-multi.json` 和（仅非空时）`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-custom-single.json`。不同客户端对多仓格式要求可能不同，构建测试只验证文件结构，不证明实际导入或播放。定时探测不保证播放质量或长期可用。不要将未授权、失效、重复或未验证的源标成优质。
+`scripts/build_subscriptions.py` 将经过目录校验的数据生成到指定输出根目录：`configs.json` 是配置索引，`subscriptions/tvbox-multi.json` 是本站多仓 JSON，`subscriptions/tvbox-custom-single.json` 是单独的自建候选 JSON。生成器先用当前严格筛查结果；若为空，则从 `reports/single-source-audit.json` 中结构可读配置提取 type-1 API 并去重回退。候选回退不表示 API 当前可达、普通搜索成功、详情有直链或客户端实播；它不含远程 Spider/脚本。报告记录有限历史测试范围，不能把未测试解释为上游全失效。多仓订阅清单仅包含 `catalog/playback-evidence.json` 中有合格实播证据的 VOD 配置；证据需记录客户端、版本、日期、测试范围及至少 30 秒成功播放。当前证据表为空，因此多仓订阅清单为空。输出不含直播、EPG、工具文档或未经审核的备用地址。Pages 发布后地址为 `https://hnnwb.github.io/tvapi_plus/configs.json`、`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-multi.json` 和（仅非空时）`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-custom-single.json`。不同客户端对多仓格式要求可能不同，构建测试只验证文件结构，不证明实际导入或播放。定时探测不保证播放质量或长期可用。不要将未授权、失效、重复或未验证的源标成优质。
 
 ## 点播检验方案
 

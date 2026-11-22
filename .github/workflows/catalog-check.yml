@@ -14,6 +14,8 @@ on:
       - "scripts/build_custom_single.py"
       - "scripts/screen_interfaces.py"
       - "reports/interface-screening.json"
+      - "reports/single-source-audit.json"
+      - "reports/custom-single-candidates.json"
       - "tests/**"
       - ".github/workflows/catalog-check.yml"
   pull_request:
@@ -28,6 +30,8 @@ on:
       - "scripts/build_custom_single.py"
       - "scripts/screen_interfaces.py"
       - "reports/interface-screening.json"
+      - "reports/single-source-audit.json"
+      - "reports/custom-single-candidates.json"
       - "tests/**"
       - ".github/workflows/catalog-check.yml"
   workflow_dispatch:
@@ -110,7 +114,9 @@ jobs:
           mkdir -p _site/reports
           cp reports/verification-report.json _site/reports/
           cp reports/interface-screening.json _site/reports/
+          cp reports/single-source-audit.json _site/reports/
           python3 scripts/build_subscriptions.py --output-dir _site
+          cp _site/reports/custom-single-candidates.json _site/reports/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

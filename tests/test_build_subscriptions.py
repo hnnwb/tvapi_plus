@@ -41,18 +41,19 @@ class BuildSubscriptionTests(unittest.TestCase):
         untested = record("untested-config", "Untested", "https://example.test/untested.json", "tvbox-multi")
         with tempfile.TemporaryDirectory() as tmp:
             catalog = self.write_catalog(Path(tmp), [single], [multi, duplicate, untested], [evidence("single-config"), evidence("multi-config")])
-            subscriptions, index, custom = build_subscriptions.build(catalog)
+            subscriptions, index, custom = build_subscriptions.build(catalog, custom_candidates=Path("/missing/candidates.json"))
         self.assertIsNone(custom)
+        self.assertEqual([item["url"] for item in index["configs"]], [single["url"], multi["url"], untested["url"]])
         self.assertEqual(subscriptions["urls"], [
             {"name": "Single", "url": single["url"]},
             {"name": "Multi", "url": multi["url"]},
         ])
-        self.assertEqual([item["url"] for item in index["configs"]], [single["url"], multi["url"], untested["url"]])
 
     def test_empty_real_catalog_builds_empty_manifests(self):
         with tempfile.TemporaryDirectory() as tmp:
             catalog = self.write_catalog(Path(tmp))
-            self.assertEqual(build_subscriptions.build(catalog), ({"urls": []}, {"configs": []}, None))
+            subscriptions, index, custom = build_subscriptions.build(catalog, custom_candidates=Path("/missing/candidates.json"))
+            self.assertEqual((subscriptions, index, custom), ({"urls": []}, {"configs": []}, None))
 
     def test_rejects_non_http_urls_through_shared_validator(self):
         unsafe = record("unsafe-config", "Unsafe", "file:///etc/passwd", "tvbox-json")
@@ -120,6 +121,60 @@ class BuildSubscriptionTests(unittest.TestCase):
         self.assertEqual(written["sites"], [{"key": "cms", "name": "CMS", "type": 1, "api": "https://api.example/vod", "searchable": 1, "quickSearch": 1, "filterable": 1}])
         self.assertEqual(set(written), {"spider", "wallpaper", "sites", "parses", "lives", "ads"})
 
+    def test_candidate_fallback_builds_deduplicated_unverified_apis(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            audit_report = {
+                "results": [
+                    {"name": "First", "config": {"result": "tvbox-json-structural"}, "cms": [
+                        {"api": "https://cms.example/api.php/provide/vod", "key": "first", "name": "CMS A"},
+                        {"api": "https://cms.example/api.php/provide/vod", "key": "dupe", "name": "CMS duplicate"},
+                    ]},
+                    {"name": "Third-party parser config", "config": {"result": "failed"}, "cms": [
+                        {"api": "https://not-structural.example/vod", "key": "ignored", "name": "Ignored"},
+                    ]},
+                ]
+            }
+            audit_path = root / "audit.json"
+            audit_path.write_text(json.dumps(audit_report), encoding="utf-8")
+            catalog = self.write_catalog(root)
+            screening_path = root / "screening.json"
+            screening_path.write_text(json.dumps({"schema_version": 1, "interfaces": [], "summary": {"included": 0}}), encoding="utf-8")
+            subscriptions, index, config = build_subscriptions.build(catalog, screening_path, audit_path)
+            output = root / "public"
+            build_subscriptions.write_outputs(output, subscriptions, index, config, build_subscriptions.build_custom_candidates_status(audit_path))
+            written = json.loads((output / "subscriptions/tvbox-custom-single.json").read_text())
+        self.assertEqual(len(written["sites"]), 1)
+        self.assertEqual([x["api"] for x in config["sites"]], ["https://cms.example/api.php/provide/vod"])
+        self.assertTrue(all(site["type"] == 1 for site in config["sites"]))
+        self.assertIn("候选未实播", index["configs"][0]["name"])
+        with tempfile.TemporaryDirectory() as tmp:
+            status_path = Path(tmp) / "audit.json"
+            status_path.write_text(json.dumps(audit_report), encoding="utf-8")
+            status = build_subscriptions.build_custom_candidates_status(status_path)
+        self.assertEqual(status["verification_status"], "unverified-candidate")
+        self.assertEqual(status["unique_candidate_apis"], 1)
+        self.assertEqual(status["structurally_parsed_configs"], 1)
+        self.assertEqual(status["screened_api_candidates"], 0)
+        self.assertEqual(status["historical_failed_or_unparsed_configs"], 0)
+        self.assertEqual(status["historical_config_status_counts"], {})
+
+    def test_candidate_status_preserves_failure_categories_without_calling_them_policy_blocks(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            audit = {
+                "results": [
+                    {"config": {"result": "failed", "error": "HTTPError: HTTP Error 404: Not Found"}, "cms": []},
+                    {"config": {"result": "failed", "error": "ValueError: URL hostname did not resolve to a safe public address"}, "cms": []},
+                ],
+                "status_counts": {"failed": 2},
+            }
+            path = Path(tmp) / "audit.json"
+            path.write_text(json.dumps(audit), encoding="utf-8")
+            status = build_subscriptions.build_custom_candidates_status(path)
+        self.assertEqual(status["historical_failed_or_unparsed_configs"], 2)
+        self.assertEqual(status["historical_network_denied_config_requests"], 1)
+        self.assertEqual(status["historical_config_status_counts"], {"failed": 2})
+
     def test_custom_single_requires_current_cms_flow_and_direct_url(self):
         report = {
             "schema_version": 1,
@@ -141,12 +196,12 @@ class BuildSubscriptionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             catalog = self.write_catalog(root)
-            subscriptions, index, custom = build_subscriptions.build(catalog)
+            subscriptions, index, custom = build_subscriptions.build(catalog, custom_candidates=Path("/missing/candidates.json"))
             output = root / "public"
             build_subscriptions.write_outputs(output, subscriptions, index, custom)
             self.assertEqual(json.loads((output / "configs.json").read_text()), index)
             self.assertEqual(json.loads((output / "subscriptions/tvbox-multi.json").read_text()), subscriptions)
-
+            self.assertFalse((output / "subscriptions/tvbox-custom-single.json").exists())
 
 if __name__ == "__main__":
     unittest.main()
