@@ -41,7 +41,8 @@ class BuildSubscriptionTests(unittest.TestCase):
         untested = record("untested-config", "Untested", "https://example.test/untested.json", "tvbox-multi")
         with tempfile.TemporaryDirectory() as tmp:
             catalog = self.write_catalog(Path(tmp), [single], [multi, duplicate, untested], [evidence("single-config"), evidence("multi-config")])
-            subscriptions, index = build_subscriptions.build(catalog)
+            subscriptions, index, custom = build_subscriptions.build(catalog)
+        self.assertIsNone(custom)
         self.assertEqual(subscriptions["urls"], [
             {"name": "Single", "url": single["url"]},
             {"name": "Multi", "url": multi["url"]},
@@ -51,7 +52,7 @@ class BuildSubscriptionTests(unittest.TestCase):
     def test_empty_real_catalog_builds_empty_manifests(self):
         with tempfile.TemporaryDirectory() as tmp:
             catalog = self.write_catalog(Path(tmp))
-            self.assertEqual(build_subscriptions.build(catalog), ({"urls": []}, {"configs": []}))
+            self.assertEqual(build_subscriptions.build(catalog), ({"urls": []}, {"configs": []}, None))
 
     def test_rejects_non_http_urls_through_shared_validator(self):
         unsafe = record("unsafe-config", "Unsafe", "file:///etc/passwd", "tvbox-json")
@@ -94,13 +95,55 @@ class BuildSubscriptionTests(unittest.TestCase):
         self.assertEqual(evidence_shape["properties"]["duration_seconds"]["minimum"], check_catalog.MIN_PLAYBACK_SECONDS)
         self.assertEqual(evidence_schema["$schema"], catalog_schema["$schema"])
 
+    def test_custom_single_index_and_file_are_built_once_from_report(self):
+        from build_custom_single import build as build_custom_single
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            catalog = self.write_catalog(root)
+            report = {
+                "schema_version": 1,
+                "generated_at": "2026-11-22T00:00:00Z",
+                "source_snapshot_sha256": "abc",
+                "summary": {"included": 1},
+                "limits": {"config_candidates": 48},
+                "interfaces": [
+                    {"decision": "include", "screen_status": "cms-api-tested", "api": "https://api.example/vod", "name": "CMS", "key": "cms", "detail_has_stream_url": True, "tests": {name: {"ok": True} for name in ("list", "search", "detail")}},
+                ],
+            }
+            evidence_path = root / "screening.json"
+            evidence_path.write_text(json.dumps(report), encoding="utf-8")
+            subscriptions, index, config = build_subscriptions.build(catalog, evidence_path)
+            output = root / "public"
+            build_subscriptions.write_outputs(output, subscriptions, index, config)
+            written = json.loads((output / "subscriptions/tvbox-custom-single.json").read_text())
+        self.assertEqual(len(index["configs"]), 1)
+        self.assertEqual(written["sites"], [{"key": "cms", "name": "CMS", "type": 1, "api": "https://api.example/vod", "searchable": 1, "quickSearch": 1, "filterable": 1}])
+        self.assertEqual(set(written), {"spider", "wallpaper", "sites", "parses", "lives", "ads"})
+
+    def test_custom_single_requires_current_cms_flow_and_direct_url(self):
+        report = {
+            "schema_version": 1,
+            "generated_at": "2026-11-22T00:00:00Z",
+            "source_snapshot_sha256": "abc",
+            "interfaces": [
+                {"decision": "include", "screen_status": "cms-api-tested", "api": "https://api.example/vod", "name": "CMS", "key": "cms", "detail_has_stream_url": True, "tests": {name: {"ok": True} for name in ("list", "search", "detail")}},
+                {"decision": "include", "screen_status": "blocked-policy", "api": "https://blocked.example/vod", "name": "Blocked", "key": "blocked", "detail_has_stream_url": True, "tests": {name: {"ok": True} for name in ("list", "search", "detail")}},
+            ],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            evidence_path = Path(tmp) / "screening.json"
+            evidence_path.write_text(json.dumps(report), encoding="utf-8")
+            config = build_subscriptions.build_custom_single(evidence_path)
+        self.assertEqual([site["api"] for site in config["sites"]], ["https://api.example/vod"])
+        self.assertEqual(set(config), {"spider", "wallpaper", "sites", "parses", "lives", "ads"})
+
     def test_writes_contract_paths_under_one_output_root(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             catalog = self.write_catalog(root)
-            subscriptions, index = build_subscriptions.build(catalog)
+            subscriptions, index, custom = build_subscriptions.build(catalog)
             output = root / "public"
-            build_subscriptions.write_outputs(output, subscriptions, index)
+            build_subscriptions.write_outputs(output, subscriptions, index, custom)
             self.assertEqual(json.loads((output / "configs.json").read_text()), index)
             self.assertEqual(json.loads((output / "subscriptions/tvbox-multi.json").read_text()), subscriptions)
 

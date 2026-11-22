@@ -11,6 +11,9 @@ on:
       - "scripts/check_catalog.py"
       - "scripts/refresh_status.py"
       - "scripts/build_subscriptions.py"
+      - "scripts/build_custom_single.py"
+      - "scripts/screen_interfaces.py"
+      - "reports/interface-screening.json"
       - "tests/**"
       - ".github/workflows/catalog-check.yml"
   pull_request:
@@ -22,6 +25,9 @@ on:
       - "scripts/check_catalog.py"
       - "scripts/refresh_status.py"
       - "scripts/build_subscriptions.py"
+      - "scripts/build_custom_single.py"
+      - "scripts/screen_interfaces.py"
+      - "reports/interface-screening.json"
       - "tests/**"
       - ".github/workflows/catalog-check.yml"
   workflow_dispatch:
@@ -103,6 +109,7 @@ jobs:
           cp probe-report.json _site/probe-report.json
           mkdir -p _site/reports
           cp reports/verification-report.json _site/reports/
+          cp reports/interface-screening.json _site/reports/
           python3 scripts/build_subscriptions.py --output-dir _site
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -246,6 +246,10 @@ def site_api_key(site: dict, base_url: str) -> str | None:
     except ValueError:
         return None
 
+def fetch_json_document(url: str, cap: int = MAX_CONFIG) -> dict:
+    response = get(url, cap)
+    return json_doc(response["body"])
+
 def audit(item: dict) -> dict:
     out = {**item, "config": {}, "cms": []}
     try:

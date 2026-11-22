@@ -10,11 +10,11 @@ const CATEGORY_NAMES = { 'vod-single': '单仓配置', 'vod-multi': '多仓配�
 const TEXT = {
   zh: {
  verificationEyebrow: '验证记录 / TEST EVIDENCE', verificationTitle: '可复现的验证记录', testsLabel: '自动化测试通过', clientPlaybackNotTested: 'TVBox 客户端实播：未验证', true4kNotTested: '真实 4K：未验证', checkPassed: '通过', checkFailed: '失败', checkNotTested: '未测试', checkDate: '测试记录',
- navCatalog: '资源矩阵', navVerification: '验证记录', navQuality: '验证协议', heroEyebrow: '开放资源 · 资源索引', heroTitleFirst: '你的影视资源', heroTitleSecond: '导航中枢。', heroSubtitle: '配置、直播与节目单，一站检索。每条资源保留来源和自动探测结果，让选择有依据。', explore: '探索资源', submitSource: '提交资源', consoleTitle: '索引状态', consoleResources: '已收录资源', consoleReachable: '链接可达', consoleProbe: '最近探测', evidenceFirst: '以证据为先', single: '单仓配置', multi: '多仓配置', live: '直播', epg: '节目单与台标', tools: '工具与文档', quickSingle: '精选单源入口', quickMulti: '复制即可导入的多仓订阅', quickLive: '频道与直播列表', quickEpg: 'EPG 与图标资源', quickTools: '辅助工具与指南', catalogLive: '分类条目', catalogState: '目录', catalogHint: '选择分类可快速筛选', total: '目录条目', verified: '链接可达', checked: '最近探测', browse: 'BROWSE / 资源检索', catalogTitle: '资源矩阵', searchLabel: '搜索资源', searchPlaceholder: '搜索名称、格式或来源', categoryLabel: '资源类别', allCategories: '所有类别', single: '单仓配置', multi: '多仓配置', live: '直播', epg: '节目单与台标', tools: '工具与文档', copyUrl: '复制源链接', copied: '已复制', copyFailed: '复制失败', emptyTitle: '目录仍在建设中', emptyText: '目前没有已审核的资源条目。我们不会用未测试的链接填充数量；提交资源前请先阅读收录标准。', contribute: '查看收录说明 ↗', noResults: '没有符合条件的条目。试试其他关键词或筛选条件。', trustEyebrow: '验证协议 / VALIDATION PROTOCOL', qualityTitle: '数量不替代验证。', qualityText: '可访问不代表能播放；格式声明也不代表客户端兼容。自动链接探测与客户端播放验证是不同结论。', quality1Title: '来源可追溯', quality1Text: '记录上游出处与许可信息，不镜像或重发第三方配置。', quality2Title: '可用性有时效', quality2Text: '定时有限探测只代表当时网络结果，不保证持续可用。', quality3Title: '兼容性靠实测', quality3Text: '自动化检查链接与格式；实际导入和播放需在客户端验证。', footerNote: '由社区维护 · 条目链接指向上游 · 请遵守当地法律及上游条款', result: (shown, total) => `显示 ${shown} / ${total} 条`, noProbe: '暂无探测记录', lastProbe: (d) => `探测 ${d}`, status: { 'playback-tested': '播放实测', 'import-tested': '导入实测', 'format-claimed': '格式声称兼容', unknown: '未验证', incompatible: '不兼容' }, tested: (version, date) => `${version || '版本未记录'} · ${date || '日期未记录'}`, source: '来源', openResource: '打开资源链接', genericCategory: '资源', emptyProbe: '尚无公开探测记录', probePassing: (n) => `${n} 条可达`, probeOk: '链接探测通过', probeFailed: '本次探测失败', probeStale: '探测失败 · 上次曾通过', fallbackUsed: '使用已审核备用地址', lastSuccess: (d) => `上次成功 ${d}`, loadError: '目录文件读取失败，请稍后刷新重试。'
+ customSingleAvailable: '当前有通过 CMS 接口筛查的配置；未测试媒体播放', customSingleUnavailable: '当前筛查没有可列入的接口', navCatalog: '资源矩阵', navVerification: '验证记录', navQuality: '验证协议', heroEyebrow: '开放资源 · 资源索引', heroTitleFirst: '你的影视资源', heroTitleSecond: '导航中枢。', heroSubtitle: '配置、直播与节目单，一站检索。每条资源保留来源和自动探测结果，让选择有依据。', explore: '探索资源', submitSource: '提交资源', consoleTitle: '索引状态', consoleResources: '已收录资源', consoleReachable: '链接可达', consoleProbe: '最近探测', evidenceFirst: '以证据为先', single: '单仓配置', multi: '多仓配置', live: '直播', epg: '节目单与台标', tools: '工具与文档', quickSingle: '上游单仓索引；自建单仓有结果时列入其中', quickCustom: '检查中…', quickMulti: '复制即可导入的多仓订阅', quickLive: '频道与直播列表', quickEpg: 'EPG 与图标资源', quickTools: '辅助工具与指南', catalogLive: '分类条目', catalogState: '目录', catalogHint: '选择分类可快速筛选', total: '目录条目', verified: '链接可达', checked: '最近探测', browse: 'BROWSE / 资源检索', catalogTitle: '资源矩阵', searchLabel: '搜索资源', searchPlaceholder: '搜索名称、格式或来源', categoryLabel: '资源类别', allCategories: '所有类别', single: '单仓配置', multi: '多仓配置', live: '直播', epg: '节目单与台标', tools: '工具与文档', copyUrl: '复制源链接', copied: '已复制', copyFailed: '复制失败', emptyTitle: '目录仍在建设中', emptyText: '目前没有已审核的资源条目。我们不会用未测试的链接填充数量；提交资源前请先阅读收录标准。', contribute: '查看收录说明 ↗', noResults: '没有符合条件的条目。试试其他关键词或筛选条件。', trustEyebrow: '验证协议 / VALIDATION PROTOCOL', qualityTitle: '数量不替代验证。', qualityText: '可访问不代表能播放；格式声明也不代表客户端兼容。自动链接探测与客户端播放验证是不同结论。', quality1Title: '来源可追溯', quality1Text: '记录上游出处与许可信息，不镜像或重发第三方配置。', quality2Title: '可用性有时效', quality2Text: '定时有限探测只代表当时网络结果，不保证持续可用。', quality3Title: '兼容性靠实测', quality3Text: '自动化检查链接与格式；实际导入和播放需在客户端验证。', footerNote: '由社区维护 · 条目链接指向上游 · 请遵守当地法律及上游条款', result: (shown, total) => `显示 ${shown} / ${total} 条`, noProbe: '暂无探测记录', lastProbe: (d) => `探测 ${d}`, status: { 'playback-tested': '播放实测', 'import-tested': '导入实测', 'format-claimed': '格式声称兼容', unknown: '未验证', incompatible: '不兼容' }, tested: (version, date) => `${version || '版本未记录'} · ${date || '日期未记录'}`, source: '来源', openResource: '打开资源链接', genericCategory: '资源', emptyProbe: '尚无公开探测记录', probePassing: (n) => `${n} 条可达`, probeOk: '链接探测通过', probeFailed: '本次探测失败', probeStale: '探测失败 · 上次曾通过', fallbackUsed: '使用已审核备用地址', lastSuccess: (d) => `上次成功 ${d}`, loadError: '目录文件读取失败，请稍后刷新重试。'
   },
   en: {
  verificationEyebrow: 'VERIFICATION LOG / TEST EVIDENCE', verificationTitle: 'Reproducible verification', testsLabel: 'Automated tests passed', clientPlaybackNotTested: 'TVBox client playback: not verified', true4kNotTested: 'True 4K: not verified', checkPassed: 'Passed', checkFailed: 'Failed', checkNotTested: 'Not tested', checkDate: 'Recorded',
- navCatalog: 'Resource matrix', navVerification: 'Test evidence', navQuality: 'Validation', heroEyebrow: 'OPEN SOURCE · RESOURCE INDEX', heroTitleFirst: 'Your media source', heroTitleSecond: 'command center.', heroSubtitle: 'Find configurations, live TV, and EPG in one place. Provenance and automated probe results stay visible on every entry.', explore: 'Explore resources', submitSource: 'Submit a source', consoleTitle: 'INDEX STATUS', consoleResources: 'Catalog entries', consoleReachable: 'Links reachable', consoleProbe: 'Latest probe', evidenceFirst: 'EVIDENCE FIRST', quickSingle: 'Single-source entry', quickMulti: 'Multi-source subscription URL', quickLive: 'Channels and playlists', quickEpg: 'EPG and channel logos', quickTools: 'Utilities and guides', catalogLive: 'Category entries', catalogState: 'CATALOG', catalogHint: 'Choose a category to filter', total: 'Catalog entries', verified: 'Links reachable', checked: 'Latest probe', browse: 'BROWSE / DISCOVER', catalogTitle: 'Resource matrix', searchLabel: 'Search resources', searchPlaceholder: 'Search name, format, or source', categoryLabel: 'Resource category', allCategories: 'All categories', single: 'Single-source config', multi: 'Multi-source config', live: 'Live TV', epg: 'EPG and logos', tools: 'Tools and docs', copyUrl: 'Copy source URL', copied: 'Copied', copyFailed: 'Copy failed', emptyTitle: 'Catalog is being built', emptyText: 'There are no reviewed entries yet. We will not inflate counts with untested links; review the inclusion criteria before submitting a resource.', contribute: 'Read contribution guide ↗', noResults: 'No entries match. Try another keyword or filter.', trustEyebrow: 'VALIDATION PROTOCOL', qualityTitle: 'Volume is not verification.', qualityText: 'Reachability does not mean playable, and a format claim does not prove client compatibility. Automated link probes and client playback tests answer different questions.', quality1Title: 'Traceable provenance', quality1Text: 'Record upstream origin and license; do not mirror or republish third-party configs.', quality2Title: 'Time-bounded availability', quality2Text: 'Scheduled probes reflect one network observation, not a guarantee of continued availability.', quality3Title: 'Compatibility requires testing', quality3Text: 'Automated checks cover links and formats; import and playback need the actual client.', footerNote: 'Community maintained · Links point upstream · Follow local law and upstream terms', result: (shown, total) => `Showing ${shown} / ${total}`, noProbe: 'No probe recorded', lastProbe: (d) => `Checked ${d}`, status: { 'playback-tested': 'Playback tested', 'import-tested': 'Import tested', 'format-claimed': 'Format claimed', unknown: 'Unverified', incompatible: 'Incompatible' }, tested: (version, date) => `${version || 'Version not recorded'} · ${date || 'Date not recorded'}`, source: 'Source', openResource: 'Open resource link', genericCategory: 'Resource', emptyProbe: 'No published probe data', probePassing: (n) => `${n} reachable`, probeOk: 'Link probe passed', probeFailed: 'Latest check failed', probeStale: 'Check failed · previously passed', fallbackUsed: 'Reviewed fallback used', lastSuccess: (d) => `Last success ${d}`, loadError: 'Catalog files failed to load. Please refresh and try again.'
+ customSingleAvailable: 'CMS interfaces passed bounded checks; media playback is untested', customSingleUnavailable: 'No interfaces currently qualify in screening', navCatalog: 'Resource matrix', navVerification: 'Test evidence', navQuality: 'Validation', heroEyebrow: 'OPEN SOURCE · RESOURCE INDEX', heroTitleFirst: 'Your media source', heroTitleSecond: 'command center.', heroSubtitle: 'Find configurations, live TV, and EPG in one place. Provenance and automated probe results stay visible on every entry.', explore: 'Explore resources', submitSource: 'Submit a source', consoleTitle: 'INDEX STATUS', consoleResources: 'Catalog entries', consoleReachable: 'Links reachable', consoleProbe: 'Latest probe', evidenceFirst: 'EVIDENCE FIRST', quickSingle: 'Upstream single-source index', quickCustom: 'Checking screening result…', quickMulti: 'Multi-source subscription URL', quickLive: 'Channels and playlists', quickEpg: 'EPG and channel logos', quickTools: 'Utilities and guides', catalogLive: 'Category entries', catalogState: 'CATALOG', catalogHint: 'Choose a category to filter', total: 'Catalog entries', verified: 'Links reachable', checked: 'Latest probe', browse: 'BROWSE / DISCOVER', catalogTitle: 'Resource matrix', searchLabel: 'Search resources', searchPlaceholder: 'Search name, format, or source', categoryLabel: 'Resource category', allCategories: 'All categories', single: 'Single-source config', multi: 'Multi-source config', live: 'Live TV', epg: 'EPG and logos', tools: 'Tools and docs', copyUrl: 'Copy source URL', copied: 'Copied', copyFailed: 'Copy failed', emptyTitle: 'Catalog is being built', emptyText: 'There are no reviewed entries yet. We will not inflate counts with untested links; review the inclusion criteria before submitting a resource.', contribute: 'Read contribution guide ↗', noResults: 'No entries match. Try another keyword or filter.', trustEyebrow: 'VALIDATION PROTOCOL', qualityTitle: 'Volume is not verification.', qualityText: 'Reachability does not mean playable, and a format claim does not prove client compatibility. Automated link probes and client playback tests answer different questions.', quality1Title: 'Traceable provenance', quality1Text: 'Record upstream origin and license; do not mirror or republish third-party configs.', quality2Title: 'Time-bounded availability', quality2Text: 'Scheduled probes reflect one network observation, not a guarantee of continued availability.', quality3Title: 'Compatibility requires testing', quality3Text: 'Automated checks cover links and formats; import and playback need the actual client.', footerNote: 'Community maintained · Links point upstream · Follow local law and upstream terms', result: (shown, total) => `Showing ${shown} / ${total}`, noProbe: 'No probe recorded', lastProbe: (d) => `Checked ${d}`, status: { 'playback-tested': 'Playback tested', 'import-tested': 'Import tested', 'format-claimed': 'Format claimed', unknown: 'Unverified', incompatible: 'Incompatible' }, tested: (version, date) => `${version || 'Version not recorded'} · ${date || 'Date not recorded'}`, source: 'Source', openResource: 'Open resource link', genericCategory: 'Resource', emptyProbe: 'No published probe data', probePassing: (n) => `${n} reachable`, probeOk: 'Link probe passed', probeFailed: 'Latest check failed', probeStale: 'Check failed · previously passed', fallbackUsed: 'Reviewed fallback used', lastSuccess: (d) => `Last success ${d}`, loadError: 'Catalog files failed to load. Please refresh and try again.'
   }
 };
 
@@ -22,6 +22,7 @@ let entries = [];
 let lang = localStorage.getItem('tvapi-language') || (navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en');
 let probeReport = null;
 let verificationReport = null;
+let customSingleState = 'loading';
 
 function applyLanguage() {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
@@ -41,6 +42,7 @@ function applyLanguage() {
   });
   document.getElementById('visible-categories').textContent = String(new Set(entries.map((entry) => entry._category)).size).padStart(2, '0');
   document.getElementById('language-toggle').textContent = lang === 'zh' ? 'EN' : '中文';
+  renderCustomSingleState();
   document.getElementById('language-toggle').setAttribute('aria-label', lang === 'zh' ? 'Switch language' : '切换语言');
   if (verificationReport) renderVerification(verificationReport);
   render();
@@ -98,7 +100,22 @@ function renderCard(entry) {
     </div>
   </article>`;
 }
+function renderCustomSingleState() {
+  const link = document.getElementById('custom-single-link');
+  if (!link) return;
+  const available = customSingleState === 'available';
+  link.hidden = customSingleState !== 'available';
+  link.href = available ? 'subscriptions/tvbox-custom-single.json' : '#custom-single-link';
+  link.classList.toggle('is-disabled', !available);
+  link.setAttribute('aria-disabled', String(!available));
+  link.tabIndex = available ? 0 : -1;
+  link.querySelector('[data-i18n="quickCustom"]').textContent = available
+    ? TEXT[lang].customSingleAvailable
+    : TEXT[lang].customSingleUnavailable;
+  link.querySelector('.quick-amount').textContent = available ? 'JSON' : '—';
+}
 function render() {
+  renderCustomSingleState();
   const query = document.getElementById('search').value.trim().toLowerCase();
   const category = document.getElementById('category-filter').value;
   const filtered = entries.filter((entry) => {
@@ -138,7 +155,7 @@ function renderVerification(report) {
 
 async function loadData() {
   try {
-    const [catalogResults, reportResponse, verificationResponse] = await Promise.all([
+    const [catalogResults, reportResponse, verificationResponse, screeningResponse] = await Promise.all([
       Promise.all(CATALOGS.map(async ({ file, category }) => {
         const response = await fetch(file, { cache: 'no-store' });
         if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
@@ -147,7 +164,8 @@ async function loadData() {
         return data.map((entry) => ({ ...entry, _category: category }));
       })),
       fetch('probe-report.json', { cache: 'no-store' }).catch(() => null),
-      fetch('reports/verification-report.json', { cache: 'no-store' }).catch(() => null)
+      fetch('reports/verification-report.json', { cache: 'no-store' }).catch(() => null),
+      fetch('reports/interface-screening.json', { cache: 'no-store' }).catch(() => null)
     ]);
     entries = catalogResults.flat();
     if (reportResponse?.ok) probeReport = await reportResponse.json();
@@ -155,9 +173,17 @@ async function loadData() {
       verificationReport = await verificationResponse.json();
       renderVerification(verificationReport);
     }
+    if (screeningResponse?.ok) {
+      const screening = await screeningResponse.json();
+      customSingleState = Number(screening.summary?.included) > 0 ? 'available' : 'unavailable';
+    } else {
+      customSingleState = 'unavailable';
+    }
     applyLanguage();
   } catch (error) {
     console.error('Unable to load catalog:', error);
+    customSingleState = 'unavailable';
+    renderCustomSingleState();
     document.getElementById('empty-state').hidden = true;
     const state = document.getElementById('no-results');
     state.textContent = TEXT[lang].loadError;
