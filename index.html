@@ -16,7 +16,7 @@
   <header class="topbar">
     <a class="brand" href="#top" aria-label="TVBox Resource Matrix home">
       <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span class="brand-name">TV<span>BOX</span><small>RESOURCE MATRIX</small></span>
+      <span class="brand-name"><span class="brand-wordmark">TV<span>BOX</span></span><small>RESOURCE MATRIX</small></span>
     </a>
     <nav aria-label="主导航">
       <a href="#catalog" data-i18n="navCatalog">资源矩阵</a>
@@ -32,7 +32,7 @@
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span><span data-i18n="heroEyebrow">OPEN SOURCE · LIVE INDEX</span></p>
+        <p class="eyebrow"><span class="index-dot" aria-hidden="true"></span><span data-i18n="heroEyebrow">OPEN SOURCE · RESOURCE INDEX</span></p>
         <h1 id="page-title" data-i18n="heroTitle">你的影视资源<br><em>导航中枢。</em></h1>
         <p class="hero-text" data-i18n="heroSubtitle">配置、直播与节目单，一站检索。每条资源保留来源与验证状态，让选择有依据。</p>
         <div class="hero-actions">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="hero-console" aria-label="Catalog status">
-        <div class="console-head"><span data-i18n="consoleTitle">INDEX STATUS</span><span class="console-live"><i></i> LIVE</span></div>
+        <div class="console-head"><span data-i18n="consoleTitle">INDEX STATUS</span><span class="console-state" data-i18n="catalogState">目录</span></div>
         <div class="console-row"><span data-i18n="consoleResources">已收录资源</span><strong id="total-count">—</strong></div>
         <div class="console-row"><span data-i18n="consolePlayback">播放实测</span><strong id="verified-count">—</strong></div>
         <div class="console-row"><span data-i18n="consoleProbe">最近探测</span><strong id="checked-at">—</strong></div>
@@ -51,11 +51,11 @@
     </section>
 
     <section class="quick-links" aria-label="资源分类">
-      <a class="quick-link" href="#catalog" data-category="vod-single"><span class="quick-index">01</span><span class="quick-title" data-i18n="single">单仓配置</span><span class="quick-desc" data-i18n="quickSingle">精选单源入口</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
-      <a class="quick-link" href="#catalog" data-category="vod-multi"><span class="quick-index">02</span><span class="quick-title" data-i18n="multi">多仓配置</span><span class="quick-desc" data-i18n="quickMulti">聚合多站点源</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
-      <a class="quick-link" href="#catalog" data-category="live"><span class="quick-index">03</span><span class="quick-title" data-i18n="live">直播</span><span class="quick-desc" data-i18n="quickLive">频道与直播列表</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
-      <a class="quick-link" href="#catalog" data-category="epg"><span class="quick-index">04</span><span class="quick-title" data-i18n="epg">节目单与台标</span><span class="quick-desc" data-i18n="quickEpg">EPG 与图标资源</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
-      <a class="quick-link" href="#catalog" data-category="tools"><span class="quick-index">05</span><span class="quick-title" data-i18n="tools">工具与文档</span><span class="quick-desc" data-i18n="quickTools">辅助工具与指南</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+      <a class="quick-link" href="#catalog" data-category="vod-single"><span class="quick-index">01</span><span class="quick-title" data-i18n="single">单仓配置</span><span class="quick-desc" data-i18n="quickSingle">精选单源入口</span><span class="quick-amount" data-count-for="vod-single">—</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+      <a class="quick-link" href="#catalog" data-category="vod-multi"><span class="quick-index">02</span><span class="quick-title" data-i18n="multi">多仓配置</span><span class="quick-desc" data-i18n="quickMulti">聚合多站点源</span><span class="quick-amount" data-count-for="vod-multi">—</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+      <a class="quick-link" href="#catalog" data-category="live"><span class="quick-index">03</span><span class="quick-title" data-i18n="live">直播</span><span class="quick-desc" data-i18n="quickLive">频道与直播列表</span><span class="quick-amount" data-count-for="live">—</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+      <a class="quick-link" href="#catalog" data-category="epg"><span class="quick-index">04</span><span class="quick-title" data-i18n="epg">节目单与台标</span><span class="quick-desc" data-i18n="quickEpg">EPG 与图标资源</span><span class="quick-amount" data-count-for="epg">—</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
+      <a class="quick-link" href="#catalog" data-category="tools"><span class="quick-index">05</span><span class="quick-title" data-i18n="tools">工具与文档</span><span class="quick-desc" data-i18n="quickTools">辅助工具与指南</span><span class="quick-amount" data-count-for="tools">—</span><span class="quick-arrow" aria-hidden="true">↗</span></a>
     </section>
 
     <section id="catalog" class="catalog-section" aria-labelledby="catalog-heading">
@@ -68,7 +68,7 @@
         <label class="select-wrap"><span class="sr-only" data-i18n="categoryLabel">资源类别</span><select id="category-filter"><option value="all" data-i18n="allCategories">所有类别</option><option value="vod-single" data-i18n="single">单仓配置</option><option value="vod-multi" data-i18n="multi">多仓配置</option><option value="live" data-i18n="live">直播</option><option value="epg" data-i18n="epg">节目单与台标</option><option value="tools" data-i18n="tools">工具与文档</option></select></label>
         <label class="select-wrap"><span class="sr-only" data-i18n="clientLabel">客户端测试状态</span><select id="client-filter"><option value="all" data-i18n="allClients">所有客户端状态</option><option value="playback-tested" data-i18n="playbackTested">播放实测</option><option value="import-tested" data-i18n="importTested">导入实测</option><option value="format-claimed" data-i18n="formatClaimed">格式声称兼容</option><option value="unknown" data-i18n="unknown">未验证</option><option value="incompatible" data-i18n="incompatible">不兼容</option></select></label>
       </div>
-      <div class="catalog-meta"><span class="meta-signal"><i></i><span data-i18n="catalogLive">目录索引已连接</span></span><span data-i18n="catalogHint">选择分类可快速筛选</span></div>
+      <div class="catalog-meta"><span class="meta-signal"><i></i><span data-i18n="catalogLive">目录条目</span> <strong id="visible-categories">0</strong></span><span data-i18n="catalogHint">选择分类可快速筛选</span></div>
       <div id="catalog-list" class="catalog-list" aria-live="polite"></div>
       <div id="empty-state" class="empty-state" hidden>
         <span class="empty-symbol" aria-hidden="true">∅</span>
