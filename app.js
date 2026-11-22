@@ -112,7 +112,9 @@ function renderCustomSingleState() {
   link.setAttribute('aria-disabled', String(!available));
   link.title = customSingleMode === 'historical-unverified'
     ? (lang === 'zh' ? '历史结构化配置中的去重 type-1 接口；仅作候选，未实播' : 'Deduplicated type-1 APIs from structural config parses; candidates only, not playback tested')
-    : '';
+    : customSingleMode === 'screened'
+      ? (lang === 'zh' ? 'CMS 接口检查通过；媒体和客户端播放未验证' : 'CMS checks passed; media and client playback unverified')
+      : '';
   link.tabIndex = available ? 0 : -1;
   link.querySelector('[data-i18n="quickCustom"]').textContent = customSingleMode === 'historical-unverified'
     ? (lang === 'zh' ? `历史候选 API · 未验证播放 · ${window.customSingleStatus?.unique_candidate_apis || 0} 个` : `Historical API candidates · playback unverified · ${window.customSingleStatus?.unique_candidate_apis || 0}`)
@@ -186,11 +188,10 @@ async function loadData() {
       if (customStatusResponse?.ok) window.customSingleStatus = await customStatusResponse.json();
       const screenedReady = Number(screening.summary?.included) > 0 && Number(screening.summary?.cms_api_tested) > 0;
       customSingleState = screenedReady ? 'available' : Number(screening.limits?.historical_candidate_apis) > 0 ? 'candidate' : 'unavailable';
-      customSingleMode = customSingleState === 'candidate' ? 'historical-unverified' : 'screened';
-      if (window.customSingleStatus?.verification_status === 'unverified-candidate' && Number(window.customSingleStatus.unique_candidate_apis) > 0) {
-        customSingleState = 'candidate';
-        customSingleMode = 'historical-unverified';
-      }
+      const candidateReady = window.customSingleStatus?.verification_status === 'unverified-candidate'
+        && Number(window.customSingleStatus.unique_candidate_apis) > 0;
+      customSingleState = screenedReady ? 'available' : candidateReady ? 'candidate' : 'unavailable';
+      customSingleMode = screenedReady ? 'screened' : candidateReady ? 'historical-unverified' : 'unavailable';
     } else {
       customSingleState = 'unavailable';
     }
