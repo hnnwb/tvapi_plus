@@ -6,11 +6,7 @@
     "format": "m3u",
     "source": "https://github.com/iptv-org/iptv",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
-    "notes": "Global community-maintained index. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20 (bounded 100 KiB sample); full playlist exceeds this cataloger's 512 KiB cap. Upstream contribution guide documents stability, geo-block and tokenized-link checks plus owner removal requests, but does not prove rights for every listed channel. Geo-blocking and playback vary; no client import/playback test. Upstream PLAYLISTS.md indexes country, language and category variants.",
-    "clients": {
-      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
-      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
-    }
+    "notes": "Global community-maintained index. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20 (bounded 100 KiB sample); full playlist exceeds this cataloger's 512 KiB cap. Upstream contribution guide documents stability, geo-block and tokenized-link checks plus owner removal requests, but does not prove rights for every listed channel. Geo-blocking and playback vary; no client import/playback test. Upstream PLAYLISTS.md indexes country, language and category variants."
   },
   {
     "id": "iptv-org-china",
@@ -19,11 +15,7 @@
     "format": "m3u",
     "source": "https://github.com/iptv-org/iptv/blob/master/streams/cn.m3u",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
-    "notes": "Country index (does not assert every item originates inside mainland China or is reachable there). HTTP 200, audio/x-mpegurl, #EXTM3U, #EXTINF confirmed 2026-11-20; 156 EXTINF records in the earlier full response. Geo-blocking, stability and rights vary per channel; network/format check only, no playback test.",
-    "clients": {
-      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
-      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
-    }
+    "notes": "Country index (does not assert every item originates inside mainland China or is reachable there). HTTP 200, audio/x-mpegurl, #EXTM3U, #EXTINF confirmed 2026-11-20; 156 EXTINF records in the earlier full response. Geo-blocking, stability and rights vary per channel; network/format check only, no playback test."
   },
   {
     "id": "iptv-org-chinese-language",
@@ -32,11 +24,7 @@
     "format": "m3u",
     "source": "https://github.com/iptv-org/iptv/blob/master/streams",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
-    "notes": "Chinese-language index spanning countries/regions (not mainland-China only). HTTP 200, audio/x-mpegurl, #EXTM3U, #EXTINF confirmed 2026-11-20; 228 EXTINF records in earlier full response. Per-channel rights, reachability and playback are not guaranteed or playback-tested.",
-    "clients": {
-      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
-      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
-    }
+    "notes": "Chinese-language index spanning countries/regions (not mainland-China only). HTTP 200, audio/x-mpegurl, #EXTM3U, #EXTINF confirmed 2026-11-20; 228 EXTINF records in earlier full response. Per-channel rights, reachability and playback are not guaranteed or playback-tested."
   },
   {
     "id": "iptv-org-public-category",
@@ -45,10 +33,6 @@
     "format": "m3u",
     "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
-    "notes": "Upstream category index named Public, not a legal determination that every channel is public-domain or openly licensed. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20; 9,376 bytes sampled. Per-channel rights and availability require independent review; not playback-tested.",
-    "clients": {
-      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
-      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
-    }
+    "notes": "Upstream category index named Public, not a legal determination that every channel is public-domain or openly licensed. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20; 9,376 bytes sampled. Per-channel rights and availability require independent review; not playback-tested."
   }
 ]

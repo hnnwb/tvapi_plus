@@ -59,6 +59,24 @@ class RefreshStatusTests(unittest.TestCase):
         self.assertEqual(validate.call_count, 2)
         self.assertEqual(result["attempts"][-1]["endpoint"], "https://backup.example/config.json")
 
+    @patch("scripts.refresh_status.check_catalog.validate_public_target", return_value=None)
+    @patch("scripts.refresh_status.check_catalog.validate_remote")
+    def test_tvbox_profile_is_forwarded_but_default_profile_remains_catalog(self, validate, _validate_target):
+        entry = {"id": "single-config", "url": "https://primary.example/config.json", "format": "tvbox-json"}
+        probe_entry("vod-single", entry, {}, retries=0, delay=0)
+        self.assertEqual(validate.call_args.kwargs["request_profile"], "catalog")
+        probe_entry("vod-single", entry, {}, retries=0, delay=0, request_profile="tvbox")
+        self.assertEqual(validate.call_args.kwargs["request_profile"], "tvbox")
+
+    @patch("scripts.check_catalog.validate_public_target", return_value=None)
+    @patch("scripts.check_catalog.validate_remote")
+    def test_catalog_cli_forwards_tvbox_profile(self, validate, _validate_target):
+        from scripts import check_catalog
+        with patch.object(check_catalog, "validate_catalog", return_value=([("vod-single", {"id": "single-config", "url": "https://primary.example/config.json", "format": "tvbox-json"})])):
+            with patch("sys.argv", ["check_catalog.py", "--check-urls", "--request-profile", "tvbox"]):
+                self.assertEqual(check_catalog.main(), 0)
+        self.assertEqual(validate.call_args.kwargs["request_profile"], "tvbox")
+
     def test_endpoint_redaction_drops_credentials_and_masks_sensitive_values(self):
         self.assertEqual(safe_endpoint("https://user:pass@example.test/a%20b?token=secret&lang=zh#frag"),
                          "https://example.test/a%20b?token=%5BREDACTED%5D&lang=zh")

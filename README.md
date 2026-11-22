@@ -2,12 +2,12 @@
 
 **简体中文** | [English](README.en.md)
 
-一个面向 TVBox 生态的资源目录与格式检查项目，涵盖 Yingxia（映霞）、影视仓及其他兼容客户端。仓库记录资源链接和来源信息，不镜像第三方配置内容，也不运行源插件。
+一个面向 TVBox 生态的资源目录与格式检查项目。仓库记录资源链接和来源信息，不镜像第三方配置内容，也不运行源插件。
 
 ## 项目范围
 
-- 使用一个主目录，按资源类型分类，不按客户端拆分 Git 分支。
-- 分别记录客户端兼容声明、链接可访问性和实际播放测试结果，避免把它们混为一谈。
+- 使用一个主目录，按资源类型分类。
+- 分开说明自动链接探测与客户端导入/播放能力；后两者需要运行真实客户端。
 - 自动检查条目元数据；可选执行有限的 HTTP 探测与基础格式检查。
 - 不自动解密、改写、代理或重新发布第三方配置，不在 CI 中执行 JS、Python 或 JAR 插件。
 
@@ -17,7 +17,6 @@
 
 ```text
 catalog/
-  clients.json       # 客户端能力参考表
   vod-single.json    # 单仓配置链接
   vod-multi.json     # 多仓（urls）配置链接
   live.json          # M3U/TXT/JSON 直播列表
@@ -45,15 +44,9 @@ scripts/
   "format": "tvbox-multi",
   "source": "https://github.com/owner/project",
   "license": "以上游条款为准",
-  "notes": "已于 2026-11-20 审核公开引用",
-  "clients": {
-    "yingxia": { "status": "format-claimed", "tested_version": null, "tested_at": null },
-    "yingshicang": { "status": "format-claimed", "tested_version": null, "tested_at": null }
-  }
+  "notes": "已于 2026-11-20 审核公开引用"
 }
 ```
-
-客户端状态可填：`unknown`、`format-claimed`、`import-tested`、`playback-tested`、`incompatible`。只有真实测试后才使用 `import-tested` 或 `playback-tested`，并填写客户端版本和 `YYYY-MM-DD` 日期。`format-claimed` 仅表示格式或上游说明声称兼容，不代表 Yingxia 或影视仓实际验证通过。影视仓不同版本、运行环境和源类型可能表现不同。
 
 各分类允许格式：
 
@@ -65,7 +58,7 @@ scripts/
 | `epg.json` | `epg-xml`、`logo-library` |
 | `tools.json` | `documentation`、`utility` |
 
-客户端参考定义见 [`catalog/clients.json`](catalog/clients.json)，条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
+条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。目录仅显示自动链接探测结果；客户端导入或实际播放需要运行客户端，不在页面显示占位状态。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
 
 ## 本地检查
 
@@ -75,14 +68,16 @@ scripts/
 python3 scripts/check_catalog.py
 python3 scripts/check_catalog.py --check-urls --report probe-report.json
 python3 scripts/refresh_status.py --report /tmp/probe-report.json --retries 0 --delay 0
+# Optional: TVBox-like configuration-fetch request headers (not app/runtime playback)
+python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-report.json --retries 0 --delay 0
 ```
 
-默认只做离线元数据检查。`--check-urls` 仅联系解析到公网地址的第三方主机，使用有超时和响应体大小限制的 GET 请求；跳转目标也必须是公网 HTTP(S)，不执行响应内容。它会对 TVBox JSON、多仓 `urls`、M3U/TXT、直播 JSON 和 EPG XML 做基本结构检查。网络探测失败只记录在报告中，不会自动删除或改写目录条目。不同地区、网络、User-Agent 和上游策略可能导致结果不同。
+默认只做离线元数据检查。`--check-urls` 仅联系解析到公网地址的第三方主机，使用有超时和响应体大小限制的 GET 请求；跳转目标也必须是公网 HTTP(S)，不执行响应内容。它会对 TVBox JSON、多仓 `urls`、M3U/TXT、直播 JSON 和 EPG XML 做基本结构检查。网络探测失败只记录在报告中，不会自动删除或改写目录条目。不同地区、网络、User-Agent 和上游策略可能导致结果不同。刷新脚本默认用项目标识 UA；可选 `--request-profile tvbox` 只模拟 TVBox 风格的配置拉取请求头（`okhttp/3.15` 和 `X-Requested-With: com.github.tvbox.osc`），用来观察服务端兼容性差异，不会运行客户端、Spider 或播放器，也不代表实际导入/播放测试。
 
 ## GitHub Actions
 
 - push 和 Pull Request 对目录、Schema、脚本或工作流文件的变更触发离线元数据检查。
-- 每日两次定时任务及手动选择 URL 检查的工作流会运行有限 URL/格式探测，带短重试；可选 `fallback_urls` 必须先审核且不会自动发现或写入。
+- 每日两次定时任务及手动选择 URL 检查的工作流会运行有限 URL/格式探测，带短重试；可选 `fallback_urls` 必须先审核且不会自动发现或写入。成功仅表示该次链接/格式探测通过，不代表客户端可导入或实际播放。
 - 探测会原子更新 `probe-report.json` 并提交状态文件，保留上次成功时间；当前失败会标记为 failed/stale，不删除目录条目，也不覆盖配置数据。仓库中的空状态报告是首跑基线，不代表探测通过。定时工作流在同一次运行中部署 Pages，确保自动提交后的报告也能发布。
 - 不会下载/镜像第三方配置，不执行 Spider/JS/Python/JAR；探测仍不等于客户端播放测试。失败请求明细作为保留 14 天的 artifact 上传。
 
@@ -90,9 +85,15 @@ python3 scripts/refresh_status.py --report /tmp/probe-report.json --retries 0 --
 
 ## 发布方式
 
-分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。页面支持按名称/格式/来源搜索，并按类别和客户端测试状态筛选；它展示探测与实测状态，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
+分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
 
-“尽量完整”通过持续收集和审核实现，不等于无差别搬运。只有出处、引用权限和格式可说明的条目才能进入目录；播放测试状态必须有版本及日期。定时网络探测只是有限时点的可访问性结果，不保证频道播放质量或长期可用。不要为了填满列表而把未授权、失效、重复或未经验证的源标成优质。
+“尽量完整”通过持续收集和审核实现，不等于无差别搬运。只有出处、引用权限和格式可说明的条目才能进入目录；任何实际播放测试声明都必须有客户端测试证据。
+
+## 自建订阅
+
+本项目可以生成自己的多仓订阅入口，但默认只输出本站已审核目录中的上游 URL，不下载或镜像远端配置。这与将多个配置的 `sites` 合并成单仓不同：合并会复制并改写第三方数据，部分源还引用 Spider、JS、JAR、Python 或其他远程资源，需另行确认许可与运行风险。因此暂不生成“全量聚合单仓”。
+
+自建多仓清单由 `scripts/build_subscriptions.py` 从经过同一目录校验器验证的数据生成到指定输出根目录：`configs.json` 是带出处的配置索引，`subscriptions/tvbox-multi.json` 是 TVBox 多仓 JSON 清单。索引只保留每个唯一 URL 的首个来源；可订阅清单仅包含 `catalog/playback-evidence.json` 中有合格实播证据的 VOD 配置。证据需记录客户端、版本、日期、测试范围及至少 30 秒成功播放；链接探测不能替代该证据。当前证据表为空，因此订阅清单为空。输出不含直播、EPG、工具文档或未经审核的备用地址。Pages 发布后，清单地址为 `https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-multi.json`。不同客户端对“多仓”的格式要求可能不同，导入前请确认客户端协议；当前构建测试只验证文件结构，不证明实际导入或播放。定时网络探测只是有限时点的可访问性结果，不保证频道播放质量或长期可用。不要为了填满列表而把未授权、失效、重复或未经验证的源标成优质。
 
 ## 点播检验方案
 

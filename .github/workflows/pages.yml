@@ -10,8 +10,12 @@ on:
       - "catalog/**"
       - "probe-report.json"
       - "scripts/refresh_status.py"
-      - "schemas/probe-report.schema.json"
+      - "scripts/build_subscriptions.py"
       - "scripts/check_catalog.py"
+      - "schemas/**"
+      - "tests/**"
+      - "README.md"
+      - "README.en.md"
       - ".github/workflows/catalog-check.yml"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -33,10 +37,12 @@ jobs:
       - name: Validate catalog and assemble Pages artifact
         run: |
           python3 scripts/check_catalog.py
+          python3 -m unittest discover -s tests
           mkdir -p _site
           cp index.html styles.css app.js _site/
           cp -R catalog _site/catalog
           if [ -f probe-report.json ]; then cp probe-report.json _site/; fi
+          python3 scripts/build_subscriptions.py --output-dir _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

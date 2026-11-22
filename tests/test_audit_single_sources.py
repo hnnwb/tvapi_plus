@@ -41,6 +41,13 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(json_doc(base64.b64encode(payload)), {"sites": []})
         self.assertEqual(json_doc(gzip.compress(payload)), {"sites": []})
 
+    def test_gzip_decompression_is_bounded(self):
+        import gzip
+        from scripts.audit_single_sources import decompress_gzip_bounded
+        bomb = gzip.compress(b"0" * 4096)
+        with self.assertRaisesRegex(ValueError, "decompressed body exceeds"):
+            decompress_gzip_bounded(bomb, cap=1024)
+
     def test_extracts_play_urls(self):
         self.assertEqual(playable_urls({"vod_play_url": "1080p$https://cdn.test/a.m3u8#tag"}),
                          ["https://cdn.test/a.m3u8"])

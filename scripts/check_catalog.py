@@ -24,8 +24,9 @@ ALLOWED_FORMATS = {
     "epg": {"epg-xml", "logo-library"},
     "tools": {"documentation", "utility"},
 }
-CLIENT_STATES = {"unknown", "format-claimed", "import-tested", "playback-tested", "incompatible"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
+PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}
+MIN_PLAYBACK_SECONDS = 30
 MAX_BODY = 512 * 1024
 TIMEOUT = 12
 
@@ -63,31 +64,96 @@ def load_json(path: Path, errors: list[str]):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
-        fail(errors, str(path.relative_to(ROOT)), f"cannot read JSON: {exc}")
+        try:
+            label = str(path.relative_to(ROOT))
+        except ValueError:
+            label = str(path)
+        fail(errors, label, f"cannot read JSON: {exc}")
         return None
 
 
-def validate_catalog(errors: list[str]) -> list[tuple[str, dict]]:
-    clients_doc = load_json(CATALOG / "clients.json", errors)
-    clients: set[str] = set()
-    if isinstance(clients_doc, dict) and isinstance(clients_doc.get("clients"), list):
-        for client in clients_doc["clients"]:
-            if isinstance(client, dict) and isinstance(client.get("id"), str):
-                clients.add(client["id"])
-    else:
-        fail(errors, "catalog/clients.json", "expected an object with a clients array")
+def validate_playback_evidence(catalog_entries: list[tuple[str, dict]], errors: list[str], evidence_path: Path | None = None) -> set[str]:
+    entries_by_id = {entry.get("id"): (category, entry) for category, entry in catalog_entries if isinstance(entry.get("id"), str)}
+    evidence_path = evidence_path or (CATALOG / "playback-evidence.json")
+    document = load_json(evidence_path, errors)
+    if not isinstance(document, list):
+        fail(errors, "catalog/playback-evidence.json", "expected a JSON array")
+        return set()
 
+    verified: set[str] = set()
+    seen: set[str] = set()
+    for index, item in enumerate(document):
+        where = f"catalog/playback-evidence.json[{index}]"
+        if not isinstance(item, dict):
+            fail(errors, where, "expected an object")
+            continue
+        missing = PLAYBACK_EVIDENCE_FIELDS - item.keys()
+        extra = item.keys() - PLAYBACK_EVIDENCE_FIELDS
+        if missing:
+            fail(errors, where, f"missing keys: {', '.join(sorted(missing))}")
+        if extra:
+            fail(errors, where, f"unexpected keys: {', '.join(sorted(extra))}")
+        entry_id = item.get("id")
+        if not isinstance(entry_id, str) or entry_id not in entries_by_id:
+            fail(errors, where, "id must reference an existing catalog entry")
+            continue
+        if not ID_RE.fullmatch(entry_id):
+            fail(errors, where, "id must match the catalog ID pattern")
+        if entry_id in seen:
+            fail(errors, where, f"duplicate playback evidence for id: {entry_id}")
+        seen.add(entry_id)
+        category, _entry = entries_by_id[entry_id]
+        if category not in {"vod-single", "vod-multi"}:
+            fail(errors, where, "playback evidence only applies to VOD configuration entries")
+        for field in ("client", "version", "scope"):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                fail(errors, where, f"{field} must be a non-empty string")
+        tested_at = item.get("tested_at")
+        try:
+            if not isinstance(tested_at, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", tested_at):
+                raise ValueError("not an ISO date")
+            dt.date.fromisoformat(tested_at)
+        except (TypeError, ValueError):
+            fail(errors, where, "tested_at must be a valid YYYY-MM-DD date")
+        duration = item.get("duration_seconds")
+        if isinstance(duration, bool) or not isinstance(duration, int) or duration < MIN_PLAYBACK_SECONDS:
+            fail(errors, where, f"duration_seconds must be an integer of at least {MIN_PLAYBACK_SECONDS}")
+        if item.get("result") != "passed":
+            fail(errors, where, "result must be passed to qualify for a subscription")
+        if (not missing and not extra and item.get("result") == "passed"
+                and category in {"vod-single", "vod-multi"}
+                and all(isinstance(item.get(field), str) and item[field].strip() for field in ("client", "version", "scope"))
+                and isinstance(duration, int) and not isinstance(duration, bool) and duration >= MIN_PLAYBACK_SECONDS):
+            try:
+                if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", item["tested_at"]):
+                    raise ValueError("not an ISO date")
+                dt.date.fromisoformat(item["tested_at"])
+                verified.add(entry_id)
+            except (TypeError, ValueError):
+                pass
+    return verified
+
+
+def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, catalog_dir: Path = CATALOG) -> list[tuple[str, dict]]:
     seen: set[str] = set()
     entries: list[tuple[str, dict]] = []
-    required = {"id", "name", "url", "format", "source", "license", "notes", "clients"}
+    required = {"id", "name", "url", "format", "source", "license", "notes"}
     for category, formats in ALLOWED_FORMATS.items():
-        path = CATALOG / f"{category}.json"
+        path = catalog_dir / f"{category}.json"
         doc = load_json(path, errors)
         if not isinstance(doc, list):
-            fail(errors, str(path.relative_to(ROOT)), "expected a JSON array")
+            try:
+                label = str(path.relative_to(ROOT))
+            except ValueError:
+                label = str(path)
+            fail(errors, label, "expected a JSON array")
             continue
         for index, entry in enumerate(doc):
-            where = f"{path.relative_to(ROOT)}[{index}]"
+            try:
+                relative_path = path.relative_to(ROOT)
+            except ValueError:
+                relative_path = path
+            where = f"{relative_path}[{index}]"
             if not isinstance(entry, dict):
                 fail(errors, where, "expected an object")
                 continue
@@ -118,28 +184,10 @@ def validate_catalog(errors: list[str]) -> list[tuple[str, dict]]:
             for field in ("name", "license", "notes"):
                 if not isinstance(entry.get(field), str) or (field != "notes" and not entry[field].strip()):
                     fail(errors, where, f"{field} must be a non-empty string" if field != "notes" else "notes must be a string")
-            mapping = entry.get("clients")
-            if not isinstance(mapping, dict) or not mapping:
-                fail(errors, where, "clients must be a non-empty object")
-            else:
-                unknown = mapping.keys() - clients
-                if unknown:
-                    fail(errors, where, f"unknown clients: {', '.join(sorted(unknown))}")
-                for client_id, result in mapping.items():
-                    if not isinstance(result, dict) or set(result) != {"status", "tested_version", "tested_at"}:
-                        fail(errors, where, f"clients.{client_id} must contain status, tested_version, tested_at")
-                        continue
-                    if result.get("status") not in CLIENT_STATES:
-                        fail(errors, where, f"clients.{client_id}.status is invalid")
-                    tested_at = result.get("tested_at")
-                    if tested_at is not None:
-                        try:
-                            dt.date.fromisoformat(tested_at)
-                        except (TypeError, ValueError):
-                            fail(errors, where, f"clients.{client_id}.tested_at must be YYYY-MM-DD or null")
-                    if result.get("status") in {"import-tested", "playback-tested"} and (not result.get("tested_version") or not tested_at):
-                        fail(errors, where, f"clients.{client_id} tested states require tested_version and tested_at")
             entries.append((category, entry))
+    verified = validate_playback_evidence(entries, errors, evidence_path=catalog_dir / "playback-evidence.json")
+    if playback_ids is not None:
+        playback_ids.update(verified)
     return entries
 
 
@@ -153,9 +201,14 @@ class PublicRedirectHandler(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(request, response, code, message, headers, new_url)
 
 
-def fetch_bounded(url: str, opener=None) -> tuple[bytes, str, int]:
+def fetch_bounded(url: str, opener=None, request_profile: str = "catalog") -> tuple[bytes, str, int]:
     validate_public_target(url)
-    request = urllib.request.Request(url, headers={"User-Agent": "tvbox-resource-catalog-check/1.0", "Accept": "*/*"})
+    headers = {"User-Agent": "tvbox-resource-catalog-check/1.0", "Accept": "*/*"}
+    if request_profile == "tvbox":
+        headers.update({"User-Agent": "okhttp/3.15", "X-Requested-With": "com.github.tvbox.osc"})
+    elif request_profile != "catalog":
+        raise ValueError("request_profile must be 'catalog' or 'tvbox'")
+    request = urllib.request.Request(url, headers=headers)
     with (opener.open(request, timeout=TIMEOUT) if opener else urllib.request.urlopen(request, timeout=TIMEOUT)) as response:
         final = urllib.parse.urlparse(response.geturl())
         if final.scheme not in {"http", "https"}:
@@ -166,8 +219,8 @@ def fetch_bounded(url: str, opener=None) -> tuple[bytes, str, int]:
         return body, response.headers.get_content_type(), response.status
 
 
-def validate_remote(category: str, entry: dict, opener=None) -> str:
-    body, _content_type, status = fetch_bounded(entry["url"], opener=opener)
+def validate_remote(category: str, entry: dict, opener=None, request_profile: str = "catalog") -> str:
+    body, _content_type, status = fetch_bounded(entry["url"], opener=opener, request_profile=request_profile)
     if not 200 <= status < 300:
         raise ValueError(f"HTTP status {status}")
     fmt = entry["format"]
@@ -209,6 +262,8 @@ def validate_remote(category: str, entry: dict, opener=None) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check-urls", action="store_true", help="make bounded HTTP requests to catalog URLs")
+    parser.add_argument("--request-profile", choices=("catalog", "tvbox"), default="catalog",
+                        help="headers for URL checks; tvbox simulates config-fetch headers only, not playback")
     parser.add_argument("--report", type=Path, help="write JSON probe report to this path")
     args = parser.parse_args()
 
@@ -219,7 +274,7 @@ def main() -> int:
         opener = urllib.request.build_opener(PublicRedirectHandler())
         for category, entry in entries:
             try:
-                validate_remote(category, entry, opener=opener)
+                validate_remote(category, entry, opener=opener, request_profile=args.request_profile)
                 probes.append({"id": entry.get("id"), "status": "ok", "checked_at": dt.datetime.now(dt.timezone.utc).isoformat()})
             except (OSError, urllib.error.URLError, TimeoutError, ValueError, UnicodeError, json.JSONDecodeError, ET.ParseError) as exc:
                 probes.append({"id": entry.get("id"), "status": "failed", "error": str(exc), "checked_at": dt.datetime.now(dt.timezone.utc).isoformat()})

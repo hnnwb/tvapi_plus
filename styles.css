@@ -113,13 +113,6 @@ select option { background: #0d1916; color: #ecf3ef; }
 .item-name { overflow-wrap: anywhere; margin-bottom: 5px; color: #eaf1ec; font-size: 13px; font-weight: 700; }
 .item-source { overflow: hidden; max-width: 100%; color: #84948a; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .item-format { display: inline-flex; width: fit-content; align-items: center; padding: 5px 7px; border: 1px solid #354a3d; background: #101f18; color: #c8e5ae; font-family: var(--mono); font-size: 9px; }
-.client-results { display: flex; flex-wrap: wrap; gap: 6px; }
-.status { display: inline-flex; align-items: center; gap: 6px; padding: 5px 7px; border: 1px solid currentColor; font-size: 9px; white-space: nowrap; }
-.status::before { width: 5px; height: 5px; border-radius: 50%; background: currentColor; content: ''; }
-.status-playback-tested { color: var(--mint); }
-.status-import-tested { color: var(--cyan); }
-.status-format-claimed { color: var(--amber); }
-.status-unknown, .status-incompatible { color: #8d9b93; }
 .test-date { display: block; margin-top: 6px; color: #829188; font-size: 9px; }
 .item-actions { display: flex; align-items: center; justify-content: flex-end; gap: 7px; }
 .item-copy { display: inline-flex; min-height: 34px; align-items: center; justify-content: center; gap: 6px; padding: 0 9px; border: 1px solid #3a5546; background: #0c1914; color: #bdc9c2; cursor: pointer; font-size: 10px; white-space: nowrap; transition: border-color .18s ease, background .18s ease, color .18s ease; }

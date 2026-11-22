@@ -6,10 +6,6 @@
     "format": "tvbox-multi",
     "source": "https://github.com/TVboxorg/TVbox",
     "license": "Subscription aggregates third-party configurations; upstream project/license does not establish rights for individual providers or media. This entry points to the upstream raw GitHub file; review the repository's current terms and each nested provider before relying on it.",
-    "notes": "Listed as an auto-probed multi-repository service in the original awesome-tvbox collection. Direct request to the upstream raw GitHub endpoint returned HTTP 206 and valid JSON with 23 urls entries on 2026-11-20. This check did not verify each nested subscription, VOD rights, stability or client import. Use as a discovery index only.",
-    "clients": {
-      "yingxia": { "status": "unknown", "tested_version": null, "tested_at": null },
-      "yingshicang": { "status": "unknown", "tested_version": null, "tested_at": null }
-    }
+    "notes": "Listed as an auto-probed multi-repository service in the original awesome-tvbox collection. Direct request to the upstream raw GitHub endpoint returned HTTP 206 and valid JSON with 23 urls entries on 2026-11-20. This check did not verify each nested subscription, VOD rights, stability or client import. Use as a discovery index only."
   }
 ]

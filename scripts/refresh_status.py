@@ -71,7 +71,7 @@ def scrub_error(exc: Exception, endpoints: list[str]) -> str:
     return f"{type(exc).__name__}: {message[:240]}"
 
 
-def probe_entry(category: str, entry: dict, previous: dict, retries: int = MAX_RETRIES, delay: float = RETRY_DELAY) -> dict:
+def probe_entry(category: str, entry: dict, previous: dict, retries: int = MAX_RETRIES, delay: float = RETRY_DELAY, request_profile: str = "catalog") -> dict:
     checked_at = dt.datetime.now(dt.timezone.utc).isoformat()
     endpoints = [entry["url"]]
     fallback_urls = entry.get("fallback_urls", [])
@@ -88,7 +88,7 @@ def probe_entry(category: str, entry: dict, previous: dict, retries: int = MAX_R
                 try:
                     entry["url"] = url
                     check_catalog.validate_public_target(url)
-                    check_catalog.validate_remote(category, entry, opener=SAFE_OPENER)
+                    check_catalog.validate_remote(category, entry, opener=SAFE_OPENER, request_profile=request_profile)
                 finally:
                     entry["url"] = old_url
                 attempts.append({"endpoint": safe_endpoint(url), "attempt": attempt + 1, "result": "ok"})
@@ -122,8 +122,8 @@ def probe_entry(category: str, entry: dict, previous: dict, retries: int = MAX_R
     }
 
 
-def refresh(entries: list[tuple[str, dict]], previous: dict, retries: int = MAX_RETRIES, delay: float = RETRY_DELAY) -> dict:
-    probes = [probe_entry(category, entry, previous, retries, delay) for category, entry in entries]
+def refresh(entries: list[tuple[str, dict]], previous: dict, retries: int = MAX_RETRIES, delay: float = RETRY_DELAY, request_profile: str = "catalog") -> dict:
+    probes = [probe_entry(category, entry, previous, retries, delay, request_profile=request_profile) for category, entry in entries]
     return {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(), "schema_version": 2, "probes": probes}
 
 
@@ -142,6 +142,8 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--retries", type=int, default=MAX_RETRIES)
     parser.add_argument("--delay", type=float, default=RETRY_DELAY)
+    parser.add_argument("--request-profile", choices=("catalog", "tvbox"), default="catalog",
+                        help="HTTP headers for compatibility checks; tvbox only simulates config-fetch headers, not playback")
     args = parser.parse_args()
     if not 0 <= args.retries <= 5:
         parser.error("--retries must be between 0 and 5")
@@ -157,7 +159,7 @@ def main() -> int:
     except ValueError as exc:
         print(str(exc), file=sys.stderr)
         return 1
-    report = refresh(entries, previous, retries=args.retries, delay=args.delay)
+    report = refresh(entries, previous, retries=args.retries, delay=args.delay, request_profile=args.request_profile)
     atomic_write(args.report, report)
     failed = sum(item["status"] == "failed" for item in report["probes"])
     stale = sum(item["stale"] for item in report["probes"])

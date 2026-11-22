@@ -7,6 +7,7 @@ import datetime as dt
 import base64
 import gzip
 import hashlib
+import io
 import ipaddress
 import json
 import re
@@ -21,6 +22,7 @@ from pathlib import Path
 README_URL = "https://raw.githubusercontent.com/jiji262/awesome-tvbox/main/README.md"
 UA = "tvapi-plus-safe-audit/1.0 (+https://github.com/hnnwb/tvapi_plus)"
 MAX_CONFIG = 2 * 1024 * 1024
+MAX_DECOMPRESSED = 8 * 1024 * 1024
 MAX_API = 256 * 1024
 TIMEOUT = 8
 TEST_WORD = "4K"
@@ -151,9 +153,26 @@ def strip_jsonc(text: str) -> str:
             out.append(ch)
     return "".join(out)
 
+def decompress_gzip_bounded(body: bytes, cap: int = MAX_DECOMPRESSED) -> bytes:
+    if len(body) > MAX_CONFIG:
+        raise ValueError("compressed body exceeds input cap")
+    decoder = gzip.GzipFile(fileobj=io.BytesIO(body))
+    chunks = []
+    total = 0
+    while True:
+        chunk = decoder.read(min(64 * 1024, cap - total + 1))
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > cap:
+            raise ValueError(f"decompressed body exceeds {cap} byte safety cap")
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
 def json_doc(body: bytes):
     if body.startswith(bytes((0x1f, 0x8b))):
-        body = gzip.decompress(body)
+        body = decompress_gzip_bounded(body)
     text = body.decode("utf-8-sig").strip()
     if not text.startswith(("{", "[")):
         try:
