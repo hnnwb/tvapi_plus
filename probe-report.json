@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-22T13:27:52.328170+00:00",
+  "generated_at": "2026-11-22T22:36:23.642549+00:00",
   "schema_version": 2,
   "probes": [
     {
       "id": "xiaoma-tvbox-config",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:45.250848+00:00",
-      "last_success_at": "2026-11-22T13:27:45.250848+00:00",
+      "checked_at": "2026-11-22T22:36:21.188743+00:00",
+      "last_success_at": "2026-11-22T22:36:21.188743+00:00",
       "configured_url": "https://szyyds.cn/tv/x.json",
       "used_endpoint": "https://szyyds.cn/tv/x.json",
       "used_fallback": false,
@@ -18,14 +18,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:45.250848+00:00"
     },
     {
       "id": "tvboxorg-multi-subscription",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.367083+00:00",
-      "last_success_at": "2026-11-22T13:27:50.367083+00:00",
+      "checked_at": "2026-11-22T22:36:22.184625+00:00",
+      "last_success_at": "2026-11-22T22:36:22.184625+00:00",
       "configured_url": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_endpoint": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_fallback": false,
@@ -36,13 +36,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:50.367083+00:00"
     },
     {
       "id": "iptv-org-global",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.502105+00:00",
+      "checked_at": "2026-11-22T22:36:22.325942+00:00",
       "last_success_at": null,
       "configured_url": "https://iptv-org.github.io/iptv/index.m3u",
       "used_endpoint": null,
@@ -61,8 +61,8 @@
       "id": "iptv-org-china",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.589049+00:00",
-      "last_success_at": "2026-11-22T13:27:50.589049+00:00",
+      "checked_at": "2026-11-22T22:36:22.419004+00:00",
+      "last_success_at": "2026-11-22T22:36:22.419004+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "used_fallback": false,
@@ -73,14 +73,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:50.589049+00:00"
     },
     {
       "id": "iptv-org-chinese-language",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.600266+00:00",
-      "last_success_at": "2026-11-22T13:27:50.600266+00:00",
+      "checked_at": "2026-11-22T22:36:22.446412+00:00",
+      "last_success_at": "2026-11-22T22:36:22.446412+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "used_fallback": false,
@@ -91,14 +91,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:50.600266+00:00"
     },
     {
       "id": "iptv-org-public-category",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.610423+00:00",
-      "last_success_at": "2026-11-22T13:27:50.610423+00:00",
+      "checked_at": "2026-11-22T22:36:22.477078+00:00",
+      "last_success_at": "2026-11-22T22:36:22.477078+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/categories/public.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/categories/public.m3u",
       "used_fallback": false,
@@ -109,13 +109,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:50.610423+00:00"
     },
     {
       "id": "suzukua-xmltv-epg",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:50.889939+00:00",
+      "checked_at": "2026-11-22T22:36:22.579586+00:00",
       "last_success_at": null,
       "configured_url": "https://epg.zsdc.eu.org/t.xml",
       "used_endpoint": null,
@@ -134,7 +134,7 @@
       "id": "epg-pw-china-xmltv",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:51.250871+00:00",
+      "checked_at": "2026-11-22T22:36:22.957181+00:00",
       "last_success_at": null,
       "configured_url": "https://epg.pw/xmltv/epg_CN.xml",
       "used_endpoint": null,
@@ -153,8 +153,8 @@
       "id": "iptv-org-epg-toolkit",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:51.355927+00:00",
-      "last_success_at": "2026-11-22T13:27:51.355927+00:00",
+      "checked_at": "2026-11-22T22:36:23.049222+00:00",
+      "last_success_at": "2026-11-22T22:36:23.049222+00:00",
       "configured_url": "https://github.com/iptv-org/epg",
       "used_endpoint": "https://github.com/iptv-org/epg",
       "used_fallback": false,
@@ -165,14 +165,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:51.355927+00:00"
     },
     {
       "id": "fongmi-config-reference",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:52.049995+00:00",
-      "last_success_at": "2026-11-22T13:27:52.049995+00:00",
+      "checked_at": "2026-11-22T22:36:23.412652+00:00",
+      "last_success_at": "2026-11-22T22:36:23.412652+00:00",
       "configured_url": "https://fongmi.github.io/TV/config/",
       "used_endpoint": "https://fongmi.github.io/TV/config/",
       "used_fallback": false,
@@ -183,14 +183,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:52.049995+00:00"
     },
     {
       "id": "bbb-hls-playback-test",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-22T13:27:52.223547+00:00",
-      "last_success_at": "2026-11-22T13:27:52.223547+00:00",
+      "checked_at": "2026-11-22T22:36:23.555933+00:00",
+      "last_success_at": "2026-11-22T22:36:23.555933+00:00",
       "configured_url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
       "used_endpoint": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
       "used_fallback": false,
@@ -201,7 +201,7 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-22T13:27:52.223547+00:00"
     }
   ]
 }
