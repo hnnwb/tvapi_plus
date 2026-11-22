@@ -106,16 +106,16 @@ function renderCustomSingleState() {
   const link = document.getElementById('custom-single-link');
   if (!link) return;
   const available = customSingleState === 'available' || customSingleState === 'candidate';
-  link.hidden = customSingleState === 'unavailable' || customSingleState === 'loading';
-  link.href = available ? 'subscriptions/tvbox-custom-single.json' : '#custom-single-link';
-  link.classList.toggle('is-disabled', !available);
-  link.setAttribute('aria-disabled', String(!available));
+  link.hidden = false;
+  link.href = 'subscriptions/tvbox-custom-single.json';
+  link.classList.remove('is-disabled');
+  link.setAttribute('aria-disabled', 'false');
   link.title = customSingleMode === 'historical-unverified'
     ? (lang === 'zh' ? '历史结构化配置中的去重 type-1 接口；仅作候选，未实播' : 'Deduplicated type-1 APIs from structural config parses; candidates only, not playback tested')
     : customSingleMode === 'screened'
       ? (lang === 'zh' ? 'CMS 接口检查通过；媒体和客户端播放未验证' : 'CMS checks passed; media and client playback unverified')
       : '';
-  link.tabIndex = available ? 0 : -1;
+  link.tabIndex = 0;
   link.querySelector('[data-i18n="quickCustom"]').textContent = customSingleMode === 'historical-unverified'
     ? (lang === 'zh' ? `历史候选 API · 未验证播放 · ${window.customSingleStatus?.unique_candidate_apis || 0} 个` : `Historical API candidates · playback unverified · ${window.customSingleStatus?.unique_candidate_apis || 0}`)
     : available ? TEXT[lang].customSingleAvailable : TEXT[lang].customSingleUnavailable;
@@ -187,10 +187,10 @@ async function loadData() {
       const screening = await screeningResponse.json();
       if (customStatusResponse?.ok) window.customSingleStatus = await customStatusResponse.json();
       const screenedReady = Number(screening.summary?.included) > 0 && Number(screening.summary?.cms_api_tested) > 0;
-      customSingleState = screenedReady ? 'available' : Number(screening.limits?.historical_candidate_apis) > 0 ? 'candidate' : 'unavailable';
       const candidateReady = window.customSingleStatus?.verification_status === 'unverified-candidate'
         && Number(window.customSingleStatus.unique_candidate_apis) > 0;
       customSingleState = screenedReady ? 'available' : candidateReady ? 'candidate' : 'unavailable';
+      document.getElementById('custom-single-link').dataset.sourceCount = String(window.customSingleStatus?.unique_candidate_apis || 0);
       customSingleMode = screenedReady ? 'screened' : candidateReady ? 'historical-unverified' : 'unavailable';
     } else {
       customSingleState = 'unavailable';

@@ -118,8 +118,20 @@ class BuildSubscriptionTests(unittest.TestCase):
             build_subscriptions.write_outputs(output, subscriptions, index, config)
             written = json.loads((output / "subscriptions/tvbox-custom-single.json").read_text())
         self.assertEqual(len(index["configs"]), 1)
+        self.assertEqual(index["configs"][0]["id"], "tvapi-plus-custom-single")
+        self.assertEqual(index["configs"][0]["display_order"], 1)
         self.assertEqual(written["sites"], [{"key": "cms", "name": "CMS", "type": 1, "api": "https://api.example/vod", "searchable": 1, "quickSearch": 1, "filterable": 1}])
         self.assertEqual(set(written), {"spider", "wallpaper", "sites", "parses", "lives", "ads"})
+
+    def test_custom_candidate_is_first_ahead_of_xiaoma_and_multi(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            catalog = self.write_catalog(root, single=[record("xiaoma-tvbox-config", "Xiaoma", "https://xiaoma.example/config.json", "tvbox-json")], multi=[record("tvboxorg-multi-subscription", "Multi", "https://multi.example/config.json", "tvbox-multi")])
+            audit_path = root / "audit.json"
+            audit_path.write_text(json.dumps({"results": [{"config": {"result": "tvbox-json-structural"}, "cms": [{"api": "https://cms.example/vod", "key": "cms", "name": "CMS"}]}]}), encoding="utf-8")
+            _, index, _ = build_subscriptions.build(catalog, custom_candidates=audit_path)
+        self.assertEqual([row["id"] for row in index["configs"]], ["tvapi-plus-custom-single", "xiaoma-tvbox-config", "tvboxorg-multi-subscription"])
+        self.assertEqual([row["display_order"] for row in index["configs"]], [1, 2, 3])
 
     def test_candidate_fallback_builds_deduplicated_unverified_apis(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -144,6 +156,8 @@ class BuildSubscriptionTests(unittest.TestCase):
             output = root / "public"
             build_subscriptions.write_outputs(output, subscriptions, index, config, build_subscriptions.build_custom_candidates_status(audit_path))
             written = json.loads((output / "subscriptions/tvbox-custom-single.json").read_text())
+        self.assertEqual([row["id"] for row in index["configs"]], ["tvapi-plus-custom-single"])
+        self.assertEqual([row["display_order"] for row in index["configs"]], [1])
         self.assertEqual(len(written["sites"]), 1)
         self.assertEqual([x["api"] for x in config["sites"]], ["https://cms.example/api.php/provide/vod"])
         self.assertTrue(all(site["type"] == 1 for site in config["sites"]))

@@ -44,7 +44,11 @@ def build(catalog_dir: Path = ROOT / "catalog", custom_evidence: Path | None = N
     if custom_candidates is not None and custom_candidates.exists() and (not custom_config or not custom_config["sites"]):
         custom_config = build_custom_candidates(custom_candidates)
     if custom_config and custom_config["sites"]:
-        index.append({"id": "tvapi-plus-custom-single", "name": "TVAPI Plus 自建单仓（候选未实播）", "url": "subscriptions/tvbox-custom-single.json", "source": "Historical awesome-tvbox config audit; candidates are unverified"})
+        index.insert(0, {"id": "tvapi-plus-custom-single", "name": "TVAPI Plus 自建单仓（候选未实播）", "url": "subscriptions/tvbox-custom-single.json", "source": "Historical awesome-tvbox config audit; candidates are unverified"})
+    index = [
+        {**row, "display_order": order}
+        for order, row in enumerate(index, start=1)
+    ]
     return {"urls": urls}, {"configs": index}, custom_config
 
 
