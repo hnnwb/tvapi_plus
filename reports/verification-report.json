@@ -4,7 +4,7 @@
   "summary": {
     "client_playback_verified": false,
     "true_4k_verified": false,
-    "local_unit_tests_passed": 26
+    "local_unit_tests_passed": 40
   },
   "checks": [
     {

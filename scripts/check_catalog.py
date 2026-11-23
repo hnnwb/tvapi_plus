@@ -334,6 +334,10 @@ def validate_remote(category: str, entry: dict, opener=None, request_profile: st
             raise ValueError("response body is empty")
         if fmt in {"web", "link-page"} and b"html" not in _content_type.encode() and _content_type not in {"application/xhtml+xml", "text/plain"}:
             raise ValueError(f"expected an HTML landing page, got {_content_type}")
+        if fmt in {"web", "link-page"} and _content_type in {"text/html", "application/xhtml+xml"}:
+            head = body[:4096].lstrip().lower()
+            if not head.startswith((b"<!doctype html", b"<html")):
+                raise ValueError("landing page did not return document markup (gateway or interstitial page)")
     return "ok"
 
 

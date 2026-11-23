@@ -42,7 +42,7 @@
     "format": "txt",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer."
   },
   {
     "id": "zhuiju-fan-tai-ying-iptv",
@@ -51,7 +51,7 @@
     "format": "txt",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer. Bounded GET on 2026-11-23 returned: utf-8-decode-failed."
+    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer."
   },
   {
     "id": "zhuiju-fei-mao-iptv",
@@ -60,6 +60,6 @@
     "format": "txt",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer. Bounded GET on 2026-11-23 returned: http200-unparsed."
+    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer."
   }
 ]

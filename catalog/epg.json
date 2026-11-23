@@ -6,7 +6,7 @@
     "format": "epg-xml",
     "source": "https://epg.zsdc.eu.org/",
     "license": "The upstream repository's MIT LICENSE applies to its software, not necessarily third-party EPG listings/channel data; data licensing and redistribution rights are not explicitly established.",
-    "notes": "The project page reports automated updates at least twice daily and provides t.xml plus t.xml.gz. Direct XML endpoint returned HTTP 200 application/xml; bounded first 65,536 bytes begin with XMLTV <tv>. Separately, the complete gzip artifact was parsed as XMLTV: root <tv>, 129 channels and 36,167 programmes. No channel mapping or client EPG import test was performed. Checked 2026-11-20."
+    "notes": "The project page reports automated updates at least twice daily and provides t.xml plus t.xml.gz. Direct XML endpoint returned HTTP 200 application/xml; bounded first 65,536 bytes begin with XMLTV <tv>. Separately, the complete gzip artifact was parsed as XMLTV: root <tv>, 129 channels and 36,167 programmes. No channel mapping or client EPG import test was performed."
   },
   {
     "id": "epg-pw-china-xmltv",
@@ -15,6 +15,6 @@
     "format": "epg-xml",
     "source": "https://epg.pw/",
     "license": "Public guide endpoint; explicit licensing/redistribution terms for the aggregated listings were not confirmed. Use as a remote client feed only after reviewing the provider's current terms.",
-    "notes": "The original awesome-tvbox list identifies this as the China XMLTV endpoint. Bounded fetch returned HTTP 200 text/xml; response begins with an XML declaration and XMLTV <tv> element. Endpoint reachability and initial XML structure only; no full-document parse, channel mapping or client import/playback test. Checked 2026-11-20."
+    "notes": "The original awesome-tvbox list identifies this as the China XMLTV endpoint. Bounded fetch returned HTTP 200 text/xml; response begins with an XML declaration and XMLTV <tv> element. Endpoint reachability and initial XML structure only; no full-document parse, channel mapping or client import/playback test."
   }
 ]

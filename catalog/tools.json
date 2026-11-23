@@ -15,7 +15,7 @@
     "format": "documentation",
     "source": "https://github.com/FongMi/TV",
     "license": "Documentation copyright and software repository licensing are governed by upstream terms; linked sample/provider data remains third-party.",
-    "notes": "Primary compatibility reference for TVBox/FongMi configuration fields, including urls (depot), Site types 0/1/3/4, parses and live/EPG. Documentation page returned HTTP 200 and distinguishes configuration syntax from app content; it does not provide licensed VOD services. Useful for validating interface shape and future Mac client implementation. Checked 2026-11-20."
+    "notes": "Primary compatibility reference for TVBox/FongMi configuration fields, including urls (depot), Site types 0/1/3/4, parses and live/EPG. Documentation page returned HTTP 200 and distinguishes configuration syntax from app content; it does not provide licensed VOD services. Useful for validating interface shape and future Mac client implementation."
   },
   {
     "id": "bbb-hls-playback-test",
@@ -33,7 +33,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: MoonTV 增强版影视聚合播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: MoonTV 增强版影视聚合播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-zyfun",
@@ -42,7 +42,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 跨平台桌面端视频资源播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 跨平台桌面端视频资源播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-iptv-api",
@@ -51,7 +51,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: IPTV 直播源自动采集筛选更新平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: IPTV 直播源自动采集筛选更新平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-iptv-org-iptv",
@@ -60,7 +60,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 全球公开 IPTV 频道集合. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 全球公开 IPTV 频道集合. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-pansou",
@@ -69,7 +69,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 高性能网盘资源搜索 API 服务. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 高性能网盘资源搜索 API 服务. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-cloudsaver",
@@ -78,7 +78,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 网盘资源搜索与转存工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 网盘资源搜索与转存工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-quark-auto-save",
@@ -87,7 +87,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 夸克网盘自动签到转存整理工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 夸克网盘自动签到转存整理工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-animeko",
@@ -96,7 +96,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 一站式弹幕追番平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 一站式弹幕追番平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-predidit-kazumi",
@@ -105,7 +105,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 免费无广告的番剧采集与在线观看. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 免费无广告的番剧采集与在线观看. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-selenetv",
@@ -114,7 +114,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: MoonTV v100/Helios 后端客户端. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: MoonTV v100/Helios 后端客户端. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-webhometv",
@@ -123,7 +123,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 基于 FongMi/CatVod 二开的 Android 影音应用. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 基于 FongMi/CatVod 二开的 Android 影音应用. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   },
   {
     "id": "zhuiju-webhometv2",
@@ -132,6 +132,6 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 基于 WebHomeTV 二开，支持 TMDB 海报. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+    "notes": "Upstream description: 基于 WebHomeTV 二开，支持 TMDB 海报. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog."
   }
 ]
