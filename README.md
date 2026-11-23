@@ -25,7 +25,7 @@ catalog/
   online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）
   search.json        # 网盘搜索与字幕站
   magnet.json        # 磁力与 BT 搜索站
-  apps.json          # 应用：玩家客户端、手机 / TV / 桌面各端与下载页
+  apps.json          # 应用：玩家客户端、手机 / TV / 桌面各端的仓库、发布页与下载页
 schemas/
   catalog.schema.json       # 目录条目结构参考
   probe-report.schema.json   # 探测报告结构

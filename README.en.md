@@ -26,7 +26,7 @@ catalog/
   search.json        # Cloud-drive search and subtitle sites
   magnet.json        # Magnet and BT search sites
   apps.json          # Player client entry points
-  apps.json          # Apps: players and per-platform clients or download pages
+  apps.json          # Apps: repositories, release pages and download pages per platform
 schemas/
   catalog.schema.json       # Reference catalog entry structure
   probe-report.schema.json   # Availability report structure

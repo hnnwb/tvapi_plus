@@ -27,6 +27,8 @@ ALLOWED_FORMATS = {
     "online": {"web"},
     "magnet": {"web"},
     "search": {"web"},
+    # An app row may be the project repository, the product's own page, or the download
+    # landing page the catalog owner keeps for a build — all three are the app's entry point.
     "apps": {"web", "link-page", "project"},
 }
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
