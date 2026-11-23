@@ -7,5 +7,50 @@
     "source": "https://j.szyyds.cn/",
     "license": "The interface references third-party media providers and executable Spider/parser resources; their individual licenses, redistribution rights and content authorization are not established by the public endpoint. Treat this as an interface compatibility sample, not a lawful content source endorsement.",
     "notes": "Compared against the original awesome-tvbox single-source candidates on 2026-11-21. Direct request returned HTTP 200 application/json; complete 30,571-byte document parsed and contains 62 sites (type 0: 1, type 1: 15, type 3: 46). This only demonstrates config structure, not source quality. User reported that a randomly selected video failed to load in their client on 2026-11-21; client/version, selected site, network and error details were not provided, so the failure is not independently reproducible. Withdrawn as a recommended test pick pending diagnosis. It references a remote Spider image and external JS rule URLs; do not import until you trust and review those code sources. Third-party provider rights are not established."
+  },
+  {
+    "id": "lao-liu-bei-tvbox-config",
+    "name": "老刘备 TVBox 配置候选",
+    "url": "https://raw.liucn.cc/box/m.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not this linked configuration, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "链接由 awesome-zhuiju-free 的 TVBox 配置目录列出；本项目仅记录上游链接，没有复制配置内容。该 URL 的当前可用性、格式、插件安全性、客户端导入及播放均未验证。按不可信第三方配置处理。"
+  },
+  {
+    "id": "wu-ming-tvbox-config",
+    "name": "无名 TVBox 配置候选",
+    "url": "https://6800.kstore.vip/fish.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not this linked configuration, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "链接由 awesome-zhuiju-free 的 TVBox 配置目录列出；本项目仅记录上游链接，没有复制配置内容。该 URL 的当前可用性、格式、插件安全性、客户端导入及播放均未验证。按不可信第三方配置处理。"
+  },
+  {
+    "id": "xiao-he-zi-4k-tvbox-config",
+    "name": "小盒子 4K 配置候选",
+    "url": "http://xhztv.top/4k.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not this linked configuration, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "上游目录以“小盒子4K”名称列出此配置 URL；名称不是 4K 内容或画质证明。本项目仅记录链接，尚未验证当前可用性、配置内容、客户端导入或播放。按不可信第三方配置处理。"
+  },
+  {
+    "id": "xiao-he-zi-single-tvbox-config",
+    "name": "小盒子单仓配置候选",
+    "url": "http://xhztv.top/xhz",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not this linked configuration, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "链接由 awesome-zhuiju-free 的 TVBox 配置目录列出；本项目仅记录上游链接，没有复制配置内容。该 URL 的当前可用性、格式、插件安全性、客户端导入及播放均未验证。按不可信第三方配置处理。"
+  },
+  {
+    "id": "aowu-tvbox-config",
+    "name": "嗷呜 TVBox 配置候选",
+    "url": "http://itv666.cc/aowu/config.webp",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not the linked configuration, plugins, providers, or media. Their redistribution and content rights are not established.",
+    "notes": "awesome-zhuiju-free 将此 URL 列作 TVBox 配置候选；.webp 扩展名不证明内容格式。本项目未下载或解析配置，也未验证安全、客户端导入或播放。"
   }
 ]

@@ -7,5 +7,32 @@
     "source": "https://github.com/TVboxorg/TVbox",
     "license": "Subscription aggregates third-party configurations; upstream project/license does not establish rights for individual providers or media. This entry points to the upstream raw GitHub file; review the repository's current terms and each nested provider before relying on it.",
     "notes": "Listed as an auto-probed multi-repository service in the original awesome-tvbox collection. Direct request to the upstream raw GitHub endpoint returned HTTP 206 and valid JSON with 23 urls entries on 2026-11-20. This check did not verify each nested subscription, VOD rights, stability or client import. Use as a discovery index only."
+  },
+  {
+    "id": "xiao-he-zi-multi-config",
+    "name": "小盒子多仓配置候选",
+    "url": "http://xhztv.top/dc",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not the linked subscription, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "链接由 awesome-zhuiju-free 列为小盒子多仓入口；配置格式、内容、子源权利和更新行为尚未验证。本项目未抓取或镜像其内容。按不可信第三方配置处理。"
+  },
+  {
+    "id": "shi-guang-multi-config",
+    "name": "拾光多仓配置候选",
+    "url": "http://xmbjm.fh4u.org/dc.txt",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not the linked subscription, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "上游目录在多仓条目中提供此 TXT 链接；TVBox 多仓 JSON 结构及客户端导入均未验证。先以候选链接列出，不会假称已验证为有效多仓订阅。"
+  },
+  {
+    "id": "ting-hao-share-multi-config",
+    "name": "挺好分享多仓配置候选",
+    "url": "http://ztha.top/TVBox/GYCK.json",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not the linked subscription, nested providers, plugins, or media. Their redistribution and content rights are not established.",
+    "notes": "上游目录将其列为分享多仓入口；结构、子源权利、客户端导入及播放均未验证。本项目仅保存链接和出处，没有代理或复制远程内容。"
   }
 ]

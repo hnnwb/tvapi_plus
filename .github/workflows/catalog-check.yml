@@ -116,7 +116,6 @@ jobs:
           cp reports/interface-screening.json _site/reports/
           cp reports/single-source-audit.json _site/reports/
           python3 scripts/build_subscriptions.py --output-dir _site
-          cp _site/reports/custom-single-candidates.json _site/reports/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
