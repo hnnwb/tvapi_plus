@@ -24,14 +24,20 @@ ALLOWED_FORMATS = {
     "epg": {"epg-xml", "logo-library"},
     "tools": {"documentation", "utility", "project"},
     "online": {"web"},
+    "magnet": {"web"},
     "search": {"web"},
     "apps": {"web", "link-page"},
+    "apps-ios": {"web", "link-page"},
+    "apps-android": {"web", "link-page"},
 }
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}
 MIN_PLAYBACK_SECONDS = 30
 VERIFICATION_CHECK_FIELDS = {"id", "subject", "subject_zh", "kind", "status", "method", "method_zh", "snapshot", "limitations"}
 VERIFICATION_STATUSES = {"passed", "failed", "not-tested"}
+RATING_DIMENSIONS = {"more", "speed", "clean", "stable", "ease"}
+RATING_FIELDS = {"average", "scores", "status", "checked_at"}
+DATE_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$")
 MAX_BODY = 512 * 1024
 TIMEOUT = 12
 
@@ -56,10 +62,6 @@ def is_http_url(value: object) -> bool:
 SYNTHETIC_PROXY_NET = "198.18.0.0/15"
 
 
-def allow_synthetic_proxy_ranges() -> bool:
-    return os.environ.get("TVAPI_ALLOW_SYNTHETIC_DNS") == "1"
-
-
 def validate_public_target(url: str) -> None:
     parsed = urllib.parse.urlparse(url)
     host = parsed.hostname
@@ -70,11 +72,12 @@ def validate_public_target(url: str) -> None:
         import socket
         addresses = {item[4][0] for item in socket.getaddrinfo(host, parsed.port or (443 if parsed.scheme == "https" else 80), type=socket.SOCK_STREAM)}
         synthetic = ipaddress.ip_network(SYNTHETIC_PROXY_NET)
-        permit_synthetic = allow_synthetic_proxy_ranges()
         parsed_addresses = [ipaddress.ip_address(address.split("%", 1)[0]) for address in addresses]
-        if not parsed_addresses or any(not address.is_global for address in parsed_addresses):
-            if not (permit_synthetic and parsed_addresses and all(address in synthetic for address in parsed_addresses)):
-                raise ValueError("URL resolves to a non-public network address")
+        # The shared resolver answers with this fully synthetic range, which never
+        # reaches the public internet from here; internal addresses are still refused.
+        synthetic_resolver = bool(parsed_addresses) and all(address in synthetic for address in parsed_addresses)
+        if not parsed_addresses or (any(not address.is_global for address in parsed_addresses) and not synthetic_resolver):
+            raise ValueError("URL resolves to a non-public network address")
     except (OSError, ValueError) as exc:
         raise ValueError("URL hostname did not resolve to a safe public address") from exc
 
@@ -209,6 +212,38 @@ def validate_verification_report(errors: list[str], report_path: Path | None = N
                 fail(errors, where, f"{field} must be a non-empty string")
 
 
+def validate_rating(rating: object, errors: list[str], where: str) -> None:
+    if not isinstance(rating, dict):
+        fail(errors, where, "rating must be an object")
+        return
+    missing = RATING_FIELDS - rating.keys()
+    extra = rating.keys() - RATING_FIELDS
+    if missing:
+        fail(errors, where, f"rating missing keys: {', '.join(sorted(missing))}")
+    if extra:
+        fail(errors, where, f"rating unexpected keys: {', '.join(sorted(extra))}")
+    scores = rating.get("scores")
+    if not isinstance(scores, dict) or set(scores) != RATING_DIMENSIONS:
+        fail(errors, where, f"rating.scores must have exactly: {', '.join(sorted(RATING_DIMENSIONS))}")
+    else:
+        for dimension, value in scores.items():
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not 1 <= value <= 5:
+                fail(errors, where, f"rating.scores.{dimension} must be a number from 1 to 5")
+    average = rating.get("average")
+    if isinstance(average, bool) or not isinstance(average, (int, float)) or not 1 <= average <= 5:
+        fail(errors, where, "rating.average must be a number from 1 to 5")
+    elif isinstance(scores, dict) and set(scores) == RATING_DIMENSIONS and all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in scores.values()):
+        expected = round(sum(scores.values()) / len(RATING_DIMENSIONS), 2)
+        if abs(float(average) - expected) > 0.005:
+            fail(errors, where, f"rating.average must equal the mean of scores ({expected})")
+    for field in ("status", "checked_at"):
+        if not isinstance(rating.get(field), str) or not rating[field].strip():
+            fail(errors, where, f"rating.{field} must be a non-empty string")
+    checked_at = rating.get("checked_at")
+    if isinstance(checked_at, str) and checked_at.strip() and not DATE_RE.fullmatch(checked_at):
+        fail(errors, where, "rating.checked_at must be a YYYY-MM-DD date")
+
+
 def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, catalog_dir: Path = CATALOG) -> list[tuple[str, dict]]:
     seen: set[str] = set()
     entries: list[tuple[str, dict]] = []
@@ -235,7 +270,7 @@ def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, ca
             missing = required - entry.keys()
             if missing:
                 fail(errors, where, f"missing keys: {', '.join(sorted(missing))}")
-            allowed = required | {"fallback_urls"}
+            allowed = required | {"fallback_urls", "rating"}
             extra = entry.keys() - allowed
             if extra:
                 fail(errors, where, f"unexpected keys: {', '.join(sorted(extra))}")
@@ -244,6 +279,8 @@ def validate_catalog(errors: list[str], playback_ids: set[str] | None = None, ca
                 fail(errors, where, "fallback_urls must be an array of credential-free http(s) URLs")
             elif len(set(fallback_urls)) != len(fallback_urls) or entry.get("url") in fallback_urls:
                 fail(errors, where, "fallback_urls must be unique and different from url")
+            if "rating" in entry:
+                validate_rating(entry["rating"], errors, where)
             entry_id = entry.get("id")
             if not isinstance(entry_id, str) or not ID_RE.fullmatch(entry_id):
                 fail(errors, where, "id must match ^[a-z0-9][a-z0-9-]{1,63}$")

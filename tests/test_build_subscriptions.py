@@ -28,7 +28,8 @@ class BuildSubscriptionTests(unittest.TestCase):
         documents = {
             "vod-single.json": single or [], "vod-multi.json": multi or [],
             "live.json": [], "epg.json": [], "tools.json": [],
-            "online.json": [], "search.json": [], "apps.json": [],
+            "online.json": [], "magnet.json": [], "search.json": [], "apps.json": [],
+            "apps-ios.json": [], "apps-android.json": [],
             "playback-evidence.json": evidence_rows or [],
         }
         for name, document in documents.items():
@@ -84,7 +85,9 @@ class BuildSubscriptionTests(unittest.TestCase):
         catalog_schema = json.loads((root / "schemas/catalog.schema.json").read_text())
         evidence_schema = json.loads((root / "schemas/playback-evidence.schema.json").read_text())
         self.assertEqual(set(catalog_schema["required"]), {"id", "name", "url", "format", "source", "license", "notes"})
-        self.assertEqual(set(catalog_schema["properties"]) - {"fallback_urls"}, set(catalog_schema["required"]))
+        self.assertEqual(set(catalog_schema["properties"]) - {"fallback_urls", "rating"}, set(catalog_schema["required"]))
+        self.assertEqual(set(catalog_schema["properties"]["rating"]["properties"]), check_catalog.RATING_FIELDS)
+        self.assertEqual(set(catalog_schema["properties"]["rating"]["properties"]["scores"]["properties"]), check_catalog.RATING_DIMENSIONS)
         self.assertEqual(catalog_schema["$defs"]["playbackEvidenceList"]["type"], "array")
         self.assertEqual(catalog_schema["$defs"]["playbackEvidenceList"]["items"]["$ref"], "#/$defs/playbackEvidence")
         self.assertEqual(evidence_schema["type"], "array")

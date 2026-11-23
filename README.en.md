@@ -21,10 +21,13 @@ catalog/
   vod-multi.json     # Multi-repository (urls) configuration links
   live.json          # M3U/TXT/JSON live playlists
   epg.json           # EPG and logo resources
-  tools.json         # Developer documentation, utilities, and open-source projects
-  online.json        # Streaming sites (browser use; not importable by a client)
-  search.json        # Magnet/cloud-drive search and subtitle sites
-  apps.json          # Player clients and download pages
+  tools.json         # Open-source repositories (link and upstream rating only)
+  online.json        # Streaming sites and download landing pages (browser use)
+  search.json        # Cloud-drive search and subtitle sites
+  magnet.json        # Magnet and BT search sites
+  apps.json          # Player client entry points
+  apps-ios.json      # Apple app source repositories
+  apps-android.json  # Android app source repositories
 schemas/
   catalog.schema.json       # Reference catalog entry structure
   probe-report.schema.json   # Availability report structure
@@ -47,9 +50,17 @@ Each catalog file is a JSON array. Use the allowed `format` for its category. En
   "format": "tvbox-multi",
   "source": "https://github.com/owner/project",
   "license": "See upstream terms",
-  "notes": "Reviewed for public linking on 2026-11-20"
+  "notes": "Reviewed for public linking on 2026-11-20",
+  "rating": {
+    "average": 4.4,
+    "scores": { "more": 5, "speed": 4, "clean": 4, "stable": 4, "ease": 5 },
+    "status": "recommended",
+    "checked_at": "2026-06-06"
+  }
 }
 ```
+
+`rating` is optional and may only republish an upstream self-assessment: `scores` must carry the five 1–5 values `more`, `speed`, `clean`, `stable` and `ease`, `average` must equal their mean, and `checked_at` is a `YYYY-MM-DD` date. The checker rejects a wrong mean, an out-of-range value or a missing field. It is the upstream maintainer's judgement: this project measured none of it and does not treat it as a recommendation.
 
 Allowed formats by catalog file:
 
@@ -62,7 +73,10 @@ Allowed formats by catalog file:
 | `tools.json` | `documentation`, `utility`, `project` |
 | `online.json` | `web` |
 | `search.json` | `web` |
+| `magnet.json` | `web` |
 | `apps.json` | `web`, `link-page` |
+| `apps-ios.json` | `web`, `link-page` |
+| `apps-android.json` | `web`, `link-page` |
 
 See [`schemas/catalog.schema.json`](schemas/catalog.schema.json) for the entry structure. The catalog displays automated link-probe results; client import or playback requires running the client and is not shown as a placeholder status. The current checker implements its own field checks; it does not load or validate against the JSON Schema file yet.
 
@@ -105,7 +119,7 @@ Do not execute unknown plugins in this repository or CI. Without the selected si
 
 ## Publishing
 
-The catalog JSON files are the canonical data and also drive the bilingual static catalog site. The site searches names, formats, and sources, and filters by category. It displays automated link-probe results but never runs source plugins. A GitHub Pages workflow deploys on pushes to `main`; before the first deployment, a repository administrator must set Settings → Pages → Source to GitHub Actions. Catalog URLs point to upstream resources; they are not mirrored by this repository.
+The catalog JSON files are the canonical data and also drive the bilingual static catalog site. The page opens with four panels — Apple apps, Android and TV boxes, open-source projects, and browser sites — followed by the full filterable list. Both the panels and the list sort by passing check first, then higher upstream rating, then name. Stars are drawn as half-star glyphs with the numeric value alongside and are hidden below 900px. The site searches names, formats, and sources, and filters by category. It displays automated link-probe results but never runs source plugins. A GitHub Pages workflow deploys on pushes to `main`; before the first deployment, a repository administrator must set Settings → Pages → Source to GitHub Actions. Catalog URLs point to upstream resources; they are not mirrored by this repository.
 
 “Broad coverage” is an ongoing collection and review process, not indiscriminate copying. Entries need traceable provenance, a basis for linking, and a stated format; actual playback claims require client test evidence.
 

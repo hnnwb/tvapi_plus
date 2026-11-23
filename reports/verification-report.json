@@ -4,7 +4,8 @@
   "summary": {
     "client_playback_verified": false,
     "true_4k_verified": false,
-    "local_unit_tests_passed": 40
+    "local_unit_tests_passed": 46,
+    "upstream_ratings_not_measured": true
   },
   "checks": [
     {
@@ -72,6 +73,17 @@
       "method_zh": "本轮验证未启动 TVBox 客户端。",
       "snapshot": "Not applicable",
       "limitations": "No claim of successful import, search, playback, buffering quality, or client compatibility."
+    },
+    {
+      "id": "upstream-rating-republish",
+      "subject": "Upstream star ratings republished untouched",
+      "subject_zh": "上游星级原样转载",
+      "kind": "data-provenance",
+      "status": "passed",
+      "method": "Read scores{more,speed,clean,stable,ease} and verification.checked_at from laoma528/awesome-zhuiju-free resources.json, recomputed each average from the same dimensions, and made the page sort on it. Validator now rejects any average that is not the mean of the five dimensions.",
+      "method_zh": "从 laoma528/awesome-zhuiju-free 的 resources.json 读入 scores{more,speed,clean,stable,ease} 与 verification.checked_at，用同一组维度重算平均值并供页面排序；校验器会拒绝任何与五维均值不符的平均分。",
+      "snapshot": "awesome-zhuiju-free resources.json, 128 records",
+      "limitations": "The stars are the upstream maintainer's self-assessment. No decoder, search or playback run was made to confirm them."
     }
   ]
 }

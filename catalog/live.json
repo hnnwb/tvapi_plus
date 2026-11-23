@@ -6,7 +6,19 @@
     "format": "m3u",
     "source": "https://github.com/iptv-org/iptv",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
-    "notes": "Global community-maintained index. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20 (bounded 100 KiB sample); full playlist exceeds this cataloger's 512 KiB cap. Upstream contribution guide documents stability, geo-block and tokenized-link checks plus owner removal requests, but does not prove rights for every listed channel. Geo-blocking and playback vary; no client import/playback test. Upstream PLAYLISTS.md indexes country, language and category variants."
+    "notes": "Global community-maintained index. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20 (bounded 100 KiB sample); full playlist exceeds this cataloger's 512 KiB cap. Upstream contribution guide documents stability, geo-block and tokenized-link checks plus owner removal requests, but does not prove rights for every listed channel. Geo-blocking and playback vary; no client import/playback test. Upstream PLAYLISTS.md indexes country, language and category variants.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "recommended",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "iptv-org-china",
@@ -42,7 +54,19 @@
     "format": "txt",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer."
+    "notes": "Upstream description: IPTV 直播源地址. Upstream self-assessment status: caution; its ratings are not reproduced here. Playlist source only; channel rights sit with the upstream maintainer.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-10-17"
+    }
   },
   {
     "id": "zhuiju-fan-tai-ying-iptv",

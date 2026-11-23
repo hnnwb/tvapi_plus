@@ -1,0 +1,422 @@
+[
+  {
+    "id": "zhuiju-magnet-kuake-so-1",
+    "name": "PanSou",
+    "url": "https://pansou.de",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "磁力/BT 搜索站，链接指向站点首页；站点是否收录某部影视、种子健康度与版权状态都不在本目录范围内。 上游自评为 五星。 上游标注：纯净的夸克网盘资源搜索引擎",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-06"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-kuakeso",
+    "name": "KK网盘搜",
+    "url": "https://kkso.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "磁力/BT 搜索站，链接指向站点首页；站点是否收录某部影视、种子健康度与版权状态都不在本目录范围内。 上游自评为 五星。 上游标注：夸克百度网盘搜索",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-13"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-zhuiju-us",
+    "name": "追剧吧",
+    "url": "https://www.zhuiju.us/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "磁力/BT 搜索站，链接指向站点首页；站点是否收录某部影视、种子健康度与版权状态都不在本目录范围内。 上游自评为 五星。 上游标注：国内外热门影视网盘资源搜索",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-13"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-gugeso",
+    "name": "谷哥搜",
+    "url": "https://gugeso.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "磁力/BT 搜索站，链接指向站点首页；站点是否收录某部影视、种子健康度与版权状态都不在本目录范围内。 上游自评为 五星。 上游标注：支持9种网盘的综合搜索站",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-13"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-juhebd",
+    "name": "BD影视聚合",
+    "url": "https://www.juhebd.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "提供最新高清电影、电视剧下载资源。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-ainunu",
+    "name": "爱努努",
+    "url": "https://video.ainunu.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "提供绿色影视下载资源。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-bdflixs",
+    "name": "BD电影首发",
+    "url": "https://www.bdflixs.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "提供4K蓝光高清电影更新。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-ldysg",
+    "name": "找电影时光",
+    "url": "https://www.ldysg.win/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "提供高清晰、无水印影视下载资源。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-meijufen",
+    "name": "美剧粉",
+    "url": "https://www.mjf2020.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "全部高清无广告。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-cilixiong",
+    "name": "磁力熊",
+    "url": "https://www.cilixiong.org",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "无删减、无广告。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-ciligou",
+    "name": "磁力狗",
+    "url": "https://ciligou.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "干净好用的磁力资源搜索。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 3.0,
+      "scores": {
+        "more": 3,
+        "speed": 3,
+        "clean": 3,
+        "stable": 3,
+        "ease": 3
+      },
+      "status": "caution",
+      "checked_at": "2026-08-02"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-cilidi",
+    "name": "磁力帝",
+    "url": "https://www.cld123.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "地址发布页cldi.top。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-02"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-bt-yingshi",
+    "name": "BT影视",
+    "url": "https://www.btbtla.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "4k高清电影BT下载。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-4k-yuanpan",
+    "name": "POMO",
+    "url": "https://pomo.mom/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "4K原盘免费下载。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-dianyinggang",
+    "name": "电影港网",
+    "url": "https://www.dyg22.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "无水印4K高清BT种子资源。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-btshijiewang",
+    "name": "BT世界网",
+    "url": "https://www.btsj6.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "高清电影美剧BT种子迅雷下载。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-gaoqing-mp4",
+    "name": "高清MP4",
+    "url": "https://www.mp4ba.vip",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "免费1080电影4K电影。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-gaoqingzu",
+    "name": "高清族",
+    "url": "https://hdzu.org",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "1080P电影下载,4K电影下载。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 3.0,
+      "scores": {
+        "more": 3,
+        "speed": 3,
+        "clean": 3,
+        "stable": 3,
+        "ease": 3
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-sidhub",
+    "name": "SeedHub",
+    "url": "https://sidhub.cc/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "影视&动漫分享，页面纯净、无广告。 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-18"
+    }
+  },
+  {
+    "id": "zhuiju-magnet-acg-rip",
+    "name": "ACG.RIP",
+    "url": "https://acg.rip/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "Upstream directory licence is CC BY 4.0; the linked site keeps its own terms.",
+    "notes": "磁力为主的动漫、OST发布，无广 · 磁力/BT 入口，只收录站点首页：种子健康度、站点内容与版权状态都不在本目录的检测范围内。星级为上游自评（多/快/净/稳/易 五项平均），不是本仓库实测。",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-19"
+    }
+  }
+]

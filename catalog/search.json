@@ -6,7 +6,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here."
+    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "zhuiju-assrt",
@@ -15,7 +27,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here."
+    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "zhuiju-subhd",
@@ -24,7 +48,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 分享下载字幕平台. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here."
+    "notes": "Upstream description: 分享下载字幕平台. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "zhuiju-juhebd",
@@ -33,7 +69,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 最新高清电影电视剧下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 最新高清电影电视剧下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
   },
   {
     "id": "zhuiju-ainunu",
@@ -42,7 +90,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 绿色影视下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 绿色影视下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
   },
   {
     "id": "zhuiju-bdflixs",
@@ -51,7 +111,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 4K蓝光高清电影更新. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 4K蓝光高清电影更新. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
   },
   {
     "id": "zhuiju-ldysg",
@@ -60,7 +132,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 影视高清晰无水印下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 影视高清晰无水印下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
   },
   {
     "id": "zhuiju-meijufen",
@@ -69,7 +153,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 全部高清无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 全部高清无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "zhuiju-cilixiong",
@@ -78,7 +174,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 无删减、无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 无删减、无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-06-19"
+    }
   },
   {
     "id": "zhuiju-ciligou",
@@ -87,7 +195,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 干净好用的磁力资源搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 干净好用的磁力资源搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 3.0,
+      "scores": {
+        "more": 3,
+        "speed": 3,
+        "clean": 3,
+        "stable": 3,
+        "ease": 3
+      },
+      "status": "caution",
+      "checked_at": "2026-08-02"
+    }
   },
   {
     "id": "zhuiju-cilidi",
@@ -96,7 +216,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 地址发布页cldi.top. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 地址发布页cldi.top. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-02"
+    }
   },
   {
     "id": "zhuiju-bt-yingshi",
@@ -105,7 +237,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 4k高清电影BT下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 4k高清电影BT下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
   },
   {
     "id": "zhuiju-4k-yuanpan",
@@ -114,7 +258,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 4K原盘免费下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 4K原盘免费下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-29"
+    }
   },
   {
     "id": "zhuiju-dianyinggang",
@@ -123,7 +279,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 无水印4K高清BT种子资源. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 无水印4K高清BT种子资源. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
   },
   {
     "id": "zhuiju-btshijiewang",
@@ -132,7 +300,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 高清电影美剧BT种子迅雷下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 高清电影美剧BT种子迅雷下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
   },
   {
     "id": "zhuiju-gaoqing-mp4",
@@ -141,7 +321,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 免费1080电影4K电影. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 免费1080电影4K电影. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
   },
   {
     "id": "zhuiju-gaoqingzu",
@@ -150,42 +342,18 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 1080P电影下载,4K电影下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
-  },
-  {
-    "id": "zhuiju-kuake-so-1",
-    "name": "PanSou",
-    "url": "https://pansou.de",
-    "format": "web",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 纯净的夸克网盘资源搜索引擎. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
-  },
-  {
-    "id": "zhuiju-kuakeso",
-    "name": "KK网盘搜",
-    "url": "https://kkso.net",
-    "format": "web",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 夸克百度网盘搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
-  },
-  {
-    "id": "zhuiju-zhuiju-us",
-    "name": "追剧吧",
-    "url": "https://www.zhuiju.us/",
-    "format": "web",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 国内外热门影视网盘资源搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
-  },
-  {
-    "id": "zhuiju-gugeso",
-    "name": "谷哥搜",
-    "url": "https://gugeso.com/",
-    "format": "web",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 支持9种网盘的综合搜索站. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory."
+    "notes": "Upstream description: 1080P电影下载,4K电影下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory.",
+    "rating": {
+      "average": 3.0,
+      "scores": {
+        "more": 3,
+        "speed": 3,
+        "clean": 3,
+        "stable": 3,
+        "ease": 3
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
   }
 ]

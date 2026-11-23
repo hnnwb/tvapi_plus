@@ -21,10 +21,13 @@ catalog/
   vod-multi.json     # 多仓（urls）配置链接
   live.json          # M3U/TXT/JSON 直播列表
   epg.json           # EPG 与台标资源
-  tools.json         # 开发文档、工具与开源项目
-  online.json        # 在线影视站（适配浏览器，不导入客户端）
-  search.json        # 磁力/网盘搜索站与字幕站
-  apps.json          # 播放器客户端与下载入口
+  tools.json         # 开源项目仓库（只记地址与上游星级）
+  online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）
+  search.json        # 网盘搜索与字幕站
+  magnet.json        # 磁力与 BT 搜索站
+  apps.json          # 播放器客户端入口
+  apps-ios.json      # 苹果端应用来源仓库
+  apps-android.json  # 安卓端应用来源仓库
 schemas/
   catalog.schema.json       # 目录条目结构参考
   probe-report.schema.json   # 探测报告结构
@@ -47,9 +50,17 @@ scripts/
   "format": "tvbox-multi",
   "source": "https://github.com/owner/project",
   "license": "以上游条款为准",
-  "notes": "已于 2026-11-20 审核公开引用"
+  "notes": "已于 2026-11-20 审核公开引用",
+  "rating": {
+    "average": 4.4,
+    "scores": { "more": 5, "speed": 4, "clean": 4, "stable": 4, "ease": 5 },
+    "status": "recommended",
+    "checked_at": "2026-06-06"
+  }
 }
 ```
+
+`rating` 可选，只能转载上游自评：`scores` 必须包含 `more`、`speed`、`clean`、`stable`、`ease` 五个 1–5 的值，`average` 必须等于五项均值，`checked_at` 为 `YYYY-MM-DD`。检查脚本会拒绝均值不符、越界或字段缺失的评分。它是上游的判断，本仓库没有实测，也不构成推荐。
 
 各分类允许格式：
 
@@ -62,7 +73,10 @@ scripts/
 | `tools.json` | `documentation`、`utility`、`project` |
 | `online.json` | `web` |
 | `search.json` | `web` |
+| `magnet.json` | `web` |
 | `apps.json` | `web`、`link-page` |
+| `apps-ios.json` | `web`、`link-page` |
+| `apps-android.json` | `web`、`link-page` |
 
 条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。目录仅显示自动链接探测结果；客户端导入或实际播放需要运行客户端，不在页面显示占位状态。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
 
@@ -91,7 +105,7 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 ## 发布方式
 
-分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
+分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。页面上半部是四个区块——苹果应用、安卓与电视盒子、开源项目、在线站与搜索——下半部是完整的可筛选列表；区块与列表统一按「检测通过优先、再按上游星级降序、最后按名称」排序。星级以半星显示并附数字，只出现在宽于 900px 的视口。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
 
 “尽量完整”通过持续收集和审核实现，不等于无差别搬运。只有出处、引用权限和格式可说明的条目才能进入目录；任何实际播放测试声明都必须有客户端测试证据。
 

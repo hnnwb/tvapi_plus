@@ -6,6 +6,18 @@
     "format": "tvbox-json",
     "source": "https://j.szyyds.cn/",
     "license": "The interface references third-party media providers and executable Spider/parser resources; their individual licenses, redistribution rights and content authorization are not established by the public endpoint. Treat this as an interface compatibility sample, not a lawful content source endorsement.",
-    "notes": "Compared against the original awesome-tvbox single-source candidates on 2026-11-21. Direct request returned HTTP 200 application/json; complete 30,571-byte document parsed and contains 62 sites (type 0: 1, type 1: 15, type 3: 46). This only demonstrates config structure, not source quality. User reported that a randomly selected video failed to load in their client on 2026-11-21; client/version, selected site, network and error details were not provided, so the failure is not independently reproducible. Withdrawn as a recommended test pick pending diagnosis. It references a remote Spider image and external JS rule URLs; do not import until you trust and review those code sources. Third-party provider rights are not established."
+    "notes": "Compared against the original awesome-tvbox single-source candidates on 2026-11-21. Direct request returned HTTP 200 application/json; complete 30,571-byte document parsed and contains 62 sites (type 0: 1, type 1: 15, type 3: 46). This only demonstrates config structure, not source quality. User reported that a randomly selected video failed to load in their client on 2026-11-21; client/version, selected site, network and error details were not provided, so the failure is not independently reproducible. Withdrawn as a recommended test pick pending diagnosis. It references a remote Spider image and external JS rule URLs; do not import until you trust and review those code sources. Third-party provider rights are not established.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
   }
 ]

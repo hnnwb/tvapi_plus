@@ -1,0 +1,44 @@
+[
+  {
+    "id": "zhuiju-ios-yingshi-app",
+    "name": "苹果iOS影视APP",
+    "url": "https://b.zhuiju.me/p/23",
+    "format": "link-page",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 苹果iOS可用APP合集. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-09-13"
+    }
+  },
+  {
+    "id": "zhuiju-kodi-ios",
+    "name": "Kodi (iOS)",
+    "url": "https://kodi.tv/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 开源、跨平台家庭媒体中心. Upstream self-assessment status: recommended; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them.",
+    "rating": {
+      "average": 4.42,
+      "scores": {
+        "more": 4.5,
+        "speed": 4,
+        "clean": 5,
+        "stable": 4.8,
+        "ease": 3.8
+      },
+      "status": "recommended",
+      "checked_at": "2026-06-06"
+    }
+  }
+]

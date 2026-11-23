@@ -1,586 +1,671 @@
 {
-  "generated_at": "2026-11-23T06:39:07.065127+00:00",
+  "generated_at": "2026-11-23T08:19:23.145605+00:00",
   "probes": [
     {
       "id": "xiaoma-tvbox-config",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "application/json",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "checked_at": "2026-11-23T08:15:00.347243+00:00",
+      "last_success_at": "2026-11-23T07:42:33.433426+00:00",
+      "stale": true
     },
     {
       "id": "tvboxorg-multi-subscription",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/plain",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:00.979657+00:00",
+      "last_success_at": "2026-11-23T08:15:00.979657+00:00"
     },
     {
       "id": "iptv-org-global",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "audio/x-mpegurl",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "response exceeded 524288 bytes",
+      "checked_at": "2026-11-23T08:15:03.467746+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "iptv-org-china",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "audio/x-mpegurl",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:04.660483+00:00",
+      "last_success_at": "2026-11-23T08:15:04.660483+00:00"
     },
     {
       "id": "iptv-org-chinese-language",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "audio/x-mpegurl",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:06.368901+00:00",
+      "last_success_at": "2026-11-23T08:15:06.368901+00:00"
     },
     {
       "id": "iptv-org-public-category",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "audio/x-mpegurl",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:07.754197+00:00",
+      "last_success_at": "2026-11-23T08:15:07.754197+00:00"
     },
     {
       "id": "zhuiju-vma-iptv-source",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "application/octet-stream",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:12.566866+00:00",
+      "last_success_at": "2026-11-23T08:15:12.566866+00:00"
     },
     {
       "id": "zhuiju-fan-tai-ying-iptv",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "image/x-ms-bmp",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte",
+      "checked_at": "2026-11-23T08:15:13.768461+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "zhuiju-fei-mao-iptv",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "application/json",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "TXT playlist contains no recognizable channel lines",
+      "checked_at": "2026-11-23T08:15:15.250581+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "suzukua-xmltv-epg",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "application/xml",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "response exceeded 524288 bytes",
+      "checked_at": "2026-11-23T08:15:16.759806+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "epg-pw-china-xmltv",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/xml",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "iptv-org-epg-toolkit",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "fongmi-config-reference",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "bbb-hls-playback-test",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "audio/mpegurl",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "response exceeded 524288 bytes",
+      "checked_at": "2026-11-23T08:15:20.201955+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "zhuiju-moontvplus",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:21.913805+00:00",
+      "last_success_at": "2026-11-23T08:15:21.913805+00:00"
     },
     {
       "id": "zhuiju-zyfun",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-iptv-api",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-iptv-org-iptv",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:23.707753+00:00",
+      "last_success_at": "2026-11-23T08:15:23.707753+00:00"
     },
     {
       "id": "zhuiju-pansou",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:25.492119+00:00",
+      "last_success_at": "2026-11-23T08:15:25.492119+00:00"
     },
     {
       "id": "zhuiju-cloudsaver",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:26.796739+00:00",
+      "last_success_at": "2026-11-23T08:15:26.796739+00:00"
     },
     {
       "id": "zhuiju-quark-auto-save",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:28.751628+00:00",
+      "last_success_at": "2026-11-23T08:15:28.751628+00:00"
     },
     {
       "id": "zhuiju-animeko",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:30.282530+00:00",
+      "last_success_at": "2026-11-23T08:15:30.282530+00:00"
     },
     {
       "id": "zhuiju-predidit-kazumi",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:32.323121+00:00",
+      "last_success_at": "2026-11-23T08:15:32.323121+00:00"
     },
     {
       "id": "zhuiju-selenetv",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:33.525546+00:00",
+      "last_success_at": "2026-11-23T08:15:33.525546+00:00"
     },
     {
       "id": "zhuiju-webhometv",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:35.719140+00:00",
+      "last_success_at": "2026-11-23T08:15:35.719140+00:00"
     },
     {
       "id": "zhuiju-webhometv2",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:37.672951+00:00",
+      "last_success_at": "2026-11-23T08:15:37.672951+00:00"
     },
     {
       "id": "zhuiju-kankanya",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:38.348068+00:00",
+      "last_success_at": "2026-11-23T08:15:38.348068+00:00"
     },
     {
       "id": "zhuiju-no-video",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 302"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:15:40.560961+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-gaze-red",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "checked_at": "2026-11-23T08:15:52.570673+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "zhuiju-sotvla",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:15:54.495980+00:00",
+      "last_success_at": "2026-11-23T08:15:54.495980+00:00"
     },
     {
       "id": "zhuiju-xlys",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 302"
+      "error": "The read operation timed out",
+      "checked_at": "2026-11-23T08:16:09.402435+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-duonao-video",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 404"
+      "error": "HTTP Error 404: Not Found",
+      "checked_at": "2026-11-23T08:16:10.386435+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-tdgo",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:11.291140+00:00",
+      "last_success_at": "2026-11-23T08:16:11.291140+00:00"
     },
     {
       "id": "zhuiju-ddmf",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:12.467007+00:00",
+      "last_success_at": "2026-11-23T08:16:12.467007+00:00"
     },
     {
       "id": "zhuiju-appmovie",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "landing page did not return document markup (gateway or interstitial page)",
+      "checked_at": "2026-11-23T08:16:13.278275+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "zhuiju-ai-movie",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "status": "failed",
+      "error": "response exceeded 524288 bytes",
+      "checked_at": "2026-11-23T08:16:19.689285+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
     },
     {
       "id": "zhuiju-jpyy",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 521"
+      "error": "HTTP Error 521: ",
+      "checked_at": "2026-11-23T08:16:20.174227+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-tv-937",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "no HTTP response (connection or timeout)"
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "checked_at": "2026-11-23T08:16:20.741020+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-iyf",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:16:21.549754+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-czzymovie",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:16:22.755038+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-libvio",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:16:24.235294+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-auete-video",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:26.132892+00:00",
+      "last_success_at": "2026-11-23T08:16:26.132892+00:00"
     },
     {
       "id": "zhuiju-dyrs",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:28.788400+00:00",
+      "last_success_at": "2026-11-23T08:16:28.788400+00:00"
     },
     {
       "id": "zhuiju-netflixgc",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:33.984805+00:00",
+      "last_success_at": "2026-11-23T08:16:33.984805+00:00"
     },
     {
       "id": "zhuiju-nfyingshi",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:16:34.940852+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-nivod",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 523"
+      "error": "HTTP Error 523: <none>",
+      "checked_at": "2026-11-23T08:16:44.179090+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-ppnix",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:45.834243+00:00",
+      "last_success_at": "2026-11-23T08:16:45.834243+00:00"
     },
     {
       "id": "zhuiju-dbku",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:51.526675+00:00",
+      "last_success_at": "2026-11-23T08:16:51.526675+00:00"
     },
     {
       "id": "zhuiju-bubu-zhuiju",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "no HTTP response (connection or timeout)"
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "checked_at": "2026-11-23T08:16:55.083824+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-yingmao-cangku",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
+      "status": "ok",
+      "checked_at": "2026-11-23T08:16:57.095880+00:00",
+      "last_success_at": "2026-11-23T08:16:57.095880+00:00"
     },
     {
       "id": "zhuiju-aikanbot",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:16:57.609740+00:00",
+      "last_success_at": "2026-11-23T08:16:57.609740+00:00"
     },
     {
       "id": "zhuiju-duse91",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 850"
+      "error": "HTTP Error 850: ",
+      "checked_at": "2026-11-23T08:16:58.296172+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-guangsu-yingshi",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:03.612725+00:00",
+      "last_success_at": "2026-11-23T08:17:03.612725+00:00"
     },
     {
       "id": "zhuiju-haohaokan",
       "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 850"
+      "error": "HTTP Error 850: ",
+      "checked_at": "2026-11-23T08:17:05.757509+00:00",
+      "last_success_at": null,
+      "stale": false
     },
     {
       "id": "zhuiju-ifn",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-zimuku",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 404"
-    },
-    {
-      "id": "zhuiju-assrt",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-subhd",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-juhebd",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
-    },
-    {
-      "id": "zhuiju-ainunu",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-bdflixs",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-ldysg",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-meijufen",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-cilixiong",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-ciligou",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-cilidi",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
-    },
-    {
-      "id": "zhuiju-bt-yingshi",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-4k-yuanpan",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-dianyinggang",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-btshijiewang",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-gaoqing-mp4",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
-    },
-    {
-      "id": "zhuiju-gaoqingzu",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
-    },
-    {
-      "id": "zhuiju-kuake-so-1",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-kuakeso",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-zhuiju-us",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-gugeso",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "no HTTP response (connection or timeout)"
-    },
-    {
-      "id": "zhuiju-animeko-app",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-kazumi",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:07.348590+00:00",
+      "last_success_at": "2026-11-23T08:17:07.348590+00:00"
     },
     {
       "id": "zhuiju-selenetv-app",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-ios-yingshi-app",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:08.748016+00:00",
+      "last_success_at": "2026-11-23T08:17:08.748016+00:00"
     },
     {
       "id": "zhuiju-android-yingshi-app",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
-    },
-    {
-      "id": "zhuiju-kodi",
-      "status": "failed",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "error": "unexpected HTTP 403"
-    },
-    {
-      "id": "zhuiju-tv-xn-yhqu5zs87a-top-3",
-      "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:10.340721+00:00",
+      "last_success_at": "2026-11-23T08:17:10.340721+00:00"
     },
     {
       "id": "zhuiju-yangke-peekpro",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:11.378504+00:00",
+      "last_success_at": "2026-11-23T08:17:11.378504+00:00"
     },
     {
       "id": "zhuiju-webhometv-player",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:13.692005+00:00",
+      "last_success_at": "2026-11-23T08:17:13.692005+00:00"
     },
     {
       "id": "zhuiju-ok-yingshi-player",
       "status": "ok",
-      "checked_at": "2026-11-23T06:39:07.065127+00:00",
-      "content_type": "text/html",
-      "last_success_at": "2026-11-23T06:39:07.065127+00:00"
+      "checked_at": "2026-11-23T08:17:15.112901+00:00",
+      "last_success_at": "2026-11-23T08:17:15.112901+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-kuake-so-1",
+      "status": "failed",
+      "error": "The read operation timed out",
+      "checked_at": "2026-11-23T08:17:35.081967+00:00",
+      "last_success_at": "2026-11-23T07:46:05.000109+00:00",
+      "stale": true
+    },
+    {
+      "id": "zhuiju-magnet-kuakeso",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:38.505959+00:00",
+      "last_success_at": "2026-11-23T08:17:38.505959+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-zhuiju-us",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:40.348396+00:00",
+      "last_success_at": "2026-11-23T08:17:40.348396+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-gugeso",
+      "status": "failed",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "checked_at": "2026-11-23T08:17:40.856027+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-juhebd",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:17:41.249297+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-ainunu",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:41.991214+00:00",
+      "last_success_at": "2026-11-23T08:17:41.991214+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-bdflixs",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:45.078193+00:00",
+      "last_success_at": "2026-11-23T08:17:45.078193+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-ldysg",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:46.071660+00:00",
+      "last_success_at": "2026-11-23T08:17:46.071660+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-meijufen",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:58.257278+00:00",
+      "last_success_at": "2026-11-23T08:17:58.257278+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-cilixiong",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:17:58.823185+00:00",
+      "last_success_at": "2026-11-23T08:17:58.823185+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-ciligou",
+      "status": "failed",
+      "error": "landing page did not return document markup (gateway or interstitial page)",
+      "checked_at": "2026-11-23T08:17:59.954410+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-cilidi",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:02.182606+00:00",
+      "last_success_at": "2026-11-23T08:18:02.182606+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-bt-yingshi",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:04.922508+00:00",
+      "last_success_at": "2026-11-23T08:18:04.922508+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-4k-yuanpan",
+      "status": "failed",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "checked_at": "2026-11-23T08:18:08.226569+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-dianyinggang",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:10.735112+00:00",
+      "last_success_at": "2026-11-23T08:18:10.735112+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-btshijiewang",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:12.981834+00:00",
+      "last_success_at": "2026-11-23T08:18:12.981834+00:00"
+    },
+    {
+      "id": "zhuiju-magnet-gaoqing-mp4",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:18:14.578170+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-gaoqingzu",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:18:16.962461+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-sidhub",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:18:19.140541+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-magnet-acg-rip",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:21.350501+00:00",
+      "last_success_at": "2026-11-23T08:18:21.350501+00:00"
+    },
+    {
+      "id": "zhuiju-zimuku",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found",
+      "checked_at": "2026-11-23T08:18:22.993174+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-assrt",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:24.633368+00:00",
+      "last_success_at": "2026-11-23T08:18:24.633368+00:00"
+    },
+    {
+      "id": "zhuiju-subhd",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:28.640006+00:00",
+      "last_success_at": "2026-11-23T08:18:28.640006+00:00"
+    },
+    {
+      "id": "zhuiju-juhebd",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:18:29.333827+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-ainunu",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:31.539746+00:00",
+      "last_success_at": "2026-11-23T08:18:31.539746+00:00"
+    },
+    {
+      "id": "zhuiju-bdflixs",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:34.827632+00:00",
+      "last_success_at": "2026-11-23T08:18:34.827632+00:00"
+    },
+    {
+      "id": "zhuiju-ldysg",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:36.180176+00:00",
+      "last_success_at": "2026-11-23T08:18:36.180176+00:00"
+    },
+    {
+      "id": "zhuiju-meijufen",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:39.202398+00:00",
+      "last_success_at": "2026-11-23T08:18:39.202398+00:00"
+    },
+    {
+      "id": "zhuiju-cilixiong",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:39.947116+00:00",
+      "last_success_at": "2026-11-23T08:18:39.947116+00:00"
+    },
+    {
+      "id": "zhuiju-ciligou",
+      "status": "failed",
+      "error": "landing page did not return document markup (gateway or interstitial page)",
+      "checked_at": "2026-11-23T08:18:40.368597+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
+    },
+    {
+      "id": "zhuiju-cilidi",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:46.223326+00:00",
+      "last_success_at": "2026-11-23T08:18:46.223326+00:00"
+    },
+    {
+      "id": "zhuiju-bt-yingshi",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:18:50.650511+00:00",
+      "last_success_at": "2026-11-23T08:18:50.650511+00:00"
+    },
+    {
+      "id": "zhuiju-4k-yuanpan",
+      "status": "failed",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "checked_at": "2026-11-23T08:19:02.673024+00:00",
+      "last_success_at": "2026-11-23T06:39:07.065127+00:00",
+      "stale": true
+    },
+    {
+      "id": "zhuiju-dianyinggang",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:04.610058+00:00",
+      "last_success_at": "2026-11-23T08:19:04.610058+00:00"
+    },
+    {
+      "id": "zhuiju-btshijiewang",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:07.045582+00:00",
+      "last_success_at": "2026-11-23T08:19:07.045582+00:00"
+    },
+    {
+      "id": "zhuiju-gaoqing-mp4",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:19:08.585373+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-gaoqingzu",
+      "status": "failed",
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T08:19:10.481027+00:00",
+      "last_success_at": null,
+      "stale": false
+    },
+    {
+      "id": "zhuiju-animeko-app",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:12.057147+00:00",
+      "last_success_at": "2026-11-23T08:19:12.057147+00:00"
+    },
+    {
+      "id": "zhuiju-kazumi",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:15.029233+00:00",
+      "last_success_at": "2026-11-23T08:19:15.029233+00:00"
+    },
+    {
+      "id": "zhuiju-tv-xn-yhqu5zs87a-top-3",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:16.768981+00:00",
+      "last_success_at": "2026-11-23T08:19:16.768981+00:00"
+    },
+    {
+      "id": "zhuiju-ios-yingshi-app",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:18.468696+00:00",
+      "last_success_at": "2026-11-23T08:19:18.468696+00:00"
+    },
+    {
+      "id": "zhuiju-kodi-ios",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:19.536845+00:00",
+      "last_success_at": "2026-11-23T08:19:19.536845+00:00"
+    },
+    {
+      "id": "zhuiju-android-yingshi-app-repo",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:20.503748+00:00",
+      "last_success_at": "2026-11-23T08:19:20.503748+00:00"
+    },
+    {
+      "id": "zhuiju-kodi-android",
+      "status": "ok",
+      "checked_at": "2026-11-23T08:19:23.141714+00:00",
+      "last_success_at": "2026-11-23T08:19:23.141714+00:00"
     }
   ]
 }

@@ -10,74 +10,133 @@ const CATALOGS = [
   { file: 'catalog/vod-multi.json', category: 'vod-multi' },
   { file: 'catalog/live.json', category: 'live' },
   { file: 'catalog/epg.json', category: 'epg' },
-  { file: 'catalog/online.json', category: 'online' },
+  { file: 'catalog/magnet.json', category: 'magnet' },
   { file: 'catalog/search.json', category: 'search' },
   { file: 'catalog/apps.json', category: 'apps' },
+  { file: 'catalog/apps-ios.json', category: 'apps-ios' },
+  { file: 'catalog/apps-android.json', category: 'apps-android' },
   { file: 'catalog/tools.json', category: 'tools' },
+  { file: 'catalog/online.json', category: 'online' },
 ];
 
+// Cards are shown only where they hold something: the rest is the sortable list.
+const PANELS = {
+  apple: ['apps-ios'],
+  android: ['apps-android'],
+  opensource: ['tools'],
+  web: ['online', 'search', 'magnet', 'apps'],
+};
+
 const IMPORTABLE = new Set(['vod-single', 'vod-multi', 'live', 'epg']);
+const WEB_ONLY = new Set(['online', 'magnet', 'search', 'apps', 'tools']);
 const CONFIG_INDEX_IDS = new Set(['tvapi-plus-custom-single', 'xiaoma-tvbox-config']);
+const CATEGORY_ORDER = {
+  'vod-single': 0, 'vod-multi': 1, live: 2, epg: 3, magnet: 4, search: 5,
+  apps: 6, 'apps-ios': 7, 'apps-android': 8, tools: 9, online: 10,
+};
+
+const STAR_PATH = 'M8 .9l2.1 4.4 4.8.7-3.5 3.4.8 4.8L8 11.9l-4.2 2.3.8-4.8L1.1 6l4.8-.7z';
+const STAR_DEFS = `<svg class="star-defs" aria-hidden="true" width="0" height="0" focusable="false"><defs><linearGradient id="star-half"><stop offset="50%" stop-color="#f5a623"/><stop offset="50%" stop-color="#e3e3e8"/></linearGradient></defs></svg>`;
 
 const TEXT = {
   zh: {
-    navCatalog: '资源', navVerification: '检测', navRules: '收录规则',
-    heroEyebrow: '配置 · 直播 · EPG · 在线站 · 项目',
+    navApple: '苹果', navAndroid: '安卓', navOpenSource: '开源', navCatalog: '全部资源', navVerification: '检测',
+    heroEyebrow: '配置 · 苹果 · 安卓 · 开源 · 网盘与磁力',
     heroTitle: '资源索引',
-    heroSub: '一个直接可用的索引：能复制、能打开、标着上游和最近一次检测结果。不送你猜。',
-    explore: '浏览资源', openIndex: '配置索引 JSON',
-    statTotal: '目录条目', statReachable: '最近一次可达', statChecked: '检测时间', statCandidate: '自建候选接口',
+    heroSub: '每个区块都按上游星级排序：星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。',
+    explore: '开始浏览', openIndex: '配置索引 JSON',
+    statTotal: '目录条目', statReachable: '最近一次可达', statRated: '带上游星级', statChecked: '检测时间',
+    panelAppleEyebrow: 'iPhone · iPad · Mac',
+    panelAppleTitle: '苹果上能装的应用',
+    panelAppleLead: '列的是应用来源仓库，不是安装包。在名单里能看到 Informations.plist 的，可以自签后用 AltStore 一类工具装；不在名单里的，只能在 App Store 找。',
+    panelAndroidEyebrow: 'Android · TV',
+    panelAndroidTitle: '安卓与电视盒子',
+    panelAndroidLead: 'FongMi 一类播放器在这里。装好后导入单仓或多仓配置才有片源，配置在「全部资源」里。',
+    panelOpenSourceEyebrow: '源码 · 自建',
+    panelOpenSourceTitle: '开源项目',
+    panelOpenSourceLead: '只记仓库地址与上游星级，不构建、不执行、不镜像任何一份代码。',
+    panelWebEyebrow: '浏览器 · 无需安装',
+    panelWebTitle: '在线站与搜索',
+    panelWebLead: '网盘、字幕与磁力搜索都是网页入口，复制到播放器里不会生效。',
+    listEyebrow: '检测 · 排序',
+    listTitle: '全部资源',
     allCategories: '全部', single: '单仓配置', multi: '多仓配置', live: '直播', epg: 'EPG',
-    online: '在线影视站', searchSites: '网盘与字幕', apps: '播放器', tools: '工具与项目',
+    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '播放器', tools: '工具', via: '来源',
     searchLabel: '搜索资源', searchPlaceholder: '搜索名称、来源',
     result: (shown, total) => `显示 ${shown} / ${total} 条`,
-    hintAll: '配置与直播可直接导入客户端；在线站、搜索与播放器是浏览器入口，导入客户端无效。',
+    hintAll: '同一分类内先按检测结果、再按上游星级排序；星级相同的按名称排。',
     hintImportable: '这一类可以直接复制链接、在客户端里导入。检测只说明当时能取到，不代表能播放。',
     hintWeb: '这一类是在浏览器里用的站点，不是 TVBox 配置，复制到客户端不会生效。',
+    ratedAs: '上游自评',
+    ratedNone: '无星级',
+    removed: '上游已移除',
     emptyText: '当前分类没有条目。',
     noResults: '没有匹配的条目。',
     verifyTitle: '检测记录', verifyLead: '检测只回答“当时能不能取到、取到的是不是那个格式”。它不证明能导入，也不证明能播放。',
-    testsLabel: '自动化测试通过', clientNotTested: '客户端实播：未验证', true4kNotTested: '真实 4K：未验证',
+    testsLabel: '自动化测试通过', ratingsLabel: '星级：上游自评转载', clientNotTested: '客户端实播：未验证', true4kNotTested: '真实 4K：未验证',
     checkPassed: '通过', checkFailed: '失败', checkNotTested: '未测试',
     rulesTitle: '收录规则',
     rule1Title: '来源可回溯', rule1Text: '每条都记上游出处与许可说明。不镜像、不重发第三方配置。',
-    rule2Title: '结果有时效', rule2Text: '定时检测只代表一次网络观察，隔天的结果可能与今天不同。',
+    rule2Title: '星级是上游自评', rule2Text: '星级原样转载自上游，附检查日期；本仓库没有实测，也不替上游背书。',
     rule3Title: '不冒充实测', rule3Text: '没有客户端实播证据的条目，不会被标成“已测试”或“优质”。',
-    footNote: '条目链接指向上游，版权归原作者；检测结果不构成可用性保证。',
-    copy: '复制', copied: '已复制', copyFailed: '复制失败', open: '打开',
-    probeOk: '检测通过', probeFail: '检测失败', probeStale: '上次通过',
-    noProbe: '未检测', lastSuccess: (d) => `上次通过 ${d}`, checkedAt: (d) => `检测于 ${d}`,
-    category: { 'vod-single': '单仓配置', 'vod-multi': '多仓配置', live: '直播', epg: 'EPG', online: '在线影视站', search: '网盘与字幕', apps: '播放器', tools: '工具与项目' },
+    footNote: '条目链接指向上游，版权归原作者；星级与检测结果都不构成可用性保证。',
+    copy: '复制', copied: '已复制', copyFailed: '复制失败', open: '打开', details: '详情',
+    probeOk: '检测通过', probeFail: '检测失败', probeStale: '上次通过', noProbe: '未检测',
+    lastSuccess: (d) => `上次通过 ${d}`,
+    category: {
+      'vod-single': '单仓配置', 'vod-multi': '多仓配置', live: '直播', epg: 'EPG', magnet: '磁力与 BT',
+      search: '网盘与字幕', apps: '播放器', 'apps-ios': '苹果应用', 'apps-android': '安卓应用',
+      tools: '开源项目', online: '在线影视站',
+    },
     loadError: '目录文件读取失败，请刷新重试。',
   },
   en: {
-    navCatalog: 'Resources', navVerification: 'Checks', navRules: 'Rules',
-    heroEyebrow: 'Configs · Live · EPG · Streaming sites · Projects',
+    navApple: 'Apple', navAndroid: 'Android', navOpenSource: 'Open source', navCatalog: 'All resources', navVerification: 'Checks',
+    heroEyebrow: 'Configs · Apple · Android · Open source · Cloud & magnet',
     heroTitle: 'Resource index',
-    heroSub: 'A plain, usable index: copy it, open it, with upstream credit and the latest check on every row. No guessing games.',
-    explore: 'Browse resources', openIndex: 'Config index JSON',
-    statTotal: 'Catalog entries', statReachable: 'Reachable last check', statChecked: 'Checked', statCandidate: 'Candidate APIs',
+    heroSub: 'Every section is ordered by the upstream star rating, highest first. Stars are the upstream self-assessment; a check only says the URL answered.',
+    explore: 'Start browsing', openIndex: 'Config index JSON',
+    statTotal: 'Catalog entries', statReachable: 'Reachable last check', statRated: 'With upstream stars', statChecked: 'Checked',
+    panelAppleEyebrow: 'iPhone · iPad · Mac',
+    panelAppleTitle: 'Apps for Apple devices',
+    panelAppleLead: 'These are app repositories, not installers. If a repository lists Informations.plist you can sign it yourself and install with a tool like AltStore; anything else has to come from the App Store.',
+    panelAndroidEyebrow: 'Android · TV',
+    panelAndroidTitle: 'Android and TV boxes',
+    panelAndroidLead: 'FongMi-style players live here. They need a single or multi config before there is anything to watch; configs are under All resources.',
+    panelOpenSourceEyebrow: 'Source · self-host',
+    panelOpenSourceTitle: 'Open-source projects',
+    panelOpenSourceLead: 'Repository links and upstream stars only. Nothing is built, executed or mirrored.',
+    panelWebEyebrow: 'Browser · nothing to install',
+    panelWebTitle: 'Streaming sites and search',
+    panelWebLead: 'Cloud-drive, subtitle and magnet search sites are browser destinations; pasting them into a player does nothing.',
+    listEyebrow: 'Checks · order',
+    listTitle: 'All resources',
     allCategories: 'All', single: 'Single config', multi: 'Multi config', live: 'Live', epg: 'EPG',
-    online: 'Streaming sites', searchSites: 'Cloud search & subs', apps: 'Players', tools: 'Tools & projects',
+    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Players', tools: 'Tools', via: 'via',
     searchLabel: 'Search resources', searchPlaceholder: 'Search name or source',
     result: (shown, total) => `Showing ${shown} of ${total}`,
-    hintAll: 'Configs and playlists import straight into a client. Streaming sites, search pages and players are browser destinations; importing them does nothing.',
+    hintAll: 'Within a category: passing checks first, then the higher upstream rating, then name.',
     hintImportable: 'Copy the link and import it in a client. A passing check only means it answered once, not that it plays.',
     hintWeb: 'This category is used in a browser. These are not TVBox configs and will not work when imported.',
+    ratedAs: 'upstream', ratedNone: 'No rating', removed: 'Removed upstream',
     emptyText: 'No entries in this category.',
     noResults: 'No matching entries.',
     verifyTitle: 'Check log', verifyLead: 'A check answers one question: did it answer, and was the body the expected format. It does not prove import or playback.',
-    testsLabel: 'Automated tests passed', clientNotTested: 'Client playback: not verified', true4kNotTested: 'True 4K: not verified',
+    testsLabel: 'Automated tests passed', ratingsLabel: 'Stars: upstream self-assessment', clientNotTested: 'Client playback: not verified', true4kNotTested: 'True 4K: not verified',
     checkPassed: 'Passed', checkFailed: 'Failed', checkNotTested: 'Not tested',
     rulesTitle: 'Inclusion rules',
     rule1Title: 'Traceable source', rule1Text: 'Every row records its upstream and licence note. Nothing is mirrored or republished.',
-    rule2Title: 'Results expire', rule2Text: 'A scheduled check is one network observation. Tomorrow it may differ.',
+    rule2Title: 'Stars are upstream', rule2Text: 'Ratings are republished untouched with their check date. This project measured none of them and does not vouch for them.',
     rule3Title: 'No faked testing', rule3Text: 'Without client playback evidence, a row is never labelled tested or recommended.',
-    footNote: 'Links point upstream; rights stay with their owners. A passing check is not a guarantee of availability.',
-    copy: 'Copy', copied: 'Copied', copyFailed: 'Copy failed', open: 'Open',
-    probeOk: 'Check passed', probeFail: 'Check failed', probeStale: 'Passed earlier',
-    noProbe: 'Not checked', lastSuccess: (d) => `passed ${d}`, checkedAt: (d) => `checked ${d}`,
-    category: { 'vod-single': 'Single config', 'vod-multi': 'Multi config', live: 'Live', epg: 'EPG', online: 'Streaming sites', search: 'Cloud search & subs', apps: 'Players', tools: 'Tools & projects' },
+    footNote: 'Links point upstream; rights stay with their owners. Neither stars nor checks guarantee availability.',
+    copy: 'Copy', copied: 'Copied', copyFailed: 'Copy failed', open: 'Open', details: 'Details',
+    probeOk: 'Check passed', probeFail: 'Check failed', probeStale: 'Passed earlier', noProbe: 'Not checked',
+    lastSuccess: (d) => `passed ${d}`,
+    category: {
+      'vod-single': 'Single config', 'vod-multi': 'Multi config', live: 'Live', epg: 'EPG', magnet: 'Magnet & BT',
+      search: 'Cloud search & subs', apps: 'Players', 'apps-ios': 'Apple apps', 'apps-android': 'Android apps',
+      tools: 'Open source', online: 'Streaming sites',
+    },
     loadError: 'Catalog files failed to load. Please refresh.',
   },
 };
@@ -140,30 +199,128 @@ function displayHost(value) {
   }
 }
 
+function initials(name) {
+  const trimmed = String(name || '?').trim();
+  const latin = trimmed.match(/[A-Za-z0-9]+/g);
+  return latin ? latin.map((part) => part[0]).join('').slice(0, 2) : trimmed.slice(0, 1);
+}
+
+function starRow(average) {
+  if (typeof average !== 'number' || !Number.isFinite(average)) return '';
+  const rounded = Math.round(Math.max(0, Math.min(5, average)) * 2) / 2;
+  let stars = '';
+  for (let index = 1; index <= 5; index += 1) {
+    const fill = rounded >= index ? 'star' : rounded >= index - 0.5 ? 'star star--half' : 'star star--empty';
+    const paint = fill === 'star star--half' ? 'url(#star-half)' : undefined;
+    stars += `<svg class="${fill}" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="${STAR_PATH}"${paint ? ` fill="${paint}"` : ''}/></svg>`;
+  }
+  const label = `${average.toFixed(2)} / 5`;
+  return `<span class="stars" title="${escapeHTML(`${t().ratedAs} ${label}`)}" aria-label="${escapeHTML(`${t().ratedAs} ${label}`)}">${stars}</span><span class="rating-num">${escapeHTML(average.toFixed(1))}</span>`;
+}
+
+// Removed entries keep their record but must never rank as if still recommended.
+function isRemoved(entry) {
+  return entry.rating?.status === 'removed';
+}
+
+function ratingOf(entry) {
+  if (isRemoved(entry)) return null;
+  return entry.rating && typeof entry.rating.average === 'number' ? entry.rating.average : null;
+}
+
+// An upstream entry reused across devices is the same source, not a second one.
+function dedupe(list) {
+  const seen = new Set();
+  return list.filter((entry) => {
+    const key = String(entry.url).replace(/^https?:\/\//, '').replace(/\/+$/, '').toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function sortEntries(list, probeIds) {
+  return list.slice().sort((a, b) => {
+    const passed = Number(probeIds.has(b.id)) - Number(probeIds.has(a.id));
+    if (passed) return passed;
+    const rated = (ratingOf(b) ?? -1) - (ratingOf(a) ?? -1);
+    if (rated) return rated;
+    return String(a.name).localeCompare(String(b.name), 'zh-Hans-CN');
+  });
+}
+
+function actionsFor(entry, compact) {
+  const href = safeHref(entry.url);
+  if (!href) return '';
+  const copy = `<button class="act" type="button" data-copy-url="${escapeHTML(entry.url)}">${escapeHTML(t().copy)}</button>`;
+  const open = `<a class="act act--fill" href="${escapeHTML(href)}" target="_blank" rel="noreferrer" title="${escapeHTML(`${t().open}: ${entry.name}`)}">${escapeHTML(compact ? t().open : t().open)}</a>`;
+  return compact ? open + copy : copy + open;
+}
+
+function renderCard(entry, rank) {
+  const href = safeHref(entry.url);
+  const notes = String(entry.notes || '').replace(/^Upstream description:\s*/i, '').split(/(?<=。)|\.\s/)[0];
+  const rating = ratingOf(entry) === null ? '' : starRow(ratingOf(entry));
+  return `<li class="card${rank <= 3 && entry.rating ? ' card--rank' : ''}">
+    <span class="card-icon" aria-hidden="true">${escapeHTML(initials(entry.name))}</span>
+    <div class="card-body">
+      <div class="card-head">
+        ${href ? `<a class="card-name" href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${escapeHTML(entry.name)}</a>` : `<span class="card-name">${escapeHTML(entry.name)}</span>`}
+        ${rating}
+      </div>
+      <p class="card-desc">${escapeHTML(notes || entry.url)}</p>
+      <div class="card-foot">${probeChip(entry)}<span class="rating-label">${escapeHTML(t().ratedAs)}</span></div>
+    </div>
+    <div class="card-actions">${actionsFor(entry, true)}</div>
+  </li>`;
+}
+
 function renderRow(entry) {
   const href = safeHref(entry.url);
-  const notes = entry.notes
-    ? `<p class="row-notes">${escapeHTML(entry.notes)}</p>`
-    : (href ? `<p class="row-notes">${escapeHTML(entry.url)}</p>` : '');
+  const average = ratingOf(entry);
+  const rating = isRemoved(entry)
+    ? `<span class="chip chip--removed">${escapeHTML(t().removed)}</span>`
+    : average === null ? `<span class="rating-num">${escapeHTML(t().ratedNone)}</span>` : starRow(average);
   const escapedSource = escapeHTML(entry.source);
-  const source = `<p class="row-source">${escapedSource.startsWith('https://github.com') ? `<a href="${escapedSource}" target="_blank" rel="noreferrer">${escapedSource}</a>` : escapedSource}</p>`;
+  const sourceHost = displayHost(entry.source);
+  // Repeating the aggregator URL on every imported row is noise; name it once, short.
+  const source = sourceHost && sourceHost !== displayHost(entry.url)
+    ? `<span class="chip chip--source">${escapeHTML(t().via)} <a href="${escapedSource}" target="_blank" rel="noreferrer">${escapeHTML(sourceHost)}</a></span>`
+    : '';
   return `<article class="row">
     <div class="row-main">
+      <div class="row-line">
+        ${href ? `<a class="row-name" href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${escapeHTML(entry.name)}</a>` : `<span class="row-name">${escapeHTML(entry.name)}</span>`}
+        <span class="row-host">${escapeHTML(displayHost(entry.url))}</span>
+      </div>
       <div class="row-meta">
         <span class="chip">${escapeHTML(t().category[entry._category] || entry._category)}</span>
         <span class="chip">${escapeHTML(entry.format)}</span>
+        ${rating}
         ${probeChip(entry)}
+        ${source}
       </div>
-      <h3 class="row-name">${escapeHTML(entry.name)}</h3>
-      <p class="row-host">${escapeHTML(displayHost(entry.url))}</p>
-      ${source}
-      ${notes}
     </div>
-    <div class="row-actions">
-      ${href ? `<button class="act" type="button" data-copy-url="${escapeHTML(entry.url)}" data-copy-name="${escapeHTML(entry.name)}">${escapeHTML(t().copy)}</button>` : ''}
-      ${href ? `<a class="act act--fill" href="${escapeHTML(href)}" target="_blank" rel="noreferrer" title="${escapeHTML(t().open)}: ${escapeHTML(entry.name)}">${escapeHTML(t().open)}</a>` : ''}
-    </div>
+    <div class="row-actions">${actionsFor(entry, false)}</div>
   </article>`;
+}
+
+function reachableIds() {
+  const ids = new Set(entries.map((entry) => entry.id));
+  return new Set((probeReport?.probes || [])
+    .filter((probe) => probe.status === 'ok' && ids.has(probe.id)).map((probe) => probe.id));
+}
+
+function renderPanels() {
+  const passed = reachableIds();
+  Object.entries(PANELS).forEach(([panel, categories]) => {
+    const container = document.querySelector(`[data-cards="${panel === 'apple' ? 'apps-ios' : panel === 'android' ? 'apps-android' : panel}"]`);
+    if (!container) return;
+    const rows = dedupe(sortEntries(entries.filter((entry) => categories.includes(entry._category)), passed));
+    container.innerHTML = rows.map((entry, index) => renderCard(entry, index + 1)).join('');
+    const counter = document.querySelector(`[data-panel-count="${panel}"]`);
+    if (counter) counter.textContent = String(rows.length);
+  });
 }
 
 function applyLanguage() {
@@ -182,26 +339,21 @@ function applyLanguage() {
 
 function currentVisible() {
   const query = document.getElementById('search').value.trim().toLowerCase();
-  return entries.filter((entry) => {
+  return sortEntries(dedupe(entries.filter((entry) => {
     if (activeCategory !== 'all' && entry._category !== activeCategory) return false;
     if (!query) return true;
     return `${entry.name} ${entry.format} ${entry.source} ${entry.notes || ''} ${entry.url}`.toLowerCase().includes(query);
-  });
+  })), reachableIds());
 }
 
 function render() {
   const visible = currentVisible();
-  document.getElementById('total-count').textContent = String(entries.length);
-  const ids = new Set(entries.map((entry) => entry.id));
-  const reachable = new Set((probeReport?.probes || [])
-    .filter((probe) => probe.status === 'ok' && ids.has(probe.id)).map((probe) => probe.id));
-  document.getElementById('verified-count').textContent = String(reachable.size);
+  const passed = reachableIds();
+  document.getElementById('total-count').textContent = String(new Set(entries.map((entry) => entry.url)).size);
+  document.getElementById('verified-count').textContent = String(passed.size);
+  document.getElementById('rated-count').textContent = String(dedupe(entries.filter((entry) => ratingOf(entry) !== null)).length);
   document.getElementById('checked-at').textContent = formatDate(probeReport?.generated_at, true) || '—';
-  document.getElementById('custom-single-count').textContent = candidateCount ? String(candidateCount) : '—';
-  document.getElementById('custom-single-count').title = candidateCount
-    ? 'subscriptions/tvbox-custom-single.json'
-    : '';
-  document.getElementById('result-count').textContent = t().result(visible.length, entries.length);
+  document.getElementById('result-count').textContent = t().result(visible.length, new Set(entries.map((entry) => entry.url)).size);
   document.getElementById('tab-hint').textContent = activeCategory === 'all'
     ? t().hintAll
     : IMPORTABLE.has(activeCategory) ? t().hintImportable : t().hintWeb;
@@ -217,8 +369,9 @@ function render() {
   });
   document.querySelectorAll('[data-count-for]').forEach((counter) => {
     const key = counter.dataset.countFor;
-    counter.textContent = String(key === 'all' ? entries.length : entries.filter((entry) => entry._category === key).length);
+    counter.textContent = String(new Set(entries.filter((entry) => key === 'all' || entry._category === key).map((entry) => entry.url)).size);
   });
+  renderPanels();
 }
 
 function renderVerification(report) {
@@ -229,6 +382,7 @@ function renderVerification(report) {
   const summary = report.summary || {};
   document.getElementById('verification-summary').innerHTML = [
     `<span>${escapeHTML(t().testsLabel)}: ${Number(summary.local_unit_tests_passed) || 0}</span>`,
+    `<span>${escapeHTML(t().ratingsLabel)}</span>`,
     `<span>${escapeHTML(t().clientNotTested)}</span>`,
     `<span>${escapeHTML(t().true4kNotTested)}</span>`,
   ].join('');
@@ -283,8 +437,7 @@ async function loadData() {
       const indexedIds = new Set(indexed.map((item) => item.id));
       entries = entries.filter((item) => !indexedIds.has(item.id)).concat(indexed);
     }
-    const order = { 'vod-single': 0, 'vod-multi': 1, live: 2, epg: 3, online: 4, search: 5, apps: 6, tools: 7 };
-    entries.sort((a, b) => (order[a._category] ?? 9) - (order[b._category] ?? 9)
+    entries.sort((a, b) => (CATEGORY_ORDER[a._category] ?? 99) - (CATEGORY_ORDER[b._category] ?? 99)
       || (a._displayOrder ?? 0) - (b._displayOrder ?? 0)
       || String(a.name).localeCompare(String(b.name), 'zh-Hans-CN'));
     if (probeResponse?.ok) probeReport = await probeResponse.json();
@@ -326,7 +479,7 @@ async function copyText(value) {
   }
 }
 
-document.getElementById('catalog-list').addEventListener('click', async (event) => {
+document.body.addEventListener('click', async (event) => {
   const button = event.target.closest('[data-copy-url]');
   if (!button) return;
   const ok = await copyText(button.dataset.copyUrl);
@@ -357,5 +510,6 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+document.body.insertAdjacentHTML('afterbegin', STAR_DEFS);
 applyLanguage();
 loadData();

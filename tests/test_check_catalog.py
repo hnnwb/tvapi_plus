@@ -36,5 +36,44 @@ class LandingPageValidationTests(unittest.TestCase):
         self.assertEqual(self.check(b"anything", "text/plain", "documentation"), "ok")
 
 
+def rated(**overrides):
+    base = {"average": 4.0, "scores": {"more": 4, "speed": 5, "clean": 3, "stable": 4, "ease": 4},
+            "status": "recommended", "checked_at": "2026-06-06"}
+    base.update(overrides)
+    return base
+
+
+class RatingValidationTests(unittest.TestCase):
+    def errors_for(self, rating):
+        errors: list[str] = []
+        check_catalog.validate_rating(rating, errors, "where")
+        return errors
+
+    def test_accepts_upstream_assessment(self):
+        self.assertEqual(self.errors_for(rated()), [])
+
+    def test_accepts_fractional_dimension_when_average_matches(self):
+        scores = {"more": 4.5, "speed": 4, "clean": 5, "stable": 4.8, "ease": 3.8}
+        self.assertEqual(self.errors_for(rated(average=4.42, scores=scores)), [])
+
+    def test_rejects_average_that_does_not_match_dimensions(self):
+        errors = self.errors_for(rated(average=5))
+        self.assertTrue(any("mean of scores" in error for error in errors), errors)
+
+    def test_rejects_out_of_range_and_missing_dimensions(self):
+        errors = self.errors_for(rated(average=5, scores={"more": 6, "speed": 5, "clean": 3, "stable": 4}))
+        self.assertTrue(any("exactly" in error for error in errors), errors)
+        errors = self.errors_for(rated(average=5, scores={"more": 6, "speed": 5, "clean": 3, "stable": 5, "ease": 6}))
+        self.assertTrue(any("1 to 5" in error for error in errors), errors)
+
+    def test_rejects_bad_status_and_date(self):
+        errors = self.errors_for(rated(status=" ", checked_at="06/06/2026"))
+        self.assertTrue(any("rating.status" in error for error in errors), errors)
+        self.assertTrue(any("rating.checked_at" in error for error in errors), errors)
+
+    def test_rating_is_rejected_when_it_is_not_an_object(self):
+        self.assertEqual(self.errors_for([4, 4, 4]), ["where: rating must be an object"])
+
+
 if __name__ == "__main__":
     unittest.main()

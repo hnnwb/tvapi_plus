@@ -6,7 +6,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 在线弹幕追番平台. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
+    "notes": "Upstream description: 在线弹幕追番平台. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-10"
+    }
   },
   {
     "id": "zhuiju-kazumi",
@@ -15,43 +27,19 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 免费无广告/在线番剧. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-selenetv-app",
-    "name": "SeleneTV",
-    "url": "https://b.zhuiju.me/p/4",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 跨平台 MoonTV 客户端. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-ios-yingshi-app",
-    "name": "苹果iOS影视APP",
-    "url": "https://b.zhuiju.me/p/23",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 苹果iOS可用APP合集. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-android-yingshi-app",
-    "name": "安卓Android影视APP",
-    "url": "https://b.zhuiju.me/p/27",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 安卓影视APP下载合集. Upstream self-assessment status: pending; its ratings are not reproduced here. Upstream still lists this entry as pending review. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-kodi",
-    "name": "Kodi",
-    "url": "https://kodi.tv/",
-    "format": "web",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 开源、跨平台家庭媒体中心. Upstream self-assessment status: recommended; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
+    "notes": "Upstream description: 免费无广告/在线番剧. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-11"
+    }
   },
   {
     "id": "zhuiju-tv-xn-yhqu5zs87a-top-3",
@@ -60,33 +48,18 @@
     "format": "web",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: tvbox二开/带视频源，手机端/平板端已测试. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-yangke-peekpro",
-    "name": "羊壳 PeekPro",
-    "url": "https://b.zhuiju.me/p/19",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 基于 FongMi 二开，优化主题、弹幕等. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-webhometv-player",
-    "name": "WebHomeTV",
-    "url": "https://b.zhuiju.me/p/18",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: 基于 FongMi / CatVod 二次开发，增强8项. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
-  },
-  {
-    "id": "zhuiju-ok-yingshi-player",
-    "name": "OK影视",
-    "url": "https://b.zhuiju.me/p/17",
-    "format": "link-page",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
-    "notes": "Upstream description: OK影视版 = FongMi蜂蜜版 + 各种新功能. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them."
+    "notes": "Upstream description: tvbox二开/带视频源，手机端/平板端已测试. Upstream self-assessment status: caution; its ratings are not reproduced here. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-10"
+    }
   }
 ]
