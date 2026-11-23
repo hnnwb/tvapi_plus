@@ -19,14 +19,6 @@ const CATALOGS = [
   { file: 'catalog/online.json', category: 'online' },
 ];
 
-// Cards are shown only where they hold something: the rest is the sortable list.
-const PANELS = {
-  apple: ['apps-ios'],
-  android: ['apps-android'],
-  opensource: ['tools'],
-  web: ['online', 'search', 'magnet', 'apps'],
-};
-
 const IMPORTABLE = new Set(['vod-single', 'vod-multi', 'live', 'epg']);
 const WEB_ONLY = new Set(['online', 'magnet', 'search', 'apps', 'tools']);
 const CONFIG_INDEX_IDS = new Set(['tvapi-plus-custom-single', 'xiaoma-tvbox-config']);
@@ -40,28 +32,16 @@ const STAR_DEFS = `<svg class="star-defs" aria-hidden="true" width="0" height="0
 
 const TEXT = {
   zh: {
-    navApple: '苹果', navAndroid: '安卓', navOpenSource: '开源', navCatalog: '全部资源', navVerification: '检测',
+    navCatalog: '全部资源', navVerification: '检测',
     heroEyebrow: '配置 · 苹果 · 安卓 · 开源 · 网盘与磁力',
     heroTitle: '资源索引',
-    heroSub: '每个区块都按上游星级排序：星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。',
+    heroSub: '列表按检测结果与上游星级排序：能取到的、星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。',
     explore: '开始浏览', openIndex: '配置索引 JSON',
     statTotal: '目录条目', statReachable: '最近一次可达', statRated: '带上游星级', statChecked: '检测时间',
-    panelAppleEyebrow: 'iPhone · iPad · Mac',
-    panelAppleTitle: '苹果上能装的应用',
-    panelAppleLead: '列的是应用来源仓库，不是安装包。在名单里能看到 Informations.plist 的，可以自签后用 AltStore 一类工具装；不在名单里的，只能在 App Store 找。',
-    panelAndroidEyebrow: 'Android · TV',
-    panelAndroidTitle: '安卓与电视盒子',
-    panelAndroidLead: 'FongMi 一类播放器在这里。装好后导入单仓或多仓配置才有片源，配置在「全部资源」里。',
-    panelOpenSourceEyebrow: '源码 · 自建',
-    panelOpenSourceTitle: '开源项目',
-    panelOpenSourceLead: '只记仓库地址与上游星级，不构建、不执行、不镜像任何一份代码。',
-    panelWebEyebrow: '浏览器 · 无需安装',
-    panelWebTitle: '在线站与搜索',
-    panelWebLead: '网盘、字幕与磁力搜索都是网页入口，复制到播放器里不会生效。',
     listEyebrow: '检测 · 排序',
     listTitle: '全部资源',
     allCategories: '全部', single: '单仓配置', multi: '多仓配置', live: '直播', epg: 'EPG',
-    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '播放器', tools: '工具', via: '来源',
+    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '播放器', "apps-ios": '苹果应用', "apps-android": '安卓应用', tools: '开源项目', via: '来源',
     searchLabel: '搜索资源', searchPlaceholder: '搜索名称、来源',
     result: (shown, total) => `显示 ${shown} / ${total} 条`,
     hintAll: '同一分类内先按检测结果、再按上游星级排序；星级相同的按名称排。',
@@ -91,28 +71,16 @@ const TEXT = {
     loadError: '目录文件读取失败，请刷新重试。',
   },
   en: {
-    navApple: 'Apple', navAndroid: 'Android', navOpenSource: 'Open source', navCatalog: 'All resources', navVerification: 'Checks',
+    navCatalog: 'All resources', navVerification: 'Checks',
     heroEyebrow: 'Configs · Apple · Android · Open source · Cloud & magnet',
     heroTitle: 'Resource index',
-    heroSub: 'Every section is ordered by the upstream star rating, highest first. Stars are the upstream self-assessment; a check only says the URL answered.',
+    heroSub: 'The list is ordered by check result, then by upstream stars: reachable and well-rated first. Stars are the upstream self-assessment; a check only says the URL answered.',
     explore: 'Start browsing', openIndex: 'Config index JSON',
     statTotal: 'Catalog entries', statReachable: 'Reachable last check', statRated: 'With upstream stars', statChecked: 'Checked',
-    panelAppleEyebrow: 'iPhone · iPad · Mac',
-    panelAppleTitle: 'Apps for Apple devices',
-    panelAppleLead: 'These are app repositories, not installers. If a repository lists Informations.plist you can sign it yourself and install with a tool like AltStore; anything else has to come from the App Store.',
-    panelAndroidEyebrow: 'Android · TV',
-    panelAndroidTitle: 'Android and TV boxes',
-    panelAndroidLead: 'FongMi-style players live here. They need a single or multi config before there is anything to watch; configs are under All resources.',
-    panelOpenSourceEyebrow: 'Source · self-host',
-    panelOpenSourceTitle: 'Open-source projects',
-    panelOpenSourceLead: 'Repository links and upstream stars only. Nothing is built, executed or mirrored.',
-    panelWebEyebrow: 'Browser · nothing to install',
-    panelWebTitle: 'Streaming sites and search',
-    panelWebLead: 'Cloud-drive, subtitle and magnet search sites are browser destinations; pasting them into a player does nothing.',
     listEyebrow: 'Checks · order',
     listTitle: 'All resources',
     allCategories: 'All', single: 'Single config', multi: 'Multi config', live: 'Live', epg: 'EPG',
-    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Players', tools: 'Tools', via: 'via',
+    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Players', "apps-ios": 'Apple apps', "apps-android": 'Android apps', tools: 'Open source', via: 'via',
     searchLabel: 'Search resources', searchPlaceholder: 'Search name or source',
     result: (shown, total) => `Showing ${shown} of ${total}`,
     hintAll: 'Within a category: passing checks first, then the higher upstream rating, then name.',
@@ -199,12 +167,6 @@ function displayHost(value) {
   }
 }
 
-function initials(name) {
-  const trimmed = String(name || '?').trim();
-  const latin = trimmed.match(/[A-Za-z0-9]+/g);
-  return latin ? latin.map((part) => part[0]).join('').slice(0, 2) : trimmed.slice(0, 1);
-}
-
 function starRow(average) {
   if (typeof average !== 'number' || !Number.isFinite(average)) return '';
   const rounded = Math.round(Math.max(0, Math.min(5, average)) * 2) / 2;
@@ -249,30 +211,12 @@ function sortEntries(list, probeIds) {
   });
 }
 
-function actionsFor(entry, compact) {
+function actionsFor(entry) {
   const href = safeHref(entry.url);
   if (!href) return '';
   const copy = `<button class="act" type="button" data-copy-url="${escapeHTML(entry.url)}">${escapeHTML(t().copy)}</button>`;
-  const open = `<a class="act act--fill" href="${escapeHTML(href)}" target="_blank" rel="noreferrer" title="${escapeHTML(`${t().open}: ${entry.name}`)}">${escapeHTML(compact ? t().open : t().open)}</a>`;
-  return compact ? open + copy : copy + open;
-}
-
-function renderCard(entry, rank) {
-  const href = safeHref(entry.url);
-  const notes = String(entry.notes || '').replace(/^Upstream description:\s*/i, '').split(/(?<=。)|\.\s/)[0];
-  const rating = ratingOf(entry) === null ? '' : starRow(ratingOf(entry));
-  return `<li class="card${rank <= 3 && entry.rating ? ' card--rank' : ''}">
-    <span class="card-icon" aria-hidden="true">${escapeHTML(initials(entry.name))}</span>
-    <div class="card-body">
-      <div class="card-head">
-        ${href ? `<a class="card-name" href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${escapeHTML(entry.name)}</a>` : `<span class="card-name">${escapeHTML(entry.name)}</span>`}
-        ${rating}
-      </div>
-      <p class="card-desc">${escapeHTML(notes || entry.url)}</p>
-      <div class="card-foot">${probeChip(entry)}<span class="rating-label">${escapeHTML(t().ratedAs)}</span></div>
-    </div>
-    <div class="card-actions">${actionsFor(entry, true)}</div>
-  </li>`;
+  const open = `<a class="act act--fill" href="${escapeHTML(href)}" target="_blank" rel="noreferrer" title="${escapeHTML(`${t().open}: ${entry.name}`)}">${escapeHTML(t().open)}</a>`;
+  return copy + open;
 }
 
 function renderRow(entry) {
@@ -301,7 +245,7 @@ function renderRow(entry) {
         ${source}
       </div>
     </div>
-    <div class="row-actions">${actionsFor(entry, false)}</div>
+    <div class="row-actions">${actionsFor(entry)}</div>
   </article>`;
 }
 
@@ -309,18 +253,6 @@ function reachableIds() {
   const ids = new Set(entries.map((entry) => entry.id));
   return new Set((probeReport?.probes || [])
     .filter((probe) => probe.status === 'ok' && ids.has(probe.id)).map((probe) => probe.id));
-}
-
-function renderPanels() {
-  const passed = reachableIds();
-  Object.entries(PANELS).forEach(([panel, categories]) => {
-    const container = document.querySelector(`[data-cards="${panel === 'apple' ? 'apps-ios' : panel === 'android' ? 'apps-android' : panel}"]`);
-    if (!container) return;
-    const rows = dedupe(sortEntries(entries.filter((entry) => categories.includes(entry._category)), passed));
-    container.innerHTML = rows.map((entry, index) => renderCard(entry, index + 1)).join('');
-    const counter = document.querySelector(`[data-panel-count="${panel}"]`);
-    if (counter) counter.textContent = String(rows.length);
-  });
 }
 
 function applyLanguage() {
@@ -371,7 +303,6 @@ function render() {
     const key = counter.dataset.countFor;
     counter.textContent = String(new Set(entries.filter((entry) => key === 'all' || entry._category === key).map((entry) => entry.url)).size);
   });
-  renderPanels();
 }
 
 function renderVerification(report) {

@@ -16,9 +16,6 @@
     <div class="nav-inner">
       <a class="nav-brand" href="#top" aria-label="TVBox 资源索引首页">TVBox<span>索引</span></a>
       <nav class="nav-links" aria-label="主导航">
-        <a href="#panel-apple" data-i18n="navApple">苹果</a>
-        <a href="#panel-android" data-i18n="navAndroid">安卓</a>
-        <a href="#panel-opensource" data-i18n="navOpenSource">开源</a>
         <a href="#list-panel" data-i18n="navCatalog">全部资源</a>
         <a href="#verification" data-i18n="navVerification">检测</a>
         <a href="https://github.com/hnnwb/tvapi_plus" target="_blank" rel="noreferrer">GitHub</a>
@@ -31,9 +28,9 @@
     <section class="hero">
       <p class="hero-eyebrow" data-i18n="heroEyebrow">配置 · 苹果 · 安卓 · 开源 · 网盘与磁力</p>
       <h1 id="page-title" data-i18n="heroTitle">资源索引</h1>
-      <p class="hero-sub" data-i18n="heroSub">每个区块都按上游星级排序：星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。</p>
+      <p class="hero-sub" data-i18n="heroSub">列表按检测结果与上游星级排序：能取到的、星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。</p>
       <div class="hero-actions">
-        <a class="btn btn-fill" href="#panel-apple"><span data-i18n="explore">开始浏览</span></a>
+        <a class="btn btn-fill" href="#list-panel"><span data-i18n="explore">开始浏览</span></a>
         <a class="btn btn-line" href="configs.json" target="_blank" rel="noreferrer" data-i18n="openIndex">配置索引 JSON</a>
       </div>
     </section>
@@ -43,56 +40,6 @@
       <div class="stat"><span class="stat-num" id="verified-count">—</span><span class="stat-label" data-i18n="statReachable">最近一次可达</span></div>
       <div class="stat"><span class="stat-num" id="rated-count">—</span><span class="stat-label" data-i18n="statRated">带上游星级</span></div>
       <div class="stat"><span class="stat-num stat-num--text" id="checked-at">—</span><span class="stat-label" data-i18n="statChecked">检测时间</span></div>
-    </section>
-
-    <section class="panels" id="panels">
-      <article class="panel" id="panel-apple" data-panel="apple" aria-labelledby="panel-apple-title">
-        <header class="panel-head">
-          <div>
-            <p class="panel-eyebrow" data-i18n="panelAppleEyebrow">iPhone · iPad · Mac</p>
-            <h2 id="panel-apple-title" data-i18n="panelAppleTitle">苹果上能装的应用</h2>
-          </div>
-          <span class="panel-count"><i data-panel-count="apple">0</i></span>
-        </header>
-        <p class="panel-lead" data-i18n="panelAppleLead">列的是应用来源仓库，不是安装包。在名单里能看到 Informations.plist 的，可以自签后用 AltStore 一类工具装；不在名单里的，只能在 App Store 找。</p>
-        <ul class="cards" data-cards="apps-ios"></ul>
-      </article>
-
-      <article class="panel" id="panel-android" data-panel="android" aria-labelledby="panel-android-title">
-        <header class="panel-head">
-          <div>
-            <p class="panel-eyebrow" data-i18n="panelAndroidEyebrow">Android · TV</p>
-            <h2 id="panel-android-title" data-i18n="panelAndroidTitle">安卓与电视盒子</h2>
-          </div>
-          <span class="panel-count"><i data-panel-count="android">0</i></span>
-        </header>
-        <p class="panel-lead" data-i18n="panelAndroidLead">FongMi 一类播放器在这里。装好后导入单仓或多仓配置才有片源，配置在「全部资源」里。</p>
-        <ul class="cards" data-cards="apps-android"></ul>
-      </article>
-
-      <article class="panel" id="panel-opensource" data-panel="opensource" aria-labelledby="panel-opensource-title">
-        <header class="panel-head">
-          <div>
-            <p class="panel-eyebrow" data-i18n="panelOpenSourceEyebrow">源码 · 自建</p>
-            <h2 id="panel-opensource-title" data-i18n="panelOpenSourceTitle">开源项目</h2>
-          </div>
-          <span class="panel-count"><i data-panel-count="opensource">0</i></span>
-        </header>
-        <p class="panel-lead" data-i18n="panelOpenSourceLead">只记仓库地址与上游星级，不构建、不执行、不镜像任何一份代码。</p>
-        <ul class="cards" data-cards="opensource"></ul>
-      </article>
-
-      <article class="panel" id="panel-web" data-panel="web" aria-labelledby="panel-web-title">
-        <header class="panel-head">
-          <div>
-            <p class="panel-eyebrow" data-i18n="panelWebEyebrow">浏览器 · 无需安装</p>
-            <h2 id="panel-web-title" data-i18n="panelWebTitle">在线站与搜索</h2>
-          </div>
-          <span class="panel-count"><i data-panel-count="web">0</i></span>
-        </header>
-        <p class="panel-lead" data-i18n="panelWebLead">网盘、字幕与磁力搜索都是网页入口，复制到播放器里不会生效。</p>
-        <ul class="cards" data-cards="web"></ul>
-      </article>
     </section>
 
     <section class="list-panel" id="list-panel" aria-labelledby="list-title">
@@ -105,15 +52,17 @@
       </header>
       <div class="tabs" id="tabs" role="tablist" aria-label="资源分类">
         <button class="tab is-active" type="button" role="tab" data-category="all" aria-selected="true"><span data-i18n="allCategories">全部</span> <i data-count-for="all">0</i></button>
-        <button class="tab" type="button" role="tab" data-category="vod-single" aria-selected="false"><span data-i18n="single">单仓配置</span> <i data-count-for="vod-single">0</i></button>
+        <button class="tab group-start" type="button" role="tab" data-category="vod-single" aria-selected="false"><span data-i18n="single">单仓配置</span> <i data-count-for="vod-single">0</i></button>
         <button class="tab" type="button" role="tab" data-category="vod-multi" aria-selected="false"><span data-i18n="multi">多仓配置</span> <i data-count-for="vod-multi">0</i></button>
         <button class="tab" type="button" role="tab" data-category="live" aria-selected="false"><span data-i18n="live">直播</span> <i data-count-for="live">0</i></button>
         <button class="tab" type="button" role="tab" data-category="epg" aria-selected="false"><span data-i18n="epg">EPG</span> <i data-count-for="epg">0</i></button>
-        <button class="tab" type="button" role="tab" data-category="magnet" aria-selected="false"><span data-i18n="magnet">磁力与 BT</span> <i data-count-for="magnet">0</i></button>
+        <button class="tab group-start" type="button" role="tab" data-category="magnet" aria-selected="false"><span data-i18n="magnet">磁力与 BT</span> <i data-count-for="magnet">0</i></button>
         <button class="tab" type="button" role="tab" data-category="search" aria-selected="false"><span data-i18n="searchSites">网盘与字幕</span> <i data-count-for="search">0</i></button>
         <button class="tab" type="button" role="tab" data-category="online" aria-selected="false"><span data-i18n="onlineSites">在线站</span> <i data-count-for="online">0</i></button>
-        <button class="tab" type="button" role="tab" data-category="apps" aria-selected="false"><span data-i18n="apps">播放器</span> <i data-count-for="apps">0</i></button>
-        <button class="tab" type="button" role="tab" data-category="tools" aria-selected="false"><span data-i18n="tools">工具</span> <i data-count-for="tools">0</i></button>
+        <button class="tab group-start" type="button" role="tab" data-category="apps" aria-selected="false"><span data-i18n="apps">播放器</span> <i data-count-for="apps">0</i></button>
+        <button class="tab" type="button" role="tab" data-category="apps-ios" aria-selected="false"><span data-i18n="apps-ios">苹果应用</span> <i data-count-for="apps-ios">0</i></button>
+        <button class="tab" type="button" role="tab" data-category="apps-android" aria-selected="false"><span data-i18n="apps-android">安卓应用</span> <i data-count-for="apps-android">0</i></button>
+        <button class="tab" type="button" role="tab" data-category="tools" aria-selected="false"><span data-i18n="tools">开源项目</span> <i data-count-for="tools">0</i></button>
       </div>
       <div class="toolbar">
         <label class="search"><span class="search-icon" aria-hidden="true"></span><span class="sr-only" data-i18n="searchLabel">搜索资源</span><input id="search" type="search" placeholder="搜索名称、来源" autocomplete="off"></label>
