@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import datetime as dt
 import json
 import os
@@ -332,26 +333,165 @@ def fetch_bounded(url: str, opener=None, request_profile: str = "catalog") -> tu
         return body, response.headers.get_content_type(), response.status
 
 
+IMAGE_MAGIC = {
+    b"\xff\xd8\xff": "jpeg",
+    b"GIF8": "gif",
+    b"\x89PNG\r\n\x1a\n": "png",
+    b"BM": "bmp",
+    b"RIFF": "webp",
+}
+
+
+def _drop_trailing_commas(text: str) -> str:
+    """Strip commas that precede a closing bracket, which clients accept and json.loads does not."""
+    out: list[str] = []
+    index, length = 0, len(text)
+    in_string = escaped = False
+    while index < length:
+        char = text[index]
+        if in_string:
+            out.append(char)
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            index += 1
+            continue
+        if char == '"':
+            in_string = True
+        elif char == ",":
+            look = index + 1
+            while look < length and text[look] in " \t\r\n":
+                look += 1
+            if look < length and text[look] in "]}":
+                index += 1
+                continue
+        out.append(char)
+        index += 1
+    return "".join(out)
+
+
+def _strip_jsonc(text: str) -> str:
+    """Remove // and /* */ comments that TVBox clients skip, leaving strings untouched."""
+    out: list[str] = []
+    index, length = 0, len(text)
+    in_string = escaped = False
+    while index < length:
+        char = text[index]
+        if in_string:
+            out.append(char)
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            index += 1
+            continue
+        if char == '"':
+            in_string = True
+            out.append(char)
+            index += 1
+        elif text.startswith("//", index):
+            while index < length and text[index] not in "\r\n":
+                index += 1
+        elif text.startswith("/*", index):
+            end = text.find("*/", index + 2)
+            index = length if end == -1 else end + 2
+        else:
+            out.append(char)
+            index += 1
+    return "".join(out)
+
+
+def tvbox_json_document(body: bytes) -> dict:  # noqa: C901 - four short response shapes
+    """Parse a config body, unwrapping the disguises upstream servers actually use.
+
+    Several hosts answer a configuration request with an image content type and an image
+    payload that has a JSON document pasted after the image bytes, or with a base64 body.
+    Both are read by clients and must not be scored as failures. Success still requires a
+    parsable object: the check reports the body as it really is, it does not claim playback.
+    """
+    text = body.decode("utf-8-sig", errors="replace")
+    first = text.lstrip()[:1]
+    if first == "{":
+        # The body is already a document; the other paths exist only for disguised payloads.
+        # Clients tolerate the comments and trailing commas maintainers actually ship, so the
+        # probe uses the same leniency instead of failing a config a client would load.
+        decoder = json.JSONDecoder()
+        try:
+            doc, end = decoder.raw_decode(text.lstrip())
+        except ValueError:
+            doc, end = None, None
+        if isinstance(doc, dict) and not text.lstrip()[end:].strip(" \r\n\t"):
+            return doc
+        stripped = _drop_trailing_commas(_strip_jsonc(text)).lstrip()
+        try:
+            doc, end = json.JSONDecoder(strict=False).raw_decode(stripped)
+        except ValueError:
+            raise ValueError("config body is not parsable JSON (comments and trailing commas are tolerated)") from None
+        if not isinstance(doc, dict):
+            raise ValueError("config body is not a JSON object")
+        return doc
+    magic = next((name for prefix, name in IMAGE_MAGIC.items() if body.startswith(prefix)), None)
+    if text.lstrip().lower().startswith(("<!doctype", "<html")):
+        raise ValueError("served an HTML page instead of a configuration")
+    attempts: list[tuple[str, str]] = []
+    if magic:
+        start = text.find("{")
+        if start == -1:
+            raise ValueError(f"{magic} image response carries no JSON document")
+        attempts.append((f"{magic}-wrapped JSON", text[start:]))
+    else:
+        if not text.isascii():
+            raise ValueError("config body is binary and carries no JSON document")
+        attempts.append(("body", text))
+        stripped = text.strip()
+        if stripped and "{" not in text[:64]:
+            try:
+                decoded = base64.b64decode(stripped, validate=False)
+            except ValueError:
+                decoded = b""
+            if decoded:
+                attempts.append(("base64-body", decoded.decode("latin-1")))
+    last: Exception | None = None
+    for label, candidate in attempts:
+        try:
+            doc = json.loads(candidate.lstrip())
+        except ValueError as exc:
+            last = exc
+            continue
+        if not isinstance(doc, dict):
+            last = ValueError(f"{label} is not a JSON object")
+            continue
+        if len(candidate) < len(text) - 64:
+            doc["__decoded_as"] = label
+        return doc
+    raise ValueError(f"config body is not parsable JSON ({last})")
+
+
 def validate_remote(category: str, entry: dict, opener=None, request_profile: str = "catalog") -> str:
     body, _content_type, status = fetch_bounded(entry["url"], opener=opener, request_profile=request_profile)
     if not 200 <= status < 300:
         raise ValueError(f"HTTP status {status}")
     fmt = entry["format"]
     if fmt == "tvbox-multi":
-        doc = json.loads(body.decode("utf-8-sig"))
+        doc = tvbox_json_document(body)
         if not isinstance(doc, dict) or not isinstance(doc.get("urls"), list) or not doc["urls"]:
             raise ValueError("multi-repository JSON must contain a non-empty urls array")
         for index, item in enumerate(doc["urls"]):
             if not isinstance(item, dict) or not isinstance(item.get("url"), str) or not is_http_url(item["url"]):
                 raise ValueError(f"urls[{index}] must contain an absolute http(s) url")
     elif fmt == "tvbox-json":
-        doc = json.loads(body.decode("utf-8-sig"))
+        doc = tvbox_json_document(body)
         if not isinstance(doc, dict):
             raise ValueError("TVBox single-source config must be a JSON object")
         if not any(key in doc for key in ("sites", "urls", "lives")):
             raise ValueError("JSON object has none of the expected TVBox fields: sites, urls, lives")
     elif fmt == "tvbox-live-json":
-        doc = json.loads(body.decode("utf-8-sig"))
+        doc = tvbox_json_document(body)
         if not isinstance(doc, dict) or not isinstance(doc.get("lives"), list):
             raise ValueError("TVBox live JSON must contain a lives array")
     elif fmt == "m3u":

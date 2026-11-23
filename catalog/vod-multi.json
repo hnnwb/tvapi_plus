@@ -6,6 +6,69 @@
     "format": "tvbox-multi",
     "source": "https://github.com/TVboxorg/TVbox",
     "license": "Subscription aggregates third-party configurations; upstream project/license does not establish rights for individual providers or media. This entry points to the upstream raw GitHub file; review the repository's current terms and each nested provider before relying on it.",
-    "notes": "Listed as an auto-probed multi-repository service in the original awesome-tvbox collection. Direct request to the upstream raw GitHub endpoint returned HTTP 206 and valid JSON with 23 urls entries on 2026-11-20. This check did not verify each nested subscription, VOD rights, stability or client import. Use as a discovery index only."
+    "notes": "Listed as an auto-probed multi-repository service in the original awesome-tvbox collection. Direct request to the upstream raw GitHub endpoint returned HTTP 206 and valid JSON with 23 urls entries on 2026-11-20. This check did not verify each nested subscription, VOD rights, stability or client import. Use as a discovery index only. Bounded GET on 2026-11-23 result: ok."
+  },
+  {
+    "id": "zhuiju-xiao-he-zi-multi",
+    "name": "小盒子多仓",
+    "url": "http://xhztv.top/dc",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-shi-guang-multi",
+    "name": "拾光多仓",
+    "url": "http://xmbjm.fh4u.org/dc.txt",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-ting-hao-share-multi",
+    "name": "挺好分享多仓",
+    "url": "http://ztha.top/TVBox/GYCK.json",
+    "format": "tvbox-multi",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
   }
 ]

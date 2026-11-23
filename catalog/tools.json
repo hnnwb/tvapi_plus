@@ -208,5 +208,152 @@
       "status": "recommended",
       "checked_at": "2026-07-18"
     }
+  },
+  {
+    "id": "zhuiju-iptv-api",
+    "name": "iptv-api",
+    "url": "https://github.com/Guovin/iptv-api",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: IPTV 直播源自动采集筛选更新平台. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-06-19.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "recommended",
+      "checked_at": "2026-06-19"
+    }
+  },
+  {
+    "id": "zhuiju-iptv-org-iptv",
+    "name": "iptv",
+    "url": "https://github.com/iptv-org/iptv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 全球公开 IPTV 频道集合. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-06-19.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "recommended",
+      "checked_at": "2026-06-19"
+    }
+  },
+  {
+    "id": "zhuiju-github-com-12",
+    "name": "sky-tv",
+    "url": "https://github.com/sky22333/sky-tv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 现代化跨平台视频播放器空壳应用. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-27.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "recommended",
+      "checked_at": "2026-07-27"
+    }
+  },
+  {
+    "id": "zhuiju-fongmi-tv",
+    "name": "FongMi TV",
+    "url": "https://github.com/FongMi/TV",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 基于 CatVod 的开源 Android 影音应用. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-08-01.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "recommended",
+      "checked_at": "2026-08-01"
+    }
+  },
+  {
+    "id": "zhuiju-czy0729-bangumi",
+    "name": "Bangumi",
+    "url": "https://github.com/czy0729/Bangumi",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 专门做 ACG 的类豆瓣追番客户端. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-08-29.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "recommended",
+      "checked_at": "2026-08-29"
+    }
+  },
+  {
+    "id": "zhuiju-github-com-49",
+    "name": "nTv 直播软件",
+    "url": "https://github.com/buhanzhe/NativeWasmTv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 横屏直播播放器. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-10-23.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "recommended",
+      "checked_at": "2026-10-23"
+    }
+  },
+  {
+    "id": "zhuiju-xiugou-tv",
+    "name": "修狗TV",
+    "url": "https://github.com/qfw66/xiugou-tv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 兼容 TVBox 配置的 Windows 影视播放器. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 3 / speed 3 / clean 3 / stable 3 / ease 3); checked 2026-10-31.",
+    "rating": {
+      "average": 3.0,
+      "scores": {
+        "more": 3,
+        "speed": 3,
+        "clean": 3,
+        "stable": 3,
+        "ease": 3
+      },
+      "status": "recommended",
+      "checked_at": "2026-10-31"
+    }
   }
 ]

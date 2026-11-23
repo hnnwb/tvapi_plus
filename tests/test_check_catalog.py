@@ -1,3 +1,4 @@
+import base64
 import sys
 import unittest
 from pathlib import Path
@@ -77,3 +78,48 @@ class RatingValidationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ConfigBodyUnwrapping(unittest.TestCase):
+    """Upstream hosts disguise configs; the probe must read through it, not score a failure."""
+
+    def test_image_prefix_is_skipped(self):
+        body = b"\xff\xd8\xff\xe0\x00\x10JFIF\x00" + b'{"sites": [{"key": "a"}]}'
+        self.assertEqual(len(check_catalog.tvbox_json_document(body)["sites"]), 1)
+
+    def test_bmp_prefix_is_skipped_for_multi(self):
+        body = b"BM\x36\x00\x00\x00" + b'{"urls": [{"url": "http://x/y"}]}'
+        self.assertEqual(check_catalog.tvbox_json_document(body)["urls"][0]["url"], "http://x/y")
+
+    def test_base64_body_is_decoded(self):
+        body = base64.b64encode(b'{"lives": []}')
+        self.assertEqual(check_catalog.tvbox_json_document(body), {"lives": []})
+
+    def test_binary_without_document_still_fails(self):
+        with self.assertRaises(ValueError):
+            check_catalog.tvbox_json_document(b"\x00\x01binary")
+
+
+class ConfigBodyShapes(unittest.TestCase):
+    """Shapes real config hosts serve: plain, commented, comment-and-trailing-comma, appended HTML."""
+
+    def test_plain_document(self):
+        self.assertEqual(check_catalog.tvbox_json_document(b'{"sites": []}'), {"sites": []})
+
+    def test_line_comments_and_trailing_commas(self):
+        body = b'{\n  "sites": [\n    {"key": "a"},  // note\n  ],\n}\n//////////\n'
+        self.assertEqual(check_catalog.tvbox_json_document(body)["sites"][0]["key"], "a")
+
+    def test_html_appended_after_document(self):
+        body = ('{"urls": [{"url": "http://x/y"}]}\n<div style="text-align:center">x</div>').encode()
+        self.assertEqual(check_catalog.tvbox_json_document(body)["urls"][0]["url"], "http://x/y")
+
+    def test_utf8_bom_and_chinese_text(self):
+        body = ('\ufeff{"urls": [{"name": "老李📚在线", "url": "http://x/y"}]}').encode("utf-8")
+        self.assertEqual(check_catalog.tvbox_json_document(body)["urls"][0]["name"], "老李📚在线")
+
+
+class ConfigBodyNotAConfig(unittest.TestCase):
+    def test_html_landing_page_is_named(self):
+        with self.assertRaisesRegex(ValueError, "HTML page instead of a configuration"):
+            check_catalog.tvbox_json_document(b"<!DOCTYPE html><html><body>x</body></html>")

@@ -6,7 +6,280 @@
     "format": "tvbox-json",
     "source": "https://j.szyyds.cn/",
     "license": "The interface references third-party media providers and executable Spider/parser resources; their individual licenses, redistribution rights and content authorization are not established by the public endpoint. Treat this as an interface compatibility sample, not a lawful content source endorsement.",
-    "notes": "Compared against the original awesome-tvbox single-source candidates on 2026-11-21. Direct request returned HTTP 200 application/json; complete 30,571-byte document parsed and contains 62 sites (type 0: 1, type 1: 15, type 3: 46). This only demonstrates config structure, not source quality. User reported that a randomly selected video failed to load in their client on 2026-11-21; client/version, selected site, network and error details were not provided, so the failure is not independently reproducible. Withdrawn as a recommended test pick pending diagnosis. It references a remote Spider image and external JS rule URLs; do not import until you trust and review those code sources. Third-party provider rights are not established.",
+    "notes": "Compared against the original awesome-tvbox single-source candidates on 2026-11-21. Direct request returned HTTP 200 application/json; complete 30,571-byte document parsed and contains 62 sites (type 0: 1, type 1: 15, type 3: 46). This only demonstrates config structure, not source quality. User reported that a randomly selected video failed to load in their client on 2026-11-21; client/version, selected site, network and error details were not provided, so the failure is not independently reproducible. Withdrawn as a recommended test pick pending diagnosis. It references a remote Spider image and external JS rule URLs; do not import until you trust and review those code sources. Third-party provider rights are not established. Bounded GET on 2026-11-23 result: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-fan-tai-ying",
+    "name": "饭太硬",
+    "url": "http://www.xn--sss604efuw.net/tv",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: HTTP Error 502: Bad Gateway. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-fei-mao",
+    "name": "肥猫",
+    "url": "http://xn--z7x900a.net/",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: config body is not parsable JSON (Expecting value: line 1 co. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-lao-liu-bei",
+    "name": "老刘备",
+    "url": "https://raw.liucn.cc/box/m.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: config body is binary and carries no JSON document. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-04.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-mo-yu-er",
+    "name": "摸鱼儿",
+    "url": "http://www.y456y.com",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-wang-er-xiao",
+    "name": "王二小",
+    "url": "http://new.xn--4kq62z5rby2qupq9ub.top",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-xiao-he-zi-4k",
+    "name": "小盒子4K",
+    "url": "http://xhztv.top/4k.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-07-04.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-chuang-xiang-ying-shi-tvbox",
+    "name": "创享影视",
+    "url": "https://ys.cxkjg.cn/api/provide/tvbox",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-10-17.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-10-17"
+    }
+  },
+  {
+    "id": "zhuiju-ying-cang-tvbox",
+    "name": "影仓",
+    "url": "http://124.71.19.220/c/1",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-10-17.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-10-17"
+    }
+  },
+  {
+    "id": "zhuiju-lun-li-tvbox",
+    "name": "伦理接口",
+    "url": "http://47.96.82.41:5188/rose/18/xgg.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-10-17.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-10-17"
+    }
+  },
+  {
+    "id": "zhuiju-xiao-he-zi-single",
+    "name": "小盒子单仓",
+    "url": "http://xhztv.top/xhz",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: config body is binary and carries no JSON document. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-04.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-ao-wu",
+    "name": "嗷呜",
+    "url": "http://itv666.cc/aowu/config.webp",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: config body is not parsable JSON (Expecting property name en. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-04.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-04"
+    }
+  },
+  {
+    "id": "zhuiju-wu-ming",
+    "name": "无名",
+    "url": "https://6800.kstore.vip/fish.json",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 影视仓配置地址. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: ok. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-12.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-07-12"
+    }
+  },
+  {
+    "id": "zhuiju-xiao-he-zi",
+    "name": "小盒子",
+    "url": "https://www.xhztv.pro/",
+    "format": "tvbox-json",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. The configuration is hosted by its own maintainer, who alone controls its contents, availability, and the plugins or media it points at.",
+    "notes": "Upstream description: 专业 TV 工具箱，免费好用. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Configuration entry only: the file is checked for reachability and shape, never for playback, and the sites behind it are not exercised. Bounded GET on 2026-11-23 result: served an HTML page instead of a configuration. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-07-04.",
     "rating": {
       "average": 4.0,
       "scores": {

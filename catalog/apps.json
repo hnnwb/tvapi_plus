@@ -61,5 +61,47 @@
       "status": "caution",
       "checked_at": "2026-07-10"
     }
+  },
+  {
+    "id": "zhuiju-fongmi-fengmi",
+    "name": "FongMi 蜂蜜",
+    "url": "https://b.zhuiju.me/p/16",
+    "format": "link-page",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 基于 CatVod 二开 ，支持Android TV和手机. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-08-01.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-01"
+    }
+  },
+  {
+    "id": "zhuiju-yingshicang-player",
+    "name": "影视仓",
+    "url": "https://b.zhuiju.me/p/15",
+    "format": "link-page",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 基于 TVBox 二次开发，魔改里知名度最高. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-08-01.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "caution",
+      "checked_at": "2026-08-01"
+    }
   }
 ]
