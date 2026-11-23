@@ -28,6 +28,7 @@ class BuildSubscriptionTests(unittest.TestCase):
         documents = {
             "vod-single.json": single or [], "vod-multi.json": multi or [],
             "live.json": [], "epg.json": [], "tools.json": [],
+            "online.json": [], "search.json": [], "apps.json": [],
             "playback-evidence.json": evidence_rows or [],
         }
         for name, document in documents.items():

@@ -25,5 +25,113 @@
     "source": "https://peach.blender.org/about/",
     "license": "Creative Commons Attribution 3.0 (CC BY 3.0) for the Blender Foundation's Big Buck Bunny film; Mux hosts the HLS test rendition. Preserve film attribution/credits and verify Mux hosting terms before redistribution.",
     "notes": "Playback/test reference, not a TVBox VOD catalog source or a claim that Mux grants mirroring rights. Blender's official site states the film is CC BY 3.0 and specifies attribution; Mux's HLS test rendition returned HTTP 206 with audio/mpegurl and valid #EXTM3U/#EXT-X-STREAM-INF on 2026-11-20. No client import/playback test performed; not a TV channel."
+  },
+  {
+    "id": "zhuiju-moontvplus",
+    "name": "MoonTVPlus",
+    "url": "https://github.com/mtvpls/MoonTVPlus",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: MoonTV 增强版影视聚合播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-zyfun",
+    "name": "zyfun",
+    "url": "https://github.com/Hiram-Wong/zyfun",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 跨平台桌面端视频资源播放器. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-iptv-api",
+    "name": "iptv-api",
+    "url": "https://github.com/Guovin/iptv-api",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: IPTV 直播源自动采集筛选更新平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-iptv-org-iptv",
+    "name": "iptv",
+    "url": "https://github.com/iptv-org/iptv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 全球公开 IPTV 频道集合. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-pansou",
+    "name": "pansou",
+    "url": "https://github.com/fish2018/pansou",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 高性能网盘资源搜索 API 服务. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-cloudsaver",
+    "name": "CloudSaver",
+    "url": "https://github.com/jiangrui1994/CloudSaver",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 网盘资源搜索与转存工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-quark-auto-save",
+    "name": "quark-auto-save",
+    "url": "https://github.com/Cp0204/quark-auto-save",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 夸克网盘自动签到转存整理工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-animeko",
+    "name": "Animeko",
+    "url": "https://github.com/open-ani/animeko",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 一站式弹幕追番平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-predidit-kazumi",
+    "name": "Kazumi",
+    "url": "https://github.com/Predidit/Kazumi",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 免费无广告的番剧采集与在线观看. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-selenetv",
+    "name": "SeleneTV",
+    "url": "https://github.com/MoonTechLab/Selene",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: MoonTV v100/Helios 后端客户端. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-webhometv",
+    "name": "WebHomeTV",
+    "url": "https://github.com/fish2018/webhtv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 基于 FongMi/CatVod 二开的 Android 影音应用. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-webhometv2",
+    "name": "WebHomeTV2",
+    "url": "https://github.com/Silent1566/webhtv",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 基于 WebHomeTV 二开，支持 TMDB 海报. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: http200."
   }
 ]

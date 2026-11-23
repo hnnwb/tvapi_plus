@@ -22,7 +22,10 @@ ALLOWED_FORMATS = {
     "vod-multi": {"tvbox-multi"},
     "live": {"m3u", "txt", "tvbox-live-json"},
     "epg": {"epg-xml", "logo-library"},
-    "tools": {"documentation", "utility"},
+    "tools": {"documentation", "utility", "project"},
+    "online": {"web"},
+    "search": {"web"},
+    "apps": {"web", "link-page"},
 }
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}
@@ -47,6 +50,16 @@ def is_http_url(value: object) -> bool:
         return False
 
 
+# Network environments that route DNS through a local proxy resolver answer with addresses from
+# RFC 2544 benchmarking space (198.18.0.0/15). Those answers still traverse the proxy, so treat the
+# block as user-opt-in rather than deleting the guard outright.
+SYNTHETIC_PROXY_NET = "198.18.0.0/15"
+
+
+def allow_synthetic_proxy_ranges() -> bool:
+    return os.environ.get("TVAPI_ALLOW_SYNTHETIC_DNS") == "1"
+
+
 def validate_public_target(url: str) -> None:
     parsed = urllib.parse.urlparse(url)
     host = parsed.hostname
@@ -56,8 +69,12 @@ def validate_public_target(url: str) -> None:
         import ipaddress
         import socket
         addresses = {item[4][0] for item in socket.getaddrinfo(host, parsed.port or (443 if parsed.scheme == "https" else 80), type=socket.SOCK_STREAM)}
-        if not addresses or any(not ipaddress.ip_address(address.split("%", 1)[0]).is_global for address in addresses):
-            raise ValueError("URL resolves to a non-public network address")
+        synthetic = ipaddress.ip_network(SYNTHETIC_PROXY_NET)
+        permit_synthetic = allow_synthetic_proxy_ranges()
+        parsed_addresses = [ipaddress.ip_address(address.split("%", 1)[0]) for address in addresses]
+        if not parsed_addresses or any(not address.is_global for address in parsed_addresses):
+            if not (permit_synthetic and parsed_addresses and all(address in synthetic for address in parsed_addresses)):
+                raise ValueError("URL resolves to a non-public network address")
     except (OSError, ValueError) as exc:
         raise ValueError("URL hostname did not resolve to a safe public address") from exc
 
@@ -312,9 +329,11 @@ def validate_remote(category: str, entry: dict, opener=None, request_profile: st
         root = ET.fromstring(body)
         if root.tag not in {"tv", "tv-programme", "programme"}:
             raise ValueError(f"unexpected XML root element: {root.tag}")
-    elif fmt in {"logo-library", "documentation", "utility"}:
+    elif fmt in {"logo-library", "documentation", "utility", "project", "web", "link-page"}:
         if not body:
             raise ValueError("response body is empty")
+        if fmt in {"web", "link-page"} and b"html" not in _content_type.encode() and _content_type not in {"application/xhtml+xml", "text/plain"}:
+            raise ValueError(f"expected an HTML landing page, got {_content_type}")
     return "ok"
 
 

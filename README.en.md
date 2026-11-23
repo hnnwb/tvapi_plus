@@ -21,7 +21,10 @@ catalog/
   vod-multi.json     # Multi-repository (urls) configuration links
   live.json          # M3U/TXT/JSON live playlists
   epg.json           # EPG and logo resources
-  tools.json         # Developer documentation and utilities
+  tools.json         # Developer documentation, utilities, and open-source projects
+  online.json        # Streaming sites (browser use; not importable by a client)
+  search.json        # Magnet/cloud-drive search and subtitle sites
+  apps.json          # Player clients and download pages
 schemas/
   catalog.schema.json       # Reference catalog entry structure
   probe-report.schema.json   # Availability report structure
@@ -56,7 +59,10 @@ Allowed formats by catalog file:
 | `vod-multi.json` | `tvbox-multi` |
 | `live.json` | `m3u`, `txt`, `tvbox-live-json` |
 | `epg.json` | `epg-xml`, `logo-library` |
-| `tools.json` | `documentation`, `utility` |
+| `tools.json` | `documentation`, `utility`, `project` |
+| `online.json` | `web` |
+| `search.json` | `web` |
+| `apps.json` | `web`, `link-page` |
 
 See [`schemas/catalog.schema.json`](schemas/catalog.schema.json) for the entry structure. The catalog displays automated link-probe results; client import or playback requires running the client and is not shown as a placeholder status. The current checker implements its own field checks; it does not load or validate against the JSON Schema file yet.
 

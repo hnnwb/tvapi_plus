@@ -1,0 +1,191 @@
+[
+  {
+    "id": "zhuiju-zimuku",
+    "name": "字幕库",
+    "url": "https://zimuku.org",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here. Bounded GET on 2026-11-23 returned: http404."
+  },
+  {
+    "id": "zhuiju-assrt",
+    "name": "射手网(伪)",
+    "url": "https://assrt.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 字幕下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-subhd",
+    "name": "SubHD",
+    "url": "https://subhd.tv",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 分享下载字幕平台. Upstream self-assessment status: caution; its ratings are not reproduced here. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-juhebd",
+    "name": "BD影视聚合",
+    "url": "https://www.juhebd.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 最新高清电影电视剧下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-ainunu",
+    "name": "爱努努",
+    "url": "https://video.ainunu.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 绿色影视下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-bdflixs",
+    "name": "BD电影首发",
+    "url": "https://www.bdflixs.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 4K蓝光高清电影更新. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-ldysg",
+    "name": "找电影时光",
+    "url": "https://www.ldysg.win/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 影视高清晰无水印下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-meijufen",
+    "name": "美剧粉",
+    "url": "https://www.mjf2020.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 全部高清无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: tls-handshake-failed."
+  },
+  {
+    "id": "zhuiju-cilixiong",
+    "name": "磁力熊",
+    "url": "https://www.cilixiong.org",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 无删减、无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-ciligou",
+    "name": "磁力狗",
+    "url": "https://ciligou.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 干净好用的磁力资源搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-cilidi",
+    "name": "磁力帝",
+    "url": "https://www.cld123.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 地址发布页cldi.top. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-bt-yingshi",
+    "name": "BT影视",
+    "url": "https://www.btbtla.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 4k高清电影BT下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-4k-yuanpan",
+    "name": "POMO",
+    "url": "https://pomo.mom/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 4K原盘免费下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-dianyinggang",
+    "name": "电影港网",
+    "url": "https://www.dyg22.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 无水印4K高清BT种子资源. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-btshijiewang",
+    "name": "BT世界网",
+    "url": "https://www.btsj6.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 高清电影美剧BT种子迅雷下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-gaoqing-mp4",
+    "name": "高清MP4",
+    "url": "https://www.mp4ba.vip",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 免费1080电影4K电影. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-gaoqingzu",
+    "name": "高清族",
+    "url": "https://hdzu.org",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 1080P电影下载,4K电影下载. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-kuake-so-1",
+    "name": "PanSou",
+    "url": "https://pansou.de",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 纯净的夸克网盘资源搜索引擎. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-kuakeso",
+    "name": "KK网盘搜",
+    "url": "https://kkso.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 夸克百度网盘搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-zhuiju-us",
+    "name": "追剧吧",
+    "url": "https://www.zhuiju.us/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 国内外热门影视网盘资源搜索. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-gugeso",
+    "name": "谷哥搜",
+    "url": "https://gugeso.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 支持9种网盘的综合搜索站. Upstream self-assessment status: caution; its ratings are not reproduced here. Search/index site only; results point at third-party files whose rights and safety are not controlled by this project or by the upstream directory. Bounded GET on 2026-11-23 returned: connection-closed."
+  }
+]

@@ -17,6 +17,7 @@ on:
       - "scripts/build_subscriptions.py"
       - "scripts/build_custom_single.py"
       - "scripts/screen_interfaces.py"
+      - "scripts/import_upstream.py"
       - "scripts/check_catalog.py"
       - "schemas/**"
       - "tests/**"

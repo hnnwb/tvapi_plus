@@ -21,7 +21,10 @@ catalog/
   vod-multi.json     # 多仓（urls）配置链接
   live.json          # M3U/TXT/JSON 直播列表
   epg.json           # EPG 与台标资源
-  tools.json         # 开发文档与工具
+  tools.json         # 开发文档、工具与开源项目
+  online.json        # 在线影视站（适配浏览器，不导入客户端）
+  search.json        # 磁力/网盘搜索站与字幕站
+  apps.json          # 播放器客户端与下载入口
 schemas/
   catalog.schema.json       # 目录条目结构参考
   probe-report.schema.json   # 探测报告结构
@@ -56,7 +59,10 @@ scripts/
 | `vod-multi.json` | `tvbox-multi` |
 | `live.json` | `m3u`、`txt`、`tvbox-live-json` |
 | `epg.json` | `epg-xml`、`logo-library` |
-| `tools.json` | `documentation`、`utility` |
+| `tools.json` | `documentation`、`utility`、`project` |
+| `online.json` | `web` |
+| `search.json` | `web` |
+| `apps.json` | `web`、`link-page` |
 
 条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。目录仅显示自动链接探测结果；客户端导入或实际播放需要运行客户端，不在页面显示占位状态。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
 

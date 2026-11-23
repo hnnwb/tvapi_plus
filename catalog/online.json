@@ -1,0 +1,263 @@
+[
+  {
+    "id": "zhuiju-kankanya",
+    "name": "看看鸭",
+    "url": "https://www.kankanya.me/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 高清无广告新站. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-no-video",
+    "name": "No影视",
+    "url": "https://novipnoad.org/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 海外影视剧资源聚合站（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-gaze-red",
+    "name": "注视影视",
+    "url": "https://gaze.red/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 国内海外影视剧资源（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-sotvla",
+    "name": "搜TV啦",
+    "url": "https://www.sotvla.cc/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 国内海外高清影视剧资源. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-xlys",
+    "name": "雪落影视",
+    "url": "https://xlys.me/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  },
+  {
+    "id": "zhuiju-duonao-video",
+    "name": "多瑙影视",
+    "url": "https://www.duonaovod.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  },
+  {
+    "id": "zhuiju-tdgo",
+    "name": "白嫖者联盟",
+    "url": "https://www.tdgo.shop",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 热门热播剧，无广告速度快（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-ddmf",
+    "name": "蛋蛋魔法",
+    "url": "https://ddmf.net",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 国内外热播剧，有福利伦理片（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-appmovie",
+    "name": "APP影院",
+    "url": "https://www.appmovie.art",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 国内外热播剧，纯净无广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-ai-movie",
+    "name": "爱电影",
+    "url": "https://kuhh4jo.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 最新热门电影/电视剧（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-jpyy",
+    "name": "金牌影视",
+    "url": "https://www.vv3nwjk.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  },
+  {
+    "id": "zhuiju-tv-937",
+    "name": "937影视",
+    "url": "https://www.937tv.vip",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 看全网影视剧（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: connection-closed."
+  },
+  {
+    "id": "zhuiju-iyf",
+    "name": "爱壹帆",
+    "url": "https://iyf.tv",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 海外华人影视站（需梯子/有VIP限制）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-czzymovie",
+    "name": "厂长资源",
+    "url": "https://www.czzymovie.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 高清、秒播不卡顿，有广告. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-libvio",
+    "name": "LIBVIO",
+    "url": "https://libviobd.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 海外影视的老牌网站，发布页www.libvio.app. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-auete-video",
+    "name": "Auete影视",
+    "url": "https://www.aeete.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 蓝光超清精品影视，发布页auete.pro. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-dyrs",
+    "name": "电影人生",
+    "url": "https://dyrs.tv",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 高清电影在线观看. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200-redirect-root."
+  },
+  {
+    "id": "zhuiju-netflixgc",
+    "name": "奈飞工厂",
+    "url": "https://www.netflixgc.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 最新美剧，无广告（需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-nfyingshi",
+    "name": "奈菲影视",
+    "url": "https://www.nfyingshi.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 热门美剧（需梯子/有VIP限制）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-nivod",
+    "name": "泥视频",
+    "url": "https://www.nivod.vip",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  },
+  {
+    "id": "zhuiju-ppnix",
+    "name": "PPnix",
+    "url": "https://www.ppnix.com/cn/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 在线观看电影电视剧. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-dbku",
+    "name": "独播库",
+    "url": "https://www.dbku.tv",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 页面无广告，纯净. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-bubu-zhuiju",
+    "name": "布布追剧",
+    "url": "https://bubuzhuiju.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 速度快，有广告能接受. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: connection-closed."
+  },
+  {
+    "id": "zhuiju-yingmao-cangku",
+    "name": "影猫仓库",
+    "url": "https://www.ymck.pro",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 热门影视剧，有广告能接受. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http403."
+  },
+  {
+    "id": "zhuiju-aikanbot",
+    "name": "爱看机器人",
+    "url": "https://www1.aikanbot.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 热门电影电视剧（有跳转广告）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http200."
+  },
+  {
+    "id": "zhuiju-duse91",
+    "name": "91毒舌",
+    "url": "https://www.duse0.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 最新Netflix新剧、4K高清（可访问）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http850."
+  },
+  {
+    "id": "zhuiju-guangsu-yingshi",
+    "name": "光速影视",
+    "url": "https://www.yingshiso.link/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  },
+  {
+    "id": "zhuiju-haohaokan",
+    "name": "好好看",
+    "url": "https://www.hhkan2.com/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 4K高清Netflix新剧（可访问需梯子）. Upstream self-assessment status: caution; its ratings are not reproduced here. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 returned: http850."
+  },
+  {
+    "id": "zhuiju-ifn",
+    "name": "IFN",
+    "url": "https://ifn.watch/register?code=8B1EF6",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream marked this entry as removed because the site is reported inaccessible; the record is kept for provenance only and is not offered as a usable resource."
+  }
+]
