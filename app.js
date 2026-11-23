@@ -9,7 +9,6 @@ const CATALOGS = [
 ];
 
 const CATEGORY_NAMES = { 'vod-single': '单仓配置', 'vod-multi': '多仓配置', live: '直播', epg: '节目单与台标', tools: '工具与文档' };
-const FORMAT_NAMES = { documentation: { zh: '文档', en: 'Documentation' }, utility: { zh: '工具', en: 'Utility' }, project: { zh: '项目参考', en: 'Project reference' } };
 const TEXT = {
   zh: {
  verificationEyebrow: '验证记录 / TEST EVIDENCE', verificationTitle: '可复现的验证记录', testsLabel: '自动化测试通过', clientPlaybackNotTested: 'TVBox 客户端实播：未验证', true4kNotTested: '真实 4K：未验证', checkPassed: '通过', checkFailed: '失败', checkNotTested: '未测试', checkDate: '测试记录',
@@ -94,10 +93,9 @@ function renderCard(entry) {
     ? `<span class="test-date">${escapeHTML(probe.label)}${probe.dateText ? ` · ${escapeHTML(probe.dateText)}` : ''}${probe.item.used_fallback ? ` · ${escapeHTML(TEXT[lang].fallbackUsed)}` : ''}${probe.previousDateText ? ` · ${escapeHTML(TEXT[lang].lastSuccess(probe.previousDateText))}` : ''}</span>`
     : `<span class="test-date">${escapeHTML(TEXT[lang].emptyProbe)}</span>`;
   const licenseMarkup = entry.license ? `<span class="test-date">${escapeHTML(entry.license)}</span>` : '';
-  const formatLabel = FORMAT_NAMES[entry.format]?.[lang] || entry.format;
   return `<article class="catalog-item">
-    <div class="item-primary"><div class="item-name">${escapeHTML(entry.name)}</div><div class="item-source" title="${source}">${escapeHTML(TEXT[lang].source)}: ${source}</div><p class="item-notes">${escapeHTML(entry.notes)}</p>${licenseMarkup}</div>
-    <div class="item-meta"><span class="item-category">${escapeHTML(categoryLabel(entry._category))}</span><span class="item-format">${escapeHTML(formatLabel)}</span></div>
+    <div class="item-primary"><div class="item-name">${escapeHTML(entry.name)}</div><div class="item-source" title="${source}">${escapeHTML(TEXT[lang].source)}: ${source}</div>${licenseMarkup}</div>
+    <div class="item-meta"><span class="item-category">${escapeHTML(categoryLabel(entry._category))}</span><span class="item-format">${escapeHTML(entry.format)}</span></div>
     <div class="item-tests">${probeMarkup}</div>
     <div class="item-actions">
       ${copyUrl ? `<button class="item-copy" type="button" data-copy-url="${escapeHTML(copyUrl)}" aria-label="${escapeHTML(TEXT[lang].copyUrl)}: ${escapeHTML(entry.name)}" title="${escapeHTML(TEXT[lang].copyUrl)}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V4H4v12h4"/></svg><span data-copy-label>${escapeHTML(TEXT[lang].copyUrl)}</span></button>` : ''}

@@ -14,7 +14,7 @@
     },
     "name": { "type": "string", "minLength": 1 },
     "url": { "type": "string", "format": "uri" },
-    "format": { "type": "string", "enum": ["tvbox-json", "tvbox-multi", "m3u", "txt", "tvbox-live-json", "epg-xml", "logo-library", "documentation", "utility", "project"] },
+    "format": { "type": "string" },
     "source": { "type": "string", "format": "uri" },
     "license": { "type": "string", "minLength": 1 },
     "notes": { "type": "string" }

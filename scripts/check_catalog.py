@@ -22,7 +22,7 @@ ALLOWED_FORMATS = {
     "vod-multi": {"tvbox-multi"},
     "live": {"m3u", "txt", "tvbox-live-json"},
     "epg": {"epg-xml", "logo-library"},
-    "tools": {"documentation", "utility", "project"},
+    "tools": {"documentation", "utility"},
 }
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}
@@ -312,7 +312,7 @@ def validate_remote(category: str, entry: dict, opener=None, request_profile: st
         root = ET.fromstring(body)
         if root.tag not in {"tv", "tv-programme", "programme"}:
             raise ValueError(f"unexpected XML root element: {root.tag}")
-    elif fmt in {"logo-library", "documentation", "utility", "project"}:
+    elif fmt in {"logo-library", "documentation", "utility"}:
         if not body:
             raise ValueError("response body is empty")
     return "ok"

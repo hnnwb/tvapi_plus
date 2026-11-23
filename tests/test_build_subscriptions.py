@@ -62,20 +62,6 @@ class BuildSubscriptionTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "url must be an http\(s\) URL"):
                 build_subscriptions.build(catalog)
 
-    def test_catalog_accepts_project_reference_and_remote_check(self):
-        entry = record("sample-project", "Sample project", "https://example.test/project", "project")
-        with tempfile.TemporaryDirectory() as tmp:
-            catalog = self.write_catalog(Path(tmp))
-            (catalog / "tools.json").write_text(json.dumps([entry]), encoding="utf-8")
-            errors = []
-            entries = check_catalog.validate_catalog(errors, catalog_dir=catalog)
-        self.assertEqual(errors, [])
-        self.assertIn(("tools", entry), entries)
-        import unittest.mock
-        from check_catalog import validate_remote
-        with unittest.mock.patch("check_catalog.fetch_bounded", return_value=(b"project reference", "text/plain", 200)):
-            self.assertEqual(validate_remote("tools", entry), "ok")
-
     def test_rejects_wrong_format_through_shared_validator(self):
         wrong = record("wrong-config", "Wrong", "https://example.test/", "m3u")
         with tempfile.TemporaryDirectory() as tmp:

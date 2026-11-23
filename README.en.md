@@ -11,9 +11,7 @@ A resource directory and format checker for the TVBox ecosystem and compatible c
 - Validate catalog metadata automatically, with optional bounded HTTP and basic format checks.
 - No automatic decryption, rewriting, proxying, or republication of third-party configurations; no JS, Python, or JAR plugin execution in CI.
 
-The catalogs contain live playlists, VOD configuration indexes, EPG resources, and tool/project references with recorded provenance. Some newly added entries are candidates listed by an upstream directory and have not been verified for reachability, format, client import, or playback. Do not copy every link from Awesome TVBox or another directory. Add only links you are authorized to publish. Public reachability is not proof of copyright permission, safety, compatibility, or playback quality. Malformed or unclear-provenance configurations are not marked as verified interfaces. Never commit credentials, private URLs, tokens, or account data.
-
-Names and links selected from `laoma528/awesome-zhuiju-free` are attributed to that directory. Its CC BY 4.0 license applies to the directory itself only; it does not license linked configurations, players, plugins, channels, EPG data, or media. Each destination's own terms and rights apply.
+The catalogs currently contain a small set of live playlists, VOD configuration indexes, EPG feeds, and tooling references with recorded provenance and bounded accessibility/structure checks; this is not a complete review. Do not copy every link from Awesome TVBox or another directory. Add only links you are authorized to publish. Public reachability is not proof of copyright permission, safety, compatibility, or playback quality. Malformed, unclear-provenance, or rights-unclear configurations (such as the currently invalid XYQ JSON) are not listed as usable interfaces. Never commit credentials, private URLs, tokens, or account data.
 
 ## Repository layout
 
@@ -58,7 +56,7 @@ Allowed formats by catalog file:
 | `vod-multi.json` | `tvbox-multi` |
 | `live.json` | `m3u`, `txt`, `tvbox-live-json` |
 | `epg.json` | `epg-xml`, `logo-library` |
-| `tools.json` | `documentation`, `utility`, `project` |
+| `tools.json` | `documentation`, `utility` |
 
 See [`schemas/catalog.schema.json`](schemas/catalog.schema.json) for the entry structure. The catalog displays automated link-probe results; client import or playback requires running the client and is not shown as a placeholder status. The current checker implements its own field checks; it does not load or validate against the JSON Schema file yet.
 

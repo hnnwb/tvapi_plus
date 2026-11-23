@@ -34,14 +34,5 @@
     "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
     "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
     "notes": "Upstream category index named Public, not a legal determination that every channel is public-domain or openly licensed. HTTP 200, audio/x-mpegurl, #EXTM3U and #EXTINF confirmed 2026-11-20; 9,376 bytes sampled. Per-channel rights and availability require independent review; not playback-tested."
-  },
-  {
-    "id": "vma-iptv-source",
-    "name": "VMA IPTV playlist candidate",
-    "url": "https://pan.vma.cc/down.php/f83b92a24d61858666f13c5db938a292.txt",
-    "format": "txt",
-    "source": "https://github.com/laoma528/awesome-zhuiju-free",
-    "license": "The upstream directory is CC BY 4.0; this covers its directory text only, not this playlist or its channels. Stream ownership and redistribution rights are not established.",
-    "notes": "URL listed as an IPTV/live subscription by awesome-zhuiju-free. The current response, playlist syntax, channel rights, reachability and playback have not been verified. Included as an upstream-referenced candidate only."
   }
 ]
