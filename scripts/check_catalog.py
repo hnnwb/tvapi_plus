@@ -27,9 +27,7 @@ ALLOWED_FORMATS = {
     "online": {"web"},
     "magnet": {"web"},
     "search": {"web"},
-    "apps": {"web", "link-page"},
-    "apps-ios": {"web", "link-page"},
-    "apps-android": {"web", "link-page"},
+    "apps": {"web", "link-page", "project"},
 }
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 PLAYBACK_EVIDENCE_FIELDS = {"id", "client", "version", "tested_at", "scope", "duration_seconds", "result"}

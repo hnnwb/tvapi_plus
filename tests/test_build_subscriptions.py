@@ -29,7 +29,6 @@ class BuildSubscriptionTests(unittest.TestCase):
             "vod-single.json": single or [], "vod-multi.json": multi or [],
             "live.json": [], "epg.json": [], "tools.json": [],
             "online.json": [], "magnet.json": [], "search.json": [], "apps.json": [],
-            "apps-ios.json": [], "apps-android.json": [],
             "playback-evidence.json": evidence_rows or [],
         }
         for name, document in documents.items():

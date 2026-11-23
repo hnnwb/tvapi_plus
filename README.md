@@ -25,9 +25,7 @@ catalog/
   online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）
   search.json        # 网盘搜索与字幕站
   magnet.json        # 磁力与 BT 搜索站
-  apps.json          # 播放器客户端入口
-  apps-ios.json      # 苹果端应用来源仓库
-  apps-android.json  # 安卓端应用来源仓库
+  apps.json          # 应用：玩家客户端、手机 / TV / 桌面各端与下载页
 schemas/
   catalog.schema.json       # 目录条目结构参考
   probe-report.schema.json   # 探测报告结构
@@ -35,6 +33,7 @@ scripts/
   check_catalog.py           # 元数据检查，可选 URL 探测
   refresh_status.py          # 定时重试/备用地址探测
   import_upstream.py         # 合并上游目录条目（按 URL 去重，可选）
+  import_apps.py             # 合并上游客户软件清单（按 URL 去重，可选）
   build_subscriptions.py     # 生成配置索引与多仓订阅
 .github/workflows/
   catalog-check.yml
@@ -76,9 +75,7 @@ scripts/
 | `online.json` | `web` |
 | `search.json` | `web` |
 | `magnet.json` | `web` |
-| `apps.json` | `web`、`link-page` |
-| `apps-ios.json` | `web`、`link-page` |
-| `apps-android.json` | `web`、`link-page` |
+| `apps.json` | `web`、`link-page`、`project` |
 
 条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。目录仅显示自动链接探测结果；客户端导入或实际播放需要运行客户端，不在页面显示占位状态。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
 
@@ -107,7 +104,7 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 ## 发布方式
 
-分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。目录合并了上游 awesome-zhuiju-free 的条目：同一 URL 只保留一条，新条目继承上游星级并由 `scripts/import_upstream.py` 按 URL 去重后再写入，重复执行不会重复追加。页面只有一个列表板块，分类用标签页切换（单仓、多仓、直播、EPG、磁力与 BT、网盘与字幕、在线站、播放器、苹果应用、安卓应用、开源项目），标签页后带各自条数；列表按「检测通过优先、再按上游星级降序、最后按名称」排序。星级以半星显示并附数字，窄屏则缩成小号星形。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
+分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。目录合并了上游 awesome-zhuiju-free 的条目：同一 URL 只保留一条，新条目继承上游星级并由 `scripts/import_upstream.py` 按 URL 去重后再写入，重复执行不会重复追加。页面只有一个列表板块，分类用标签页切换（单仓、多仓、直播、EPG、磁力与 BT、网盘与字幕、在线站、应用、开源项目），标签页后带各自条数；列表按「检测通过优先、再按上游星级降序、最后按名称」排序。星级以半星显示并附数字，窄屏则缩成小号星形。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
 
 “尽量完整”通过持续收集和审核实现，不等于无差别搬运。只有出处、引用权限和格式可说明的条目才能进入目录；任何实际播放测试声明都必须有客户端测试证据。
 

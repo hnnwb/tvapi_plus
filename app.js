@@ -13,8 +13,6 @@ const CATALOGS = [
   { file: 'catalog/magnet.json', category: 'magnet' },
   { file: 'catalog/search.json', category: 'search' },
   { file: 'catalog/apps.json', category: 'apps' },
-  { file: 'catalog/apps-ios.json', category: 'apps-ios' },
-  { file: 'catalog/apps-android.json', category: 'apps-android' },
   { file: 'catalog/tools.json', category: 'tools' },
   { file: 'catalog/online.json', category: 'online' },
 ];
@@ -24,7 +22,7 @@ const WEB_ONLY = new Set(['online', 'magnet', 'search', 'apps', 'tools']);
 const CONFIG_INDEX_IDS = new Set(['tvapi-plus-custom-single', 'xiaoma-tvbox-config']);
 const CATEGORY_ORDER = {
   'vod-single': 0, 'vod-multi': 1, live: 2, epg: 3, magnet: 4, search: 5,
-  apps: 6, 'apps-ios': 7, 'apps-android': 8, tools: 9, online: 10,
+  apps: 6, tools: 9, online: 10,
 };
 
 const STAR_PATH = 'M8 .9l2.1 4.4 4.8.7-3.5 3.4.8 4.8L8 11.9l-4.2 2.3.8-4.8L1.1 6l4.8-.7z';
@@ -41,12 +39,13 @@ const TEXT = {
     listEyebrow: '检测 · 排序',
     listTitle: '全部资源',
     allCategories: '全部', single: '单仓配置', multi: '多仓配置', live: '直播', epg: 'EPG',
-    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '播放器', "apps-ios": '苹果应用', "apps-android": '安卓应用', tools: '开源项目', via: '来源',
+    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '应用', tools: '开源项目', via: '来源',
     searchLabel: '搜索资源', searchPlaceholder: '搜索名称、来源',
     result: (shown, total) => `显示 ${shown} / ${total} 条`,
     hintAll: '同一分类内先按检测结果、再按上游星级排序；星级相同的按名称排。',
     hintImportable: '这一类可以直接复制链接、在客户端里导入。检测只说明当时能取到，不代表能播放。',
     hintWeb: '这一类是在浏览器里用的站点，不是 TVBox 配置，复制到客户端不会生效。',
+    hintApps: '应用清单：条目指向项目仓库或下载页，平台写在条目说明里；星标数折算的星级只表示热度。',
     ratedAs: '上游自评',
     ratedNone: '无星级',
     removed: '上游已移除',
@@ -65,7 +64,7 @@ const TEXT = {
     lastSuccess: (d) => `上次通过 ${d}`,
     category: {
       'vod-single': '单仓配置', 'vod-multi': '多仓配置', live: '直播', epg: 'EPG', magnet: '磁力与 BT',
-      search: '网盘与字幕', apps: '播放器', 'apps-ios': '苹果应用', 'apps-android': '安卓应用',
+      search: '网盘与字幕', apps: '应用',
       tools: '开源项目', online: '在线影视站',
     },
     loadError: '目录文件读取失败，请刷新重试。',
@@ -80,12 +79,13 @@ const TEXT = {
     listEyebrow: 'Checks · order',
     listTitle: 'All resources',
     allCategories: 'All', single: 'Single config', multi: 'Multi config', live: 'Live', epg: 'EPG',
-    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Players', "apps-ios": 'Apple apps', "apps-android": 'Android apps', tools: 'Open source', via: 'via',
+    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Apps', tools: 'Open source', via: 'via',
     searchLabel: 'Search resources', searchPlaceholder: 'Search name or source',
     result: (shown, total) => `Showing ${shown} of ${total}`,
     hintAll: 'Within a category: passing checks first, then the higher upstream rating, then name.',
     hintImportable: 'Copy the link and import it in a client. A passing check only means it answered once, not that it plays.',
     hintWeb: 'This category is used in a browser. These are not TVBox configs and will not work when imported.',
+    hintApps: 'An app list: rows point at a repository or download page and name their platform. Stars converted to a rating only mean popularity.',
     ratedAs: 'upstream', ratedNone: 'No rating', removed: 'Removed upstream',
     emptyText: 'No entries in this category.',
     noResults: 'No matching entries.',
@@ -102,7 +102,7 @@ const TEXT = {
     lastSuccess: (d) => `passed ${d}`,
     category: {
       'vod-single': 'Single config', 'vod-multi': 'Multi config', live: 'Live', epg: 'EPG', magnet: 'Magnet & BT',
-      search: 'Cloud search & subs', apps: 'Players', 'apps-ios': 'Apple apps', 'apps-android': 'Android apps',
+      search: 'Cloud search & subs', apps: 'Apps',
       tools: 'Open source', online: 'Streaming sites',
     },
     loadError: 'Catalog files failed to load. Please refresh.',
@@ -288,7 +288,8 @@ function render() {
   document.getElementById('result-count').textContent = t().result(visible.length, new Set(entries.map((entry) => entry.url)).size);
   document.getElementById('tab-hint').textContent = activeCategory === 'all'
     ? t().hintAll
-    : IMPORTABLE.has(activeCategory) ? t().hintImportable : t().hintWeb;
+    : activeCategory === 'apps' ? t().hintApps
+      : IMPORTABLE.has(activeCategory) ? t().hintImportable : t().hintWeb;
   document.getElementById('catalog-list').innerHTML = visible.map(renderRow).join('');
   document.getElementById('empty-state').hidden = entries.length !== 0;
   document.getElementById('empty-state').querySelector('p').textContent = t().emptyText;
