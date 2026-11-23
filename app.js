@@ -1,4 +1,5 @@
 const CUSTOM_SINGLE_STATUS_URL = 'reports/custom-single-candidates.json';
+const CONFIG_INDEX_URL = 'configs.json';
 const CATALOGS = [
   { file: 'catalog/vod-single.json', category: 'vod-single' },
   { file: 'catalog/vod-multi.json', category: 'vod-multi' },
@@ -164,7 +165,7 @@ function renderVerification(report) {
 
 async function loadData() {
   try {
-    const [catalogResults, reportResponse, verificationResponse, screeningResponse, customStatusResponse] = await Promise.all([
+    const [catalogResults, reportResponse, verificationResponse, screeningResponse, customStatusResponse, configIndexResponse] = await Promise.all([
       Promise.all(CATALOGS.map(async ({ file, category }) => {
         const response = await fetch(file, { cache: 'no-store' });
         if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
@@ -175,9 +176,30 @@ async function loadData() {
       fetch('probe-report.json', { cache: 'no-store' }).catch(() => null),
       fetch('reports/verification-report.json', { cache: 'no-store' }).catch(() => null),
       fetch('reports/interface-screening.json', { cache: 'no-store' }).catch(() => null),
-      fetch(CUSTOM_SINGLE_STATUS_URL, { cache: 'no-store' }).catch(() => null)
+      fetch(CUSTOM_SINGLE_STATUS_URL, { cache: 'no-store' }).catch(() => null),
+      fetch(CONFIG_INDEX_URL, { cache: 'no-store' }).catch(() => null)
     ]);
     entries = catalogResults.flat();
+    if (configIndexResponse?.ok) {
+      const configIndex = await configIndexResponse.json();
+      const indexedSingles = (configIndex.configs || [])
+        .filter((item) => item.id === 'tvapi-plus-custom-single' || item.id === 'xiaoma-tvbox-config')
+        .map((item) => ({
+          id: item.id,
+          name: item.name,
+          url: item.url,
+          format: 'tvbox-json',
+          source: item.source || 'configs.json',
+          license: '未验证',
+          notes: item.id === 'tvapi-plus-custom-single' ? '单仓候选；未实播验证' : '上游配置入口',
+          _category: 'vod-single',
+          _displayOrder: Number(item.display_order) || Number.MAX_SAFE_INTEGER
+        }));
+      const indexedIds = new Set(indexedSingles.map((item) => item.id));
+      entries = entries.filter((item) => !indexedIds.has(item.id)).concat(indexedSingles);
+      entries.sort((a, b) => (a._category === 'vod-single' ? 0 : 1) - (b._category === 'vod-single' ? 0 : 1)
+        || (a._displayOrder || Number.MAX_SAFE_INTEGER) - (b._displayOrder || Number.MAX_SAFE_INTEGER));
+    }
     if (reportResponse?.ok) probeReport = await reportResponse.json();
     if (verificationResponse?.ok) {
       verificationReport = await verificationResponse.json();
