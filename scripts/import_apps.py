@@ -36,16 +36,22 @@ NOTES = {
     "yaoxieyoulei/mytv-android": "已归档的原项目。",
 }
 
+# Every row in the list's client sections is Android-side unless it says otherwise: the list
+# is about TV boxes. "TV" alone is not a platform, so a row that only says TV is an Android app
+# on a TV, not a desktop program.
 PLATFORMS = [
-    (r"Apple 全平台|iOS / iPadOS / tvOS / macOS / watchOS", "iOS·tvOS·macOS"),
-    (r"^\s*iOS", "iOS"),
-    (r"macos|macOS|Apple Silicon", "macOS"),
+    (r"Apple 全平台|iOS / iPadOS / tvOS / macOS / watchOS", "Apple 全平台（iOS·tvOS·macOS）"),
+    (r"Android / TV / iOS / Windows", "Android·TV·iOS·Windows·macOS"),
+    (r"Windows / macOS / Linux", "Windows·macOS·Linux"),
+    (r"Android / TV / iOS", "Android·TV·iOS"),
+    (r"Android TV", "Android TV"),
+    (r"Android", "Android"),
+    (r"iOS", "iOS"),
+    (r"macOS|macOS|Apple Silicon", "macOS"),
     (r"Windows", "Windows"),
     (r"Linux", "Linux"),
     (r"Web\b", "Web"),
-    (r"Android TV", "Android TV"),
-    (r"Android", "Android"),
-    (r"TV", "TV"),
+    (r"TV", "Android TV·盒子"),
 ]
 
 ROW = re.compile(r"\|\s*\[([^\]]+)\]\((https://github\.com/[^)]+)\)\s*\|([^|]*)\|([^|]*)\|")
@@ -72,7 +78,7 @@ def platforms(desc: str) -> str:
     for pattern, label in PLATFORMS:
         if re.search(pattern, desc):
             return label
-    return "未标注"
+    return "Android TV·盒子（上游只标 TV，未写具体系统）"
 
 
 def entry_id(url: str) -> str:

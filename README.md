@@ -25,7 +25,7 @@ catalog/
   online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）
   search.json        # 网盘搜索与字幕站
   magnet.json        # 磁力与 BT 搜索站
-  apps.json          # 应用：玩家客户端、手机 / TV / 桌面各端的仓库、发布页与下载页
+  apps.json          # 应用：客户端仓库、产品页与下载页，条目写明支持的系统
 schemas/
   catalog.schema.json       # 目录条目结构参考
   probe-report.schema.json   # 探测报告结构
@@ -75,7 +75,7 @@ scripts/
 | `online.json` | `web` |
 | `search.json` | `web` |
 | `magnet.json` | `web` |
-| `apps.json` | `web`、`link-page`、`project` |
+| `apps.json` | `web`、`link-page`、`project`（三者都是该应用的入口） |
 
 条目结构参考见 [`schemas/catalog.schema.json`](schemas/catalog.schema.json)。目录仅显示自动链接探测结果；客户端导入或实际播放需要运行客户端，不在页面显示占位状态。当前检查脚本直接执行自己的字段检查逻辑；JSON Schema 文件作为结构文档，尚未由脚本加载验证。
 

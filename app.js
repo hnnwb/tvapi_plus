@@ -185,6 +185,14 @@ function isRemoved(entry) {
   return entry.rating?.status === 'removed';
 }
 
+// Clients only: what the row's note says about systems, pulled out so it is visible without
+// opening the row. Blank when the note never established one.
+function platformOf(entry) {
+  const match = /平台：([^。]+)。/.exec(entry.notes || '');
+  // The chip carries only the systems; the note keeps the provenance behind them.
+  return match ? match[1].trim() : '';
+}
+
 function ratingOf(entry) {
   if (isRemoved(entry)) return null;
   return entry.rating && typeof entry.rating.average === 'number' ? entry.rating.average : null;
@@ -222,6 +230,7 @@ function actionsFor(entry) {
 function renderRow(entry) {
   const href = safeHref(entry.url);
   const average = ratingOf(entry);
+  const platform = platformOf(entry);
   const rating = isRemoved(entry)
     ? `<span class="chip chip--removed">${escapeHTML(t().removed)}</span>`
     : average === null ? `<span class="rating-num">${escapeHTML(t().ratedNone)}</span>` : starRow(average);
@@ -240,6 +249,7 @@ function renderRow(entry) {
       <div class="row-meta">
         <span class="chip">${escapeHTML(t().category[entry._category] || entry._category)}</span>
         <span class="chip">${escapeHTML(entry.format)}</span>
+        ${platform ? `<span class="chip chip--platform">${escapeHTML(platform)}</span>` : ''}
         ${rating}
         ${probeChip(entry)}
         ${source}

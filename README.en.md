@@ -25,8 +25,7 @@ catalog/
   online.json        # Streaming sites and download landing pages (browser use)
   search.json        # Cloud-drive search and subtitle sites
   magnet.json        # Magnet and BT search sites
-  apps.json          # Player client entry points
-  apps.json          # Apps: repositories, release pages and download pages per platform
+  apps.json          # Apps: repositories, product and download pages, each naming its systems
 schemas/
   catalog.schema.json       # Reference catalog entry structure
   probe-report.schema.json   # Availability report structure
@@ -75,8 +74,7 @@ Allowed formats by catalog file:
 | `online.json` | `web` |
 | `search.json` | `web` |
 | `magnet.json` | `web` |
-| `apps.json` | `web`, `link-page` |
-| `apps.json` | `web`, `link-page`, `project` |
+| `apps.json` | `web`, `link-page`, `project` — all three are entry points to that app |
 
 See [`schemas/catalog.schema.json`](schemas/catalog.schema.json) for the entry structure. The catalog displays automated link-probe results; client import or playback requires running the client and is not shown as a placeholder status. The current checker implements its own field checks; it does not load or validate against the JSON Schema file yet.
 

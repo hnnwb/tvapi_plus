@@ -112,6 +112,11 @@ h2 { font-size: 30px; font-weight: 700; letter-spacing: -.022em; }
 .row-host { overflow: hidden; color: var(--ink-3); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .row-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 6px; }
 .chip--source { color: var(--ink-3); }
+.chip--platform {
+  background: #eef0f4;
+  color: #3a3a3d;
+}
+
 .chip--removed { border-color: #f2d5d5; background: #fdf3f3; color: #a4453f; }
 .chip--source a { color: var(--ink-3); text-decoration: underline; text-decoration-color: var(--line); }
 .chip { padding: 2px 8px; border-radius: 980px; background: var(--fill); color: var(--ink-2); font-size: 11px; }
