@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T03:31:37.251569+00:00",
+  "generated_at": "2026-11-24T08:24:31.906557+00:00",
   "schema_version": 2,
   "probes": [
     {
       "id": "xiaoma-tvbox-config",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:23:28.144905+00:00",
-      "last_success_at": "2026-11-24T03:23:28.144905+00:00",
+      "checked_at": "2026-11-24T08:23:22.581082+00:00",
+      "last_success_at": "2026-11-24T08:23:22.581082+00:00",
       "configured_url": "https://szyyds.cn/tv/x.json",
       "used_endpoint": "https://szyyds.cn/tv/x.json",
       "used_fallback": false,
@@ -18,13 +18,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:12:52.676530+00:00"
+      "previous_last_success_at": "2026-11-24T03:23:28.144905+00:00"
     },
     {
       "id": "zhuiju-fan-tai-ying",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:23:29.254458+00:00",
+      "checked_at": "2026-11-24T08:23:22.581687+00:00",
       "last_success_at": null,
       "configured_url": "http://www.xn--sss604efuw.net/tv",
       "used_endpoint": null,
@@ -35,18 +35,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: config body is not parsable JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1))"
-        },
-        {
-          "endpoint": "http://www.xn--sss604efuw.net/tv",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: config body is not parsable JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1))"
-        },
-        {
-          "endpoint": "http://www.xn--sss604efuw.net/tv",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: config body is not parsable JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1))"
         }
       ],
       "error": "http://www.xn--sss604efuw.net/tv: ValueError: config body is not parsable JSON (Expecting property name enclosed in double quotes: line 1 column 2 (char 1))"
@@ -55,7 +43,7 @@
       "id": "zhuiju-fei-mao",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:23:36.204946+00:00",
+      "checked_at": "2026-11-24T08:23:22.581785+00:00",
       "last_success_at": null,
       "configured_url": "http://xn--z7x900a.net/",
       "used_endpoint": null,
@@ -66,18 +54,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: config body is not parsable JSON (Expecting value: line 1 column 1 (char 0))"
-        },
-        {
-          "endpoint": "http://xn--z7x900a.net/",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: config body is not parsable JSON (Expecting value: line 1 column 1 (char 0))"
-        },
-        {
-          "endpoint": "http://xn--z7x900a.net/",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: config body is not parsable JSON (Expecting value: line 1 column 1 (char 0))"
         }
       ],
       "error": "http://xn--z7x900a.net/: ValueError: config body is not parsable JSON (Expecting value: line 1 column 1 (char 0))"
@@ -86,7 +62,7 @@
       "id": "zhuiju-lao-liu-bei",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:23:48.203123+00:00",
+      "checked_at": "2026-11-24T08:23:22.581834+00:00",
       "last_success_at": null,
       "configured_url": "https://raw.liucn.cc/box/m.json",
       "used_endpoint": null,
@@ -97,18 +73,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: config body is binary and carries no JSON document"
-        },
-        {
-          "endpoint": "https://raw.liucn.cc/box/m.json",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: config body is binary and carries no JSON document"
-        },
-        {
-          "endpoint": "https://raw.liucn.cc/box/m.json",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: config body is binary and carries no JSON document"
         }
       ],
       "error": "https://raw.liucn.cc/box/m.json: ValueError: config body is binary and carries no JSON document"
@@ -117,7 +81,7 @@
       "id": "zhuiju-mo-yu-er",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-24T03:23:51.591586+00:00",
+      "checked_at": "2026-11-24T08:23:22.581937+00:00",
       "last_success_at": "2026-11-23T11:29:39.519926+00:00",
       "configured_url": "http://www.y456y.com",
       "used_endpoint": null,
@@ -128,18 +92,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://www.y456y.com",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://www.y456y.com",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
         }
       ],
       "error": "http://www.y456y.com: ValueError: served an HTML page instead of a configuration"
@@ -148,7 +100,7 @@
       "id": "zhuiju-wang-er-xiao",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-24T03:23:57.704059+00:00",
+      "checked_at": "2026-11-24T08:23:22.582084+00:00",
       "last_success_at": "2026-11-23T11:29:41.386050+00:00",
       "configured_url": "http://new.xn--4kq62z5rby2qupq9ub.top",
       "used_endpoint": null,
@@ -158,29 +110,17 @@
           "endpoint": "http://new.xn--4kq62z5rby2qupq9ub.top",
           "attempt": 1,
           "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://new.xn--4kq62z5rby2qupq9ub.top",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://new.xn--4kq62z5rby2qupq9ub.top",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
+          "error": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
         }
       ],
-      "error": "http://new.xn--4kq62z5rby2qupq9ub.top: ValueError: served an HTML page instead of a configuration"
+      "error": "http://new.xn--4kq62z5rby2qupq9ub.top: URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
     },
     {
       "id": "zhuiju-xiao-he-zi-4k",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:01.603831+00:00",
-      "last_success_at": "2026-11-24T03:24:01.603831+00:00",
+      "checked_at": "2026-11-24T08:23:22.582176+00:00",
+      "last_success_at": "2026-11-24T08:23:22.582176+00:00",
       "configured_url": "http://xhztv.top/4k.json",
       "used_endpoint": "http://xhztv.top/4k.json",
       "used_fallback": false,
@@ -191,14 +131,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:13:43.794248+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:01.603831+00:00"
     },
     {
       "id": "zhuiju-chuang-xiang-ying-shi-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:01.761330+00:00",
-      "last_success_at": "2026-11-24T03:24:01.761330+00:00",
+      "checked_at": "2026-11-24T08:23:22.582248+00:00",
+      "last_success_at": "2026-11-24T08:23:22.582248+00:00",
       "configured_url": "https://ys.cxkjg.cn/api/provide/tvbox",
       "used_endpoint": "https://ys.cxkjg.cn/api/provide/tvbox",
       "used_fallback": false,
@@ -209,14 +149,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:13:44.029024+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:01.761330+00:00"
     },
     {
       "id": "zhuiju-ying-cang-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:04.453366+00:00",
-      "last_success_at": "2026-11-24T03:24:04.453366+00:00",
+      "checked_at": "2026-11-24T08:23:22.728840+00:00",
+      "last_success_at": "2026-11-24T08:23:22.728840+00:00",
       "configured_url": "http://124.71.19.220/c/1",
       "used_endpoint": "http://124.71.19.220/c/1",
       "used_fallback": false,
@@ -227,14 +167,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:13:46.431764+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:04.453366+00:00"
     },
     {
       "id": "zhuiju-lun-li-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:05.050955+00:00",
-      "last_success_at": "2026-11-24T03:24:05.050955+00:00",
+      "checked_at": "2026-11-24T08:23:22.862714+00:00",
+      "last_success_at": "2026-11-24T08:23:22.862714+00:00",
       "configured_url": "http://47.96.82.41:5188/rose/18/xgg.json",
       "used_endpoint": "http://47.96.82.41:5188/rose/18/xgg.json",
       "used_fallback": false,
@@ -245,13 +185,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:13:47.163335+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:05.050955+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi-single",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:05.455564+00:00",
+      "checked_at": "2026-11-24T08:23:22.931746+00:00",
       "last_success_at": null,
       "configured_url": "http://xhztv.top/xhz",
       "used_endpoint": null,
@@ -262,18 +202,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: config body is binary and carries no JSON document"
-        },
-        {
-          "endpoint": "http://xhztv.top/xhz",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: config body is binary and carries no JSON document"
-        },
-        {
-          "endpoint": "http://xhztv.top/xhz",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: config body is binary and carries no JSON document"
         }
       ],
       "error": "http://xhztv.top/xhz: ValueError: config body is binary and carries no JSON document"
@@ -282,7 +210,7 @@
       "id": "zhuiju-ao-wu",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:09.010351+00:00",
+      "checked_at": "2026-11-24T08:23:22.996383+00:00",
       "last_success_at": null,
       "configured_url": "http://itv666.cc/aowu/config.webp",
       "used_endpoint": null,
@@ -293,18 +221,6 @@
           "attempt": 1,
           "result": "failed",
           "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://itv666.cc/aowu/config.webp",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "http://itv666.cc/aowu/config.webp",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
         }
       ],
       "error": "http://itv666.cc/aowu/config.webp: ValueError: served an HTML page instead of a configuration"
@@ -313,8 +229,8 @@
       "id": "zhuiju-wu-ming",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:18.553156+00:00",
-      "last_success_at": "2026-11-24T03:24:18.553156+00:00",
+      "checked_at": "2026-11-24T08:23:23.027957+00:00",
+      "last_success_at": "2026-11-24T08:23:23.027957+00:00",
       "configured_url": "https://6800.kstore.vip/fish.json",
       "used_endpoint": "https://6800.kstore.vip/fish.json",
       "used_fallback": false,
@@ -325,13 +241,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:14:03.565844+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:18.553156+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:19.245693+00:00",
+      "checked_at": "2026-11-24T08:23:23.197106+00:00",
       "last_success_at": null,
       "configured_url": "https://www.xhztv.pro/",
       "used_endpoint": null,
@@ -341,29 +257,17 @@
           "endpoint": "https://www.xhztv.pro/",
           "attempt": 1,
           "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "https://www.xhztv.pro/",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
-        },
-        {
-          "endpoint": "https://www.xhztv.pro/",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: served an HTML page instead of a configuration"
+          "error": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
         }
       ],
-      "error": "https://www.xhztv.pro/: ValueError: served an HTML page instead of a configuration"
+      "error": "https://www.xhztv.pro/: URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
     },
     {
       "id": "tvboxorg-multi-subscription",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:23.642539+00:00",
-      "last_success_at": "2026-11-24T03:24:23.642539+00:00",
+      "checked_at": "2026-11-24T08:23:23.654188+00:00",
+      "last_success_at": "2026-11-24T08:23:23.654188+00:00",
       "configured_url": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_endpoint": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_fallback": false,
@@ -374,14 +278,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:14:08.914679+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:23.642539+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi-multi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:24:23.757399+00:00",
-      "last_success_at": "2026-11-24T03:24:23.757399+00:00",
+      "checked_at": "2026-11-24T08:23:23.679901+00:00",
+      "last_success_at": "2026-11-24T08:23:23.679901+00:00",
       "configured_url": "http://xhztv.top/dc",
       "used_endpoint": "http://xhztv.top/dc",
       "used_fallback": false,
@@ -392,45 +296,32 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:14:08.987334+00:00"
+      "previous_last_success_at": "2026-11-24T03:24:23.757399+00:00"
     },
     {
       "id": "zhuiju-shi-guang-multi",
-      "status": "failed",
-      "stale": true,
-      "checked_at": "2026-11-24T03:24:23.897899+00:00",
-      "last_success_at": "2026-11-23T16:14:09.297472+00:00",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-24T08:23:23.864100+00:00",
+      "last_success_at": "2026-11-24T08:23:23.864100+00:00",
       "configured_url": "http://xmbjm.fh4u.org/dc.txt",
-      "used_endpoint": null,
+      "used_endpoint": "http://xmbjm.fh4u.org/dc.txt",
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "http://xmbjm.fh4u.org/dc.txt",
           "attempt": 1,
-          "result": "failed",
-          "error": "URLError: <urlopen error timed out>"
-        },
-        {
-          "endpoint": "http://xmbjm.fh4u.org/dc.txt",
-          "attempt": 2,
-          "result": "failed",
-          "error": "URLError: <urlopen error timed out>"
-        },
-        {
-          "endpoint": "http://xmbjm.fh4u.org/dc.txt",
-          "attempt": 3,
-          "result": "failed",
-          "error": "URLError: <urlopen error timed out>"
+          "result": "ok"
         }
       ],
-      "error": "http://xmbjm.fh4u.org/dc.txt: URLError: <urlopen error timed out>"
+      "previous_last_success_at": "2026-11-23T16:14:09.297472+00:00"
     },
     {
       "id": "zhuiju-ting-hao-share-multi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:25:03.798838+00:00",
-      "last_success_at": "2026-11-24T03:25:03.798838+00:00",
+      "checked_at": "2026-11-24T08:23:23.926898+00:00",
+      "last_success_at": "2026-11-24T08:23:23.926898+00:00",
       "configured_url": "http://ztha.top/TVBox/GYCK.json",
       "used_endpoint": "http://ztha.top/TVBox/GYCK.json",
       "used_fallback": false,
@@ -441,7 +332,7 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T16:14:09.836336+00:00"
+      "previous_last_success_at": "2026-11-24T03:25:03.798838+00:00"
     },
     {
       "id": "iptv-org-global",
