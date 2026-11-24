@@ -97,7 +97,7 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 ## GitHub Actions
 
 - push 和 Pull Request 对目录、Schema、脚本或工作流文件的变更触发离线元数据检查。
-- 每日两次定时任务先跑 `scripts/check_upstream.py`：抓两个上游清单（`laoma528/awesome-zhuiju-free` 的 `resources.json` 与 `jiji262/awesome-tvbox` 的 README）按条目比对。上游改了地址的条目自动跟随并把旧地址写进 `fallback_urls`；上游新加与删除的条目只写进 `reports/upstream-changes.json` 并在页面「上游变动」里列出，不自动收录、不自动删除。抓取失败时保留上次快照，不影响后面的探测。
+- 每日两次定时任务先跑 `scripts/check_upstream.py`：抓两个上游清单（`laoma528/awesome-zhuiju-free` 的 `resources.json` 与 `jiji262/awesome-tvbox` 的 README）按条目比对。上游改了地址的条目自动跟随并把旧地址写进 `fallback_urls`；上游新加的条目用同一个导入脚本自动收录进对应分类，删除的只写进 `reports/upstream-changes.json` 并在页面「上游变动」里列出，不自动删除。抓取失败时保留上次快照，不影响后面的探测。
 - 每日两次定时任务及手动选择 URL 检查的工作流会运行有限 URL/格式探测，带短重试；可选 `fallback_urls` 必须先审核且不会自动发现或写入。成功仅表示该次链接/格式探测通过，不代表客户端可导入或实际播放。
 - 探测会原子更新 `probe-report.json` 并提交状态文件，保留上次成功时间；当前失败会标记为 failed/stale，不删除目录条目，也不覆盖配置数据。仓库中的空状态报告是首跑基线，不代表探测通过。定时工作流在同一次运行中部署 Pages，确保自动提交后的报告也能发布。
 - 不会下载/镜像第三方配置，不执行 Spider/JS/Python/JAR；探测仍不等于客户端播放测试。失败请求明细作为保留 14 天的 artifact 上传。

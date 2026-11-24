@@ -9,7 +9,10 @@ from scripts import check_upstream
 
 
 def resources(*rows):
-    return json.dumps({"resources": [dict(id=i, name=n, url=u) for i, n, u in rows]})
+    """Upstream resource objects; category defaults to a streaming site."""
+    return json.dumps({"resources": [dict(id=i, name=n, url=u, category=c, summary_short=n)
+                                     for i, n, u, c in
+                                     [(r[0], r[1], r[2], r[3] if len(r) > 3 else "online_video") for r in rows]]})
 
 
 README = """
@@ -67,10 +70,40 @@ class UpstreamCheckTests(unittest.TestCase):
         self.assertEqual(doc["removed"], [])
         self.assertTrue(self.previous.exists())
 
+    def test_new_row_is_taken_in_and_reported(self):
+        self.run_check()
+        self.fetched[check_upstream.SOURCES[0]["url"]] = resources(
+            ("site", "Site", "https://old.example/"), ("extra", "Extra", "https://extra.example/"))
+        with unittest.mock.patch.object(check_upstream, "probe_new"):
+            doc = check_upstream.run(self.catalog, self.report, fetch_fn=self.fetch)
+        added = json.loads((self.catalog / "online.json").read_text(encoding="utf-8"))
+        self.assertEqual([row["id"] for row in added], ["zhuiju-site", "zhuiju-extra"])
+        self.assertEqual(doc["imported"], [{"source": "awesome-zhuiju-free", "file": "online.json", "rows": 1}])
+
+    def test_imported_row_carries_the_upstream_licence_note(self):
+        self.fetched[check_upstream.SOURCES[0]["url"]] = resources(("extra", "Extra", "https://extra.example/"))
+        self.fetched[check_upstream.SOURCES[1]["url"]] = README
+        with unittest.mock.patch.object(check_upstream, "probe_new"):
+            check_upstream.run(self.catalog, self.report, fetch_fn=self.fetch)
+        row = json.loads((self.catalog / "online.json").read_text(encoding="utf-8"))[-1]
+        self.assertEqual(row["source"], "https://github.com/laoma528/awesome-zhuiju-free")
+        self.assertTrue(row["license"])
+
+    def test_new_client_row_lands_in_apps(self):
+        new = README + "| [B](https://github.com/acme/b) | 播放器 | 40 |\n"
+        self.run_check()
+        self.fetched[check_upstream.SOURCES[1]["url"]] = new
+        with unittest.mock.patch.object(check_upstream, "probe_new"):
+            doc = check_upstream.run(self.catalog, self.report, fetch_fn=self.fetch)
+        rows = json.loads((self.catalog / "apps.json").read_text(encoding="utf-8"))
+        # "A" came in during the first round; only the second round's row is new here.
+        self.assertEqual([row["id"] for row in rows], ["app-acme-a", "app-acme-b"])
+        self.assertEqual(doc["imported"][0]["file"], "apps.json")
+
     def test_unchanged_round_reports_nothing(self):
         self.run_check()
         doc = self.run_check()
-        self.assertEqual((doc["added"], doc["changed"], doc["removed"]), ([], [], []))
+        self.assertEqual((doc["added"], doc["changed"], doc["removed"], doc["imported"]), ([], [], [], []))
 
     def test_repointed_link_is_followed_and_old_kept_as_fallback(self):
         self.run_check()

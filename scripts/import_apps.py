@@ -13,6 +13,7 @@ Rows already present in any catalog file are skipped by URL, so repeat runs only
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import re
 import sys
@@ -130,9 +131,11 @@ def build(rows: list[dict]) -> list[dict]:
                 "source": "https://github.com/jiji262/awesome-tvbox",
                 "license": "See the repository for its own licence; this catalog only links to it.",
                 "notes": " ".join(notes),
+                # Placeholder scores; displayed as a star count, so the five fields are not shown.
                 "rating": {"average": stars_to_rating(row["stars"]),
                            "scores": {"more": 3, "speed": 3, "clean": 3, "stable": 3, "ease": 3},
-                           "status": "upstream-stars", "checked_at": "2026-11-23"},
+                           "status": "upstream-stars",
+                           "checked_at": dt.date.today().isoformat()},
             }
         )
     return out

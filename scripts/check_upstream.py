@@ -6,9 +6,10 @@ change" is answered on the extracted rows rather than the page text: renaming a 
 its description, or repointing its link all show up, while unrelated README churn does not.
 
 The catalog is then brought in line. A link upstream repoints is followed and the old address
-is kept under fallback_urls, so nothing already published goes dead. Two kinds of change are
-only reported and left for a human: a newly added row (it still wants a look before it ships)
-and a row upstream deleted (dropping it would take a working address off the page).
+kept under fallback_urls, so nothing already published goes dead. Rows upstream adds are taken
+in at once, built by the same code the manual importers use, so the catalog keeps up with the
+lists it tracks. A row upstream deletes is only reported: dropping it would take an address
+that may still work off the page.
 
 Output is reports/upstream-changes.json. Nonzero exit means a fetch failed and the run saw an
 incomplete picture, not that something changed.
@@ -92,6 +93,29 @@ def catalog_id(upstream_id: str) -> str:
     return upstream_id[4:] if upstream_id.startswith("app:") else import_upstream.slug(upstream_id)
 
 
+def append(path: Path, rows: list[dict]) -> int:
+    if not rows:
+        return 0
+    existing = json.loads(path.read_text(encoding="utf-8"))
+    path.write_text(json.dumps(existing + rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return len(rows)
+
+
+def import_rows(catalog_dir: Path, source_id: str, ids: set[str], text: str) -> dict[str, int]:
+    """Add the given upstream rows the catalog does not already carry, using the same builders
+    the manual importers use, so an automatically added row is shaped exactly like a reviewed one."""
+    if not ids:
+        return {}
+    if source_id == "awesome-zhuiju-free":
+        groups = import_upstream.build(import_upstream.load_upstream_text(text), only=ids)
+        targets = import_upstream.TARGETS
+        return {targets[name]: append(catalog_dir / targets[name], rows)
+                for name, rows in groups.items() if rows}
+    rows = [row for row in import_apps.build([r for r in import_apps.parse_text(text)
+                                              if "app:" + r["url"].rstrip("/") in ids])]
+    return {"apps.json": append(catalog_dir / "apps.json", rows)}
+
+
 def catalog_urls(catalog_dir: Path) -> set[str]:
     """Every address the catalog already carries, normalised the same way as the snapshot."""
     urls: set[str] = set()
@@ -164,6 +188,7 @@ def run(catalog_dir: Path, report: Path, fetch_fn=fetch, now: str | None = None)
     changed_written: list[dict] = []
     added: list[dict] = []
     removed: list[dict] = []
+    imported: list[dict] = []
     for source in SOURCES:
         if source["id"] not in snapshot:
             continue
@@ -195,12 +220,23 @@ def run(catalog_dir: Path, report: Path, fetch_fn=fetch, now: str | None = None)
              if row["id"] not in {other["id"] for other in fresh[:index]}]
     probe_new(added)
 
+    # New rows are taken in now; they are rows the page did not have, and leaving them out
+    # until a human looks would mean the catalog drifts behind the list it tracks.
+    for source in SOURCES:
+        if source["id"] not in fetched:
+            continue
+        mine = {row["id"] for row in added if row["source"] == source["id"]}
+        for file, count in import_rows(catalog_dir, source["id"], mine, fetched[source["id"]]).items():
+            if count:
+                imported.append({"source": source["id"], "file": file, "rows": count})
+
     doc = {
         "generated_at": stamp,
         "errors": errors,
         "changed": changed_written,
         "added": added,
         "removed": removed,
+        "imported": imported,
     }
     report.parent.mkdir(parents=True, exist_ok=True)
     report.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -215,7 +251,8 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=REPORT)
     args = parser.parse_args()
     doc = run(args.catalog_dir, args.report)
-    print(f"Upstream check: {len(doc['changed'])} repointed, {len(doc['added'])} new, "
+    taken = sum(item["rows"] for item in doc["imported"])
+    print(f"Upstream check: {len(doc['changed'])} repointed, {taken} of {len(doc['added'])} new imported, "
           f"{len(doc['removed'])} gone, {len(doc['errors'])} fetch errors")
     for error in doc["errors"]:
         print(error, file=sys.stderr)

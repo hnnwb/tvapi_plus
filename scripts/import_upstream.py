@@ -290,9 +290,16 @@ def config_entry(raw: dict) -> dict:
     return entry
 
 
-def build(upstream: dict) -> dict[str, list[dict]]:
+def build(upstream: dict, only: set[str] | None = None) -> dict[str, list[dict]]:
+    """Group every upstream resource into its catalog zone.
+
+    `only` restricts the result to those upstream ids, which is what an incremental run needs:
+    the scheduled job must never touch a row that already exists and has since been curated.
+    """
     groups: dict[str, list[dict]] = {name: [] for name in ZONES}
     for raw in upstream["resources"]:
+        if only is not None and raw.get("id") not in only:
+            continue
         category = raw.get("category")
         if category == "online_video":
             entry = base_entry(raw, "web", LICENSE_WEB)
@@ -350,7 +357,9 @@ def build(upstream: dict) -> dict[str, list[dict]]:
         for entry in rows:
             if not entry["url"].isascii():
                 raise ValueError(f"non-ASCII URL survived conversion: {entry['url']}")
-        if not rows:
+        # A partial build (only a few ids) legitimately fills one zone and leaves the rest
+        # empty; the full-directory build must fill every zone or a mapping broke quietly.
+        if not rows and only is None:
             raise ValueError(f"no entries generated for {name}")
     return groups
 
