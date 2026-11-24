@@ -19,7 +19,7 @@
 catalog/
   vod-single.json    # 单仓源链接
   vod-multi.json     # 多仓源（urls）链接
-  live.json          # M3U/TXT/JSON 直播源
+  live.json          # M3U/TXT/JSON 直播源；含全球、国家/地区、语言和主题分类播放列表（各条目备注核验范围）
   epg.json           # EPG 节目单与台标
   tools.json         # 开源项目仓库；页面从上游说明提取一行用途简介
   online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）

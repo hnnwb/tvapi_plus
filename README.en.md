@@ -19,7 +19,7 @@ The catalogs currently contain a small set of live playlists, VOD configuration 
 catalog/
   vod-single.json    # Single-source links
   vod-multi.json     # Multi-source (urls) links
-  live.json          # M3U/TXT/JSON live sources
+  live.json          # M3U/TXT/JSON playlists; global, country/region, language and topic indexes (see per-entry verification notes)
   epg.json           # EPG guides and logo resources
   tools.json         # Open-source repositories; UI extracts a one-line purpose summary from upstream notes
   online.json        # Streaming sites and download landing pages (browser use)

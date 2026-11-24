@@ -39,6 +39,60 @@
     "notes": "Chinese-language index spanning countries/regions (not mainland-China only). HTTP 200, audio/x-mpegurl, #EXTM3U, #EXTINF confirmed 2026-11-20; 228 EXTINF records in earlier full response. Per-channel rights, reachability and playback are not guaranteed or playback-tested."
   },
   {
+    "id": "iptv-org-hong-kong",
+    "name": "IPTV-org Hong Kong Playlist",
+    "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Hong Kong country index (not a guarantee of local reachability or rights). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 18 #EXTINF records. Per-channel rights and playback remain unverified; geo-blocking and availability can vary. Upstream README says its playlists are collections of publicly available channel links and offers a rights-holder removal route; no blanket rights claim is made here."
+  },
+  {
+    "id": "iptv-org-taiwan",
+    "name": "IPTV-org Taiwan Playlist",
+    "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Taiwan country index (not a guarantee of local reachability or rights). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 34 #EXTINF records. Per-channel rights and playback remain unverified; geo-blocking and availability can vary. Upstream README says its playlists are collections of publicly available channel links and offers a rights-holder removal route; no blanket rights claim is made here."
+  },
+  {
+    "id": "iptv-org-macao",
+    "name": "IPTV-org Macao Playlist",
+    "url": "https://iptv-org.github.io/iptv/countries/mo.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Macao country index (not a guarantee of local reachability or rights). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 7 #EXTINF records. Per-channel rights and playback remain unverified; geo-blocking and availability can vary. Upstream README says its playlists are collections of publicly available channel links and offers a rights-holder removal route; no blanket rights claim is made here."
+  },
+  {
+    "id": "iptv-org-cantonese",
+    "name": "IPTV-org Cantonese-Language Playlist",
+    "url": "https://iptv-org.github.io/iptv/languages/yue.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Cantonese-language index spanning countries and regions (not limited to Hong Kong or mainland China). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 11 #EXTINF records. Per-channel rights, reachability and playback remain unverified; geo-blocking and availability can vary."
+  },
+  {
+    "id": "iptv-org-kids-category",
+    "name": "IPTV-org Kids Category Playlist",
+    "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Upstream Kids category index (a topic label, not a child-safety certification). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 456 #EXTINF records. Channel content, per-stream rights, availability, and age suitability have not been independently verified; supervise use and review channels individually."
+  },
+  {
+    "id": "iptv-org-news-category",
+    "name": "IPTV-org News Category Playlist",
+    "url": "https://iptv-org.github.io/iptv/categories/news.m3u",
+    "format": "m3u",
+    "source": "https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md",
+    "license": "Unlicense covers upstream repository software/data contributions as stated by upstream; individual stream rights remain with their owners",
+    "notes": "Upstream News category index (topic grouping, not a guarantee of editorial quality or neutrality). Full GET on 2026-11-24: HTTP 200, audio/x-mpegurl, #EXTM3U, 1,059 #EXTINF records. Channel availability and per-stream rights remain unverified; no playback test."
+  },
+  {
     "id": "iptv-org-public-category",
     "name": "IPTV-org Public Category Playlist",
     "url": "https://iptv-org.github.io/iptv/categories/public.m3u",
