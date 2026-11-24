@@ -15,7 +15,16 @@
     "format": "epg-xml",
     "source": "https://epg.pw/",
     "license": "Public guide endpoint; explicit licensing/redistribution terms for the aggregated listings were not confirmed. Use as a remote client feed only after reviewing the provider's current terms.",
-    "notes": "The original awesome-tvbox list identifies this as the China XMLTV endpoint. Bounded fetch returned HTTP 200 text/xml; response begins with an XML declaration and XMLTV <tv> element. Endpoint reachability and initial XML structure only; no full-document parse, channel mapping or client import/playback test."
+    "notes": "The original awesome-tvbox list identifies this as the China XMLTV endpoint. Full GET and XML parse checked 2026-11-24: HTTP 200 text/xml; XMLTV root <tv>, 711 channel records and 39,814 programme records (feed date 2026-11-24; 9,898,167 bytes). This large feed is not mirrored here. Channel-name mapping and client EPG import were not tested; it may contain channels unrelated to a user's playlist."
+  },
+  {
+    "id": "epg-pw-hong-kong-xmltv",
+    "name": "EPG.pw Hong Kong XMLTV Guide",
+    "url": "https://epg.pw/xmltv/epg_HK.xml",
+    "format": "epg-xml",
+    "source": "https://epg.pw/",
+    "license": "Public guide endpoint; explicit licensing/redistribution terms for aggregated listings and channel logos were not confirmed. Use as a remote client feed only after reviewing the provider's current terms.",
+    "notes": "The provider lists Hong Kong as a guide region. Full GET and XML parse checked 2026-11-24: HTTP 200 text/xml; XMLTV root <tv>, 236 channel records and 47,438 programme records (feed date 2026-11-24). This is a large live feed and is not mirrored here. Channel-name mapping, logo reuse rights and client EPG import were not tested; the guide may contain channels unrelated to a user's playlist."
   },
   {
     "id": "iptv-org-channel-logo-library",
