@@ -47,7 +47,7 @@ const TEXT = {
     hintImportable: '这一类可以直接复制链接、在客户端里导入。检测只说明当时能取到，不代表能播放。',
     hintWeb: '这一类是在浏览器里用的站点，不是 TVBox 配置，复制到客户端不会生效。',
     hintApps: '应用清单：条目指向项目仓库、发布页或下载页，平台写在条目说明里；星标数折算的星级只表示热度。',
-    ratedAs: '上游自评',
+    ratedAs: '上游自评', starsTitle: 'GitHub 星标，2026-11-24 实读；是热度，不是评分',
     ratedNone: '无星级',
     removed: '上游已移除',
     emptyText: '当前分类没有条目。',
@@ -90,7 +90,7 @@ const TEXT = {
     hintImportable: 'Copy the link and import it in a client. A passing check only means it answered once, not that it plays.',
     hintWeb: 'This category is used in a browser. These are not TVBox configs and will not work when imported.',
     hintApps: 'An app list: rows point at a repository, release page or download page and name their platform. Stars converted to a rating only mean popularity.',
-    ratedAs: 'upstream', ratedNone: 'No rating', removed: 'Removed upstream',
+    ratedAs: 'upstream', ratedNone: 'No rating', removed: 'Removed upstream', starsTitle: 'GitHub stars, read 2026-11-24; popularity, not a rating',
     emptyText: 'No entries in this category.',
     noResults: 'No matching entries.',
     verifyTitle: 'Check log', verifyLead: 'A check answers one question: did it answer, and was the body the expected format. It does not prove import or playback.',
@@ -192,6 +192,13 @@ function isRemoved(entry) {
   return entry.rating?.status === 'removed';
 }
 
+// The note carries the count verbatim; the row shows it as a chip so popularity is visible
+// without opening the note. GitHub has no star count for anything but a repository.
+function starsOf(entry) {
+  const match = /GitHub 星标 ([0-9.]+k?)/.exec(entry.notes || '');
+  return match ? match[1] : '';
+}
+
 // Clients only: what the row's note says about systems, pulled out so it is visible without
 // opening the row. Blank when the note never established one.
 function platformOf(entry) {
@@ -238,6 +245,7 @@ function renderRow(entry) {
   const href = safeHref(entry.url);
   const average = ratingOf(entry);
   const platform = platformOf(entry);
+  const stars = starsOf(entry);
   const rating = isRemoved(entry)
     ? `<span class="chip chip--removed">${escapeHTML(t().removed)}</span>`
     : average === null ? `<span class="rating-num">${escapeHTML(t().ratedNone)}</span>` : starRow(average);
@@ -257,6 +265,7 @@ function renderRow(entry) {
         <span class="chip">${escapeHTML(t().category[entry._category] || entry._category)}</span>
         <span class="chip">${escapeHTML(entry.format)}</span>
         ${platform ? `<span class="chip chip--platform">${escapeHTML(platform)}</span>` : ''}
+        ${stars ? `<span class="chip chip--stars" title="${escapeHTML(t().starsTitle)}">★ ${escapeHTML(stars)}</span>` : ''}
         ${rating}
         ${probeChip(entry)}
         ${source}

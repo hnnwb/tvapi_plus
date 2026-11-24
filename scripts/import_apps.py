@@ -117,7 +117,8 @@ def build(rows: list[dict]) -> list[dict]:
             f"平台：{platforms(row['desc'])}。",
         ]
         if row["stars"]:
-            notes.append(f"GitHub 星标 {row['stars']}，据此折算星级；星标表示热度，不代表可用或好用。")
+            notes.append(f"GitHub 星标 {row['stars']}（{dt.date.today().isoformat()} 实读），据此折算星级；"
+                         "星标表示热度，不代表可用或好用。")
         if slug in NOTES:
             notes.append(NOTES[slug])
         if slug in ARCHIVED:

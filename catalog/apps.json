@@ -27,7 +27,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 自动构建发布（原 o0HalfLife0o/TVBoxOSC），每日编译 takagen99/Box 与 q215613905/TVBoxOS 等分支 APK 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 18.3k，据此折算星级；星标表示热度，不代表可用或好用。 自动构建发布仓，APK 在 Releases 里；源码在各自的分支仓库。",
+    "notes": "上游列表收录：TVBox 自动构建发布（原 o0HalfLife0o/TVBoxOSC），每日编译 takagen99/Box 与 q215613905/TVBoxOS 等分支 APK 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 18.4k（18426，2026-11-24 实读），不代表可用或好用。 自动构建发布仓，APK 在 Releases 里；源码在各自的分支仓库。",
     "rating": {
       "average": 5.0,
       "scores": {
@@ -48,7 +48,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 开源版空壳（已停更，存档参考） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 10.3k，据此折算星级；星标表示热度，不代表可用或好用。 已停更，仅作存档参考。 star 数与当前可用性无关，已停更条目不要按星级优先。",
+    "notes": "上游列表收录：TVBox 开源版空壳（已停更，存档参考） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 10.3k（10301，2026-11-24 实读），不代表可用或好用。 已停更，仅作存档参考。 star 数与当前可用性无关，已停更条目不要按星级优先。",
     "rating": {
       "average": 5.0,
       "scores": {
@@ -69,7 +69,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 的 takagen99 分支 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 3.1k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox 的 takagen99 分支 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 3.1k（3120，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -90,7 +90,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 二开分支，README 附完整 JSON 配置示例 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 3k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox 二开分支，README 附完整 JSON 配置示例 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 3.1k（3075，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -111,7 +111,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：WebHomeTV，基于 FongMi 二开，WebHome 自定义首页、网盘链接检测 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 1.9k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：WebHomeTV，基于 FongMi 二开，WebHome 自定义首页、网盘链接检测 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 1.9k（1942，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.0,
       "scores": {
@@ -132,7 +132,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于 TVBoxOS 的手机竖屏适配版（已归档） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 1.6k，据此折算星级；星标表示热度，不代表可用或好用。 已归档的竖屏适配版。 star 数与当前可用性无关，已停更条目不要按星级优先。",
+    "notes": "上游列表收录：基于 TVBoxOS 的手机竖屏适配版（已归档） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 1.6k（1558，2026-11-24 实读），不代表可用或好用。 已归档的竖屏适配版。 star 数与当前可用性无关，已停更条目不要按星级优先。",
     "rating": {
       "average": 4.0,
       "scores": {
@@ -153,7 +153,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Material Design 3 全新设计的多平台 TVBox（已归档） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 734，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Material Design 3 全新设计的多平台 TVBox（已归档） 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 752（752，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -174,7 +174,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于 FongMi / CatVod 二开的 Android TV 影音聚合客户端 平台：Android TV。 GitHub 星标 206，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于 FongMi / CatVod 二开的 Android TV 影音聚合客户端 平台：Android TV。 GitHub 星标 214（214，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -195,7 +195,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Z影视，基于 TVBoxOSC 二开的多源聚合客户端 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 74，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Z影视，基于 TVBoxOSC 二开的多源聚合客户端 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 104（104，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.5,
       "scores": {
@@ -216,7 +216,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：用 GitHub Actions 自动编译并发布签名版 FongMi TV APK 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 54，据此折算星级；星标表示热度，不代表可用或好用。 用 GitHub Actions 编译并签名 FongMi TV，产出 APK 供自建。",
+    "notes": "上游列表收录：用 GitHub Actions 自动编译并发布签名版 FongMi TV APK 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 55（55，2026-11-24 实读），不代表可用或好用。 用 GitHub Actions 编译并签名 FongMi TV，产出 APK 供自建。",
     "rating": {
       "average": 2.5,
       "scores": {
@@ -237,7 +237,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：揽星影视，兼容 TVBox JSON 接口的 Android 手机端播放器，支持多仓、直播 EPG 与 DLNA 投屏 平台：Android。 GitHub 星标 15，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：揽星影视，兼容 TVBox JSON 接口的 Android 手机端播放器，支持多仓、直播 EPG 与 DLNA 投屏 平台：Android。 GitHub 星标 20（20，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.0,
       "scores": {
@@ -258,7 +258,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于 OK影视 的 Android 4.4 (ARM32) 老电视优化版 平台：Android。 GitHub 星标 12，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于 OK影视 的 Android 4.4 (ARM32) 老电视优化版 平台：Android。 GitHub 星标 16（16，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.0,
       "scores": {
@@ -279,7 +279,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：跨平台多媒体播放器（Android / TV / iOS / Windows / macOS / Linux），支持 CMS、IPTV、WebDAV、AList / OpenList、Emby、Jellyfin 平台：macOS。 GitHub 星标 3.1k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：跨平台多媒体播放器（Android / TV / iOS / Windows / macOS / Linux），支持 CMS、IPTV、WebDAV、AList / OpenList、Emby、Jellyfin 平台：macOS。 GitHub 星标 3.1k（3070，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -300,7 +300,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 电脑版 / 姊妹软件，扩展 TVBox 生态到桌面 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 2.2k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox 电脑版 / 姊妹软件，扩展 TVBox 生态到桌面 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 2.2k（2162，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.0,
       "scores": {
@@ -321,7 +321,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于 FongMi/TV 的桌面版实现 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 717，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于 FongMi/TV 的桌面版实现 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 719（719，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -342,7 +342,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox Desktop：极简 Windows 影视聚合客户端，可直接导入 TVBox 配置订阅，支持 M3U / TXT 直播 平台：Windows。 GitHub 星标 707，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox Desktop：极简 Windows 影视聚合客户端，可直接导入 TVBox 配置订阅，支持 M3U / TXT 直播 平台：Windows。 GitHub 星标 1.1k（1123，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -363,7 +363,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：兼容 CatVod / TVBox 源的 Windows 11 原生 4K 硬解聚合播放器 平台：Windows。 GitHub 星标 554，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：兼容 CatVod / TVBox 源的 Windows 11 原生 4K 硬解聚合播放器 平台：Windows。 GitHub 星标 581（581，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -384,7 +384,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Yingxia（映霞）：原生 SwiftUI 的 Apple 全平台（Apple TV / iPhone / iPad / Mac）TVBox 播放器 平台：iOS·tvOS·macOS。 上游为 SwiftUI 原生应用，macOS 为当前主要发布平台。 GitHub 星标 534，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Yingxia（映霞）：原生 SwiftUI 的 Apple 全平台（Apple TV / iPhone / iPad / Mac）TVBox 播放器 平台：iOS·tvOS·macOS。 上游为 SwiftUI 原生应用，macOS 为当前主要发布平台。 GitHub 星标 623（623，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -405,7 +405,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Windows 版 TVBox 平台：Windows。 GitHub 星标 353，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Windows 版 TVBox 平台：Windows。 GitHub 星标 355（355，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -426,7 +426,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVS：Flutter 空壳播放器（Android TV / iOS / iPadOS / macOS），仅支持羊壳（PeekPro）订阅与 M3U / TXT / JSON 直播源，不保证兼容 TVBox 配置 平台：macOS。 GitHub 星标 249，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVS：Flutter 空壳播放器（Android TV / iOS / iPadOS / macOS），仅支持羊壳（PeekPro）订阅与 M3U / TXT / JSON 直播源，不保证兼容 TVBox 配置 平台：macOS。 GitHub 星标 266（266，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -447,7 +447,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：原生 Swift & SwiftUI 构建的 macOS / iOS TVBox 客户端 平台：macOS。 GitHub 星标 220，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：原生 Swift & SwiftUI 构建的 macOS / iOS TVBox 客户端 平台：macOS。 GitHub 星标 221（221，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -468,7 +468,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于 Go + Wails 的跨平台桌面播放器，兼容 TVBox / FongMi 源与 IPTV 直播，内嵌纯 Go JS 爬虫引擎 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 160，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于 Go + Wails 的跨平台桌面播放器，兼容 TVBox / FongMi 源与 IPTV 直播，内嵌纯 Go JS 爬虫引擎 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 164（164，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -489,7 +489,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：原生 macOS（Apple Silicon）IPTV / 点播播放器 平台：macOS。 GitHub 星标 128，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：原生 macOS（Apple Silicon）IPTV / 点播播放器 平台：macOS。 GitHub 星标 132（132，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -510,7 +510,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Windows 11 x64 的 TVBox / FongMi 风格桌面播放器 平台：Windows。 GitHub 星标 125，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Windows 11 x64 的 TVBox / FongMi 风格桌面播放器 平台：Windows。 GitHub 星标 134（134，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.0,
       "scores": {
@@ -531,7 +531,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于影视 APP 扩展的跨平台桌面播放器，解析主流 TVBox 源 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 33，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于影视 APP 扩展的跨平台桌面播放器，解析主流 TVBox 源 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 37（37，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.5,
       "scores": {
@@ -552,7 +552,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox 电脑版（Windows），免安装绿色包，网盘播放 / 弹幕 / 历史同步 平台：Windows。 GitHub 星标 32，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox 电脑版（Windows），免安装绿色包，网盘播放 / 弹幕 / 历史同步 平台：Windows。 GitHub 星标 34（34，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.5,
       "scores": {
@@ -573,7 +573,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：兼容 FongMi / TVBox 配置格式的跨平台桌面播放器 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 18，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：兼容 FongMi / TVBox 配置格式的跨平台桌面播放器 平台：Android TV·盒子（上游只标 TV，未写具体系统）。 GitHub 星标 20（20，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.0,
       "scores": {
@@ -594,7 +594,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：TVBox / CatVod 兼容的 Windows 桌面客户端 平台：Windows。 GitHub 星标 16，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：TVBox / CatVod 兼容的 Windows 桌面客户端 平台：Windows。 GitHub 星标 20（20，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 2.0,
       "scores": {
@@ -615,7 +615,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：原生 SwiftUI 的 TVBox 客户端（macOS / iOS） 平台：macOS。 GitHub 星标 9，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：原生 SwiftUI 的 TVBox 客户端（macOS / iOS） 平台：macOS。 GitHub 星标 9（9，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 1.0,
       "scores": {
@@ -636,7 +636,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：Flutter / Go 跨端影视聚合客户端，兼容 CatVod 配置生态 平台：Windows·macOS·Linux·Android·iOS。 Flutter 界面加 Go 引擎，桌面与手机共用一套逻辑。 GitHub 星标 6，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：Flutter / Go 跨端影视聚合客户端，兼容 CatVod 配置生态 平台：Windows·macOS·Linux·Android·iOS。 Flutter 界面加 Go 引擎，桌面与手机共用一套逻辑。 GitHub 星标 6（6，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 1.0,
       "scores": {
@@ -657,7 +657,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：我的电视，安装即用的电视直播软件（2024 年后停更） 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 31.9k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：我的电视，安装即用的电视直播软件（2024 年后停更） 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 31.9k（31944，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 5.0,
       "scores": {
@@ -678,7 +678,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：跨平台 IPTV 播放器（Windows / macOS / Linux / Web），支持 M3U、EPG 与回看 平台：Windows·macOS·Linux·Android·Web。 上游写明 Windows、macOS、Linux、Android 与网页版。 GitHub 星标 7.8k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：跨平台 IPTV 播放器（Windows / macOS / Linux / Web），支持 M3U、EPG 与回看 平台：Windows·macOS·Linux·Android·Web。 上游写明 Windows、macOS、Linux、Android 与网页版。 GitHub 星标 7.8k（7832，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -699,7 +699,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：基于腾讯 X5 WebView 直接加载电视台官网直播页的 Android TV 直播软件 平台：Android TV。 GitHub 星标 5.4k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：基于腾讯 X5 WebView 直接加载电视台官网直播页的 Android TV 直播软件 平台：Android TV。 GitHub 星标 5.4k（5429，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -720,7 +720,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：我的電視·〇，可自定义视频源的直播软件 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 4.7k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：我的電視·〇，可自定义视频源的直播软件 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 4.7k（4671，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -741,7 +741,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：天光云影，Material 3 Expressive 风格的 Android / Android TV 直播播放器 平台：Android TV。 GitHub 星标 3.1k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：天光云影，Material 3 Expressive 风格的 Android / Android TV 直播播放器 平台：Android TV。 GitHub 星标 3.2k（3158，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -762,7 +762,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：电视浏览器：在机顶盒与 Android TV 上收看央视等网页直播的轻量软件 平台：Android TV。 GitHub 星标 3k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：电视浏览器：在机顶盒与 Android TV 上收看央视等网页直播的轻量软件 平台：Android TV。 GitHub 星标 3.0k（2965，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.5,
       "scores": {
@@ -783,7 +783,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：APTV：Apple 全平台（iOS / iPadOS / tvOS / macOS / watchOS）直播播放器，支持 M3U、回看与节目单 平台：iOS·tvOS·macOS。 上游写明 iOS、tvOS、macOS 三个 App Store 版本。 GitHub 星标 2.9k，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：APTV：Apple 全平台（iOS / iPadOS / tvOS / macOS / watchOS）直播播放器，支持 M3U、回看与节目单 平台：iOS·tvOS·macOS。 上游写明 iOS、tvOS、macOS 三个 App Store 版本。 GitHub 星标 2.9k（2943，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 4.0,
       "scores": {
@@ -804,7 +804,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：天光云影原项目（已归档） 平台：Android（原项目，仓库名为 mytv-android）。 GitHub 星标 1.9k，据此折算星级；星标表示热度，不代表可用或好用。 已归档的原项目。 star 数与当前可用性无关，已停更条目不要按星级优先。",
+    "notes": "上游列表收录：天光云影原项目（已归档） 平台：Android（原项目，仓库名为 mytv-android）。 GitHub 星标 1.9k（1871，2026-11-24 实读），不代表可用或好用。 已归档的原项目。 star 数与当前可用性无关，已停更条目不要按星级优先。",
     "rating": {
       "average": 4.0,
       "scores": {
@@ -825,7 +825,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：免费无广告的电视直播 App，手机与电视盒子通用 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 844，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：免费无广告的电视直播 App，手机与电视盒子通用 平台：Android（APK）。 上游只发布 APK，未提其他系统。 GitHub 星标 853（853，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {
@@ -846,7 +846,7 @@
     "format": "project",
     "source": "https://github.com/jiji262/awesome-tvbox",
     "license": "See the repository for its own licence; this catalog only links to it.",
-    "notes": "上游列表收录：原生 Android TV IPTV 播放器（Compose for TV，ExoPlayer + mpv 双内核） 平台：Android TV。 GitHub 星标 830，据此折算星级；星标表示热度，不代表可用或好用。",
+    "notes": "上游列表收录：原生 Android TV IPTV 播放器（Compose for TV，ExoPlayer + mpv 双内核） 平台：Android TV。 GitHub 星标 867（867，2026-11-24 实读），不代表可用或好用。",
     "rating": {
       "average": 3.5,
       "scores": {

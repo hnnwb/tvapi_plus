@@ -117,6 +117,12 @@ h2 { font-size: 30px; font-weight: 700; letter-spacing: -.022em; }
   color: #3a3a3d;
 }
 
+.chip--stars {
+  background: #fdf6e3;
+  color: #7a5c12;
+  font-variant-numeric: tabular-nums;
+}
+
 .chip--removed { border-color: #f2d5d5; background: #fdf3f3; color: #a4453f; }
 .chip--source a { color: var(--ink-3); text-decoration: underline; text-decoration-color: var(--line); }
 .chip { padding: 2px 8px; border-radius: 980px; background: var(--fill); color: var(--ink-2); font-size: 11px; }
