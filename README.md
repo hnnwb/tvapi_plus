@@ -116,7 +116,7 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 ## 自建订阅
 
-本项目会生成自己的多仓订阅入口与独立自建单仓。自建单仓优先采用当前筛查通过 list/search/detail 且详情返回直链的 CMS；若当前严格筛查为空，则回退汇总历史结构审计里可读配置的 type-1 API 候选，生成明确标注“候选未实播”的配置供用户导入试用。回退候选并不表示 API 当前可达、搜索成功或能播放。不会下载/镜像整个第三方配置，也不执行 Spider、JS、JAR、Python。
+目录收录的第三方多仓以 awesome-tvbox 的“多仓接口”清单为参考；截至 2026-11-24，原清单 7 项中 6 项通过本项目的有界 GET 和 `urls` 结构检查（TVBox.org、小盒子、拾光、挺好分享、noimank、Lightconer），游魂地址当前返回 HTML 页面，故暂不列为可导入配置。检查只证明当次响应可读且结构符合多仓格式，不代表客户端实导入、嵌套源可用或版权已核实。\n\n本项目会生成自己的多仓订阅入口与独立自建单仓。自建单仓优先采用当前筛查通过 list/search/detail 且详情返回直链的 CMS；若当前严格筛查为空，则回退汇总历史结构审计里可读配置的 type-1 API 候选，生成明确标注“候选未实播”的配置供用户导入试用。回退候选并不表示 API 当前可达、搜索成功或能播放。不会下载/镜像整个第三方配置，也不执行 Spider、JS、JAR、Python。
 
 `scripts/build_subscriptions.py` 将经过目录校验的数据生成到指定输出根目录：`configs.json` 是配置索引，`subscriptions/tvbox-multi.json` 是本站多仓 JSON，`subscriptions/tvbox-custom-single.json` 是单独的自建候选 JSON。生成器先用当前严格筛查结果；若为空，则从 `reports/single-source-audit.json` 中结构可读配置提取 type-1 API 并去重回退。候选回退不表示 API 当前可达、普通搜索成功、详情有直链或客户端实播；它不含远程 Spider/脚本。报告记录有限历史测试范围，不能把未测试解释为上游全失效。多仓订阅清单仅包含 `catalog/playback-evidence.json` 中有合格实播证据的 VOD 配置；证据需记录客户端、版本、日期、测试范围及至少 30 秒成功播放。当前证据表为空，因此多仓订阅清单为空。输出不含直播、EPG、工具文档或未经审核的备用地址。Pages 发布后地址为 `https://hnnwb.github.io/tvapi_plus/configs.json`、`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-multi.json` 和（仅非空时）`https://hnnwb.github.io/tvapi_plus/subscriptions/tvbox-custom-single.json`。不同客户端对多仓格式要求可能不同，构建测试只验证文件结构，不证明实际导入或播放。定时探测不保证播放质量或长期可用。不要将未授权、失效、重复或未验证的源标成优质。
 

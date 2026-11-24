@@ -70,5 +70,23 @@
       "status": "caution",
       "checked_at": "2026-07-04"
     }
+  },
+  {
+    "id": "noimank-multi-subscription",
+    "name": "noimank 多仓",
+    "url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvboxmuti.json",
+    "format": "tvbox-multi",
+    "source": "https://gitlab.com/noimank/tvbox",
+    "license": "A multi-source index can aggregate third-party configurations; the repository license does not establish rights for individual providers or media. Review upstream terms and each nested provider before relying on it.",
+    "notes": "Listed as a GitLab-hosted multi-repository configuration in the original awesome-tvbox collection. Direct GET on 2026-11-24 returned HTTP 200 and valid JSON with 14 urls entries. This was only a bounded reachability and structure check; nested feeds, content rights, stability and client import were not tested. Use as a discovery index only."
+  },
+  {
+    "id": "lightconer-multi-subscription",
+    "name": "Lightconer 多仓订阅",
+    "url": "https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json",
+    "format": "tvbox-multi",
+    "source": "https://github.com/Lightconer/tvbox-ysc-config",
+    "license": "A multi-source index can aggregate third-party configurations; the repository license does not establish rights for individual providers or media. Review upstream terms and each nested provider before relying on it.",
+    "notes": "Listed as a GitHub Actions-generated multi-repository subscription in the original awesome-tvbox collection. Direct GET on the upstream raw GitHub endpoint on 2026-11-24 returned HTTP 200 and valid JSON with 9 urls entries. This was only a bounded reachability and structure check; nested feeds, content rights, stability and client import were not tested. Use as a discovery index only."
   }
 ]

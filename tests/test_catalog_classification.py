@@ -14,6 +14,8 @@ class CatalogClassificationTests(unittest.TestCase):
             "zhuiju-xiao-he-zi-multi": "18 urls entries",
             "zhuiju-shi-guang-multi": "54 urls entries",
             "zhuiju-ting-hao-share-multi": "32 urls entries",
+            "noimank-multi-subscription": "14 urls entries",
+            "lightconer-multi-subscription": "9 urls entries",
         }
         indexed = {row["id"]: row for row in rows}
         self.assertEqual(set(indexed), set(expected))
