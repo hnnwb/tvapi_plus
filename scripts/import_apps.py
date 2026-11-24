@@ -88,9 +88,13 @@ def entry_id(url: str) -> str:
 
 
 def parse(source: Path) -> list[dict]:
+    return parse_text(source.read_text(encoding="utf-8", errors="replace"))
+
+
+def parse_text(text: str) -> list[dict]:
     rows: list[dict] = []
     section = ""
-    for line in source.read_text(encoding="utf-8", errors="replace").splitlines():
+    for line in text.splitlines():
         if line.startswith("### "):
             section = line[4:].strip()
             continue

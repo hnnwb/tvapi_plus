@@ -1,0 +1,702 @@
+{
+  "awesome-zhuiju-free": {
+    "kankanya": {
+      "name": "看看鸭",
+      "url": "https://www.kankanya.me/"
+    },
+    "no-video": {
+      "name": "No影视",
+      "url": "https://novipnoad.org/"
+    },
+    "gaze-red": {
+      "name": "注视影视",
+      "url": "https://gaze.red/"
+    },
+    "sotvla": {
+      "name": "搜TV啦",
+      "url": "https://www.sotvla.cc/"
+    },
+    "xlys": {
+      "name": "雪落影视",
+      "url": "https://xlys.me/"
+    },
+    "duonao-video": {
+      "name": "多瑙影视",
+      "url": "https://www.duonaovod.com"
+    },
+    "tdgo": {
+      "name": "白嫖者联盟",
+      "url": "https://www.tdgo.shop"
+    },
+    "ddmf": {
+      "name": "蛋蛋魔法",
+      "url": "https://ddmf.net"
+    },
+    "appmovie": {
+      "name": "APP影院",
+      "url": "https://www.appmovie.art"
+    },
+    "ai-movie": {
+      "name": "爱电影",
+      "url": "https://kuhh4jo.com"
+    },
+    "jpyy": {
+      "name": "金牌影视",
+      "url": "https://www.vv3nwjk.com"
+    },
+    "tv-937": {
+      "name": "937影视",
+      "url": "https://www.937tv.vip"
+    },
+    "iyf": {
+      "name": "爱壹帆",
+      "url": "https://iyf.tv"
+    },
+    "czzymovie": {
+      "name": "厂长资源",
+      "url": "https://www.czzymovie.com"
+    },
+    "libvio": {
+      "name": "LIBVIO",
+      "url": "https://libviobd.com"
+    },
+    "auete-video": {
+      "name": "Auete影视",
+      "url": "https://www.aeete.com"
+    },
+    "dyrs": {
+      "name": "电影人生",
+      "url": "https://dyrs.tv"
+    },
+    "netflixgc": {
+      "name": "奈飞工厂",
+      "url": "https://www.netflixgc.com"
+    },
+    "nfyingshi": {
+      "name": "奈菲影视",
+      "url": "https://www.nfyingshi.com"
+    },
+    "nivod": {
+      "name": "泥视频",
+      "url": "https://www.nivod.vip"
+    },
+    "ppnix": {
+      "name": "PPnix",
+      "url": "https://www.ppnix.com/cn/"
+    },
+    "dbku": {
+      "name": "独播库",
+      "url": "https://www.dbku.tv"
+    },
+    "bubu-zhuiju": {
+      "name": "布布追剧",
+      "url": "https://bubuzhuiju.com"
+    },
+    "yingmao-cangku": {
+      "name": "影猫仓库",
+      "url": "https://www.ymck.pro"
+    },
+    "aikanbot": {
+      "name": "爱看机器人",
+      "url": "https://www1.aikanbot.com"
+    },
+    "duse91": {
+      "name": "91毒舌",
+      "url": "https://www.duse0.com/"
+    },
+    "guangsu-yingshi": {
+      "name": "光速影视",
+      "url": "https://www.yingshiso.link/"
+    },
+    "haohaokan": {
+      "name": "好好看",
+      "url": "https://www.hhkan2.com/"
+    },
+    "ifn": {
+      "name": "IFN",
+      "url": "https://ifn.watch/register?code=8B1EF6"
+    },
+    "animeko-app": {
+      "name": "Animeko",
+      "url": "https://animeko.org/downloads/"
+    },
+    "kazumi": {
+      "name": "Kazumi",
+      "url": "https://kazumi.app/download"
+    },
+    "selenetv-app": {
+      "name": "SeleneTV",
+      "url": "https://b.zhuiju.me/p/4"
+    },
+    "ios-yingshi-app": {
+      "name": "苹果iOS影视APP",
+      "url": "https://b.zhuiju.me/p/23"
+    },
+    "android-yingshi-app": {
+      "name": "安卓Android影视APP",
+      "url": "https://b.zhuiju.me/p/27"
+    },
+    "zimuku": {
+      "name": "字幕库",
+      "url": "https://zimuku.org"
+    },
+    "assrt": {
+      "name": "射手网(伪)",
+      "url": "https://assrt.net"
+    },
+    "subhd": {
+      "name": "SubHD",
+      "url": "https://subhd.tv"
+    },
+    "kodi": {
+      "name": "Kodi",
+      "url": "https://kodi.tv/"
+    },
+    "iptv-org": {
+      "name": "IPTV-org",
+      "url": "https://github.com/iptv-org/iptv"
+    },
+    "vma-iptv-source": {
+      "name": "VMA",
+      "url": "https://pan.vma.cc/down.php/f83b92a24d61858666f13c5db938a292.txt"
+    },
+    "fan-tai-ying-iptv": {
+      "name": "饭太硬",
+      "url": "http://www.饭太硬.cc/tv"
+    },
+    "fei-mao-iptv": {
+      "name": "肥猫",
+      "url": "http://肥猫.net/tv"
+    },
+    "fan-tai-ying": {
+      "name": "饭太硬",
+      "url": "http://www.饭太硬.net/tv"
+    },
+    "fei-mao": {
+      "name": "肥猫",
+      "url": "http://肥猫.net/"
+    },
+    "lao-liu-bei": {
+      "name": "老刘备",
+      "url": "https://raw.liucn.cc/box/m.json"
+    },
+    "xiao-ma": {
+      "name": "小马",
+      "url": "https://szyyds.cn/tv/x.json"
+    },
+    "mo-yu-er": {
+      "name": "摸鱼儿",
+      "url": "http://www.y456y.com"
+    },
+    "wang-er-xiao": {
+      "name": "王二小",
+      "url": "http://new.王二小放牛娃.top"
+    },
+    "xiao-he-zi-4k": {
+      "name": "小盒子4K",
+      "url": "http://xhztv.top/4k.json"
+    },
+    "chuang-xiang-ying-shi-tvbox": {
+      "name": "创享影视",
+      "url": "https://ys.cxkjg.cn/api/provide/tvbox"
+    },
+    "ying-cang-tvbox": {
+      "name": "影仓",
+      "url": "http://124.71.19.220/c/1"
+    },
+    "lun-li-tvbox": {
+      "name": "伦理接口",
+      "url": "http://47.96.82.41:5188/rose/18/xgg.json"
+    },
+    "xiao-he-zi-single": {
+      "name": "小盒子单仓",
+      "url": "http://xhztv.top/xhz"
+    },
+    "ao-wu": {
+      "name": "嗷呜",
+      "url": "http://itv666.cc/aowu/config.webp"
+    },
+    "wu-ming": {
+      "name": "无名",
+      "url": "https://6800.kstore.vip/fish.json"
+    },
+    "xiao-he-zi-multi": {
+      "name": "小盒子多仓",
+      "url": "http://xhztv.top/dc"
+    },
+    "shi-guang-multi": {
+      "name": "拾光多仓",
+      "url": "http://xmbjm.fh4u.org/dc.txt"
+    },
+    "ting-hao-share-multi": {
+      "name": "挺好分享多仓",
+      "url": "http://ztha.top/TVBox/GYCK.json"
+    },
+    "xiao-he-zi": {
+      "name": "小盒子",
+      "url": "https://www.xhztv.pro/"
+    },
+    "juhebd": {
+      "name": "BD影视聚合",
+      "url": "https://www.juhebd.com/"
+    },
+    "ainunu": {
+      "name": "爱努努",
+      "url": "https://video.ainunu.com/"
+    },
+    "bdflixs": {
+      "name": "BD电影首发",
+      "url": "https://www.bdflixs.com/"
+    },
+    "ldysg": {
+      "name": "找电影时光",
+      "url": "https://www.ldysg.win/"
+    },
+    "meijufen": {
+      "name": "美剧粉",
+      "url": "https://www.mjf2020.com"
+    },
+    "cilixiong": {
+      "name": "磁力熊",
+      "url": "https://www.cilixiong.org"
+    },
+    "ciligou": {
+      "name": "磁力狗",
+      "url": "https://ciligou.net"
+    },
+    "cilidi": {
+      "name": "磁力帝",
+      "url": "https://www.cld123.com"
+    },
+    "bt-yingshi": {
+      "name": "BT影视",
+      "url": "https://www.btbtla.com"
+    },
+    "4k-yuanpan": {
+      "name": "POMO",
+      "url": "https://pomo.mom/"
+    },
+    "dianyinggang": {
+      "name": "电影港网",
+      "url": "https://www.dyg22.com"
+    },
+    "btshijiewang": {
+      "name": "BT世界网",
+      "url": "https://www.btsj6.com"
+    },
+    "gaoqing-mp4": {
+      "name": "高清MP4",
+      "url": "https://www.mp4ba.vip"
+    },
+    "gaoqingzu": {
+      "name": "高清族",
+      "url": "https://hdzu.org"
+    },
+    "kuake-so-1": {
+      "name": "PanSou",
+      "url": "https://pansou.de"
+    },
+    "kuakeso": {
+      "name": "KK网盘搜",
+      "url": "https://kkso.net"
+    },
+    "zhuiju-us": {
+      "name": "追剧吧",
+      "url": "https://www.zhuiju.us/"
+    },
+    "gugeso": {
+      "name": "谷哥搜",
+      "url": "https://gugeso.com/"
+    },
+    "moontvplus": {
+      "name": "MoonTVPlus",
+      "url": "https://github.com/mtvpls/MoonTVPlus"
+    },
+    "zyfun": {
+      "name": "zyfun",
+      "url": "https://github.com/Hiram-Wong/zyfun"
+    },
+    "iptv-api": {
+      "name": "iptv-api",
+      "url": "https://github.com/Guovin/iptv-api"
+    },
+    "iptv-org-iptv": {
+      "name": "iptv",
+      "url": "https://github.com/iptv-org/iptv"
+    },
+    "pansou": {
+      "name": "pansou",
+      "url": "https://github.com/fish2018/pansou"
+    },
+    "cloudsaver": {
+      "name": "CloudSaver",
+      "url": "https://github.com/jiangrui1994/CloudSaver"
+    },
+    "quark-auto-save": {
+      "name": "quark-auto-save",
+      "url": "https://github.com/Cp0204/quark-auto-save"
+    },
+    "animeko": {
+      "name": "Animeko",
+      "url": "https://github.com/open-ani/animeko"
+    },
+    "predidit-kazumi": {
+      "name": "Kazumi",
+      "url": "https://github.com/Predidit/Kazumi"
+    },
+    "selenetv": {
+      "name": "SeleneTV",
+      "url": "https://github.com/MoonTechLab/Selene"
+    },
+    "webhometv": {
+      "name": "WebHomeTV",
+      "url": "https://github.com/fish2018/webhtv"
+    },
+    "webhometv2": {
+      "name": "WebHomeTV2",
+      "url": "https://github.com/Silent1566/webhtv"
+    },
+    "tv-xn-yhqu5zs87a-top-3": {
+      "name": "FongMi 影视",
+      "url": "https://tv.xn--yhqu5zs87a.top/"
+    },
+    "yangke-peekpro": {
+      "name": "羊壳 PeekPro",
+      "url": "https://b.zhuiju.me/p/19"
+    },
+    "webhometv-player": {
+      "name": "WebHomeTV",
+      "url": "https://b.zhuiju.me/p/18"
+    },
+    "ok-yingshi-player": {
+      "name": "OK影视",
+      "url": "https://b.zhuiju.me/p/17"
+    },
+    "fongmi-fengmi": {
+      "name": "FongMi 蜂蜜",
+      "url": "https://b.zhuiju.me/p/16"
+    },
+    "yingshicang-player": {
+      "name": "影视仓",
+      "url": "https://b.zhuiju.me/p/15"
+    },
+    "sidhub-cc-7": {
+      "name": "SeedHub",
+      "url": "https://sidhub.cc/"
+    },
+    "acg-rip-10": {
+      "name": "ACG.RIP",
+      "url": "https://acg.rip/"
+    },
+    "github-com-12": {
+      "name": "sky-tv",
+      "url": "https://github.com/sky22333/sky-tv"
+    },
+    "fongmi-tv": {
+      "name": "FongMi TV",
+      "url": "https://github.com/FongMi/TV"
+    },
+    "4kvm-cc-18": {
+      "name": "4k影视",
+      "url": "https://www.4kvm.cc/"
+    },
+    "fdzys": {
+      "name": "饭搭子影视",
+      "url": "https://fdzys.com"
+    },
+    "sa-video": {
+      "name": "SA视频",
+      "url": "https://www.lsjys11.com/"
+    },
+    "naifei-fyi-19": {
+      "name": "奈飞工厂",
+      "url": "https://naifei.fyi/"
+    },
+    "juok": {
+      "name": "剧OK",
+      "url": "https://juok3.top/"
+    },
+    "dandanqi": {
+      "name": "蛋蛋奇",
+      "url": "https://www.dandanqi.cc/"
+    },
+    "zndy": {
+      "name": "宅男影视",
+      "url": "https://zndy.top/"
+    },
+    "yingshidaquan": {
+      "name": "影视大全",
+      "url": "https://yingshidaquan.top/"
+    },
+    "juzong": {
+      "name": "剧踪影院",
+      "url": "https://www.juzong01.me/"
+    },
+    "jianyunys": {
+      "name": "简云影视",
+      "url": "https://jianyunys.com/"
+    },
+    "pianku": {
+      "name": "片库",
+      "url": "https://4k01.pianku.online/"
+    },
+    "66-dapianwang": {
+      "name": "66 大片网",
+      "url": "https://www.77dpw.vip/"
+    },
+    "didahd": {
+      "name": "嘀嗒影视",
+      "url": "https://www.didahd.xyz/"
+    },
+    "zhuiying": {
+      "name": "追影",
+      "url": "https://zhuiying3.cc/"
+    },
+    "wbbb": {
+      "name": "歪比巴卜",
+      "url": "https://wbbb1.com/"
+    },
+    "kxyy": {
+      "name": "开心影院",
+      "url": "https://www.kxyy1.cc/"
+    },
+    "dhvideo": {
+      "name": "豆花电影网",
+      "url": "https://dhvideo.cc/"
+    },
+    "czy0729-bangumi": {
+      "name": "Bangumi",
+      "url": "https://github.com/czy0729/Bangumi"
+    },
+    "zip0": {
+      "name": "ZIP0",
+      "url": "https://zip0.com/?r=KBDIG8"
+    },
+    "aipan-me-25": {
+      "name": "爱盼",
+      "url": "https://www.aipan.me/"
+    },
+    "103-39-111-180-29": {
+      "name": "可可影视",
+      "url": "https://www.kkys14.com/"
+    },
+    "skr-skr1-cc-9": {
+      "name": "樱之空",
+      "url": "https://skr.skr1.cc:666/"
+    },
+    "tv-lxyy-club-36": {
+      "name": "洛雪TV",
+      "url": "https://tv.lxyy.club/"
+    },
+    "iptv-cqshushu-com-31": {
+      "name": "IPTV神器Pro",
+      "url": "https://iptv.cqshushu.com/"
+    },
+    "kanmovie-com-34": {
+      "name": "西瓜影视",
+      "url": "https://www.kanmovie.com/"
+    },
+    "ys-cxkjg-cn-39": {
+      "name": "创享影视",
+      "url": "https://ys.cxkjg.cn/"
+    },
+    "github-com-49": {
+      "name": "nTv 直播软件",
+      "url": "https://github.com/buhanzhe/NativeWasmTv"
+    },
+    "xiugou-tv": {
+      "name": "修狗TV",
+      "url": "https://github.com/qfw66/xiugou-tv"
+    },
+    "yingxivod-com-53": {
+      "name": "影夕视频",
+      "url": "https://yingxivod.com/"
+    }
+  },
+  "awesome-tvbox": {
+    "app:https://github.com/j4Uq/TVBoxOSC": {
+      "name": "j4Uq/TVBoxOSC",
+      "url": "https://github.com/j4Uq/TVBoxOSC"
+    },
+    "app:https://github.com/FongMi/TV": {
+      "name": "FongMi/TV",
+      "url": "https://github.com/FongMi/TV"
+    },
+    "app:https://github.com/liu673cn/bug": {
+      "name": "liu673cn/bug",
+      "url": "https://github.com/liu673cn/bug"
+    },
+    "app:https://github.com/takagen99/Box": {
+      "name": "takagen99/Box",
+      "url": "https://github.com/takagen99/Box"
+    },
+    "app:https://github.com/q215613905/TVBoxOS": {
+      "name": "q215613905/TVBoxOS",
+      "url": "https://github.com/q215613905/TVBoxOS"
+    },
+    "app:https://github.com/webhtv/webhtv": {
+      "name": "webhtv/webhtv",
+      "url": "https://github.com/webhtv/webhtv"
+    },
+    "app:https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile": {
+      "name": "XiaoRanLiu3119/TVBoxOS-Mobile",
+      "url": "https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile"
+    },
+    "app:https://github.com/Silent1566/webhtv": {
+      "name": "Silent1566/webhtv",
+      "url": "https://github.com/Silent1566/webhtv"
+    },
+    "app:https://github.com/XiaochangXu/AVBox": {
+      "name": "XiaochangXu/AVBox",
+      "url": "https://github.com/XiaochangXu/AVBox"
+    },
+    "app:https://github.com/motao123/webtv": {
+      "name": "motao123/webtv",
+      "url": "https://github.com/motao123/webtv"
+    },
+    "app:https://github.com/zongchenghuan0318/TVBox-fashion-UI": {
+      "name": "zongchenghuan0318/TVBox-fashion-UI",
+      "url": "https://github.com/zongchenghuan0318/TVBox-fashion-UI"
+    },
+    "app:https://github.com/xixu-me/fongmi-tv-actions-builder": {
+      "name": "xixu-me/fongmi-tv-actions-builder",
+      "url": "https://github.com/xixu-me/fongmi-tv-actions-builder"
+    },
+    "app:https://github.com/cyj265/lanxing-vod": {
+      "name": "cyj265/lanxing-vod",
+      "url": "https://github.com/cyj265/lanxing-vod"
+    },
+    "app:https://github.com/dhicoc/FusionTV-KitKat": {
+      "name": "dhicoc/FusionTV-KitKat",
+      "url": "https://github.com/dhicoc/FusionTV-KitKat"
+    },
+    "app:https://github.com/Hiram-Wong/zyfun": {
+      "name": "Hiram-Wong/zyfun",
+      "url": "https://github.com/Hiram-Wong/zyfun"
+    },
+    "app:https://github.com/gstory0404/Cinetry": {
+      "name": "gstory0404/Cinetry",
+      "url": "https://github.com/gstory0404/Cinetry"
+    },
+    "app:https://github.com/kknifer7/FreeBox": {
+      "name": "kknifer7/FreeBox",
+      "url": "https://github.com/kknifer7/FreeBox"
+    },
+    "app:https://github.com/Greatwallcorner/TV-Multiplatform": {
+      "name": "Greatwallcorner/TV-Multiplatform",
+      "url": "https://github.com/Greatwallcorner/TV-Multiplatform"
+    },
+    "app:https://github.com/hgtuj5688/tvbox-desktop": {
+      "name": "hgtuj5688/tvbox-desktop",
+      "url": "https://github.com/hgtuj5688/tvbox-desktop"
+    },
+    "app:https://github.com/Ainanya21/AinanPlayer": {
+      "name": "Ainanya21/AinanPlayer",
+      "url": "https://github.com/Ainanya21/AinanPlayer"
+    },
+    "app:https://github.com/jo32/tvbox-silicon": {
+      "name": "jo32/tvbox-silicon",
+      "url": "https://github.com/jo32/tvbox-silicon"
+    },
+    "app:https://github.com/yagami-hue/Win-box": {
+      "name": "yagami-hue/Win-box",
+      "url": "https://github.com/yagami-hue/Win-box"
+    },
+    "app:https://github.com/yuluoos/TVBox-tvs": {
+      "name": "yuluoos/TVBox-tvs",
+      "url": "https://github.com/yuluoos/TVBox-tvs"
+    },
+    "app:https://github.com/Jstrom2022/tvbox-Swift": {
+      "name": "Jstrom2022/tvbox-Swift",
+      "url": "https://github.com/Jstrom2022/tvbox-Swift"
+    },
+    "app:https://github.com/qfw66/xiugou-tv": {
+      "name": "qfw66/xiugou-tv",
+      "url": "https://github.com/qfw66/xiugou-tv"
+    },
+    "app:https://github.com/teaGod-s/UnBox": {
+      "name": "teaGod-s/UnBox",
+      "url": "https://github.com/teaGod-s/UnBox"
+    },
+    "app:https://github.com/sky22333/sky-tv": {
+      "name": "sky22333/sky-tv",
+      "url": "https://github.com/sky22333/sky-tv"
+    },
+    "app:https://github.com/yaolin-dev/OKVideoMac": {
+      "name": "yaolin-dev/OKVideoMac",
+      "url": "https://github.com/yaolin-dev/OKVideoMac"
+    },
+    "app:https://github.com/cwe88108/free-new-desk-public": {
+      "name": "cwe88108/free-new-desk-public",
+      "url": "https://github.com/cwe88108/free-new-desk-public"
+    },
+    "app:https://github.com/zhujinrun/FongMi-Player": {
+      "name": "zhujinrun/FongMi-Player",
+      "url": "https://github.com/zhujinrun/FongMi-Player"
+    },
+    "app:https://github.com/LanLanff/FlyTV": {
+      "name": "LanLanff/FlyTV",
+      "url": "https://github.com/LanLanff/FlyTV"
+    },
+    "app:https://github.com/jianbinzhang1987/OKPlayer": {
+      "name": "jianbinzhang1987/OKPlayer",
+      "url": "https://github.com/jianbinzhang1987/OKPlayer"
+    },
+    "app:https://github.com/tengdechun/tvbox-desktop": {
+      "name": "tengdechun/tvbox-desktop",
+      "url": "https://github.com/tengdechun/tvbox-desktop"
+    },
+    "app:https://github.com/shareu007/tvbox-Swift-macOS": {
+      "name": "shareu007/tvbox-Swift-macOS",
+      "url": "https://github.com/shareu007/tvbox-Swift-macOS"
+    },
+    "app:https://github.com/wj5403293/KOTV": {
+      "name": "wj5403293/KOTV",
+      "url": "https://github.com/wj5403293/KOTV"
+    },
+    "app:https://github.com/lizongying/my-tv": {
+      "name": "lizongying/my-tv",
+      "url": "https://github.com/lizongying/my-tv"
+    },
+    "app:https://github.com/4gray/iptvnator": {
+      "name": "4gray/iptvnator",
+      "url": "https://github.com/4gray/iptvnator"
+    },
+    "app:https://github.com/hxh19950701/WebViewTvLive": {
+      "name": "hxh19950701/WebViewTvLive",
+      "url": "https://github.com/hxh19950701/WebViewTvLive"
+    },
+    "app:https://github.com/lizongying/my-tv-0": {
+      "name": "lizongying/my-tv-0",
+      "url": "https://github.com/lizongying/my-tv-0"
+    },
+    "app:https://github.com/mytv-android/mytv-android": {
+      "name": "mytv-android/mytv-android",
+      "url": "https://github.com/mytv-android/mytv-android"
+    },
+    "app:https://github.com/Eanya-Tonic/CCTV_Viewer": {
+      "name": "Eanya-Tonic/CCTV_Viewer",
+      "url": "https://github.com/Eanya-Tonic/CCTV_Viewer"
+    },
+    "app:https://github.com/Kimentanm/aptv": {
+      "name": "Kimentanm/aptv",
+      "url": "https://github.com/Kimentanm/aptv"
+    },
+    "app:https://github.com/yaoxieyoulei/mytv-android": {
+      "name": "yaoxieyoulei/mytv-android",
+      "url": "https://github.com/yaoxieyoulei/mytv-android"
+    },
+    "app:https://github.com/HTWMedia/HTV": {
+      "name": "HTWMedia/HTV",
+      "url": "https://github.com/HTWMedia/HTV"
+    },
+    "app:https://github.com/ahXN00/OwnTV": {
+      "name": "ahXN00/OwnTV",
+      "url": "https://github.com/ahXN00/OwnTV"
+    },
+    "app:https://github.com/buhanzhe/NativeWasmTv": {
+      "name": "buhanzhe/NativeWasmTv",
+      "url": "https://github.com/buhanzhe/NativeWasmTv"
+    }
+  }
+}

@@ -34,6 +34,7 @@ scripts/
   refresh_status.py          # Scheduled retry/fallback status refresh
   import_upstream.py         # Merge upstream catalog entries by URL (optional)
   import_apps.py             # Merge upstream client lists by URL (optional)
+  check_upstream.py          # Scheduled upstream diff: follow repointed links, report the rest
 .github/workflows/
   catalog-check.yml
 ```
@@ -95,6 +96,7 @@ The default command performs offline metadata validation. `--check-urls` contact
 ## GitHub Actions
 
 - Pushes and pull requests affecting catalog, schema, checker, or workflow files run offline metadata checks.
+- Each scheduled run first diffs both upstream lists (`laoma528/awesome-zhuiju-free`'s `resources.json` and `jiji262/awesome-tvbox`'s README) row by row with `scripts/check_upstream.py`. A row whose address upstream repointed is followed and the old address kept in `fallback_urls`; rows upstream added or dropped are only written to `reports/upstream-changes.json` and listed on the page, never added or removed automatically. A failed fetch keeps the previous snapshot and does not stop the probe.
 - Twice-daily scheduled runs and manually requested URL checks perform bounded probes with short retries. Optional `fallback_urls` must be reviewed and explicitly added; the job never discovers or writes them automatically. A pass means only that the link/format probe succeeded at that time, not that a client can import or play it.
 - The job atomically updates and commits only `probe-report.json`, preserving the previous successful timestamp and marking current failures as failed/stale. The checked-in empty report is a first-run baseline, not a passing probe. It does not delete catalog entries or overwrite resource configurations. The scheduled job deploys Pages in the same run so its status commit is published despite GitHub's `GITHUB_TOKEN` workflow-trigger restrictions.
 - It does not download/mirror third-party configurations or execute Spider/JS/Python/JAR code. Link reachability probes are not client playback tests. Detailed failures are also uploaded as a 14-day artifact.

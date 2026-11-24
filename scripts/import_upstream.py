@@ -160,7 +160,10 @@ STATUS_NOTES = {
 
 
 def load_upstream(path: Path) -> dict:
-    raw = path.read_text(encoding="utf-8")
+    return load_upstream_text(path.read_text(encoding="utf-8"))
+
+
+def load_upstream_text(raw: str) -> dict:
     start = raw.find("\n{")
     body = raw[start + 1:] if start != -1 else raw
     # Tolerate a truncated capture: keep the last complete object.
@@ -169,7 +172,10 @@ def load_upstream(path: Path) -> dict:
         if end == -1:
             raise ValueError("capture has no complete resource object")
         body = body[: end + 6] + "\n  ]\n}"
-    return json.loads(body)
+    doc = json.loads(body)
+    if not isinstance(doc, dict) or not isinstance(doc.get("resources"), list):
+        raise ValueError("resource file has no resources list")
+    return doc
 
 
 def slug(entry_id: str) -> str:

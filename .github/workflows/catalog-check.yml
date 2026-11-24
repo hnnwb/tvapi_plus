@@ -13,6 +13,11 @@ on:
       - "scripts/build_subscriptions.py"
       - "scripts/build_custom_single.py"
       - "scripts/screen_interfaces.py"
+      - "scripts/check_upstream.py"
+      - "scripts/import_upstream.py"
+      - "scripts/import_apps.py"
+      - "reports/upstream-changes.json"
+      - "reports/upstream-checked.json"
       - "reports/interface-screening.json"
       - "reports/single-source-audit.json"
       - "reports/custom-single-candidates.json"
@@ -29,6 +34,11 @@ on:
       - "scripts/build_subscriptions.py"
       - "scripts/build_custom_single.py"
       - "scripts/screen_interfaces.py"
+      - "scripts/check_upstream.py"
+      - "scripts/import_upstream.py"
+      - "scripts/import_apps.py"
+      - "reports/upstream-changes.json"
+      - "reports/upstream-checked.json"
       - "reports/interface-screening.json"
       - "reports/single-source-audit.json"
       - "reports/custom-single-candidates.json"
@@ -84,23 +94,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Check both upstream directories for new and repointed links
+        # A failed fetch leaves the previous snapshot alone; the probe below still refreshes
+        # availability, so upstream reachability must not decide whether the schedule runs.
+        continue-on-error: true
+        run: python scripts/check_upstream.py
       - name: Refresh bounded availability evidence
         run: python scripts/refresh_status.py --report probe-report.json
-      - name: Commit updated status only
+      - name: Commit upstream report, repointed links and status
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if ! git ls-files --error-unmatch probe-report.json >/dev/null 2>&1; then
-            echo "Status report is untracked; refusing to publish before it is reviewed"
-            exit 1
-          fi
+          for report in probe-report.json reports/upstream-changes.json reports/upstream-checked.json; do
+            if ! git ls-files --error-unmatch "$report" >/dev/null 2>&1; then
+              echo "$report is untracked; refusing to publish before it is reviewed"
+              exit 1
+            fi
+          done
           if git diff --quiet -- probe-report.json && git diff --cached --quiet -- probe-report.json; then
             echo "No status changes"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add probe-report.json
-            git commit -m "chore: refresh catalog status"
+            git add probe-report.json reports/upstream-changes.json reports/upstream-checked.json catalog
+            git commit -m "chore: refresh upstream links and catalog status"
             gh auth setup-git
             git -c credential.helper='!gh auth git-credential' push origin HEAD:${{ github.event.repository.default_branch }}
           fi
@@ -112,6 +129,7 @@ jobs:
           cp -R catalog _site/catalog
           cp probe-report.json _site/probe-report.json
           mkdir -p _site/reports
+          cp reports/upstream-changes.json _site/reports/
           cp reports/verification-report.json _site/reports/
           cp reports/interface-screening.json _site/reports/
           cp reports/single-source-audit.json _site/reports/

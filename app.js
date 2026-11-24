@@ -4,6 +4,7 @@ const CUSTOM_SINGLE_STATUS_URL = 'reports/custom-single-candidates.json';
 const CONFIG_INDEX_URL = 'configs.json';
 const PROBE_REPORT_URL = 'probe-report.json';
 const VERIFICATION_URL = 'reports/verification-report.json';
+const UPSTREAM_URL = 'reports/upstream-changes.json';
 
 const CATALOGS = [
   { file: 'catalog/vod-single.json', category: 'vod-single' },
@@ -55,6 +56,9 @@ const TEXT = {
     testsLabel: '自动化测试通过', ratingsLabel: '星级：上游自评转载', clientNotTested: '客户端实播：未验证', true4kNotTested: '真实 4K：未验证',
     checkPassed: '通过', checkFailed: '失败', checkNotTested: '未测试',
     rulesTitle: '收录规则',
+    upstreamTitle: '上游变动',
+    upstreamLead: '两次定时检查之间，两个上游清单改了哪些条目。被改掉地址的已自动跟随，旧地址留作备用；新加的与上游已删的只报告，等人判断后再动手。',
+    upstreamChanged: '地址变更，已跟随', upstreamRenamed: '改名', upstreamAdded: '上游新加，尚未收录', upstreamRemoved: '上游已删，仍在发布', upstreamNone: '上一次检查以来，上游没有变化。', upstreamOld: '原', upstreamProbe: '探测', upstreamReported: '仅报告',
     rule1Title: '来源可回溯', rule1Text: '每条都记上游出处与许可说明。不镜像、不重发第三方配置。',
     rule2Title: '星级是上游自评', rule2Text: '星级原样转载自上游，附检查日期；本仓库没有实测，也不替上游背书。',
     rule3Title: '不冒充实测', rule3Text: '没有客户端实播证据的条目，不会被标成“已测试”或“优质”。',
@@ -92,6 +96,8 @@ const TEXT = {
     verifyTitle: 'Check log', verifyLead: 'A check answers one question: did it answer, and was the body the expected format. It does not prove import or playback.',
     testsLabel: 'Automated tests passed', ratingsLabel: 'Stars: upstream self-assessment', clientNotTested: 'Client playback: not verified', true4kNotTested: 'True 4K: not verified',
     checkPassed: 'Passed', checkFailed: 'Failed', checkNotTested: 'Not tested',
+    upstreamTitle: 'Upstream changes', upstreamLead: 'What the two upstream lists changed since the last scheduled check. Links upstream repointed were followed and the old address kept as a fallback; new and vanished rows are only reported for a human to judge.',
+    upstreamChanged: 'Address changed, followed', upstreamRenamed: 'Renamed', upstreamAdded: 'New upstream, not yet included', upstreamRemoved: 'Gone upstream, still published', upstreamNone: 'No upstream changes since the last check.', upstreamOld: 'was', upstreamProbe: 'probe', upstreamReported: 'reported only',
     rulesTitle: 'Inclusion rules',
     rule1Title: 'Traceable source', rule1Text: 'Every row records its upstream and licence note. Nothing is mirrored or republished.',
     rule2Title: 'Stars are upstream', rule2Text: 'Ratings are republished untouched with their check date. This project measured none of them and does not vouch for them.',
@@ -112,6 +118,7 @@ const TEXT = {
 let entries = [];
 let probeReport = null;
 let verificationReport = null;
+let upstreamReport = null;
 let candidateCount = 0;
 let lang = localStorage.getItem('tvapi-language') || (navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en');
 let activeCategory = 'all';
@@ -276,6 +283,7 @@ function applyLanguage() {
   document.getElementById('language-toggle').setAttribute('aria-label', lang === 'zh' ? 'Switch language' : '切换语言');
   document.title = lang === 'zh' ? 'TVBox 资源索引' : 'TVBox resource index';
   if (verificationReport) renderVerification(verificationReport);
+  if (upstreamReport) renderUpstream(upstreamReport);
   render();
 }
 
@@ -316,6 +324,32 @@ function render() {
   });
 }
 
+function upstreamRow(item, kind) {
+  const name = escapeHTML(item.after?.name || item.name || item.id);
+  const before = item.before ? `<span class="upstream-was">${escapeHTML(t().upstreamOld)} ${escapeHTML(item.before.url)}</span>` : '';
+  const probe = item.probe ? `<span class="chip ${item.probe.status === 'ok' ? 'chip--ok' : 'chip--fail'}">${escapeHTML(t().upstreamProbe)}: ${escapeHTML(item.probe.status === 'ok' ? t().checkPassed : t().checkFailed)}</span>` : '';
+  const note = item.action && item.action.includes('reported') ? `<span class="chip">${escapeHTML(t().upstreamReported)}</span>` : '';
+  return `<article class="upstream-item"><div><span class="upstream-name">${name}</span> ${before}</div><div class="row-meta">${probe}${note}</div></article>`;
+}
+
+function renderUpstream(report) {
+  const groups = [
+    [t().upstreamChanged, (report.changed || []).filter((item) => item.before && item.before.url !== item.after.url), 'changed'],
+    [t().upstreamRenamed, (report.changed || []).filter((item) => !item.before || item.before.url === item.after.url), 'renamed'],
+    [t().upstreamAdded, report.added || [], 'added'],
+    [t().upstreamRemoved, report.removed || [], 'removed'],
+  ];
+  const sections = groups.filter(([, items]) => items.length).map(([title, items, kind]) =>
+    `<div class="upstream-group"><h3>${escapeHTML(title)} <span class="upstream-count">${items.length}</span></h3>${items.map((item) => upstreamRow(item, kind)).join('')}</div>`);
+  document.getElementById('upstream-groups').innerHTML = sections.join('')
+    || `<p class="block-lead">${escapeHTML(t().upstreamNone)}</p>`;
+  const date = new Date(report.generated_at);
+  document.getElementById('upstream-date').textContent = Number.isNaN(date.valueOf())
+    ? '—'
+    : date.toLocaleString(lang === 'zh' ? 'zh-CN' : 'en-US', { dateStyle: 'medium', timeStyle: 'short' });
+  document.getElementById('upstream').hidden = false;
+}
+
 function renderVerification(report) {
   const date = new Date(report.generated_at);
   document.getElementById('verification-date').textContent = Number.isNaN(date.valueOf())
@@ -346,7 +380,7 @@ function renderVerification(report) {
 
 async function loadData() {
   try {
-    const [catalogs, probeResponse, verificationResponse, candidateResponse, indexResponse] = await Promise.all([
+    const [catalogs, probeResponse, verificationResponse, candidateResponse, indexResponse, upstreamResponse] = await Promise.all([
       Promise.all(CATALOGS.map(async ({ file, category }) => {
         const response = await fetch(file, { cache: 'no-store' });
         if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
@@ -358,6 +392,7 @@ async function loadData() {
       fetch(VERIFICATION_URL, { cache: 'no-store' }).catch(() => null),
       fetch(CUSTOM_SINGLE_STATUS_URL, { cache: 'no-store' }).catch(() => null),
       fetch(CONFIG_INDEX_URL, { cache: 'no-store' }).catch(() => null),
+      fetch(UPSTREAM_URL, { cache: 'no-store' }).catch(() => null),
     ]);
     entries = catalogs.flat();
     if (indexResponse?.ok) {
@@ -383,6 +418,10 @@ async function loadData() {
       || (a._displayOrder ?? 0) - (b._displayOrder ?? 0)
       || String(a.name).localeCompare(String(b.name), 'zh-Hans-CN'));
     if (probeResponse?.ok) probeReport = await probeResponse.json();
+    if (upstreamResponse?.ok) {
+      upstreamReport = await upstreamResponse.json();
+      renderUpstream(upstreamReport);
+    }
     if (verificationResponse?.ok) {
       verificationReport = await verificationResponse.json();
       renderVerification(verificationReport);
