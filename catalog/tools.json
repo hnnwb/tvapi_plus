@@ -69,7 +69,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 网盘资源搜索与转存工具. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. GitHub 星标 9.5k（9479，2026-11-24 实读）。",
+    "notes": "Upstream description: 可自行部署的网盘资源搜索与转存工具，集成资源搜索、分享链接解析、网盘转存，提供桌面与移动端适配的 Web 界面. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. GitHub 星标 9.5k（9479，2026-11-24 实读）。",
     "rating": {
       "average": 5.0,
       "scores": {
@@ -111,7 +111,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 一站式弹幕追番平台. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. GitHub 星标 22.0k（22039，2026-11-24 实读）。",
+    "notes": "Upstream description: 多平台弹幕追番应用，支持 Bangumi 信息与评价、进度云同步、多视频源、弹幕和离线缓存；覆盖 Android、iOS、Windows、macOS、Linux. Upstream self-assessment status: recommended; its ratings are not reproduced here. Source repository reference; nothing is built, executed, or mirrored by this catalog. GitHub 星标 22.0k（22039，2026-11-24 实读）。",
     "rating": {
       "average": 5.0,
       "scores": {
@@ -321,7 +321,7 @@
     "format": "project",
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
-    "notes": "Upstream description: 横屏直播播放器. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-10-23. GitHub 星标 504（504，2026-11-24 实读）。",
+    "notes": "Upstream description: 面向 Android TV、机顶盒、平板和手机的横屏直播播放器，支持 M3U/M3U8/TXT、节目单与回看；Android 4.0+，ARM64 包需 Android 5.0+. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 returned: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-10-23. GitHub 星标 504（504，2026-11-24 实读）。",
     "rating": {
       "average": 4.0,
       "scores": {

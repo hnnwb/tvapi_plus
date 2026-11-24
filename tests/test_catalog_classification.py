@@ -27,6 +27,19 @@ class CatalogClassificationTests(unittest.TestCase):
                 self.assertTrue(row["license"])
                 self.assertTrue(row["source"])
 
+    def test_open_source_intros_capture_useful_capabilities_from_upstream(self):
+        rows = json.loads((ROOT / "catalog/tools.json").read_text(encoding="utf-8"))
+        indexed = {row["id"]: row for row in rows}
+        expected_phrases = {
+            "zhuiju-cloudsaver": "桌面与移动端适配的 Web 界面",
+            "zhuiju-animeko": "多视频源、弹幕和离线缓存",
+            "zhuiju-github-com-49": "M3U/M3U8/TXT",
+        }
+        for entry_id, phrase in expected_phrases.items():
+            with self.subTest(entry=entry_id):
+                self.assertIn(phrase, indexed[entry_id]["notes"])
+                self.assertIn("Upstream description:", indexed[entry_id]["notes"])
+
     def test_upstream_app_download_pages_are_catalogued_as_apps(self):
         app_ids = {
             "zhuiju-selenetv-app",
