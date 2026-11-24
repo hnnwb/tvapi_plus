@@ -42,6 +42,28 @@ class CatalogClassificationTests(unittest.TestCase):
                 self.assertIn(phrase, indexed[entry_id]["notes"])
                 self.assertIn("Upstream description:", indexed[entry_id]["notes"])
 
+    def test_reference_indexes_are_listed_as_open_source_projects(self):
+        rows = json.loads((ROOT / "catalog/tools.json").read_text(encoding="utf-8"))
+        indexed = {row["id"]: row for row in rows}
+        expected = {
+            "reference-awesome-tvbox": (
+                "https://github.com/jiji262/awesome-tvbox",
+                "CC0 1.0",
+            ),
+            "reference-awesome-zhuiju-free": (
+                "https://github.com/laoma528/awesome-zhuiju-free",
+                "CC BY 4.0",
+            ),
+        }
+        for entry_id, (url, license_note) in expected.items():
+            with self.subTest(entry=entry_id):
+                row = indexed[entry_id]
+                self.assertEqual(row["url"], url)
+                self.assertEqual(row["format"], "project")
+                self.assertIn(license_note, row["license"])
+                self.assertIn("Upstream description:", row["notes"])
+                self.assertTrue(row["source"])
+
     def test_upstream_app_download_pages_are_catalogued_as_apps(self):
         app_ids = {
             "zhuiju-selenetv-app",

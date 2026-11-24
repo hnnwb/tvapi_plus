@@ -355,5 +355,23 @@
       "status": "recommended",
       "checked_at": "2026-10-31"
     }
+  },
+  {
+    "id": "reference-awesome-tvbox",
+    "name": "Awesome TVBox",
+    "url": "https://github.com/jiji262/awesome-tvbox",
+    "format": "project",
+    "source": "https://github.com/jiji262/awesome-tvbox",
+    "license": "The repository's CC0 1.0 applies to its own list/database, not to linked third-party software, configuration sources, media, or trademarks.",
+    "notes": "Upstream description: TVBox / 影视仓 / FongMi 生态资源目录，汇总客户端、配置接口、直播源、开发文档与实用工具. Source repository reference; README and CC0 1.0 license checked 2026-11-24. This is a resource list, not a TVBox client or tested configuration source."
+  },
+  {
+    "id": "reference-awesome-zhuiju-free",
+    "name": "Awesome Zhuiju Free",
+    "url": "https://github.com/laoma528/awesome-zhuiju-free",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The repository's CC BY 4.0 applies to its own directory/database with attribution; it does not license linked third-party software, websites, configurations, media, or trademarks.",
+    "notes": "Upstream description: 免费追剧资源目录，涵盖影视站、应用、网盘搜索、TVBox/影视仓接口、IPTV 与开源项目，并提供自动可用性检测. Source repository reference; README and CC BY 4.0 license checked 2026-11-24. This is a resource index, not a player or tested resource."
   }
 ]
