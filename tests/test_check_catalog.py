@@ -15,6 +15,61 @@ def entry(format_name="web"):
 
 
 class LandingPageValidationTests(unittest.TestCase):
+    def test_xmltv_uses_larger_but_bounded_fetch_limit(self):
+        body = b"<tv>" + b" " * (check_catalog.MAX_BODY + 10) + b"</tv>"
+        with patch.object(check_catalog, "fetch_bounded", return_value=(body, "application/xml", 200)) as fetch:
+            self.assertEqual(check_catalog.validate_remote("epg", entry("epg-xml")), "ok")
+            self.assertEqual(fetch.call_args.kwargs["max_body"], check_catalog.MAX_EPG_BODY)
+
+    def test_xmltv_still_fails_above_epg_limit(self):
+        body = b"<tv>" + b" " * check_catalog.MAX_EPG_BODY + b"</tv>"
+        with patch.object(check_catalog, "fetch_bounded", side_effect=ValueError(
+            f"response exceeded {check_catalog.MAX_EPG_BODY} bytes"
+        )):
+            with self.assertRaisesRegex(ValueError, "response exceeded"):
+                check_catalog.validate_remote("epg", entry("epg-xml"))
+
+    def test_fetch_bounded_enforces_requested_limit(self):
+        class Response:
+            status = 200
+            headers = type("Headers", (), {"get_content_type": lambda self: "application/xml"})()
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def geturl(self): return "https://example.test/feed.xml"
+            def read(self, amount): return b"x" * amount
+        class Opener:
+            def open(self, request, timeout): return Response()
+        with patch.object(check_catalog, "validate_public_target"):
+            with self.assertRaisesRegex(ValueError, "response exceeded 3 bytes"):
+                check_catalog.fetch_bounded("https://example.test/feed.xml", opener=Opener(), max_body=3)
+
+    def test_fetch_bounded_reports_incomplete_transfer(self):
+        import http.client
+        class Response:
+            status = 200
+            headers = type("Headers", (), {"get_content_type": lambda self: "application/xml"})()
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def geturl(self): return "https://example.test/feed.xml"
+            def read(self, amount): raise http.client.IncompleteRead(b"<tv>")
+        class Opener:
+            def open(self, request, timeout): return Response()
+        with patch.object(check_catalog, "validate_public_target"):
+            with self.assertRaisesRegex(ValueError, "incomplete response: received 4 bytes"):
+                check_catalog.fetch_bounded("https://example.test/feed.xml", opener=Opener(), max_body=20)
+
+    def test_logo_library_requires_json_array_with_image_urls(self):
+        body = b'[{"url":"https://img.example/logo.png"}]'
+        with patch.object(check_catalog, "fetch_bounded", return_value=(body, "application/json", 200)) as fetch:
+            self.assertEqual(check_catalog.validate_remote("epg", entry("logo-library")), "ok")
+            self.assertEqual(fetch.call_args.kwargs["max_body"], check_catalog.MAX_LOGO_BODY)
+        with patch.object(check_catalog, "fetch_bounded", return_value=(b"{}", "application/json", 200)):
+            with self.assertRaisesRegex(ValueError, "non-empty array"):
+                check_catalog.validate_remote("epg", entry("logo-library"))
+        with patch.object(check_catalog, "fetch_bounded", return_value=(b"[]", "application/json", 200)):
+            with self.assertRaisesRegex(ValueError, "non-empty array"):
+                check_catalog.validate_remote("epg", entry("logo-library"))
+
     def check(self, body, content_type, format_name="web"):
         with patch.object(check_catalog, "fetch_bounded", return_value=(body, content_type, 200)):
             return check_catalog.validate_remote("online", entry(format_name))

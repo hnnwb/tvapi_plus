@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import base64
 import datetime as dt
+import http.client
 import json
 import os
 import re
@@ -40,6 +41,10 @@ RATING_DIMENSIONS = {"more", "speed", "clean", "stable", "ease"}
 RATING_FIELDS = {"average", "scores", "status", "checked_at"}
 DATE_RE = re.compile(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$")
 MAX_BODY = 512 * 1024
+# Guide feeds routinely exceed a few MiB; keep a separate hard ceiling while allowing
+# structural XMLTV validation. This is still a bounded metadata check, not a mirror.
+MAX_EPG_BODY = 32 * 1024 * 1024
+MAX_LOGO_BODY = 16 * 1024 * 1024
 TIMEOUT = 12
 
 
@@ -315,7 +320,9 @@ class PublicRedirectHandler(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(request, response, code, message, headers, new_url)
 
 
-def fetch_bounded(url: str, opener=None, request_profile: str = "catalog") -> tuple[bytes, str, int]:
+def fetch_bounded(url: str, opener=None, request_profile: str = "catalog", max_body: int = MAX_BODY) -> tuple[bytes, str, int]:
+    if not isinstance(max_body, int) or max_body <= 0:
+        raise ValueError("max_body must be a positive integer")
     validate_public_target(url)
     headers = {"User-Agent": "tvbox-resource-catalog-check/1.0", "Accept": "*/*"}
     if request_profile == "tvbox":
@@ -327,9 +334,12 @@ def fetch_bounded(url: str, opener=None, request_profile: str = "catalog") -> tu
         final = urllib.parse.urlparse(response.geturl())
         if final.scheme not in {"http", "https"}:
             raise ValueError("redirected to a non-http(s) URL")
-        body = response.read(MAX_BODY + 1)
-        if len(body) > MAX_BODY:
-            raise ValueError(f"response exceeded {MAX_BODY} bytes")
+        try:
+            body = response.read(max_body + 1)
+        except http.client.IncompleteRead as exc:
+            raise ValueError(f"incomplete response: received {len(exc.partial)} bytes") from None
+        if len(body) > max_body:
+            raise ValueError(f"response exceeded {max_body} bytes")
         return body, response.headers.get_content_type(), response.status
 
 
@@ -473,7 +483,9 @@ def tvbox_json_document(body: bytes) -> dict:  # noqa: C901 - four short respons
 
 
 def validate_remote(category: str, entry: dict, opener=None, request_profile: str = "catalog") -> str:
-    body, _content_type, status = fetch_bounded(entry["url"], opener=opener, request_profile=request_profile)
+    format_name = entry.get("format")
+    max_body = MAX_EPG_BODY if format_name == "epg-xml" else MAX_LOGO_BODY if format_name == "logo-library" else MAX_BODY
+    body, content_type, status = fetch_bounded(entry["url"], opener=opener, request_profile=request_profile, max_body=max_body)
     if not 200 <= status < 300:
         raise ValueError(f"HTTP status {status}")
     fmt = entry["format"]
@@ -506,12 +518,26 @@ def validate_remote(category: str, entry: dict, opener=None, request_profile: st
         root = ET.fromstring(body)
         if root.tag not in {"tv", "tv-programme", "programme"}:
             raise ValueError(f"unexpected XML root element: {root.tag}")
-    elif fmt in {"logo-library", "documentation", "utility", "project", "web", "link-page"}:
+    elif fmt == "logo-library":
+        if not body:
+            raise ValueError("logo-library response body is empty")
+        if "json" not in content_type.lower():
+            raise ValueError(f"logo-library expected JSON, got {content_type}")
+        try:
+            logos = json.loads(body.decode("utf-8-sig"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise ValueError(f"logo-library response is not valid JSON ({exc})") from None
+        if not isinstance(logos, list) or not logos:
+            raise ValueError("logo-library JSON must be a non-empty array")
+        for index, logo in enumerate(logos):
+            if not isinstance(logo, dict) or not isinstance(logo.get("url"), str) or not is_http_url(logo["url"]):
+                raise ValueError(f"logo-library[{index}] must contain an absolute http(s) url")
+    elif fmt in {"documentation", "utility", "project", "web", "link-page"}:
         if not body:
             raise ValueError("response body is empty")
-        if fmt in {"web", "link-page"} and b"html" not in _content_type.encode() and _content_type not in {"application/xhtml+xml", "text/plain"}:
-            raise ValueError(f"expected an HTML landing page, got {_content_type}")
-        if fmt in {"web", "link-page"} and _content_type in {"text/html", "application/xhtml+xml"}:
+        if fmt in {"web", "link-page"} and b"html" not in content_type.encode() and content_type not in {"application/xhtml+xml", "text/plain"}:
+            raise ValueError(f"expected an HTML landing page, got {content_type}")
+        if fmt in {"web", "link-page"} and content_type in {"text/html", "application/xhtml+xml"}:
             head = body[:4096].lstrip().lower()
             if not head.startswith((b"<!doctype html", b"<html")):
                 raise ValueError("landing page did not return document markup (gateway or interstitial page)")

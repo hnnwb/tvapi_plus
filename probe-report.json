@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T08:57:43.967125+00:00",
+  "generated_at": "2026-11-24T09:25:32.473274+00:00",
   "schema_version": 2,
   "probes": [
     {
@@ -578,9 +578,9 @@
     {
       "id": "suzukua-xmltv-epg",
       "status": "failed",
-      "stale": false,
-      "checked_at": "2026-11-24T03:25:22.394243+00:00",
-      "last_success_at": null,
+      "stale": true,
+      "checked_at": "2026-11-24T09:24:56.748285+00:00",
+      "last_success_at": "2026-11-24T09:11:43+00:00",
       "configured_url": "https://epg.zsdc.eu.org/t.xml",
       "used_endpoint": null,
       "used_fallback": false,
@@ -589,29 +589,28 @@
           "endpoint": "https://epg.zsdc.eu.org/t.xml",
           "attempt": 1,
           "result": "failed",
-          "error": "ValueError: response exceeded 524288 bytes"
+          "error": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
         }
       ],
-      "error": "https://epg.zsdc.eu.org/t.xml: ValueError: response exceeded 524288 bytes"
+      "error": "https://epg.zsdc.eu.org/t.xml: URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
     },
     {
       "id": "epg-pw-china-xmltv",
-      "status": "failed",
+      "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-24T03:25:23.006399+00:00",
-      "last_success_at": null,
+      "checked_at": "2026-11-24T09:25:01.834372+00:00",
+      "last_success_at": "2026-11-24T09:25:01.834372+00:00",
       "configured_url": "https://epg.pw/xmltv/epg_CN.xml",
-      "used_endpoint": null,
+      "used_endpoint": "https://epg.pw/xmltv/epg_CN.xml",
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "https://epg.pw/xmltv/epg_CN.xml",
           "attempt": 1,
-          "result": "failed",
-          "error": "ValueError: response exceeded 524288 bytes"
+          "result": "ok"
         }
       ],
-      "error": "https://epg.pw/xmltv/epg_CN.xml: ValueError: response exceeded 524288 bytes"
+      "previous_last_success_at": "2026-11-24T09:18:58.550559+00:00"
     },
     {
       "id": "zhuiju-moontvplus",
@@ -3617,6 +3616,42 @@
         }
       ],
       "previous_last_success_at": "2026-11-23T16:19:30.686448+00:00"
+    },
+    {
+      "id": "epg-pw-hong-kong-xmltv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-24T09:25:11.507798+00:00",
+      "last_success_at": "2026-11-24T09:25:11.507798+00:00",
+      "configured_url": "https://epg.pw/xmltv/epg_HK.xml",
+      "used_endpoint": "https://epg.pw/xmltv/epg_HK.xml",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://epg.pw/xmltv/epg_HK.xml",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": "2026-11-24T09:19:06.315766+00:00"
+    },
+    {
+      "id": "iptv-org-channel-logo-library",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-24T09:25:19.165517+00:00",
+      "last_success_at": "2026-11-24T09:25:19.165517+00:00",
+      "configured_url": "https://iptv-org.github.io/api/logos.json",
+      "used_endpoint": "https://iptv-org.github.io/api/logos.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://iptv-org.github.io/api/logos.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": "2026-11-24T09:19:42.273787+00:00"
     }
   ]
 }
