@@ -110,6 +110,7 @@ h2 { font-size: 30px; font-weight: 700; letter-spacing: -.022em; }
 .row-name { color: var(--ink); font-size: 16px; font-weight: 600; letter-spacing: -.01em; overflow-wrap: anywhere; }
 .row-name:hover { text-decoration: underline; }
 .row-host { overflow: hidden; color: var(--ink-3); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.row-description { margin: 4px 0 0; color: var(--ink-3); font-size: 13px; line-height: 1.45; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 .row-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 6px; }
 .chip--source { color: var(--ink-3); }
 .chip--platform {

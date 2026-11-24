@@ -17,14 +17,14 @@
 
 ```text
 catalog/
-  vod-single.json    # 单仓配置链接
-  vod-multi.json     # 多仓（urls）配置链接
-  live.json          # M3U/TXT/JSON 直播列表
-  epg.json           # EPG 与台标资源
-  tools.json         # 开源项目仓库（只记地址与上游星级）
+  vod-single.json    # 单仓源链接
+  vod-multi.json     # 多仓源（urls）链接
+  live.json          # M3U/TXT/JSON 直播源
+  epg.json           # EPG 节目单与台标
+  tools.json         # 开源项目仓库；页面从上游说明提取一行用途简介
   online.json        # 在线影视站与下载落地页（适配浏览器，不导入客户端）
-  search.json        # 网盘搜索与字幕站
-  magnet.json        # 磁力与 BT 搜索站
+  search.json        # 网盘、字幕、磁力与 BT 搜索站（页面合并展示）
+  magnet.json        # 磁力与 BT 搜索站（原始数据文件；页面与网盘、字幕合并展示）
   apps.json          # 应用：客户端仓库、产品页与下载页，条目写明支持的系统
 schemas/
   catalog.schema.json       # 目录条目结构参考
@@ -106,7 +106,7 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 ## 发布方式
 
-分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。目录合并了上游 awesome-zhuiju-free 的条目：同一 URL 只保留一条，新条目继承上游星级并由 `scripts/import_upstream.py` 按 URL 去重后再写入，重复执行不会重复追加。页面只有一个列表板块，分类用标签页切换（单仓、多仓、直播、EPG、磁力与 BT、网盘与字幕、在线站、应用、开源项目），标签页后带各自条数；列表按「检测通过优先、再按上游星级降序、最后按名称」排序。星级以半星显示并附数字，窄屏则缩成小号星形。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
+分类 JSON 文件是目录的原始数据，也驱动仓库内的双语静态目录页。目录合并了上游 awesome-zhuiju-free 的条目：同一 URL 只保留一条，新条目继承上游星级并由 `scripts/import_upstream.py` 按 URL 去重后再写入，重复执行不会重复追加。页面只有一个列表板块，分类用标签页切换（单仓、多仓、直播、EPG 节目单/台标、磁力/BT/网盘/字幕、在线站、应用、开源项目），标签页后带各自条数；磁力和网盘/字幕在页面合并为一类，底层 JSON 文件仍分开。应用与开源项目在名称下方展示一行上游简介，完整出处、平台、星标和许可仍保存在条目说明里；列表按「检测通过优先、再按上游星级降序、最后按名称」排序。星级以半星显示并附数字，窄屏则缩成小号星形。页面支持按名称/格式/来源搜索，并按类别筛选；它展示自动链接探测结果，但不会替用户运行源插件。GitHub Pages 发布工作流在 push 到 `main` 时部署静态页面；首次发布前，仓库管理员需在 Settings → Pages 中将 Source 设为 GitHub Actions。这里记录的 URL 指向上游，不是本仓库托管的镜像。
 
 “尽量完整”通过持续收集和审核实现，不等于无差别搬运。只有出处、引用权限和格式可说明的条目才能进入目录；任何实际播放测试声明都必须有客户端测试证据。
 

@@ -16,5 +16,14 @@
     "source": "https://epg.pw/",
     "license": "Public guide endpoint; explicit licensing/redistribution terms for the aggregated listings were not confirmed. Use as a remote client feed only after reviewing the provider's current terms.",
     "notes": "The original awesome-tvbox list identifies this as the China XMLTV endpoint. Bounded fetch returned HTTP 200 text/xml; response begins with an XML declaration and XMLTV <tv> element. Endpoint reachability and initial XML structure only; no full-document parse, channel mapping or client import/playback test."
+  },
+  {
+    "id": "iptv-org-channel-logo-library",
+    "name": "IPTV-org Channel Logo Library (API)",
+    "url": "https://iptv-org.github.io/api/logos.json",
+    "format": "logo-library",
+    "source": "https://github.com/iptv-org/api",
+    "license": "iptv-org/api code is Unlicense/public-domain; iptv-org/database README displays CC0 for its database project. Neither statement establishes reuse rights for each third-party channel logo image. This is a link-only index, not an assertion of logo reuse rights.",
+    "notes": "API index of channel and feed logos, including image URL, in-use flag, dimensions and format. The upstream API documents logos as sourced from iptv-org/database and offers a JSON endpoint. Checked 2026-11-24: endpoint returned HTTP 200 and JSON records; no logo assets are mirrored. Match `channel` / `feed` identifiers against a playlist before use; not every live playlist channel is guaranteed to have a corresponding logo. Client integration and logo rights require separate review."
   }
 ]

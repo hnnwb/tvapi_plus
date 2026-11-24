@@ -17,14 +17,14 @@ The catalogs currently contain a small set of live playlists, VOD configuration 
 
 ```text
 catalog/
-  vod-single.json    # Single-repository configuration links
-  vod-multi.json     # Multi-repository (urls) configuration links
-  live.json          # M3U/TXT/JSON live playlists
-  epg.json           # EPG and logo resources
-  tools.json         # Open-source repositories (link and upstream rating only)
+  vod-single.json    # Single-source links
+  vod-multi.json     # Multi-source (urls) links
+  live.json          # M3U/TXT/JSON live sources
+  epg.json           # EPG guides and logo resources
+  tools.json         # Open-source repositories; UI extracts a one-line purpose summary from upstream notes
   online.json        # Streaming sites and download landing pages (browser use)
-  search.json        # Cloud-drive search and subtitle sites
-  magnet.json        # Magnet and BT search sites
+  search.json        # Cloud, subtitle, magnet and BT search sites (combined in the UI)
+  magnet.json        # Magnet and BT sites (raw data file; combined with cloud/subtitle in the UI)
   apps.json          # Apps: repositories, product and download pages, each naming its systems
 schemas/
   catalog.schema.json       # Reference catalog entry structure
@@ -119,7 +119,7 @@ Do not execute unknown plugins in this repository or CI. Without the selected si
 
 ## Publishing
 
-The catalog JSON files are the canonical data and also drive the bilingual static catalog site. The catalog merges the upstream awesome-zhuiju-free directory: one row per URL, imported rows inherit the upstream rating, and `scripts/import_upstream.py` dedupes by URL before writing, so a re-run never appends twice. The page is a single catalog panel whose categories are tabs — single and multi configs, live, EPG, magnet and BT, cloud search and subtitles, streaming sites, apps, and open-source projects — each with its own count. Rows sort by passing check first, then higher upstream rating, then name. Stars are drawn as half-star glyphs with the numeric value alongside, and shrink to small glyphs on narrow screens. The site searches names, formats, and sources, and filters by category. It displays automated link-probe results but never runs source plugins. A GitHub Pages workflow deploys on pushes to `main`; before the first deployment, a repository administrator must set Settings → Pages → Source to GitHub Actions. Catalog URLs point to upstream resources; they are not mirrored by this repository.
+The catalog JSON files are the canonical data and also drive the bilingual static catalog site. The catalog merges the upstream awesome-zhuiju-free directory: one row per URL, imported rows inherit the upstream rating, and `scripts/import_upstream.py` dedupes by URL before writing, so a re-run never appends twice. The page is a single catalog panel whose categories are tabs — single and multi configs, live, EPG guide/logos, magnet/BT/cloud/subtitles, streaming sites, apps, and open-source projects — each with its own count. Magnet and cloud/subtitle entries are combined in the UI while their raw JSON files remain separate. Apps and open-source projects show a one-line upstream summary below the name; full provenance, platforms, stars and licence remain in the row notes. Rows sort by passing check first, then higher upstream rating, then name. Stars are drawn as half-star glyphs with the numeric value alongside, and shrink to small glyphs on narrow screens. The site searches names, formats, and sources, and filters by category. It displays automated link-probe results but never runs source plugins. A GitHub Pages workflow deploys on pushes to `main`; before the first deployment, a repository administrator must set Settings → Pages → Source to GitHub Actions. Catalog URLs point to upstream resources; they are not mirrored by this repository.
 
 “Broad coverage” is an ongoing collection and review process, not indiscriminate copying. Entries need traceable provenance, a basis for linking, and a stated format; actual playback claims require client test evidence.
 

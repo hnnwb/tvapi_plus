@@ -11,7 +11,7 @@ const CATALOGS = [
   { file: 'catalog/vod-multi.json', category: 'vod-multi' },
   { file: 'catalog/live.json', category: 'live' },
   { file: 'catalog/epg.json', category: 'epg' },
-  { file: 'catalog/magnet.json', category: 'magnet' },
+  { file: 'catalog/magnet.json', category: 'search' },
   { file: 'catalog/search.json', category: 'search' },
   { file: 'catalog/apps.json', category: 'apps' },
   { file: 'catalog/tools.json', category: 'tools' },
@@ -19,11 +19,11 @@ const CATALOGS = [
 ];
 
 const IMPORTABLE = new Set(['vod-single', 'vod-multi', 'live', 'epg']);
-const WEB_ONLY = new Set(['online', 'magnet', 'search', 'apps', 'tools']);
+const WEB_ONLY = new Set(['online', 'search', 'apps', 'tools']);
 const CONFIG_INDEX_IDS = new Set(['tvapi-plus-custom-single', 'xiaoma-tvbox-config']);
 const CATEGORY_ORDER = {
-  'vod-single': 0, 'vod-multi': 1, live: 2, epg: 3, magnet: 4, search: 5,
-  apps: 6, tools: 9, online: 10,
+  'vod-single': 0, 'vod-multi': 1, live: 2, epg: 3, search: 4,
+  apps: 5, tools: 6, online: 7,
 };
 
 const STAR_PATH = 'M8 .9l2.1 4.4 4.8.7-3.5 3.4.8 4.8L8 11.9l-4.2 2.3.8-4.8L1.1 6l4.8-.7z';
@@ -32,21 +32,23 @@ const STAR_DEFS = `<svg class="star-defs" aria-hidden="true" width="0" height="0
 const TEXT = {
   zh: {
     navCatalog: '全部资源', navVerification: '检测',
-    heroEyebrow: '配置 · 苹果 · 安卓 · 开源 · 网盘与磁力',
+    heroEyebrow: '配置 · 直播 · EPG · 磁力/BT/网盘/字幕 · 在线站 · 应用 · 开源',
     heroTitle: '资源索引',
     heroSub: '列表按检测结果与上游星级排序：能取到的、星多的排前面。星级来自上游自评，检测结果只说明当时能不能取到。',
     explore: '开始浏览', openIndex: '配置索引 JSON',
     statTotal: '目录条目', statReachable: '最近一次可达', statRated: '带上游星级', statChecked: '检测时间',
     listEyebrow: '检测 · 排序',
     listTitle: '全部资源',
-    allCategories: '全部', single: '单仓配置', multi: '多仓配置', live: '直播', epg: 'EPG',
-    magnet: '磁力与 BT', searchSites: '网盘与字幕', onlineSites: '在线站', apps: '应用', tools: '开源项目', via: '来源',
+    allCategories: '全部', single: '单仓源', multi: '多仓源', live: '直播源', epg: 'EPG 节目单/台标',
+    searchSites: '磁力/BT/网盘/字幕', onlineSites: '在线站', apps: '应用', tools: '开源项目', via: '来源',
     searchLabel: '搜索资源', searchPlaceholder: '搜索名称、来源',
     result: (shown, total) => `显示 ${shown} / ${total} 条`,
-    hintAll: '同一分类内先按检测结果、再按上游星级排序；星级相同的按名称排。',
+    hintAll: '单仓、多仓、直播和 XMLTV 节目单可复制到兼容客户端；台标库是频道图片索引，不是节目单。磁力/BT/网盘/字幕与在线站在浏览器使用；应用和开源项目附简介。分类内按检测结果、星级和名称排序。',
     hintImportable: '这一类可以直接复制链接、在客户端里导入。检测只说明当时能取到，不代表能播放。',
+    hintEpg: '节目单 XMLTV 可复制到支持 EPG 的客户端；台标库只是频道标识与图片链接索引，并非节目单。台标版权与客户端匹配需另行核实。',
     hintWeb: '这一类是在浏览器里用的站点，不是 TVBox 配置，复制到客户端不会生效。',
-    hintApps: '应用清单：条目指向项目仓库、发布页或下载页，平台写在条目说明里；星标数折算的星级只表示热度。',
+    hintApps: '每个应用附一行用途简介；条目指向项目仓库、发布页或下载页，支持平台另行标明。GitHub 星标是热度，不是质量保证。',
+    hintTools: '每个开源项目附一行用途简介；链接指向上游项目仓库。GitHub 星标是热度，不代表实测质量。',
     ratedAs: '上游自评', starsTitle: 'GitHub 星标，2026-11-24 实读；是热度，不是评分',
     ratedNone: '无星级',
     removed: '上游已移除',
@@ -67,29 +69,30 @@ const TEXT = {
     probeOk: '检测通过', probeFail: '检测失败', probeStale: '上次通过', noProbe: '未检测',
     lastSuccess: (d) => `上次通过 ${d}`,
     category: {
-      'vod-single': '单仓配置', 'vod-multi': '多仓配置', live: '直播', epg: 'EPG', magnet: '磁力与 BT',
-      search: '网盘与字幕', apps: '应用',
+      'vod-single': '单仓源', 'vod-multi': '多仓源', live: '直播源', epg: 'EPG 节目单/台标', search: '磁力/BT/网盘/字幕', apps: '应用',
       tools: '开源项目', online: '在线影视站',
     },
     loadError: '目录文件读取失败，请刷新重试。',
   },
   en: {
     navCatalog: 'All resources', navVerification: 'Checks',
-    heroEyebrow: 'Configs · Apple · Android · Open source · Cloud & magnet',
+    heroEyebrow: 'Configs · Live · EPG · Magnet / BT / Cloud / Subs · Streaming sites · Apps · Open source',
     heroTitle: 'Resource index',
     heroSub: 'The list is ordered by check result, then by upstream stars: reachable and well-rated first. Stars are the upstream self-assessment; a check only says the URL answered.',
     explore: 'Start browsing', openIndex: 'Config index JSON',
     statTotal: 'Catalog entries', statReachable: 'Reachable last check', statRated: 'With upstream stars', statChecked: 'Checked',
     listEyebrow: 'Checks · order',
     listTitle: 'All resources',
-    allCategories: 'All', single: 'Single config', multi: 'Multi config', live: 'Live', epg: 'EPG',
-    magnet: 'Magnet & BT', searchSites: 'Cloud search & subs', onlineSites: 'Streaming sites', apps: 'Apps', tools: 'Open source', via: 'via',
+    allCategories: 'All', single: 'Single-source', multi: 'Multi-source', live: 'Live sources', epg: 'EPG / guide & logos',
+    searchSites: 'Magnet / BT / Cloud / Subs', onlineSites: 'Streaming sites', apps: 'Apps', tools: 'Open source', via: 'via',
     searchLabel: 'Search resources', searchPlaceholder: 'Search name or source',
     result: (shown, total) => `Showing ${shown} of ${total}`,
-    hintAll: 'Within a category: passing checks first, then the higher upstream rating, then name.',
+    hintAll: 'Single/multi configs, live playlists and XMLTV guides can be copied into compatible clients; a logo library is an image index, not a programme guide. Magnet/BT/cloud/subtitle and streaming entries are browser sites; apps and open-source projects include short descriptions. Items sort by check, rating, then name.',
     hintImportable: 'Copy the link and import it in a client. A passing check only means it answered once, not that it plays.',
+    hintEpg: 'XMLTV guides can be copied into compatible clients. A logo library is only an index of channel identifiers and image URLs, not a programme guide; image rights and client matching need separate review.',
     hintWeb: 'This category is used in a browser. These are not TVBox configs and will not work when imported.',
-    hintApps: 'An app list: rows point at a repository, release page or download page and name their platform. Stars converted to a rating only mean popularity.',
+    hintApps: 'Each app includes a one-line purpose summary. Links point to its repository, release or download page; supported platforms are listed separately. GitHub stars indicate popularity, not quality.',
+    hintTools: 'Each open-source project includes a one-line purpose summary and links to its upstream repository. GitHub stars indicate popularity, not tested quality.',
     ratedAs: 'upstream', ratedNone: 'No rating', removed: 'Removed upstream', starsTitle: 'GitHub stars, read 2026-11-24; popularity, not a rating',
     emptyText: 'No entries in this category.',
     noResults: 'No matching entries.',
@@ -107,8 +110,8 @@ const TEXT = {
     probeOk: 'Check passed', probeFail: 'Check failed', probeStale: 'Passed earlier', noProbe: 'Not checked',
     lastSuccess: (d) => `passed ${d}`,
     category: {
-      'vod-single': 'Single config', 'vod-multi': 'Multi config', live: 'Live', epg: 'EPG', magnet: 'Magnet & BT',
-      search: 'Cloud search & subs', apps: 'Apps',
+      'vod-single': 'Single-source', 'vod-multi': 'Multi-source', live: 'Live sources', epg: 'EPG / guide & logos',
+      search: 'Magnet / BT / Cloud / Subs', apps: 'Apps',
       tools: 'Open source', online: 'Streaming sites',
     },
     loadError: 'Catalog files failed to load. Please refresh.',
@@ -207,6 +210,32 @@ function platformOf(entry) {
   return match ? match[1].trim() : '';
 }
 
+function formatLabel(entry) {
+  if (entry.format === 'epg-xml') return lang === 'zh' ? 'XMLTV 节目单' : 'XMLTV guide';
+  if (entry.format === 'logo-library') return lang === 'zh' ? '台标索引' : 'Logo index';
+  return entry.format;
+}
+
+function descriptionOf(entry) {
+  if (entry.format === 'logo-library') {
+    return lang === 'zh'
+      ? '频道与台标图片 URL 的 JSON 索引；不是节目单，也不代表各图片均可自由复用。'
+      : 'JSON index of channels and logo image URLs; not a programme guide, and image reuse rights may vary.';
+  }
+  const notes = String(entry.notes || '').trim();
+  if (entry._category === 'apps') {
+    const app = notes.match(/上游列表收录：(.+?)(?= 平台：| GitHub 星标 | 已停更| 已归档|$)/);
+    if (app) return app[1].replace(/[。；;]+$/, '');
+    const upstream = notes.match(/^(.+?)(?=\.? Upstream self-assessment|\.? status:| 下载页；| 平台：| GitHub 星标 |$)/);
+    if (upstream) return upstream[1].replace(/^Upstream description:\s*/, '').replace(/[。；;.]+$/, '');
+  }
+  if (entry._category === 'tools') {
+    const tool = notes.match(/(?:^|\s)Upstream description:\s*(.+?)(?=\. Upstream self-assessment|\. status:| Source repository reference| GitHub 星标 |$)/);
+    if (tool) return tool[1].replace(/[。；;.]+$/, '');
+  }
+  return '';
+}
+
 function ratingOf(entry) {
   if (isRemoved(entry)) return null;
   return entry.rating && typeof entry.rating.average === 'number' ? entry.rating.average : null;
@@ -236,7 +265,8 @@ function sortEntries(list, probeIds) {
 function actionsFor(entry) {
   const href = safeHref(entry.url);
   if (!href) return '';
-  const copy = `<button class="act" type="button" data-copy-url="${escapeHTML(entry.url)}">${escapeHTML(t().copy)}</button>`;
+  const copy = entry.format === 'logo-library' ? ''
+    : `<button class="act" type="button" data-copy-url="${escapeHTML(entry.url)}">${escapeHTML(t().copy)}</button>`;
   const open = `<a class="act act--fill" href="${escapeHTML(href)}" target="_blank" rel="noreferrer" title="${escapeHTML(`${t().open}: ${entry.name}`)}">${escapeHTML(t().open)}</a>`;
   return copy + open;
 }
@@ -246,6 +276,7 @@ function renderRow(entry) {
   const average = ratingOf(entry);
   const platform = platformOf(entry);
   const stars = starsOf(entry);
+  const description = descriptionOf(entry);
   const rating = isRemoved(entry)
     ? `<span class="chip chip--removed">${escapeHTML(t().removed)}</span>`
     : average === null ? `<span class="rating-num">${escapeHTML(t().ratedNone)}</span>` : starRow(average);
@@ -261,9 +292,10 @@ function renderRow(entry) {
         ${href ? `<a class="row-name" href="${escapeHTML(href)}" target="_blank" rel="noreferrer">${escapeHTML(entry.name)}</a>` : `<span class="row-name">${escapeHTML(entry.name)}</span>`}
         <span class="row-host">${escapeHTML(displayHost(entry.url))}</span>
       </div>
+      ${description ? `<p class="row-description">${escapeHTML(description)}</p>` : ''}
       <div class="row-meta">
         <span class="chip">${escapeHTML(t().category[entry._category] || entry._category)}</span>
-        <span class="chip">${escapeHTML(entry.format)}</span>
+        <span class="chip">${escapeHTML(formatLabel(entry))}</span>
         ${platform ? `<span class="chip chip--platform">${escapeHTML(platform)}</span>` : ''}
         ${stars ? `<span class="chip chip--stars" title="${escapeHTML(t().starsTitle)}">★ ${escapeHTML(stars)}</span>` : ''}
         ${rating}
@@ -316,7 +348,9 @@ function render() {
   document.getElementById('tab-hint').textContent = activeCategory === 'all'
     ? t().hintAll
     : activeCategory === 'apps' ? t().hintApps
-      : IMPORTABLE.has(activeCategory) ? t().hintImportable : t().hintWeb;
+      : activeCategory === 'tools' ? t().hintTools
+        : activeCategory === 'epg' ? t().hintEpg
+          : IMPORTABLE.has(activeCategory) ? t().hintImportable : t().hintWeb;
   document.getElementById('catalog-list').innerHTML = visible.map(renderRow).join('');
   document.getElementById('empty-state').hidden = entries.length !== 0;
   document.getElementById('empty-state').querySelector('p').textContent = t().emptyText;
