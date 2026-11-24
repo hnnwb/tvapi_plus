@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T16:19:31.331642+00:00",
+  "generated_at": "2026-11-24T03:31:37.251569+00:00",
   "schema_version": 2,
   "probes": [
     {
       "id": "xiaoma-tvbox-config",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:12:52.676530+00:00",
-      "last_success_at": "2026-11-23T16:12:52.676530+00:00",
+      "checked_at": "2026-11-24T03:23:28.144905+00:00",
+      "last_success_at": "2026-11-24T03:23:28.144905+00:00",
       "configured_url": "https://szyyds.cn/tv/x.json",
       "used_endpoint": "https://szyyds.cn/tv/x.json",
       "used_fallback": false,
@@ -18,13 +18,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T10:56:12.749984+00:00"
+      "previous_last_success_at": "2026-11-23T16:12:52.676530+00:00"
     },
     {
       "id": "zhuiju-fan-tai-ying",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:12:53.959764+00:00",
+      "checked_at": "2026-11-24T03:23:29.254458+00:00",
       "last_success_at": null,
       "configured_url": "http://www.xn--sss604efuw.net/tv",
       "used_endpoint": null,
@@ -55,7 +55,7 @@
       "id": "zhuiju-fei-mao",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:04.779196+00:00",
+      "checked_at": "2026-11-24T03:23:36.204946+00:00",
       "last_success_at": null,
       "configured_url": "http://xn--z7x900a.net/",
       "used_endpoint": null,
@@ -65,7 +65,7 @@
           "endpoint": "http://xn--z7x900a.net/",
           "attempt": 1,
           "result": "failed",
-          "error": "TimeoutError: timed out"
+          "error": "ValueError: config body is not parsable JSON (Expecting value: line 1 column 1 (char 0))"
         },
         {
           "endpoint": "http://xn--z7x900a.net/",
@@ -86,7 +86,7 @@
       "id": "zhuiju-lao-liu-bei",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:29.394473+00:00",
+      "checked_at": "2026-11-24T03:23:48.203123+00:00",
       "last_success_at": null,
       "configured_url": "https://raw.liucn.cc/box/m.json",
       "used_endpoint": null,
@@ -117,7 +117,7 @@
       "id": "zhuiju-mo-yu-er",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:13:32.918360+00:00",
+      "checked_at": "2026-11-24T03:23:51.591586+00:00",
       "last_success_at": "2026-11-23T11:29:39.519926+00:00",
       "configured_url": "http://www.y456y.com",
       "used_endpoint": null,
@@ -148,7 +148,7 @@
       "id": "zhuiju-wang-er-xiao",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:13:39.572253+00:00",
+      "checked_at": "2026-11-24T03:23:57.704059+00:00",
       "last_success_at": "2026-11-23T11:29:41.386050+00:00",
       "configured_url": "http://new.xn--4kq62z5rby2qupq9ub.top",
       "used_endpoint": null,
@@ -179,8 +179,8 @@
       "id": "zhuiju-xiao-he-zi-4k",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:43.794248+00:00",
-      "last_success_at": "2026-11-23T16:13:43.794248+00:00",
+      "checked_at": "2026-11-24T03:24:01.603831+00:00",
+      "last_success_at": "2026-11-24T03:24:01.603831+00:00",
       "configured_url": "http://xhztv.top/4k.json",
       "used_endpoint": "http://xhztv.top/4k.json",
       "used_fallback": false,
@@ -191,14 +191,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:29:42.255403+00:00"
+      "previous_last_success_at": "2026-11-23T16:13:43.794248+00:00"
     },
     {
       "id": "zhuiju-chuang-xiang-ying-shi-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:44.029024+00:00",
-      "last_success_at": "2026-11-23T16:13:44.029024+00:00",
+      "checked_at": "2026-11-24T03:24:01.761330+00:00",
+      "last_success_at": "2026-11-24T03:24:01.761330+00:00",
       "configured_url": "https://ys.cxkjg.cn/api/provide/tvbox",
       "used_endpoint": "https://ys.cxkjg.cn/api/provide/tvbox",
       "used_fallback": false,
@@ -209,14 +209,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:29:45.130739+00:00"
+      "previous_last_success_at": "2026-11-23T16:13:44.029024+00:00"
     },
     {
       "id": "zhuiju-ying-cang-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:46.431764+00:00",
-      "last_success_at": "2026-11-23T16:13:46.431764+00:00",
+      "checked_at": "2026-11-24T03:24:04.453366+00:00",
+      "last_success_at": "2026-11-24T03:24:04.453366+00:00",
       "configured_url": "http://124.71.19.220/c/1",
       "used_endpoint": "http://124.71.19.220/c/1",
       "used_fallback": false,
@@ -227,14 +227,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:29:48.743852+00:00"
+      "previous_last_success_at": "2026-11-23T16:13:46.431764+00:00"
     },
     {
       "id": "zhuiju-lun-li-tvbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:47.163335+00:00",
-      "last_success_at": "2026-11-23T16:13:47.163335+00:00",
+      "checked_at": "2026-11-24T03:24:05.050955+00:00",
+      "last_success_at": "2026-11-24T03:24:05.050955+00:00",
       "configured_url": "http://47.96.82.41:5188/rose/18/xgg.json",
       "used_endpoint": "http://47.96.82.41:5188/rose/18/xgg.json",
       "used_fallback": false,
@@ -245,13 +245,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:29:50.670741+00:00"
+      "previous_last_success_at": "2026-11-23T16:13:47.163335+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi-single",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:47.657959+00:00",
+      "checked_at": "2026-11-24T03:24:05.455564+00:00",
       "last_success_at": null,
       "configured_url": "http://xhztv.top/xhz",
       "used_endpoint": null,
@@ -282,7 +282,7 @@
       "id": "zhuiju-ao-wu",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:13:51.747111+00:00",
+      "checked_at": "2026-11-24T03:24:09.010351+00:00",
       "last_success_at": null,
       "configured_url": "http://itv666.cc/aowu/config.webp",
       "used_endpoint": null,
@@ -313,8 +313,8 @@
       "id": "zhuiju-wu-ming",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:03.565844+00:00",
-      "last_success_at": "2026-11-23T16:14:03.565844+00:00",
+      "checked_at": "2026-11-24T03:24:18.553156+00:00",
+      "last_success_at": "2026-11-24T03:24:18.553156+00:00",
       "configured_url": "https://6800.kstore.vip/fish.json",
       "used_endpoint": "https://6800.kstore.vip/fish.json",
       "used_fallback": false,
@@ -325,13 +325,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:29:59.036407+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:03.565844+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:05.045422+00:00",
+      "checked_at": "2026-11-24T03:24:19.245693+00:00",
       "last_success_at": null,
       "configured_url": "https://www.xhztv.pro/",
       "used_endpoint": null,
@@ -362,8 +362,8 @@
       "id": "tvboxorg-multi-subscription",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:08.914679+00:00",
-      "last_success_at": "2026-11-23T16:14:08.914679+00:00",
+      "checked_at": "2026-11-24T03:24:23.642539+00:00",
+      "last_success_at": "2026-11-24T03:24:23.642539+00:00",
       "configured_url": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_endpoint": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/tvbox.json",
       "used_fallback": false,
@@ -374,14 +374,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:01.655331+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:08.914679+00:00"
     },
     {
       "id": "zhuiju-xiao-he-zi-multi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:08.987334+00:00",
-      "last_success_at": "2026-11-23T16:14:08.987334+00:00",
+      "checked_at": "2026-11-24T03:24:23.757399+00:00",
+      "last_success_at": "2026-11-24T03:24:23.757399+00:00",
       "configured_url": "http://xhztv.top/dc",
       "used_endpoint": "http://xhztv.top/dc",
       "used_fallback": false,
@@ -392,32 +392,45 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:02.965368+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:08.987334+00:00"
     },
     {
       "id": "zhuiju-shi-guang-multi",
-      "status": "ok",
-      "stale": false,
-      "checked_at": "2026-11-23T16:14:09.297472+00:00",
+      "status": "failed",
+      "stale": true,
+      "checked_at": "2026-11-24T03:24:23.897899+00:00",
       "last_success_at": "2026-11-23T16:14:09.297472+00:00",
       "configured_url": "http://xmbjm.fh4u.org/dc.txt",
-      "used_endpoint": "http://xmbjm.fh4u.org/dc.txt",
+      "used_endpoint": null,
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "http://xmbjm.fh4u.org/dc.txt",
           "attempt": 1,
-          "result": "ok"
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "endpoint": "http://xmbjm.fh4u.org/dc.txt",
+          "attempt": 2,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "endpoint": "http://xmbjm.fh4u.org/dc.txt",
+          "attempt": 3,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:03.775400+00:00"
+      "error": "http://xmbjm.fh4u.org/dc.txt: URLError: <urlopen error timed out>"
     },
     {
       "id": "zhuiju-ting-hao-share-multi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:09.836336+00:00",
-      "last_success_at": "2026-11-23T16:14:09.836336+00:00",
+      "checked_at": "2026-11-24T03:25:03.798838+00:00",
+      "last_success_at": "2026-11-24T03:25:03.798838+00:00",
       "configured_url": "http://ztha.top/TVBox/GYCK.json",
       "used_endpoint": "http://ztha.top/TVBox/GYCK.json",
       "used_fallback": false,
@@ -428,13 +441,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:05.769575+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:09.836336+00:00"
     },
     {
       "id": "iptv-org-global",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:12.301571+00:00",
+      "checked_at": "2026-11-24T03:25:05.974317+00:00",
       "last_success_at": null,
       "configured_url": "https://iptv-org.github.io/iptv/index.m3u",
       "used_endpoint": null,
@@ -453,8 +466,8 @@
       "id": "iptv-org-china",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:12.326941+00:00",
-      "last_success_at": "2026-11-23T16:14:12.326941+00:00",
+      "checked_at": "2026-11-24T03:25:06.016772+00:00",
+      "last_success_at": "2026-11-24T03:25:06.016772+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "used_fallback": false,
@@ -465,14 +478,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:12.354280+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:12.326941+00:00"
     },
     {
       "id": "iptv-org-chinese-language",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:12.352910+00:00",
-      "last_success_at": "2026-11-23T16:14:12.352910+00:00",
+      "checked_at": "2026-11-24T03:25:06.061484+00:00",
+      "last_success_at": "2026-11-24T03:25:06.061484+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "used_fallback": false,
@@ -483,14 +496,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:14.535332+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:12.352910+00:00"
     },
     {
       "id": "iptv-org-public-category",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:12.387075+00:00",
-      "last_success_at": "2026-11-23T16:14:12.387075+00:00",
+      "checked_at": "2026-11-24T03:25:06.102064+00:00",
+      "last_success_at": "2026-11-24T03:25:06.102064+00:00",
       "configured_url": "https://iptv-org.github.io/iptv/categories/public.m3u",
       "used_endpoint": "https://iptv-org.github.io/iptv/categories/public.m3u",
       "used_fallback": false,
@@ -501,14 +514,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:15.455582+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:12.387075+00:00"
     },
     {
       "id": "zhuiju-vma-iptv-source",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:12.405632+00:00",
-      "last_success_at": "2026-11-23T16:14:12.405632+00:00",
+      "checked_at": "2026-11-24T03:25:06.205103+00:00",
+      "last_success_at": "2026-11-24T03:25:06.205103+00:00",
       "configured_url": "https://pan.vma.cc/down.php/f83b92a24d61858666f13c5db938a292.txt",
       "used_endpoint": "https://pan.vma.cc/down.php/f83b92a24d61858666f13c5db938a292.txt",
       "used_fallback": false,
@@ -519,31 +532,44 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:22.229202+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:12.405632+00:00"
     },
     {
       "id": "zhuiju-fan-tai-ying-iptv",
-      "status": "ok",
-      "stale": false,
-      "checked_at": "2026-11-23T16:14:15.116179+00:00",
+      "status": "failed",
+      "stale": true,
+      "checked_at": "2026-11-24T03:25:08.814568+00:00",
       "last_success_at": "2026-11-23T16:14:15.116179+00:00",
       "configured_url": "http://www.xn--sss604efuw.cc/tv",
-      "used_endpoint": "http://www.xn--sss604efuw.cc/tv",
+      "used_endpoint": null,
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "http://www.xn--sss604efuw.cc/tv",
           "attempt": 1,
-          "result": "ok"
+          "result": "failed",
+          "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+        },
+        {
+          "endpoint": "http://www.xn--sss604efuw.cc/tv",
+          "attempt": 2,
+          "result": "failed",
+          "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+        },
+        {
+          "endpoint": "http://www.xn--sss604efuw.cc/tv",
+          "attempt": 3,
+          "result": "failed",
+          "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:23.510529+00:00"
+      "error": "http://www.xn--sss604efuw.cc/tv: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
     },
     {
       "id": "zhuiju-fei-mao-iptv",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:15.969548+00:00",
+      "checked_at": "2026-11-24T03:25:14.204752+00:00",
       "last_success_at": null,
       "configured_url": "http://xn--z7x900a.net/tv",
       "used_endpoint": null,
@@ -574,8 +600,8 @@
       "id": "zhuiju-iptv-cqshushu-com-31",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:24.499527+00:00",
-      "last_success_at": "2026-11-23T16:14:24.499527+00:00",
+      "checked_at": "2026-11-24T03:25:21.697955+00:00",
+      "last_success_at": "2026-11-24T03:25:21.697955+00:00",
       "configured_url": "https://iptv.cqshushu.com/",
       "used_endpoint": "https://iptv.cqshushu.com/",
       "used_fallback": false,
@@ -586,13 +612,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:30:27.367674+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:24.499527+00:00"
     },
     {
       "id": "suzukua-xmltv-epg",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:25.140755+00:00",
+      "checked_at": "2026-11-24T03:25:22.394243+00:00",
       "last_success_at": null,
       "configured_url": "https://epg.zsdc.eu.org/t.xml",
       "used_endpoint": null,
@@ -611,7 +637,7 @@
       "id": "epg-pw-china-xmltv",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:25.453108+00:00",
+      "checked_at": "2026-11-24T03:25:23.006399+00:00",
       "last_success_at": null,
       "configured_url": "https://epg.pw/xmltv/epg_CN.xml",
       "used_endpoint": null,
@@ -630,8 +656,8 @@
       "id": "zhuiju-moontvplus",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:25.619145+00:00",
-      "last_success_at": "2026-11-23T16:14:25.619145+00:00",
+      "checked_at": "2026-11-24T03:25:23.125902+00:00",
+      "last_success_at": "2026-11-24T03:25:23.125902+00:00",
       "configured_url": "https://github.com/mtvpls/MoonTVPlus",
       "used_endpoint": "https://github.com/mtvpls/MoonTVPlus",
       "used_fallback": false,
@@ -642,14 +668,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:06.005644+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:25.619145+00:00"
     },
     {
       "id": "zhuiju-zyfun",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:25.987693+00:00",
-      "last_success_at": "2026-11-23T16:14:25.987693+00:00",
+      "checked_at": "2026-11-24T03:25:23.951893+00:00",
+      "last_success_at": "2026-11-24T03:25:23.951893+00:00",
       "configured_url": "https://github.com/Hiram-Wong/zyfun",
       "used_endpoint": "https://github.com/Hiram-Wong/zyfun",
       "used_fallback": false,
@@ -660,14 +686,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:07.519041+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:25.987693+00:00"
     },
     {
       "id": "zhuiju-pansou",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:26.374943+00:00",
-      "last_success_at": "2026-11-23T16:14:26.374943+00:00",
+      "checked_at": "2026-11-24T03:25:24.782763+00:00",
+      "last_success_at": "2026-11-24T03:25:24.782763+00:00",
       "configured_url": "https://github.com/fish2018/pansou",
       "used_endpoint": "https://github.com/fish2018/pansou",
       "used_fallback": false,
@@ -678,14 +704,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:09.223847+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:26.374943+00:00"
     },
     {
       "id": "zhuiju-cloudsaver",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:26.778348+00:00",
-      "last_success_at": "2026-11-23T16:14:26.778348+00:00",
+      "checked_at": "2026-11-24T03:25:25.598616+00:00",
+      "last_success_at": "2026-11-24T03:25:25.598616+00:00",
       "configured_url": "https://github.com/jiangrui1994/CloudSaver",
       "used_endpoint": "https://github.com/jiangrui1994/CloudSaver",
       "used_fallback": false,
@@ -696,14 +722,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:10.449329+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:26.778348+00:00"
     },
     {
       "id": "zhuiju-quark-auto-save",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:27.264494+00:00",
-      "last_success_at": "2026-11-23T16:14:27.264494+00:00",
+      "checked_at": "2026-11-24T03:25:26.287302+00:00",
+      "last_success_at": "2026-11-24T03:25:26.287302+00:00",
       "configured_url": "https://github.com/Cp0204/quark-auto-save",
       "used_endpoint": "https://github.com/Cp0204/quark-auto-save",
       "used_fallback": false,
@@ -714,14 +740,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:12.181151+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:27.264494+00:00"
     },
     {
       "id": "zhuiju-animeko",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:27.758125+00:00",
-      "last_success_at": "2026-11-23T16:14:27.758125+00:00",
+      "checked_at": "2026-11-24T03:25:27.043205+00:00",
+      "last_success_at": "2026-11-24T03:25:27.043205+00:00",
       "configured_url": "https://github.com/open-ani/animeko",
       "used_endpoint": "https://github.com/open-ani/animeko",
       "used_fallback": false,
@@ -732,14 +758,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:13.512671+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:27.758125+00:00"
     },
     {
       "id": "zhuiju-predidit-kazumi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:28.226611+00:00",
-      "last_success_at": "2026-11-23T16:14:28.226611+00:00",
+      "checked_at": "2026-11-24T03:25:27.691815+00:00",
+      "last_success_at": "2026-11-24T03:25:27.691815+00:00",
       "configured_url": "https://github.com/Predidit/Kazumi",
       "used_endpoint": "https://github.com/Predidit/Kazumi",
       "used_fallback": false,
@@ -750,14 +776,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:15.017266+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:28.226611+00:00"
     },
     {
       "id": "zhuiju-selenetv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:28.664909+00:00",
-      "last_success_at": "2026-11-23T16:14:28.664909+00:00",
+      "checked_at": "2026-11-24T03:25:28.419042+00:00",
+      "last_success_at": "2026-11-24T03:25:28.419042+00:00",
       "configured_url": "https://github.com/MoonTechLab/Selene",
       "used_endpoint": "https://github.com/MoonTechLab/Selene",
       "used_fallback": false,
@@ -768,14 +794,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:16.494378+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:28.664909+00:00"
     },
     {
       "id": "zhuiju-webhometv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:29.001495+00:00",
-      "last_success_at": "2026-11-23T16:14:29.001495+00:00",
+      "checked_at": "2026-11-24T03:25:29.069075+00:00",
+      "last_success_at": "2026-11-24T03:25:29.069075+00:00",
       "configured_url": "https://github.com/fish2018/webhtv",
       "used_endpoint": "https://github.com/fish2018/webhtv",
       "used_fallback": false,
@@ -786,14 +812,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:18.529619+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:29.001495+00:00"
     },
     {
       "id": "zhuiju-webhometv2",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:29.540343+00:00",
-      "last_success_at": "2026-11-23T16:14:29.540343+00:00",
+      "checked_at": "2026-11-24T03:25:30.060759+00:00",
+      "last_success_at": "2026-11-24T03:25:30.060759+00:00",
       "configured_url": "https://github.com/Silent1566/webhtv",
       "used_endpoint": "https://github.com/Silent1566/webhtv",
       "used_fallback": false,
@@ -804,14 +830,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:20.281844+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:29.540343+00:00"
     },
     {
       "id": "zhuiju-iptv-api",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:30.058816+00:00",
-      "last_success_at": "2026-11-23T16:14:30.058816+00:00",
+      "checked_at": "2026-11-24T03:25:31.009830+00:00",
+      "last_success_at": "2026-11-24T03:25:31.009830+00:00",
       "configured_url": "https://github.com/Guovin/iptv-api",
       "used_endpoint": "https://github.com/Guovin/iptv-api",
       "used_fallback": false,
@@ -822,14 +848,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:21.967849+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:30.058816+00:00"
     },
     {
       "id": "zhuiju-iptv-org-iptv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:30.466173+00:00",
-      "last_success_at": "2026-11-23T16:14:30.466173+00:00",
+      "checked_at": "2026-11-24T03:25:31.799968+00:00",
+      "last_success_at": "2026-11-24T03:25:31.799968+00:00",
       "configured_url": "https://github.com/iptv-org/iptv",
       "used_endpoint": "https://github.com/iptv-org/iptv",
       "used_fallback": false,
@@ -840,14 +866,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:23.237705+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:30.466173+00:00"
     },
     {
       "id": "zhuiju-github-com-12",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:30.992917+00:00",
-      "last_success_at": "2026-11-23T16:14:30.992917+00:00",
+      "checked_at": "2026-11-24T03:25:32.534485+00:00",
+      "last_success_at": "2026-11-24T03:25:32.534485+00:00",
       "configured_url": "https://github.com/sky22333/sky-tv",
       "used_endpoint": "https://github.com/sky22333/sky-tv",
       "used_fallback": false,
@@ -858,14 +884,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:24.561055+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:30.992917+00:00"
     },
     {
       "id": "zhuiju-fongmi-tv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:31.368450+00:00",
-      "last_success_at": "2026-11-23T16:14:31.368450+00:00",
+      "checked_at": "2026-11-24T03:25:33.264317+00:00",
+      "last_success_at": "2026-11-24T03:25:33.264317+00:00",
       "configured_url": "https://github.com/FongMi/TV",
       "used_endpoint": "https://github.com/FongMi/TV",
       "used_fallback": false,
@@ -876,14 +902,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:26.425657+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:31.368450+00:00"
     },
     {
       "id": "zhuiju-czy0729-bangumi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:31.761308+00:00",
-      "last_success_at": "2026-11-23T16:14:31.761308+00:00",
+      "checked_at": "2026-11-24T03:25:33.952191+00:00",
+      "last_success_at": "2026-11-24T03:25:33.952191+00:00",
       "configured_url": "https://github.com/czy0729/Bangumi",
       "used_endpoint": "https://github.com/czy0729/Bangumi",
       "used_fallback": false,
@@ -894,14 +920,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:27.694652+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:31.761308+00:00"
     },
     {
       "id": "zhuiju-github-com-49",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:32.152084+00:00",
-      "last_success_at": "2026-11-23T16:14:32.152084+00:00",
+      "checked_at": "2026-11-24T03:25:34.719249+00:00",
+      "last_success_at": "2026-11-24T03:25:34.719249+00:00",
       "configured_url": "https://github.com/buhanzhe/NativeWasmTv",
       "used_endpoint": "https://github.com/buhanzhe/NativeWasmTv",
       "used_fallback": false,
@@ -912,14 +938,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:29.216848+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:32.152084+00:00"
     },
     {
       "id": "zhuiju-xiugou-tv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:32.512332+00:00",
-      "last_success_at": "2026-11-23T16:14:32.512332+00:00",
+      "checked_at": "2026-11-24T03:25:35.472348+00:00",
+      "last_success_at": "2026-11-24T03:25:35.472348+00:00",
       "configured_url": "https://github.com/qfw66/xiugou-tv",
       "used_endpoint": "https://github.com/qfw66/xiugou-tv",
       "used_fallback": false,
@@ -930,14 +956,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:30.394715+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:32.512332+00:00"
     },
     {
       "id": "zhuiju-kankanya",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:32.846080+00:00",
-      "last_success_at": "2026-11-23T16:14:32.846080+00:00",
+      "checked_at": "2026-11-24T03:25:36.243289+00:00",
+      "last_success_at": "2026-11-24T03:25:36.243289+00:00",
       "configured_url": "https://www.kankanya.me/",
       "used_endpoint": "https://www.kankanya.me/",
       "used_fallback": false,
@@ -948,13 +974,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:35.582337+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:32.846080+00:00"
     },
     {
       "id": "zhuiju-no-video",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:33.658712+00:00",
+      "checked_at": "2026-11-24T03:25:36.816212+00:00",
       "last_success_at": null,
       "configured_url": "https://novipnoad.org/",
       "used_endpoint": null,
@@ -973,8 +999,8 @@
       "id": "zhuiju-gaze-red",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:35.299953+00:00",
-      "last_success_at": "2026-11-23T16:14:35.299953+00:00",
+      "checked_at": "2026-11-24T03:25:37.954795+00:00",
+      "last_success_at": "2026-11-24T03:25:37.954795+00:00",
       "configured_url": "https://gaze.red/",
       "used_endpoint": "https://gaze.red/",
       "used_fallback": false,
@@ -985,14 +1011,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T10:58:55.921698+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:35.299953+00:00"
     },
     {
       "id": "zhuiju-sotvla",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:36.463189+00:00",
-      "last_success_at": "2026-11-23T16:14:36.463189+00:00",
+      "checked_at": "2026-11-24T03:25:39.254498+00:00",
+      "last_success_at": "2026-11-24T03:25:39.254498+00:00",
       "configured_url": "https://www.sotvla.cc/",
       "used_endpoint": "https://www.sotvla.cc/",
       "used_fallback": false,
@@ -1003,13 +1029,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:31:44.037109+00:00"
+      "previous_last_success_at": "2026-11-23T16:14:36.463189+00:00"
     },
     {
       "id": "zhuiju-xlys",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:14:36.789163+00:00",
+      "checked_at": "2026-11-24T03:25:39.467821+00:00",
       "last_success_at": null,
       "configured_url": "https://xlys.me/",
       "used_endpoint": null,
@@ -1040,7 +1066,7 @@
       "id": "zhuiju-duonao-video",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:16.499627+00:00",
+      "checked_at": "2026-11-24T03:26:19.464006+00:00",
       "last_success_at": null,
       "configured_url": "https://www.duonaovod.com",
       "used_endpoint": null,
@@ -1059,8 +1085,8 @@
       "id": "zhuiju-tdgo",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:16.871333+00:00",
-      "last_success_at": "2026-11-23T16:15:16.871333+00:00",
+      "checked_at": "2026-11-24T03:26:19.862998+00:00",
+      "last_success_at": "2026-11-24T03:26:19.862998+00:00",
       "configured_url": "https://www.tdgo.shop",
       "used_endpoint": "https://www.tdgo.shop",
       "used_fallback": false,
@@ -1071,14 +1097,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:02.758296+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:16.871333+00:00"
     },
     {
       "id": "zhuiju-ddmf",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:16.922194+00:00",
-      "last_success_at": "2026-11-23T16:15:16.922194+00:00",
+      "checked_at": "2026-11-24T03:26:20.118160+00:00",
+      "last_success_at": "2026-11-24T03:26:20.118160+00:00",
       "configured_url": "https://ddmf.net",
       "used_endpoint": "https://ddmf.net",
       "used_fallback": false,
@@ -1089,13 +1115,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:03.467225+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:16.922194+00:00"
     },
     {
       "id": "zhuiju-appmovie",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:17.975176+00:00",
+      "checked_at": "2026-11-24T03:26:20.747796+00:00",
       "last_success_at": null,
       "configured_url": "https://www.appmovie.art",
       "used_endpoint": null,
@@ -1105,28 +1131,16 @@
           "endpoint": "https://www.appmovie.art",
           "attempt": 1,
           "result": "failed",
-          "error": "ValueError: landing page did not return document markup (gateway or interstitial page)"
-        },
-        {
-          "endpoint": "https://www.appmovie.art",
-          "attempt": 2,
-          "result": "failed",
-          "error": "ValueError: landing page did not return document markup (gateway or interstitial page)"
-        },
-        {
-          "endpoint": "https://www.appmovie.art",
-          "attempt": 3,
-          "result": "failed",
-          "error": "ValueError: landing page did not return document markup (gateway or interstitial page)"
+          "error": "HTTPError: HTTP Error 403: Forbidden"
         }
       ],
-      "error": "https://www.appmovie.art: ValueError: landing page did not return document markup (gateway or interstitial page)"
+      "error": "https://www.appmovie.art: HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "id": "zhuiju-ai-movie",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:23.041750+00:00",
+      "checked_at": "2026-11-24T03:26:21.316958+00:00",
       "last_success_at": null,
       "configured_url": "https://kuhh4jo.com",
       "used_endpoint": null,
@@ -1145,7 +1159,7 @@
       "id": "zhuiju-jpyy",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:27.678135+00:00",
+      "checked_at": "2026-11-24T03:26:26.525771+00:00",
       "last_success_at": null,
       "configured_url": "https://www.vv3nwjk.com",
       "used_endpoint": null,
@@ -1164,7 +1178,7 @@
       "id": "zhuiju-tv-937",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:30.084878+00:00",
+      "checked_at": "2026-11-24T03:26:28.879705+00:00",
       "last_success_at": null,
       "configured_url": "https://www.937tv.vip",
       "used_endpoint": null,
@@ -1195,7 +1209,7 @@
       "id": "zhuiju-iyf",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:33.129621+00:00",
+      "checked_at": "2026-11-24T03:26:32.012996+00:00",
       "last_success_at": null,
       "configured_url": "https://iyf.tv",
       "used_endpoint": null,
@@ -1214,7 +1228,7 @@
       "id": "zhuiju-czzymovie",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:33.187094+00:00",
+      "checked_at": "2026-11-24T03:26:32.194865+00:00",
       "last_success_at": null,
       "configured_url": "https://www.czzymovie.com",
       "used_endpoint": null,
@@ -1233,7 +1247,7 @@
       "id": "zhuiju-libvio",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:34.363017+00:00",
+      "checked_at": "2026-11-24T03:26:32.937722+00:00",
       "last_success_at": null,
       "configured_url": "https://libviobd.com",
       "used_endpoint": null,
@@ -1252,8 +1266,8 @@
       "id": "zhuiju-auete-video",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:35.130352+00:00",
-      "last_success_at": "2026-11-23T16:15:35.130352+00:00",
+      "checked_at": "2026-11-24T03:26:33.402141+00:00",
+      "last_success_at": "2026-11-24T03:26:33.402141+00:00",
       "configured_url": "https://www.aeete.com",
       "used_endpoint": "https://www.aeete.com",
       "used_fallback": false,
@@ -1264,14 +1278,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:27.884165+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:35.130352+00:00"
     },
     {
       "id": "zhuiju-dyrs",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:35.743262+00:00",
-      "last_success_at": "2026-11-23T16:15:35.743262+00:00",
+      "checked_at": "2026-11-24T03:26:33.810977+00:00",
+      "last_success_at": "2026-11-24T03:26:33.810977+00:00",
       "configured_url": "https://dyrs.tv",
       "used_endpoint": "https://dyrs.tv",
       "used_fallback": false,
@@ -1282,14 +1296,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:30.423759+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:35.743262+00:00"
     },
     {
       "id": "zhuiju-netflixgc",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:36.266427+00:00",
-      "last_success_at": "2026-11-23T16:15:36.266427+00:00",
+      "checked_at": "2026-11-24T03:26:34.101753+00:00",
+      "last_success_at": "2026-11-24T03:26:34.101753+00:00",
       "configured_url": "https://www.netflixgc.com",
       "used_endpoint": "https://www.netflixgc.com",
       "used_fallback": false,
@@ -1300,13 +1314,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:35.337545+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:36.266427+00:00"
     },
     {
       "id": "zhuiju-nfyingshi",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:36.475266+00:00",
+      "checked_at": "2026-11-24T03:26:34.431976+00:00",
       "last_success_at": null,
       "configured_url": "https://www.nfyingshi.com",
       "used_endpoint": null,
@@ -1325,7 +1339,7 @@
       "id": "zhuiju-nivod",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:38.392638+00:00",
+      "checked_at": "2026-11-24T03:26:35.843243+00:00",
       "last_success_at": null,
       "configured_url": "https://www.nivod.vip",
       "used_endpoint": null,
@@ -1341,6 +1355,12 @@
           "endpoint": "https://www.nivod.vip",
           "attempt": 2,
           "result": "failed",
+          "error": "TimeoutError: The read operation timed out"
+        },
+        {
+          "endpoint": "https://www.nivod.vip",
+          "attempt": 3,
+          "result": "failed",
           "error": "HTTPError: HTTP Error 523: <none>"
         }
       ],
@@ -1350,8 +1370,8 @@
       "id": "zhuiju-ppnix",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:58.869359+00:00",
-      "last_success_at": "2026-11-23T16:15:58.869359+00:00",
+      "checked_at": "2026-11-24T03:27:12.169291+00:00",
+      "last_success_at": "2026-11-24T03:27:12.169291+00:00",
       "configured_url": "https://www.ppnix.com/cn/",
       "used_endpoint": "https://www.ppnix.com/cn/",
       "used_fallback": false,
@@ -1362,14 +1382,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:45.198087+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:58.869359+00:00"
     },
     {
       "id": "zhuiju-dbku",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:59.058897+00:00",
-      "last_success_at": "2026-11-23T16:15:59.058897+00:00",
+      "checked_at": "2026-11-24T03:27:12.440998+00:00",
+      "last_success_at": "2026-11-24T03:27:12.440998+00:00",
       "configured_url": "https://www.dbku.tv",
       "used_endpoint": "https://www.dbku.tv",
       "used_fallback": false,
@@ -1380,13 +1400,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:45.823014+00:00"
+      "previous_last_success_at": "2026-11-23T16:15:59.058897+00:00"
     },
     {
       "id": "zhuiju-bubu-zhuiju",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:15:59.379063+00:00",
+      "checked_at": "2026-11-24T03:27:12.809895+00:00",
       "last_success_at": null,
       "configured_url": "https://bubuzhuiju.com",
       "used_endpoint": null,
@@ -1417,8 +1437,8 @@
       "id": "zhuiju-yingmao-cangku",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:39.081241+00:00",
-      "last_success_at": "2026-11-23T16:16:39.081241+00:00",
+      "checked_at": "2026-11-24T03:27:52.770855+00:00",
+      "last_success_at": "2026-11-24T03:27:52.770855+00:00",
       "configured_url": "https://www.ymck.pro",
       "used_endpoint": "https://www.ymck.pro",
       "used_fallback": false,
@@ -1429,14 +1449,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:52.608502+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:39.081241+00:00"
     },
     {
       "id": "zhuiju-aikanbot",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:39.592610+00:00",
-      "last_success_at": "2026-11-23T16:16:39.592610+00:00",
+      "checked_at": "2026-11-24T03:27:53.647295+00:00",
+      "last_success_at": "2026-11-24T03:27:53.647295+00:00",
       "configured_url": "https://www1.aikanbot.com",
       "used_endpoint": "https://www1.aikanbot.com",
       "used_fallback": false,
@@ -1447,13 +1467,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T10:59:58.935316+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:39.592610+00:00"
     },
     {
       "id": "zhuiju-duse91",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:39.694883+00:00",
+      "checked_at": "2026-11-24T03:27:53.798699+00:00",
       "last_success_at": null,
       "configured_url": "https://www.duse0.com/",
       "used_endpoint": null,
@@ -1472,8 +1492,8 @@
       "id": "zhuiju-guangsu-yingshi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:41.757006+00:00",
-      "last_success_at": "2026-11-23T16:16:41.757006+00:00",
+      "checked_at": "2026-11-24T03:27:55.505503+00:00",
+      "last_success_at": "2026-11-24T03:27:55.505503+00:00",
       "configured_url": "https://www.yingshiso.link/",
       "used_endpoint": "https://www.yingshiso.link/",
       "used_fallback": false,
@@ -1484,13 +1504,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:55.551455+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:41.757006+00:00"
     },
     {
       "id": "zhuiju-haohaokan",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:42.954532+00:00",
+      "checked_at": "2026-11-24T03:27:56.432245+00:00",
       "last_success_at": null,
       "configured_url": "https://www.hhkan2.com/",
       "used_endpoint": null,
@@ -1509,8 +1529,8 @@
       "id": "zhuiju-ifn",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:44.537212+00:00",
-      "last_success_at": "2026-11-23T16:16:44.537212+00:00",
+      "checked_at": "2026-11-24T03:27:57.954610+00:00",
+      "last_success_at": "2026-11-24T03:27:57.954610+00:00",
       "configured_url": "https://ifn.watch/register?code=8B1EF6",
       "used_endpoint": "https://ifn.watch/register?code=8B1EF6",
       "used_fallback": false,
@@ -1521,14 +1541,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:32:59.101836+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:44.537212+00:00"
     },
     {
       "id": "zhuiju-selenetv-app",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:45.601863+00:00",
-      "last_success_at": "2026-11-23T16:16:45.601863+00:00",
+      "checked_at": "2026-11-24T03:27:58.655835+00:00",
+      "last_success_at": "2026-11-24T03:27:58.655835+00:00",
       "configured_url": "https://b.zhuiju.me/p/4",
       "used_endpoint": "https://b.zhuiju.me/p/4",
       "used_fallback": false,
@@ -1539,14 +1559,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:01.116941+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:45.601863+00:00"
     },
     {
       "id": "zhuiju-android-yingshi-app",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:46.300849+00:00",
-      "last_success_at": "2026-11-23T16:16:46.300849+00:00",
+      "checked_at": "2026-11-24T03:27:59.222210+00:00",
+      "last_success_at": "2026-11-24T03:27:59.222210+00:00",
       "configured_url": "https://b.zhuiju.me/p/27",
       "used_endpoint": "https://b.zhuiju.me/p/27",
       "used_fallback": false,
@@ -1557,14 +1577,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:02.211186+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:46.300849+00:00"
     },
     {
       "id": "zhuiju-yangke-peekpro",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:46.932057+00:00",
-      "last_success_at": "2026-11-23T16:16:46.932057+00:00",
+      "checked_at": "2026-11-24T03:27:59.408388+00:00",
+      "last_success_at": "2026-11-24T03:27:59.408388+00:00",
       "configured_url": "https://b.zhuiju.me/p/19",
       "used_endpoint": "https://b.zhuiju.me/p/19",
       "used_fallback": false,
@@ -1575,14 +1595,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:07.808432+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:46.932057+00:00"
     },
     {
       "id": "zhuiju-webhometv-player",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:47.544561+00:00",
-      "last_success_at": "2026-11-23T16:16:47.544561+00:00",
+      "checked_at": "2026-11-24T03:27:59.596071+00:00",
+      "last_success_at": "2026-11-24T03:27:59.596071+00:00",
       "configured_url": "https://b.zhuiju.me/p/18",
       "used_endpoint": "https://b.zhuiju.me/p/18",
       "used_fallback": false,
@@ -1593,14 +1613,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:08.845089+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:47.544561+00:00"
     },
     {
       "id": "zhuiju-ok-yingshi-player",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:47.769859+00:00",
-      "last_success_at": "2026-11-23T16:16:47.769859+00:00",
+      "checked_at": "2026-11-24T03:27:59.789355+00:00",
+      "last_success_at": "2026-11-24T03:27:59.789355+00:00",
       "configured_url": "https://b.zhuiju.me/p/17",
       "used_endpoint": "https://b.zhuiju.me/p/17",
       "used_fallback": false,
@@ -1611,13 +1631,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:10.151353+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:47.769859+00:00"
     },
     {
       "id": "zhuiju-4kvm-cc-18",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:48.412939+00:00",
+      "checked_at": "2026-11-24T03:27:59.972009+00:00",
       "last_success_at": null,
       "configured_url": "https://www.4kvm.cc/",
       "used_endpoint": null,
@@ -1636,8 +1656,8 @@
       "id": "zhuiju-fdzys",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:50.045442+00:00",
-      "last_success_at": "2026-11-23T16:16:50.045442+00:00",
+      "checked_at": "2026-11-24T03:28:01.210536+00:00",
+      "last_success_at": "2026-11-24T03:28:01.210536+00:00",
       "configured_url": "https://fdzys.com",
       "used_endpoint": "https://fdzys.com",
       "used_fallback": false,
@@ -1648,13 +1668,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:12.877888+00:00"
+      "previous_last_success_at": "2026-11-23T16:16:50.045442+00:00"
     },
     {
       "id": "zhuiju-sa-video",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:51.274252+00:00",
+      "checked_at": "2026-11-24T03:28:02.549278+00:00",
       "last_success_at": null,
       "configured_url": "https://www.lsjys11.com/",
       "used_endpoint": null,
@@ -1673,7 +1693,7 @@
       "id": "zhuiju-naifei-fyi-19",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:52.417971+00:00",
+      "checked_at": "2026-11-24T03:28:03.821179+00:00",
       "last_success_at": null,
       "configured_url": "https://naifei.fyi/",
       "used_endpoint": null,
@@ -1704,7 +1724,7 @@
       "id": "zhuiju-juok",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:16:55.553726+00:00",
+      "checked_at": "2026-11-24T03:28:06.928717+00:00",
       "last_success_at": null,
       "configured_url": "https://juok3.top/",
       "used_endpoint": null,
@@ -1735,7 +1755,7 @@
       "id": "zhuiju-dandanqi",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:35.611068+00:00",
+      "checked_at": "2026-11-24T03:28:46.694147+00:00",
       "last_success_at": null,
       "configured_url": "https://www.dandanqi.cc/",
       "used_endpoint": null,
@@ -1754,8 +1774,8 @@
       "id": "zhuiju-zndy",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:36.483030+00:00",
-      "last_success_at": "2026-11-23T16:17:36.483030+00:00",
+      "checked_at": "2026-11-24T03:28:47.432112+00:00",
+      "last_success_at": "2026-11-24T03:28:47.432112+00:00",
       "configured_url": "https://zndy.top/",
       "used_endpoint": "https://zndy.top/",
       "used_fallback": false,
@@ -1766,14 +1786,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:26.569837+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:36.483030+00:00"
     },
     {
       "id": "zhuiju-yingshidaquan",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:37.994102+00:00",
-      "last_success_at": "2026-11-23T16:17:37.994102+00:00",
+      "checked_at": "2026-11-24T03:28:48.499728+00:00",
+      "last_success_at": "2026-11-24T03:28:48.499728+00:00",
       "configured_url": "https://yingshidaquan.top/",
       "used_endpoint": "https://yingshidaquan.top/",
       "used_fallback": false,
@@ -1784,13 +1804,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:27.133054+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:37.994102+00:00"
     },
     {
       "id": "zhuiju-juzong",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:38.950757+00:00",
+      "checked_at": "2026-11-24T03:28:49.310029+00:00",
       "last_success_at": null,
       "configured_url": "https://www.juzong01.me/",
       "used_endpoint": null,
@@ -1809,8 +1829,8 @@
       "id": "zhuiju-jianyunys",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:39.554605+00:00",
-      "last_success_at": "2026-11-23T16:17:39.554605+00:00",
+      "checked_at": "2026-11-24T03:28:49.860885+00:00",
+      "last_success_at": "2026-11-24T03:28:49.860885+00:00",
       "configured_url": "https://jianyunys.com/",
       "used_endpoint": "https://jianyunys.com/",
       "used_fallback": false,
@@ -1821,14 +1841,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:34.699346+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:39.554605+00:00"
     },
     {
       "id": "zhuiju-pianku",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:42.020087+00:00",
-      "last_success_at": "2026-11-23T16:17:42.020087+00:00",
+      "checked_at": "2026-11-24T03:28:52.318421+00:00",
+      "last_success_at": "2026-11-24T03:28:52.318421+00:00",
       "configured_url": "https://4k01.pianku.online/",
       "used_endpoint": "https://4k01.pianku.online/",
       "used_fallback": false,
@@ -1839,14 +1859,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:36.022109+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:42.020087+00:00"
     },
     {
       "id": "zhuiju-66-dapianwang",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:43.668808+00:00",
-      "last_success_at": "2026-11-23T16:17:43.668808+00:00",
+      "checked_at": "2026-11-24T03:28:52.783405+00:00",
+      "last_success_at": "2026-11-24T03:28:52.783405+00:00",
       "configured_url": "https://www.77dpw.vip/",
       "used_endpoint": "https://www.77dpw.vip/",
       "used_fallback": false,
@@ -1857,14 +1877,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:41.138588+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:43.668808+00:00"
     },
     {
       "id": "zhuiju-didahd",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:44.568850+00:00",
-      "last_success_at": "2026-11-23T16:17:44.568850+00:00",
+      "checked_at": "2026-11-24T03:28:53.322439+00:00",
+      "last_success_at": "2026-11-24T03:28:53.322439+00:00",
       "configured_url": "https://www.didahd.xyz/",
       "used_endpoint": "https://www.didahd.xyz/",
       "used_fallback": false,
@@ -1875,13 +1895,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:33:42.262515+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:44.568850+00:00"
     },
     {
       "id": "zhuiju-zhuiying",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:44.908634+00:00",
+      "checked_at": "2026-11-24T03:28:54.319988+00:00",
       "last_success_at": null,
       "configured_url": "https://zhuiying3.cc/",
       "used_endpoint": null,
@@ -1900,7 +1920,7 @@
       "id": "zhuiju-wbbb",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:45.623017+00:00",
+      "checked_at": "2026-11-24T03:28:55.171614+00:00",
       "last_success_at": null,
       "configured_url": "https://wbbb1.com/",
       "used_endpoint": null,
@@ -1919,7 +1939,7 @@
       "id": "zhuiju-kxyy",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:46.887567+00:00",
+      "checked_at": "2026-11-24T03:28:56.067219+00:00",
       "last_success_at": null,
       "configured_url": "https://www.kxyy1.cc/",
       "used_endpoint": null,
@@ -1938,8 +1958,8 @@
       "id": "zhuiju-dhvideo",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:47.607802+00:00",
-      "last_success_at": "2026-11-23T16:17:47.607802+00:00",
+      "checked_at": "2026-11-24T03:28:56.901240+00:00",
+      "last_success_at": "2026-11-24T03:28:56.901240+00:00",
       "configured_url": "https://dhvideo.cc/",
       "used_endpoint": "https://dhvideo.cc/",
       "used_fallback": false,
@@ -1950,14 +1970,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:01:09.646226+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:47.607802+00:00"
     },
     {
       "id": "zhuiju-zip0",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:48.169152+00:00",
-      "last_success_at": "2026-11-23T16:17:48.169152+00:00",
+      "checked_at": "2026-11-24T03:28:57.267504+00:00",
+      "last_success_at": "2026-11-24T03:28:57.267504+00:00",
       "configured_url": "https://zip0.com/?r=KBDIG8",
       "used_endpoint": "https://zip0.com/?r=KBDIG8",
       "used_fallback": false,
@@ -1968,14 +1988,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:02.765501+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:48.169152+00:00"
     },
     {
       "id": "zhuiju-aipan-me-25",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:48.744734+00:00",
-      "last_success_at": "2026-11-23T16:17:48.744734+00:00",
+      "checked_at": "2026-11-24T03:28:57.537331+00:00",
+      "last_success_at": "2026-11-24T03:28:57.537331+00:00",
       "configured_url": "https://www.aipan.me/",
       "used_endpoint": "https://www.aipan.me/",
       "used_fallback": false,
@@ -1986,13 +2006,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:06.794548+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:48.744734+00:00"
     },
     {
       "id": "zhuiju-103-39-111-180-29",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:49.064796+00:00",
+      "checked_at": "2026-11-24T03:28:58.041803+00:00",
       "last_success_at": null,
       "configured_url": "https://www.kkys14.com/",
       "used_endpoint": null,
@@ -2011,7 +2031,7 @@
       "id": "zhuiju-skr-skr1-cc-9",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:50.542655+00:00",
+      "checked_at": "2026-11-24T03:28:59.714043+00:00",
       "last_success_at": null,
       "configured_url": "https://skr.skr1.cc:666/",
       "used_endpoint": null,
@@ -2030,8 +2050,8 @@
       "id": "zhuiju-tv-lxyy-club-36",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:52.072480+00:00",
-      "last_success_at": "2026-11-23T16:17:52.072480+00:00",
+      "checked_at": "2026-11-24T03:29:01.584317+00:00",
+      "last_success_at": "2026-11-24T03:29:01.584317+00:00",
       "configured_url": "https://tv.lxyy.club/",
       "used_endpoint": "https://tv.lxyy.club/",
       "used_fallback": false,
@@ -2042,14 +2062,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:16.279584+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:52.072480+00:00"
     },
     {
       "id": "zhuiju-kanmovie-com-34",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:52.727016+00:00",
-      "last_success_at": "2026-11-23T16:17:52.727016+00:00",
+      "checked_at": "2026-11-24T03:29:01.795063+00:00",
+      "last_success_at": "2026-11-24T03:29:01.795063+00:00",
       "configured_url": "https://www.kanmovie.com/",
       "used_endpoint": "https://www.kanmovie.com/",
       "used_fallback": false,
@@ -2060,13 +2080,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:19.840450+00:00"
+      "previous_last_success_at": "2026-11-23T16:17:52.727016+00:00"
     },
     {
       "id": "zhuiju-ys-cxkjg-cn-39",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:17:54.541691+00:00",
+      "checked_at": "2026-11-24T03:29:04.508343+00:00",
       "last_success_at": null,
       "configured_url": "https://ys.cxkjg.cn/",
       "used_endpoint": null,
@@ -2085,8 +2105,8 @@
       "id": "zhuiju-yingxivod-com-53",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:09.982776+00:00",
-      "last_success_at": "2026-11-23T16:18:09.982776+00:00",
+      "checked_at": "2026-11-24T03:29:14.860601+00:00",
+      "last_success_at": "2026-11-24T03:29:14.860601+00:00",
       "configured_url": "https://yingxivod.com/",
       "used_endpoint": "https://yingxivod.com/",
       "used_fallback": false,
@@ -2097,14 +2117,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:47.383044+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:09.982776+00:00"
     },
     {
       "id": "zhuiju-magnet-kuake-so-1",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:10.484078+00:00",
-      "last_success_at": "2026-11-23T16:18:10.484078+00:00",
+      "checked_at": "2026-11-24T03:29:15.037521+00:00",
+      "last_success_at": "2026-11-24T03:29:15.037521+00:00",
       "configured_url": "https://pansou.de",
       "used_endpoint": "https://pansou.de",
       "used_fallback": false,
@@ -2115,14 +2135,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:49.012826+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:10.484078+00:00"
     },
     {
       "id": "zhuiju-magnet-kuakeso",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:11.428828+00:00",
-      "last_success_at": "2026-11-23T16:18:11.428828+00:00",
+      "checked_at": "2026-11-24T03:29:15.874678+00:00",
+      "last_success_at": "2026-11-24T03:29:15.874678+00:00",
       "configured_url": "https://kkso.net",
       "used_endpoint": "https://kkso.net",
       "used_fallback": false,
@@ -2133,14 +2153,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:50.206368+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:11.428828+00:00"
     },
     {
       "id": "zhuiju-magnet-zhuiju-us",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:12.423194+00:00",
-      "last_success_at": "2026-11-23T16:18:12.423194+00:00",
+      "checked_at": "2026-11-24T03:29:16.771041+00:00",
+      "last_success_at": "2026-11-24T03:29:16.771041+00:00",
       "configured_url": "https://www.zhuiju.us/",
       "used_endpoint": "https://www.zhuiju.us/",
       "used_fallback": false,
@@ -2151,14 +2171,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:52.540923+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:12.423194+00:00"
     },
     {
       "id": "zhuiju-magnet-gugeso",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:13.636831+00:00",
-      "last_success_at": "2026-11-23T16:18:13.636831+00:00",
+      "checked_at": "2026-11-24T03:29:17.758033+00:00",
+      "last_success_at": "2026-11-24T03:29:17.758033+00:00",
       "configured_url": "https://gugeso.com/",
       "used_endpoint": "https://gugeso.com/",
       "used_fallback": false,
@@ -2169,13 +2189,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:53.018139+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:13.636831+00:00"
     },
     {
       "id": "zhuiju-magnet-juhebd",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:17.177582+00:00",
+      "checked_at": "2026-11-24T03:29:23.597803+00:00",
       "last_success_at": null,
       "configured_url": "https://www.juhebd.com/",
       "used_endpoint": null,
@@ -2194,8 +2214,8 @@
       "id": "zhuiju-magnet-ainunu",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:17.254858+00:00",
-      "last_success_at": "2026-11-23T16:18:17.254858+00:00",
+      "checked_at": "2026-11-24T03:29:23.724291+00:00",
+      "last_success_at": "2026-11-24T03:29:23.724291+00:00",
       "configured_url": "https://video.ainunu.com/",
       "used_endpoint": "https://video.ainunu.com/",
       "used_fallback": false,
@@ -2206,14 +2226,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:53.637420+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:17.254858+00:00"
     },
     {
       "id": "zhuiju-magnet-bdflixs",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:18.178546+00:00",
-      "last_success_at": "2026-11-23T16:18:18.178546+00:00",
+      "checked_at": "2026-11-24T03:29:24.500297+00:00",
+      "last_success_at": "2026-11-24T03:29:24.500297+00:00",
       "configured_url": "https://www.bdflixs.com/",
       "used_endpoint": "https://www.bdflixs.com/",
       "used_fallback": false,
@@ -2224,14 +2244,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:56.482631+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:18.178546+00:00"
     },
     {
       "id": "zhuiju-magnet-ldysg",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:24.220617+00:00",
-      "last_success_at": "2026-11-23T16:18:24.220617+00:00",
+      "checked_at": "2026-11-24T03:29:26.075726+00:00",
+      "last_success_at": "2026-11-24T03:29:26.075726+00:00",
       "configured_url": "https://www.ldysg.win/",
       "used_endpoint": "https://www.ldysg.win/",
       "used_fallback": false,
@@ -2242,14 +2262,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:34:58.401075+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:24.220617+00:00"
     },
     {
       "id": "zhuiju-magnet-meijufen",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:25.051672+00:00",
-      "last_success_at": "2026-11-23T16:18:25.051672+00:00",
+      "checked_at": "2026-11-24T03:29:27.285237+00:00",
+      "last_success_at": "2026-11-24T03:29:27.285237+00:00",
       "configured_url": "https://www.mjf2020.com",
       "used_endpoint": "https://www.mjf2020.com",
       "used_fallback": false,
@@ -2260,14 +2280,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:01.732906+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:25.051672+00:00"
     },
     {
       "id": "zhuiju-magnet-cilixiong",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:26.808689+00:00",
-      "last_success_at": "2026-11-23T16:18:26.808689+00:00",
+      "checked_at": "2026-11-24T03:29:28.604487+00:00",
+      "last_success_at": "2026-11-24T03:29:28.604487+00:00",
       "configured_url": "https://www.cilixiong.org",
       "used_endpoint": "https://www.cilixiong.org",
       "used_fallback": false,
@@ -2278,13 +2298,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:02.649375+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:26.808689+00:00"
     },
     {
       "id": "zhuiju-magnet-ciligou",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:27.059156+00:00",
+      "checked_at": "2026-11-24T03:29:28.840189+00:00",
       "last_success_at": null,
       "configured_url": "https://ciligou.net",
       "used_endpoint": null,
@@ -2315,7 +2335,7 @@
       "id": "zhuiju-magnet-cilidi",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:18:31.580681+00:00",
+      "checked_at": "2026-11-24T03:29:32.827766+00:00",
       "last_success_at": "2026-11-23T11:35:06.424907+00:00",
       "configured_url": "https://www.cld123.com",
       "used_endpoint": null,
@@ -2334,8 +2354,8 @@
       "id": "zhuiju-magnet-bt-yingshi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:31.839560+00:00",
-      "last_success_at": "2026-11-23T16:18:31.839560+00:00",
+      "checked_at": "2026-11-24T03:29:32.991884+00:00",
+      "last_success_at": "2026-11-24T03:29:32.991884+00:00",
       "configured_url": "https://www.btbtla.com",
       "used_endpoint": "https://www.btbtla.com",
       "used_fallback": false,
@@ -2346,32 +2366,45 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:08.446976+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:31.839560+00:00"
     },
     {
       "id": "zhuiju-magnet-4k-yuanpan",
-      "status": "ok",
-      "stale": false,
-      "checked_at": "2026-11-23T16:18:32.886678+00:00",
+      "status": "failed",
+      "stale": true,
+      "checked_at": "2026-11-24T03:29:33.779521+00:00",
       "last_success_at": "2026-11-23T16:18:32.886678+00:00",
       "configured_url": "https://pomo.mom/",
-      "used_endpoint": "https://pomo.mom/",
+      "used_endpoint": null,
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "https://pomo.mom/",
           "attempt": 1,
-          "result": "ok"
+          "result": "failed",
+          "error": "RemoteDisconnected: Remote end closed connection without response"
+        },
+        {
+          "endpoint": "https://pomo.mom/",
+          "attempt": 2,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "endpoint": "https://pomo.mom/",
+          "attempt": 3,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:13.323247+00:00"
+      "error": "https://pomo.mom/: URLError: <urlopen error timed out>"
     },
     {
       "id": "zhuiju-magnet-dianyinggang",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:34.752860+00:00",
-      "last_success_at": "2026-11-23T16:18:34.752860+00:00",
+      "checked_at": "2026-11-24T03:30:02.467924+00:00",
+      "last_success_at": "2026-11-24T03:30:02.467924+00:00",
       "configured_url": "https://www.dyg22.com",
       "used_endpoint": "https://www.dyg22.com",
       "used_fallback": false,
@@ -2382,14 +2415,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:16.211152+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:34.752860+00:00"
     },
     {
       "id": "zhuiju-magnet-btshijiewang",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:36.532166+00:00",
-      "last_success_at": "2026-11-23T16:18:36.532166+00:00",
+      "checked_at": "2026-11-24T03:30:04.051525+00:00",
+      "last_success_at": "2026-11-24T03:30:04.051525+00:00",
       "configured_url": "https://www.btsj6.com",
       "used_endpoint": "https://www.btsj6.com",
       "used_fallback": false,
@@ -2400,13 +2433,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:18.382160+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:36.532166+00:00"
     },
     {
       "id": "zhuiju-magnet-gaoqing-mp4",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:38.311569+00:00",
+      "checked_at": "2026-11-24T03:30:05.686151+00:00",
       "last_success_at": null,
       "configured_url": "https://www.mp4ba.vip",
       "used_endpoint": null,
@@ -2425,7 +2458,7 @@
       "id": "zhuiju-magnet-gaoqingzu",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:18:40.111336+00:00",
+      "checked_at": "2026-11-24T03:30:07.158435+00:00",
       "last_success_at": "2026-11-23T11:02:41.117776+00:00",
       "configured_url": "https://hdzu.org",
       "used_endpoint": null,
@@ -2444,7 +2477,7 @@
       "id": "zhuiju-magnet-sidhub",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:41.890466+00:00",
+      "checked_at": "2026-11-24T03:30:08.626300+00:00",
       "last_success_at": null,
       "configured_url": "https://sidhub.cc/",
       "used_endpoint": null,
@@ -2463,8 +2496,8 @@
       "id": "zhuiju-magnet-acg-rip",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:42.071245+00:00",
-      "last_success_at": "2026-11-23T16:18:42.071245+00:00",
+      "checked_at": "2026-11-24T03:30:08.749414+00:00",
+      "last_success_at": "2026-11-24T03:30:08.749414+00:00",
       "configured_url": "https://acg.rip/",
       "used_endpoint": "https://acg.rip/",
       "used_fallback": false,
@@ -2475,13 +2508,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:27.265899+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:42.071245+00:00"
     },
     {
       "id": "zhuiju-zimuku",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:42.995377+00:00",
+      "checked_at": "2026-11-24T03:30:10.012972+00:00",
       "last_success_at": null,
       "configured_url": "https://zimuku.org",
       "used_endpoint": null,
@@ -2500,8 +2533,8 @@
       "id": "zhuiju-assrt",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:43.275613+00:00",
-      "last_success_at": "2026-11-23T16:18:43.275613+00:00",
+      "checked_at": "2026-11-24T03:30:10.167141+00:00",
+      "last_success_at": "2026-11-24T03:30:10.167141+00:00",
       "configured_url": "https://assrt.net",
       "used_endpoint": "https://assrt.net",
       "used_fallback": false,
@@ -2512,14 +2545,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:31.265450+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:43.275613+00:00"
     },
     {
       "id": "zhuiju-subhd",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:44.040586+00:00",
-      "last_success_at": "2026-11-23T16:18:44.040586+00:00",
+      "checked_at": "2026-11-24T03:30:11.703088+00:00",
+      "last_success_at": "2026-11-24T03:30:11.703088+00:00",
       "configured_url": "https://subhd.tv",
       "used_endpoint": "https://subhd.tv",
       "used_fallback": false,
@@ -2530,13 +2563,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:02:53.002200+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:44.040586+00:00"
     },
     {
       "id": "zhuiju-juhebd",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:45.308716+00:00",
+      "checked_at": "2026-11-24T03:30:12.113779+00:00",
       "last_success_at": null,
       "configured_url": "https://www.juhebd.com/",
       "used_endpoint": null,
@@ -2555,8 +2588,8 @@
       "id": "zhuiju-ainunu",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:45.614491+00:00",
-      "last_success_at": "2026-11-23T16:18:45.614491+00:00",
+      "checked_at": "2026-11-24T03:30:12.185670+00:00",
+      "last_success_at": "2026-11-24T03:30:12.185670+00:00",
       "configured_url": "https://video.ainunu.com/",
       "used_endpoint": "https://video.ainunu.com/",
       "used_fallback": false,
@@ -2567,14 +2600,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:38.333062+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:45.614491+00:00"
     },
     {
       "id": "zhuiju-bdflixs",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:46.513632+00:00",
-      "last_success_at": "2026-11-23T16:18:46.513632+00:00",
+      "checked_at": "2026-11-24T03:30:12.980719+00:00",
+      "last_success_at": "2026-11-24T03:30:12.980719+00:00",
       "configured_url": "https://www.bdflixs.com/",
       "used_endpoint": "https://www.bdflixs.com/",
       "used_fallback": false,
@@ -2585,14 +2618,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:41.049255+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:46.513632+00:00"
     },
     {
       "id": "zhuiju-ldysg",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:47.882164+00:00",
-      "last_success_at": "2026-11-23T16:18:47.882164+00:00",
+      "checked_at": "2026-11-24T03:30:14.592001+00:00",
+      "last_success_at": "2026-11-24T03:30:14.592001+00:00",
       "configured_url": "https://www.ldysg.win/",
       "used_endpoint": "https://www.ldysg.win/",
       "used_fallback": false,
@@ -2603,14 +2636,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:42.047088+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:47.882164+00:00"
     },
     {
       "id": "zhuiju-meijufen",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:48.394361+00:00",
-      "last_success_at": "2026-11-23T16:18:48.394361+00:00",
+      "checked_at": "2026-11-24T03:30:15.250688+00:00",
+      "last_success_at": "2026-11-24T03:30:15.250688+00:00",
       "configured_url": "https://www.mjf2020.com",
       "used_endpoint": "https://www.mjf2020.com",
       "used_fallback": false,
@@ -2621,14 +2654,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:44.388025+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:48.394361+00:00"
     },
     {
       "id": "zhuiju-cilixiong",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:49.860389+00:00",
-      "last_success_at": "2026-11-23T16:18:49.860389+00:00",
+      "checked_at": "2026-11-24T03:30:16.530918+00:00",
+      "last_success_at": "2026-11-24T03:30:16.530918+00:00",
       "configured_url": "https://www.cilixiong.org",
       "used_endpoint": "https://www.cilixiong.org",
       "used_fallback": false,
@@ -2639,13 +2672,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:44.954266+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:49.860389+00:00"
     },
     {
       "id": "zhuiju-ciligou",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:50.172724+00:00",
+      "checked_at": "2026-11-24T03:30:16.745553+00:00",
       "last_success_at": null,
       "configured_url": "https://ciligou.net",
       "used_endpoint": null,
@@ -2676,7 +2709,7 @@
       "id": "zhuiju-cilidi",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:18:54.315969+00:00",
+      "checked_at": "2026-11-24T03:30:20.602001+00:00",
       "last_success_at": "2026-11-23T11:35:50.703026+00:00",
       "configured_url": "https://www.cld123.com",
       "used_endpoint": null,
@@ -2695,8 +2728,8 @@
       "id": "zhuiju-bt-yingshi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:54.583051+00:00",
-      "last_success_at": "2026-11-23T16:18:54.583051+00:00",
+      "checked_at": "2026-11-24T03:30:20.725824+00:00",
+      "last_success_at": "2026-11-24T03:30:20.725824+00:00",
       "configured_url": "https://www.btbtla.com",
       "used_endpoint": "https://www.btbtla.com",
       "used_fallback": false,
@@ -2707,32 +2740,45 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:35:51.861674+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:54.583051+00:00"
     },
     {
       "id": "zhuiju-4k-yuanpan",
-      "status": "ok",
-      "stale": false,
-      "checked_at": "2026-11-23T16:18:56.589689+00:00",
+      "status": "failed",
+      "stale": true,
+      "checked_at": "2026-11-24T03:30:21.455565+00:00",
       "last_success_at": "2026-11-23T16:18:56.589689+00:00",
       "configured_url": "https://pomo.mom/",
-      "used_endpoint": "https://pomo.mom/",
+      "used_endpoint": null,
       "used_fallback": false,
       "attempts": [
         {
           "endpoint": "https://pomo.mom/",
           "attempt": 1,
-          "result": "ok"
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "endpoint": "https://pomo.mom/",
+          "attempt": 2,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "endpoint": "https://pomo.mom/",
+          "attempt": 3,
+          "result": "failed",
+          "error": "URLError: <urlopen error timed out>"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:03.867967+00:00"
+      "error": "https://pomo.mom/: URLError: <urlopen error timed out>"
     },
     {
       "id": "zhuiju-dianyinggang",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:58.176462+00:00",
-      "last_success_at": "2026-11-23T16:18:58.176462+00:00",
+      "checked_at": "2026-11-24T03:31:00.854746+00:00",
+      "last_success_at": "2026-11-24T03:31:00.854746+00:00",
       "configured_url": "https://www.dyg22.com",
       "used_endpoint": "https://www.dyg22.com",
       "used_fallback": false,
@@ -2743,14 +2789,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:05.847463+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:58.176462+00:00"
     },
     {
       "id": "zhuiju-btshijiewang",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:18:59.959310+00:00",
-      "last_success_at": "2026-11-23T16:18:59.959310+00:00",
+      "checked_at": "2026-11-24T03:31:02.491499+00:00",
+      "last_success_at": "2026-11-24T03:31:02.491499+00:00",
       "configured_url": "https://www.btsj6.com",
       "used_endpoint": "https://www.btsj6.com",
       "used_fallback": false,
@@ -2761,13 +2807,13 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:09.975951+00:00"
+      "previous_last_success_at": "2026-11-23T16:18:59.959310+00:00"
     },
     {
       "id": "zhuiju-gaoqing-mp4",
       "status": "failed",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:01.820635+00:00",
+      "checked_at": "2026-11-24T03:31:03.972521+00:00",
       "last_success_at": null,
       "configured_url": "https://www.mp4ba.vip",
       "used_endpoint": null,
@@ -2786,7 +2832,7 @@
       "id": "zhuiju-gaoqingzu",
       "status": "failed",
       "stale": true,
-      "checked_at": "2026-11-23T16:19:02.437646+00:00",
+      "checked_at": "2026-11-24T03:31:04.689864+00:00",
       "last_success_at": "2026-11-23T11:03:21.109782+00:00",
       "configured_url": "https://hdzu.org",
       "used_endpoint": null,
@@ -2805,8 +2851,8 @@
       "id": "zhuiju-tv-xn-yhqu5zs87a-top-3",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:04.977334+00:00",
-      "last_success_at": "2026-11-23T16:19:04.977334+00:00",
+      "checked_at": "2026-11-24T03:31:05.275474+00:00",
+      "last_success_at": "2026-11-24T03:31:05.275474+00:00",
       "configured_url": "https://tv.xn--yhqu5zs87a.top/",
       "used_endpoint": "https://tv.xn--yhqu5zs87a.top/",
       "used_fallback": false,
@@ -2817,14 +2863,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:03:29.023821+00:00"
+      "previous_last_success_at": "2026-11-23T16:19:04.977334+00:00"
     },
     {
       "id": "app-j4uq-tvboxosc",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:05.735420+00:00",
-      "last_success_at": "2026-11-23T16:19:05.735420+00:00",
+      "checked_at": "2026-11-24T03:31:05.457817+00:00",
+      "last_success_at": "2026-11-24T03:31:05.457817+00:00",
       "configured_url": "https://github.com/j4Uq/TVBoxOSC",
       "used_endpoint": "https://github.com/j4Uq/TVBoxOSC",
       "used_fallback": false,
@@ -2835,14 +2881,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:05.735420+00:00"
     },
     {
       "id": "app-liu673cn-bug",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:06.067625+00:00",
-      "last_success_at": "2026-11-23T16:19:06.067625+00:00",
+      "checked_at": "2026-11-24T03:31:06.077380+00:00",
+      "last_success_at": "2026-11-24T03:31:06.077380+00:00",
       "configured_url": "https://github.com/liu673cn/bug",
       "used_endpoint": "https://github.com/liu673cn/bug",
       "used_fallback": false,
@@ -2853,14 +2899,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:06.067625+00:00"
     },
     {
       "id": "app-takagen99-box",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:06.535934+00:00",
-      "last_success_at": "2026-11-23T16:19:06.535934+00:00",
+      "checked_at": "2026-11-24T03:31:06.834284+00:00",
+      "last_success_at": "2026-11-24T03:31:06.834284+00:00",
       "configured_url": "https://github.com/takagen99/Box",
       "used_endpoint": "https://github.com/takagen99/Box",
       "used_fallback": false,
@@ -2871,14 +2917,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:06.535934+00:00"
     },
     {
       "id": "app-q215613905-tvboxos",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:06.936230+00:00",
-      "last_success_at": "2026-11-23T16:19:06.936230+00:00",
+      "checked_at": "2026-11-24T03:31:07.565580+00:00",
+      "last_success_at": "2026-11-24T03:31:07.565580+00:00",
       "configured_url": "https://github.com/q215613905/TVBoxOS",
       "used_endpoint": "https://github.com/q215613905/TVBoxOS",
       "used_fallback": false,
@@ -2889,14 +2935,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:06.936230+00:00"
     },
     {
       "id": "app-webhtv-webhtv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:07.402619+00:00",
-      "last_success_at": "2026-11-23T16:19:07.402619+00:00",
+      "checked_at": "2026-11-24T03:31:08.360215+00:00",
+      "last_success_at": "2026-11-24T03:31:08.360215+00:00",
       "configured_url": "https://github.com/webhtv/webhtv",
       "used_endpoint": "https://github.com/webhtv/webhtv",
       "used_fallback": false,
@@ -2907,14 +2953,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:07.402619+00:00"
     },
     {
       "id": "app-xiaoranliu3119-tvboxos-mobile",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:07.895860+00:00",
-      "last_success_at": "2026-11-23T16:19:07.895860+00:00",
+      "checked_at": "2026-11-24T03:31:09.121976+00:00",
+      "last_success_at": "2026-11-24T03:31:09.121976+00:00",
       "configured_url": "https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile",
       "used_endpoint": "https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile",
       "used_fallback": false,
@@ -2925,14 +2971,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:07.895860+00:00"
     },
     {
       "id": "app-xiaochangxu-avbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:08.306455+00:00",
-      "last_success_at": "2026-11-23T16:19:08.306455+00:00",
+      "checked_at": "2026-11-24T03:31:09.946104+00:00",
+      "last_success_at": "2026-11-24T03:31:09.946104+00:00",
       "configured_url": "https://github.com/XiaochangXu/AVBox",
       "used_endpoint": "https://github.com/XiaochangXu/AVBox",
       "used_fallback": false,
@@ -2943,14 +2989,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:08.306455+00:00"
     },
     {
       "id": "app-motao123-webtv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:08.644267+00:00",
-      "last_success_at": "2026-11-23T16:19:08.644267+00:00",
+      "checked_at": "2026-11-24T03:31:10.711117+00:00",
+      "last_success_at": "2026-11-24T03:31:10.711117+00:00",
       "configured_url": "https://github.com/motao123/webtv",
       "used_endpoint": "https://github.com/motao123/webtv",
       "used_fallback": false,
@@ -2961,14 +3007,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:08.644267+00:00"
     },
     {
       "id": "app-zongchenghuan0318-tvbox-fashion-ui",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:09.141664+00:00",
-      "last_success_at": "2026-11-23T16:19:09.141664+00:00",
+      "checked_at": "2026-11-24T03:31:11.429837+00:00",
+      "last_success_at": "2026-11-24T03:31:11.429837+00:00",
       "configured_url": "https://github.com/zongchenghuan0318/TVBox-fashion-UI",
       "used_endpoint": "https://github.com/zongchenghuan0318/TVBox-fashion-UI",
       "used_fallback": false,
@@ -2979,14 +3025,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:09.141664+00:00"
     },
     {
       "id": "app-xixu-me-fongmi-tv-actions-builder",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:09.566576+00:00",
-      "last_success_at": "2026-11-23T16:19:09.566576+00:00",
+      "checked_at": "2026-11-24T03:31:12.182471+00:00",
+      "last_success_at": "2026-11-24T03:31:12.182471+00:00",
       "configured_url": "https://github.com/xixu-me/fongmi-tv-actions-builder",
       "used_endpoint": "https://github.com/xixu-me/fongmi-tv-actions-builder",
       "used_fallback": false,
@@ -2997,14 +3043,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:09.566576+00:00"
     },
     {
       "id": "app-cyj265-lanxing-vod",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:10.493423+00:00",
-      "last_success_at": "2026-11-23T16:19:10.493423+00:00",
+      "checked_at": "2026-11-24T03:31:12.922388+00:00",
+      "last_success_at": "2026-11-24T03:31:12.922388+00:00",
       "configured_url": "https://github.com/cyj265/lanxing-vod",
       "used_endpoint": "https://github.com/cyj265/lanxing-vod",
       "used_fallback": false,
@@ -3015,14 +3061,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:10.493423+00:00"
     },
     {
       "id": "app-dhicoc-fusiontv-kitkat",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:10.986969+00:00",
-      "last_success_at": "2026-11-23T16:19:10.986969+00:00",
+      "checked_at": "2026-11-24T03:31:13.723343+00:00",
+      "last_success_at": "2026-11-24T03:31:13.723343+00:00",
       "configured_url": "https://github.com/dhicoc/FusionTV-KitKat",
       "used_endpoint": "https://github.com/dhicoc/FusionTV-KitKat",
       "used_fallback": false,
@@ -3033,14 +3079,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:10.986969+00:00"
     },
     {
       "id": "app-gstory0404-cinetry",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:11.350589+00:00",
-      "last_success_at": "2026-11-23T16:19:11.350589+00:00",
+      "checked_at": "2026-11-24T03:31:14.504341+00:00",
+      "last_success_at": "2026-11-24T03:31:14.504341+00:00",
       "configured_url": "https://github.com/gstory0404/Cinetry",
       "used_endpoint": "https://github.com/gstory0404/Cinetry",
       "used_fallback": false,
@@ -3051,14 +3097,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:11.350589+00:00"
     },
     {
       "id": "app-kknifer7-freebox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:11.823152+00:00",
-      "last_success_at": "2026-11-23T16:19:11.823152+00:00",
+      "checked_at": "2026-11-24T03:31:15.194316+00:00",
+      "last_success_at": "2026-11-24T03:31:15.194316+00:00",
       "configured_url": "https://github.com/kknifer7/FreeBox",
       "used_endpoint": "https://github.com/kknifer7/FreeBox",
       "used_fallback": false,
@@ -3069,14 +3115,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:11.823152+00:00"
     },
     {
       "id": "app-greatwallcorner-tv-multiplatform",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:12.313315+00:00",
-      "last_success_at": "2026-11-23T16:19:12.313315+00:00",
+      "checked_at": "2026-11-24T03:31:15.942023+00:00",
+      "last_success_at": "2026-11-24T03:31:15.942023+00:00",
       "configured_url": "https://github.com/Greatwallcorner/TV-Multiplatform",
       "used_endpoint": "https://github.com/Greatwallcorner/TV-Multiplatform",
       "used_fallback": false,
@@ -3087,14 +3133,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:12.313315+00:00"
     },
     {
       "id": "app-hgtuj5688-tvbox-desktop",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:12.971395+00:00",
-      "last_success_at": "2026-11-23T16:19:12.971395+00:00",
+      "checked_at": "2026-11-24T03:31:16.807499+00:00",
+      "last_success_at": "2026-11-24T03:31:16.807499+00:00",
       "configured_url": "https://github.com/hgtuj5688/tvbox-desktop",
       "used_endpoint": "https://github.com/hgtuj5688/tvbox-desktop",
       "used_fallback": false,
@@ -3105,14 +3151,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:12.971395+00:00"
     },
     {
       "id": "app-ainanya21-ainanplayer",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:13.494853+00:00",
-      "last_success_at": "2026-11-23T16:19:13.494853+00:00",
+      "checked_at": "2026-11-24T03:31:17.618907+00:00",
+      "last_success_at": "2026-11-24T03:31:17.618907+00:00",
       "configured_url": "https://github.com/Ainanya21/AinanPlayer",
       "used_endpoint": "https://github.com/Ainanya21/AinanPlayer",
       "used_fallback": false,
@@ -3123,14 +3169,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:13.494853+00:00"
     },
     {
       "id": "app-jo32-tvbox-silicon",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:13.887917+00:00",
-      "last_success_at": "2026-11-23T16:19:13.887917+00:00",
+      "checked_at": "2026-11-24T03:31:18.423014+00:00",
+      "last_success_at": "2026-11-24T03:31:18.423014+00:00",
       "configured_url": "https://github.com/jo32/tvbox-silicon",
       "used_endpoint": "https://github.com/jo32/tvbox-silicon",
       "used_fallback": false,
@@ -3141,14 +3187,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:13.887917+00:00"
     },
     {
       "id": "app-yagami-hue-win-box",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:14.340925+00:00",
-      "last_success_at": "2026-11-23T16:19:14.340925+00:00",
+      "checked_at": "2026-11-24T03:31:19.127913+00:00",
+      "last_success_at": "2026-11-24T03:31:19.127913+00:00",
       "configured_url": "https://github.com/yagami-hue/Win-box",
       "used_endpoint": "https://github.com/yagami-hue/Win-box",
       "used_fallback": false,
@@ -3159,14 +3205,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:14.340925+00:00"
     },
     {
       "id": "app-yuluoos-tvbox-tvs",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:14.865436+00:00",
-      "last_success_at": "2026-11-23T16:19:14.865436+00:00",
+      "checked_at": "2026-11-24T03:31:19.946962+00:00",
+      "last_success_at": "2026-11-24T03:31:19.946962+00:00",
       "configured_url": "https://github.com/yuluoos/TVBox-tvs",
       "used_endpoint": "https://github.com/yuluoos/TVBox-tvs",
       "used_fallback": false,
@@ -3177,14 +3223,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:14.865436+00:00"
     },
     {
       "id": "app-jstrom2022-tvbox-swift",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:15.399626+00:00",
-      "last_success_at": "2026-11-23T16:19:15.399626+00:00",
+      "checked_at": "2026-11-24T03:31:20.712871+00:00",
+      "last_success_at": "2026-11-24T03:31:20.712871+00:00",
       "configured_url": "https://github.com/Jstrom2022/tvbox-Swift",
       "used_endpoint": "https://github.com/Jstrom2022/tvbox-Swift",
       "used_fallback": false,
@@ -3195,14 +3241,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:15.399626+00:00"
     },
     {
       "id": "app-teagod-s-unbox",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:15.911804+00:00",
-      "last_success_at": "2026-11-23T16:19:15.911804+00:00",
+      "checked_at": "2026-11-24T03:31:21.580677+00:00",
+      "last_success_at": "2026-11-24T03:31:21.580677+00:00",
       "configured_url": "https://github.com/teaGod-s/UnBox",
       "used_endpoint": "https://github.com/teaGod-s/UnBox",
       "used_fallback": false,
@@ -3213,14 +3259,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:15.911804+00:00"
     },
     {
       "id": "app-yaolin-dev-okvideomac",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:16.459058+00:00",
-      "last_success_at": "2026-11-23T16:19:16.459058+00:00",
+      "checked_at": "2026-11-24T03:31:22.263754+00:00",
+      "last_success_at": "2026-11-24T03:31:22.263754+00:00",
       "configured_url": "https://github.com/yaolin-dev/OKVideoMac",
       "used_endpoint": "https://github.com/yaolin-dev/OKVideoMac",
       "used_fallback": false,
@@ -3231,14 +3277,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:16.459058+00:00"
     },
     {
       "id": "app-cwe88108-free-new-desk-public",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:16.862511+00:00",
-      "last_success_at": "2026-11-23T16:19:16.862511+00:00",
+      "checked_at": "2026-11-24T03:31:22.982327+00:00",
+      "last_success_at": "2026-11-24T03:31:22.982327+00:00",
       "configured_url": "https://github.com/cwe88108/free-new-desk-public",
       "used_endpoint": "https://github.com/cwe88108/free-new-desk-public",
       "used_fallback": false,
@@ -3249,14 +3295,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:16.862511+00:00"
     },
     {
       "id": "app-zhujinrun-fongmi-player",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:17.307378+00:00",
-      "last_success_at": "2026-11-23T16:19:17.307378+00:00",
+      "checked_at": "2026-11-24T03:31:23.833724+00:00",
+      "last_success_at": "2026-11-24T03:31:23.833724+00:00",
       "configured_url": "https://github.com/zhujinrun/FongMi-Player",
       "used_endpoint": "https://github.com/zhujinrun/FongMi-Player",
       "used_fallback": false,
@@ -3267,14 +3313,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:17.307378+00:00"
     },
     {
       "id": "app-lanlanff-flytv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:17.783217+00:00",
-      "last_success_at": "2026-11-23T16:19:17.783217+00:00",
+      "checked_at": "2026-11-24T03:31:24.663469+00:00",
+      "last_success_at": "2026-11-24T03:31:24.663469+00:00",
       "configured_url": "https://github.com/LanLanff/FlyTV",
       "used_endpoint": "https://github.com/LanLanff/FlyTV",
       "used_fallback": false,
@@ -3285,14 +3331,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:17.783217+00:00"
     },
     {
       "id": "app-jianbinzhang1987-okplayer",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:18.224619+00:00",
-      "last_success_at": "2026-11-23T16:19:18.224619+00:00",
+      "checked_at": "2026-11-24T03:31:25.421380+00:00",
+      "last_success_at": "2026-11-24T03:31:25.421380+00:00",
       "configured_url": "https://github.com/jianbinzhang1987/OKPlayer",
       "used_endpoint": "https://github.com/jianbinzhang1987/OKPlayer",
       "used_fallback": false,
@@ -3303,14 +3349,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:18.224619+00:00"
     },
     {
       "id": "app-tengdechun-tvbox-desktop",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:18.904770+00:00",
-      "last_success_at": "2026-11-23T16:19:18.904770+00:00",
+      "checked_at": "2026-11-24T03:31:26.298072+00:00",
+      "last_success_at": "2026-11-24T03:31:26.298072+00:00",
       "configured_url": "https://github.com/tengdechun/tvbox-desktop",
       "used_endpoint": "https://github.com/tengdechun/tvbox-desktop",
       "used_fallback": false,
@@ -3321,14 +3367,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:18.904770+00:00"
     },
     {
       "id": "app-shareu007-tvbox-swift-macos",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:19.394788+00:00",
-      "last_success_at": "2026-11-23T16:19:19.394788+00:00",
+      "checked_at": "2026-11-24T03:31:27.051731+00:00",
+      "last_success_at": "2026-11-24T03:31:27.051731+00:00",
       "configured_url": "https://github.com/shareu007/tvbox-Swift-macOS",
       "used_endpoint": "https://github.com/shareu007/tvbox-Swift-macOS",
       "used_fallback": false,
@@ -3339,14 +3385,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:19.394788+00:00"
     },
     {
       "id": "app-wj5403293-kotv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:19.961135+00:00",
-      "last_success_at": "2026-11-23T16:19:19.961135+00:00",
+      "checked_at": "2026-11-24T03:31:27.810920+00:00",
+      "last_success_at": "2026-11-24T03:31:27.810920+00:00",
       "configured_url": "https://github.com/wj5403293/KOTV",
       "used_endpoint": "https://github.com/wj5403293/KOTV",
       "used_fallback": false,
@@ -3357,14 +3403,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:19.961135+00:00"
     },
     {
       "id": "app-lizongying-my-tv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:20.634978+00:00",
-      "last_success_at": "2026-11-23T16:19:20.634978+00:00",
+      "checked_at": "2026-11-24T03:31:28.607441+00:00",
+      "last_success_at": "2026-11-24T03:31:28.607441+00:00",
       "configured_url": "https://github.com/lizongying/my-tv",
       "used_endpoint": "https://github.com/lizongying/my-tv",
       "used_fallback": false,
@@ -3375,14 +3421,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:20.634978+00:00"
     },
     {
       "id": "app-4gray-iptvnator",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:21.073791+00:00",
-      "last_success_at": "2026-11-23T16:19:21.073791+00:00",
+      "checked_at": "2026-11-24T03:31:29.281163+00:00",
+      "last_success_at": "2026-11-24T03:31:29.281163+00:00",
       "configured_url": "https://github.com/4gray/iptvnator",
       "used_endpoint": "https://github.com/4gray/iptvnator",
       "used_fallback": false,
@@ -3393,14 +3439,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:21.073791+00:00"
     },
     {
       "id": "app-hxh19950701-webviewtvlive",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:21.500981+00:00",
-      "last_success_at": "2026-11-23T16:19:21.500981+00:00",
+      "checked_at": "2026-11-24T03:31:29.988395+00:00",
+      "last_success_at": "2026-11-24T03:31:29.988395+00:00",
       "configured_url": "https://github.com/hxh19950701/WebViewTvLive",
       "used_endpoint": "https://github.com/hxh19950701/WebViewTvLive",
       "used_fallback": false,
@@ -3411,14 +3457,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:21.500981+00:00"
     },
     {
       "id": "app-lizongying-my-tv-0",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:22.031964+00:00",
-      "last_success_at": "2026-11-23T16:19:22.031964+00:00",
+      "checked_at": "2026-11-24T03:31:30.684870+00:00",
+      "last_success_at": "2026-11-24T03:31:30.684870+00:00",
       "configured_url": "https://github.com/lizongying/my-tv-0",
       "used_endpoint": "https://github.com/lizongying/my-tv-0",
       "used_fallback": false,
@@ -3429,14 +3475,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:22.031964+00:00"
     },
     {
       "id": "app-mytv-android-mytv-android",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:22.406360+00:00",
-      "last_success_at": "2026-11-23T16:19:22.406360+00:00",
+      "checked_at": "2026-11-24T03:31:31.385765+00:00",
+      "last_success_at": "2026-11-24T03:31:31.385765+00:00",
       "configured_url": "https://github.com/mytv-android/mytv-android",
       "used_endpoint": "https://github.com/mytv-android/mytv-android",
       "used_fallback": false,
@@ -3447,14 +3493,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:22.406360+00:00"
     },
     {
       "id": "app-eanya-tonic-cctv-viewer",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:22.837210+00:00",
-      "last_success_at": "2026-11-23T16:19:22.837210+00:00",
+      "checked_at": "2026-11-24T03:31:32.099610+00:00",
+      "last_success_at": "2026-11-24T03:31:32.099610+00:00",
       "configured_url": "https://github.com/Eanya-Tonic/CCTV_Viewer",
       "used_endpoint": "https://github.com/Eanya-Tonic/CCTV_Viewer",
       "used_fallback": false,
@@ -3465,14 +3511,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:22.837210+00:00"
     },
     {
       "id": "app-kimentanm-aptv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:23.206765+00:00",
-      "last_success_at": "2026-11-23T16:19:23.206765+00:00",
+      "checked_at": "2026-11-24T03:31:32.872696+00:00",
+      "last_success_at": "2026-11-24T03:31:32.872696+00:00",
       "configured_url": "https://github.com/Kimentanm/aptv",
       "used_endpoint": "https://github.com/Kimentanm/aptv",
       "used_fallback": false,
@@ -3483,14 +3529,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:23.206765+00:00"
     },
     {
       "id": "app-yaoxieyoulei-mytv-android",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:23.553669+00:00",
-      "last_success_at": "2026-11-23T16:19:23.553669+00:00",
+      "checked_at": "2026-11-24T03:31:33.538130+00:00",
+      "last_success_at": "2026-11-24T03:31:33.538130+00:00",
       "configured_url": "https://github.com/yaoxieyoulei/mytv-android",
       "used_endpoint": "https://github.com/yaoxieyoulei/mytv-android",
       "used_fallback": false,
@@ -3501,14 +3547,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:23.553669+00:00"
     },
     {
       "id": "app-htwmedia-htv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:23.972786+00:00",
-      "last_success_at": "2026-11-23T16:19:23.972786+00:00",
+      "checked_at": "2026-11-24T03:31:34.286411+00:00",
+      "last_success_at": "2026-11-24T03:31:34.286411+00:00",
       "configured_url": "https://github.com/HTWMedia/HTV",
       "used_endpoint": "https://github.com/HTWMedia/HTV",
       "used_fallback": false,
@@ -3519,14 +3565,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:23.972786+00:00"
     },
     {
       "id": "app-ahxn00-owntv",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:24.430019+00:00",
-      "last_success_at": "2026-11-23T16:19:24.430019+00:00",
+      "checked_at": "2026-11-24T03:31:35.048174+00:00",
+      "last_success_at": "2026-11-24T03:31:35.048174+00:00",
       "configured_url": "https://github.com/ahXN00/OwnTV",
       "used_endpoint": "https://github.com/ahXN00/OwnTV",
       "used_fallback": false,
@@ -3537,14 +3583,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": null
+      "previous_last_success_at": "2026-11-23T16:19:24.430019+00:00"
     },
     {
       "id": "zhuiju-animeko-app",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:24.840351+00:00",
-      "last_success_at": "2026-11-23T16:19:24.840351+00:00",
+      "checked_at": "2026-11-24T03:31:35.727392+00:00",
+      "last_success_at": "2026-11-24T03:31:35.727392+00:00",
       "configured_url": "https://animeko.org/downloads/",
       "used_endpoint": "https://animeko.org/downloads/",
       "used_fallback": false,
@@ -3555,14 +3601,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:15.651347+00:00"
+      "previous_last_success_at": "2026-11-23T16:19:24.840351+00:00"
     },
     {
       "id": "zhuiju-kazumi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:25.148317+00:00",
-      "last_success_at": "2026-11-23T16:19:25.148317+00:00",
+      "checked_at": "2026-11-24T03:31:35.934651+00:00",
+      "last_success_at": "2026-11-24T03:31:35.934651+00:00",
       "configured_url": "https://kazumi.app/download",
       "used_endpoint": "https://kazumi.app/download",
       "used_fallback": false,
@@ -3573,14 +3619,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:19.072176+00:00"
+      "previous_last_success_at": "2026-11-23T16:19:25.148317+00:00"
     },
     {
       "id": "zhuiju-fongmi-fengmi",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:25.350464+00:00",
-      "last_success_at": "2026-11-23T16:19:25.350464+00:00",
+      "checked_at": "2026-11-24T03:31:36.392762+00:00",
+      "last_success_at": "2026-11-24T03:31:36.392762+00:00",
       "configured_url": "https://b.zhuiju.me/p/16",
       "used_endpoint": "https://b.zhuiju.me/p/16",
       "used_fallback": false,
@@ -3591,14 +3637,14 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:21.637979+00:00"
+      "previous_last_success_at": "2026-11-23T16:19:25.350464+00:00"
     },
     {
       "id": "zhuiju-yingshicang-player",
       "status": "ok",
       "stale": false,
-      "checked_at": "2026-11-23T16:19:30.686448+00:00",
-      "last_success_at": "2026-11-23T16:19:30.686448+00:00",
+      "checked_at": "2026-11-24T03:31:37.060239+00:00",
+      "last_success_at": "2026-11-24T03:31:37.060239+00:00",
       "configured_url": "https://b.zhuiju.me/p/15",
       "used_endpoint": "https://b.zhuiju.me/p/15",
       "used_fallback": false,
@@ -3609,7 +3655,7 @@
           "result": "ok"
         }
       ],
-      "previous_last_success_at": "2026-11-23T11:36:23.455166+00:00"
+      "previous_last_success_at": "2026-11-23T16:19:30.686448+00:00"
     }
   ]
 }
