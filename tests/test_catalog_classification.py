@@ -64,6 +64,43 @@ class CatalogClassificationTests(unittest.TestCase):
                 self.assertIn("Upstream description:", row["notes"])
                 self.assertTrue(row["source"])
 
+    def test_tvapp_reference_and_voyatv_are_listed_with_scope_limits(self):
+        tools = json.loads((ROOT / "catalog/tools.json").read_text(encoding="utf-8"))
+        apps = json.loads((ROOT / "catalog/apps.json").read_text(encoding="utf-8"))
+        tool_rows = {row["id"]: row for row in tools}
+        app_rows = {row["id"]: row for row in apps}
+
+        tvapp = tool_rows["reference-youhun-tvapp"]
+        self.assertEqual(tvapp["url"], "https://github.com/youhunwl/TVAPP")
+        self.assertEqual(tvapp["format"], "project")
+        self.assertIn("Apache", tvapp["license"])
+        self.assertIn("third-party APKs", tvapp["license"])
+        self.assertIn("index only", tvapp["notes"])
+
+        voyatv = app_rows["voyatv-iptv-player"]
+        self.assertEqual(voyatv["url"], "https://xptv.nb9.xyz/")
+        self.assertEqual(voyatv["format"], "link-page")
+        self.assertIn("Android TV", voyatv["notes"])
+        self.assertIn("M3U/M3U8/TXT", voyatv["notes"])
+        self.assertIn("不提供或托管直播源", voyatv["notes"])
+        self.assertTrue(voyatv["source"])
+
+        kodi = app_rows["app-kodi-media-center"]
+        self.assertEqual(kodi["url"], "https://github.com/xbmc/xbmc")
+        self.assertEqual(kodi["format"], "project")
+        self.assertIn("GPL-2.0-or-later", kodi["license"])
+        self.assertIn("macOS", kodi["notes"])
+
+    def test_free_tv_playlist_is_separate_from_iptv_org_and_has_rights_caveat(self):
+        rows = json.loads((ROOT / "catalog/live.json").read_text(encoding="utf-8"))
+        indexed = {row["id"]: row for row in rows}
+        free_tv = indexed["free-tv-global-playlist"]
+        self.assertEqual(free_tv["url"], "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8")
+        self.assertEqual(free_tv["format"], "m3u")
+        self.assertIn("No repository-wide license", free_tv["license"])
+        self.assertIn("#EXTM3U", free_tv["notes"])
+        self.assertIn("No playback", free_tv["notes"])
+
     def test_upstream_app_download_pages_are_catalogued_as_apps(self):
         app_ids = {
             "zhuiju-selenetv-app",

@@ -373,5 +373,14 @@
     "source": "https://github.com/laoma528/awesome-zhuiju-free",
     "license": "The repository's CC BY 4.0 applies to its own directory/database with attribution; it does not license linked third-party software, websites, configurations, media, or trademarks.",
     "notes": "Upstream description: 免费追剧资源目录，涵盖影视站、应用、网盘搜索、TVBox/影视仓接口、IPTV 与开源项目，并提供自动可用性检测. Source repository reference; README and CC BY 4.0 license checked 2026-11-24. This is a resource index, not a player or tested resource."
+  },
+  {
+    "id": "reference-youhun-tvapp",
+    "name": "TVAPP",
+    "url": "https://github.com/youhunwl/TVAPP",
+    "format": "project",
+    "source": "https://github.com/youhunwl/TVAPP",
+    "license": "The repository declares Apache License 2.0 for its own repository content. That does not grant rights to third-party APKs, modified/unlocked apps, media, IPTV streams, trademarks, or linked configurations; review each item and its own terms. This catalog links to the index only and does not redistribute its binaries or content.",
+    "notes": "Upstream description: TV 应用、TVBox/影视仓配置与 IPTV 直播列表的社区收集目录. Source repository reference; README and Apache-2.0 LICENSE checked 2026-11-25. The README includes third-party and modified APK links and expressly restricts use; entries are not endorsed or individually verified. Use the repository as a reference index only, not as a source of authorized software or media."
   }
 ]

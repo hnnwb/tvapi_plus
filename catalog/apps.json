@@ -1048,5 +1048,23 @@
       "status": "caution",
       "checked_at": "2026-08-01"
     }
+  },
+  {
+    "id": "voyatv-iptv-player",
+    "name": "观屿TV（VoyaTV）",
+    "url": "https://xptv.nb9.xyz/",
+    "format": "link-page",
+    "source": "https://github.com/youhunwl/TVAPP",
+    "license": "The TVAPP directory license does not license this linked app. Refer to the app's own terms; this catalog only links to its official homepage and does not redistribute APKs or channel content.",
+    "notes": "Upstream description: IPTV 播放器，不提供或托管直播源；支持 M3U/M3U8/TXT 播放列表与 XMLTV EPG，适配 Android TV、电视盒子和安卓手机（Android 6.0+）。 Official homepage and TVAPP README checked 2026-11-25. 下载页；安装包未审阅，本仓库不镜像也不托管。 平台：Android TV·Android（6.0+）。 The app's streams and playlist rights are the user's responsibility; no channel or playback verification is implied."
+  },
+  {
+    "id": "app-kodi-media-center",
+    "name": "Kodi",
+    "url": "https://github.com/xbmc/xbmc",
+    "format": "project",
+    "source": "https://github.com/xbmc/xbmc",
+    "license": "Kodi is GPL-2.0-or-later; third-party components may have their own licenses. See the upstream LICENSE.md and component notices.",
+    "notes": "Upstream description: 开源媒体播放器与家庭影院中心，支持本地媒体、网络共享和流媒体播放，并可通过插件扩展。 Source repository reference; README and LICENSE checked 2026-11-25. 平台：Android·Linux·BSD·macOS·iOS·tvOS·Windows。 This links to the source project; it is not a bundled build or a verification of third-party add-ons or streams."
   }
 ]
