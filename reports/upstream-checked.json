@@ -1,5 +1,13 @@
 {
   "awesome-zhuiju-free": {
+    "duoduo-yingshi": {
+      "name": "多多影视",
+      "url": "https://dduotv01.top/"
+    },
+    "haopianwang": {
+      "name": "好片严选",
+      "url": "https://haopianwang.com"
+    },
     "kankanya": {
       "name": "看看鸭",
       "url": "https://www.kankanya.me/"
@@ -44,10 +52,6 @@
       "name": "金牌影视",
       "url": "https://www.vv3nwjk.com"
     },
-    "tv-937": {
-      "name": "937影视",
-      "url": "https://www.937tv.vip"
-    },
     "iyf": {
       "name": "爱壹帆",
       "url": "https://iyf.tv"
@@ -88,10 +92,6 @@
       "name": "独播库",
       "url": "https://www.dbku.tv"
     },
-    "bubu-zhuiju": {
-      "name": "布布追剧",
-      "url": "https://bubuzhuiju.com"
-    },
     "yingmao-cangku": {
       "name": "影猫仓库",
       "url": "https://www.ymck.pro"
@@ -99,10 +99,6 @@
     "aikanbot": {
       "name": "爱看机器人",
       "url": "https://www1.aikanbot.com"
-    },
-    "duse91": {
-      "name": "91毒舌",
-      "url": "https://www.duse0.com/"
     },
     "guangsu-yingshi": {
       "name": "光速影视",
@@ -376,6 +372,10 @@
       "name": "FongMi 蜂蜜",
       "url": "https://b.zhuiju.me/p/16"
     },
+    "yingshi-box-collection": {
+      "name": "影视Box合集",
+      "url": "https://b.zhuiju.me/p/34"
+    },
     "yingshicang-player": {
       "name": "影视仓",
       "url": "https://b.zhuiju.me/p/15"
@@ -407,14 +407,6 @@
     "sa-video": {
       "name": "SA视频",
       "url": "https://www.lsjys11.com/"
-    },
-    "naifei-fyi-19": {
-      "name": "奈飞工厂",
-      "url": "https://naifei.fyi/"
-    },
-    "juok": {
-      "name": "剧OK",
-      "url": "https://juok3.top/"
     },
     "dandanqi": {
       "name": "蛋蛋奇",
@@ -523,6 +515,10 @@
     "github-com-59": {
       "name": "CineFlow",
       "url": "https://github.com/incldue/CineFlow"
+    },
+    "prodclub": {
+      "name": "ProdClub",
+      "url": "https://github.com/laoma528/ProdClub"
     }
   },
   "awesome-tvbox": {

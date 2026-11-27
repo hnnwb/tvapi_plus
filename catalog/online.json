@@ -1153,5 +1153,47 @@
       "status": "caution",
       "checked_at": "2026-11-23"
     }
+  },
+  {
+    "id": "zhuiju-duoduo-yingshi",
+    "name": "多多影视",
+    "url": "https://dduotv01.top/",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 永久发布地址 `duoduozhuiju.com`. Upstream self-assessment status: pending; the rating shown here is the upstream score, not a local measurement. Upstream still lists this entry as pending review. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-11-27.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "pending",
+      "checked_at": "2026-11-27"
+    }
+  },
+  {
+    "id": "zhuiju-haopianwang",
+    "name": "好片严选",
+    "url": "https://haopianwang.com",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 剔除澳门赌场/棋牌劣质源. Upstream self-assessment status: pending; the rating shown here is the upstream score, not a local measurement. Upstream still lists this entry as pending review. Site entry only: it is not a TVBox configuration, playlist, or EPG feed, and it is not importable by a client. Content, rights, and reachability can change without notice. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-11-27.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "pending",
+      "checked_at": "2026-11-27"
+    }
   }
 ]

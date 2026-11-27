@@ -403,5 +403,26 @@
       "status": "recommended",
       "checked_at": "2026-11-13"
     }
+  },
+  {
+    "id": "zhuiju-prodclub",
+    "name": "ProdClub",
+    "url": "https://github.com/laoma528/ProdClub",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: ChatGPT Plus/Pro国内代充值. Upstream self-assessment status: pending; the rating shown here is the upstream score, not a local measurement. Upstream still lists this entry as pending review. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-11-27.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "pending",
+      "checked_at": "2026-11-27"
+    }
   }
 ]

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-27T01:04:23.596202+00:00",
+  "generated_at": "2026-11-27T15:20:01.995021+00:00",
   "errors": [],
   "changed": [],
   "added": [
     {
-      "id": "github-com-66",
-      "name": "Mimi",
-      "url": "https://github.com/yuxino/mimi",
+      "id": "duoduo-yingshi",
+      "name": "多多影视",
+      "url": "https://dduotv01.top/",
       "source": "awesome-zhuiju-free",
       "probe": {
         "status": "failed",
@@ -14,9 +14,9 @@
       }
     },
     {
-      "id": "101movies-pages-dev-62",
-      "name": "101Movies",
-      "url": "https://101movies.pages.dev/",
+      "id": "haopianwang",
+      "name": "好片严选",
+      "url": "https://haopianwang.com",
       "source": "awesome-zhuiju-free",
       "probe": {
         "status": "failed",
@@ -24,9 +24,19 @@
       }
     },
     {
-      "id": "github-com-59",
-      "name": "CineFlow",
-      "url": "https://github.com/incldue/CineFlow",
+      "id": "yingshi-box-collection",
+      "name": "影视Box合集",
+      "url": "https://b.zhuiju.me/p/34",
+      "source": "awesome-zhuiju-free",
+      "probe": {
+        "status": "failed",
+        "reason": "KeyError: 'format'"
+      }
+    },
+    {
+      "id": "prodclub",
+      "name": "ProdClub",
+      "url": "https://github.com/laoma528/ProdClub",
       "source": "awesome-zhuiju-free",
       "probe": {
         "status": "failed",
@@ -34,16 +44,47 @@
       }
     }
   ],
-  "removed": [],
+  "removed": [
+    {
+      "id": "tv-937",
+      "name": "937影视",
+      "url": "https://www.937tv.vip",
+      "source": "awesome-zhuiju-free"
+    },
+    {
+      "id": "bubu-zhuiju",
+      "name": "布布追剧",
+      "url": "https://bubuzhuiju.com",
+      "source": "awesome-zhuiju-free"
+    },
+    {
+      "id": "duse91",
+      "name": "91毒舌",
+      "url": "https://www.duse0.com/",
+      "source": "awesome-zhuiju-free"
+    },
+    {
+      "id": "naifei-fyi-19",
+      "name": "奈飞工厂",
+      "url": "https://naifei.fyi/",
+      "source": "awesome-zhuiju-free"
+    },
+    {
+      "id": "juok",
+      "name": "剧OK",
+      "url": "https://juok3.top/",
+      "source": "awesome-zhuiju-free"
+    }
+  ],
   "imported": [
     {
       "source": "awesome-zhuiju-free",
       "file": "online.json",
-      "rows": 1
+      "rows": 2
     },
     {
       "source": "awesome-zhuiju-free",
-      "file": "search.json",
+      "file": "apps.json",
       "rows": 1
     },
     {

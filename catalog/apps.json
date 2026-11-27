@@ -1066,5 +1066,26 @@
     "source": "https://github.com/xbmc/xbmc",
     "license": "Kodi is GPL-2.0-or-later; third-party components may have their own licenses. See the upstream LICENSE.md and component notices.",
     "notes": "Upstream description: 开源媒体播放器与家庭影院中心，支持本地媒体、网络共享和流媒体播放，并可通过插件扩展。 Source repository reference; README and LICENSE checked 2026-11-25. 平台：Android·Linux·BSD·macOS·iOS·tvOS·Windows。 This links to the source project; it is not a bundled build or a verification of third-party add-ons or streams."
+  },
+  {
+    "id": "zhuiju-yingshi-box-collection",
+    "name": "影视Box合集",
+    "url": "https://b.zhuiju.me/p/34",
+    "format": "link-page",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 空壳安装包大合集，长期更新. Upstream self-assessment status: verified; the rating shown here is the upstream score, not a local measurement. Landing page for an app/download bundle; the packages behind it are not reviewed, and this project does not redistribute or host them. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 5 / speed 5 / clean 5 / stable 5 / ease 5); checked 2026-11-27.",
+    "rating": {
+      "average": 5.0,
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "status": "verified",
+      "checked_at": "2026-11-27"
+    }
   }
 ]
