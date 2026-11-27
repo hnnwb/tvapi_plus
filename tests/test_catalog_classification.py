@@ -123,6 +123,32 @@ class CatalogClassificationTests(unittest.TestCase):
             self.assertTrue(row["license"])
             self.assertTrue(row["source"])
 
+    def test_backup_index_rows_keep_their_measured_shape(self):
+        index = "https://lubin776.github.io/tvbox-api-backup/"
+        vod = [row for row in json.loads((ROOT / "catalog/vod-single.json").read_text(encoding="utf-8"))
+               if row["id"].startswith("backup-")]
+        live = [row for row in json.loads((ROOT / "catalog/live.json").read_text(encoding="utf-8"))
+                if row["id"].startswith("backup-")]
+        self.assertGreaterEqual(len(vod), 14)
+        self.assertGreaterEqual(len(live), 35)
+        for row in vod:
+            self.assertEqual(row["format"], "tvbox-json")
+            self.assertEqual(row["source"], index)
+            self.assertIn("sites", row["notes"])
+        for row in live:
+            self.assertIn(row["format"], {"m3u", "txt"})
+            self.assertEqual(row["source"], index)
+            self.assertTrue("#EXTINF" in row["notes"] or "channel lines" in row["notes"])
+        rows = vod + live
+        self.assertEqual(len({row["id"] for row in rows}), len(rows))
+        urls = [row["url"] for row in rows]
+        self.assertEqual(len(set(urls)), len(urls))
+        for row in rows:
+            # Reachability, not playback or rights: the wording has to stay honest.
+            notes = row["notes"]
+            self.assertTrue("no client import or playback was tested" in notes
+                            or "no playback or client import was tested" in notes)
+
 
 if __name__ == "__main__":
     unittest.main()

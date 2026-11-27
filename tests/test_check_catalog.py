@@ -173,6 +173,14 @@ class ConfigBodyShapes(unittest.TestCase):
         body = ('\ufeff{"urls": [{"name": "老李📚在线", "url": "http://x/y"}]}').encode("utf-8")
         self.assertEqual(check_catalog.tvbox_json_document(body)["urls"][0]["name"], "老李📚在线")
 
+    def test_chinese_comment_block_before_document(self):
+        body = (
+            "// box.json\n"
+            "// 说明：由「自动添加注释」维护，共 1625 行\n"
+            '{\n  "sites": [{"key": "a"}],\n}\n'
+        ).encode("utf-8")
+        self.assertEqual(check_catalog.tvbox_json_document(body)["sites"][0]["key"], "a")
+
 
 class ConfigBodyNotAConfig(unittest.TestCase):
     def test_html_landing_page_is_named(self):

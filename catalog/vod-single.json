@@ -292,5 +292,145 @@
       "status": "caution",
       "checked_at": "2026-07-04"
     }
+  },
+  {
+    "id": "backup-xingfu-niannian",
+    "name": "幸福年年 配置",
+    "url": "http://150.158.52.248/tgyg/bbm.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 53722 bytes, parsed as a TVBox configuration with 123 sites. Plain TVBox JSON with sites, lives and parses. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-lao-zhang",
+    "name": "老张 配置",
+    "url": "https://zhangqun1818.serv00.net/zq/api.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 12834 bytes, parsed as a TVBox configuration with 19 sites. Plain TVBox JSON with sites and parses. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-zhou-j",
+    "name": "周J 配置",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/box",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 6711 bytes, parsed as a TVBox configuration with 26 sites. Served through a GitHub proxy; the config carries sites, lives and a spider. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-xiao-mi",
+    "name": "小米 配置",
+    "url": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 20852 bytes, parsed as a TVBox configuration with 44 sites. Demo config shipped with a CatVod spider project; proxy URL measured. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested.",
+    "fallback_urls": [
+      "https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json"
+    ]
+  },
+  {
+    "id": "backup-xin-mo",
+    "name": "心魔 配置",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 46130 bytes, parsed as a TVBox configuration with 151 sites. Large site list with its own spider and parsers. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested.",
+    "fallback_urls": [
+      "https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json"
+    ]
+  },
+  {
+    "id": "backup-jun-yu",
+    "name": "俊宇 配置",
+    "url": "http://home.jundie.top:81/top98.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 16543 bytes, parsed as a TVBox configuration with 24 sites. Plain TVBox JSON; host runs on a non-standard port. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-clun",
+    "name": "Clun 配置",
+    "url": "https://clun.top/box.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 31412 bytes, parsed as a TVBox configuration with 101 sites. JSONC with a Chinese comment header and 17 live groups; parses only after comments and trailing commas are stripped. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-xia-xia",
+    "name": "夏夏影视 配置",
+    "url": "https://11405.kstore.space/xiaye/qk4k.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 21864 bytes, parsed as a TVBox configuration with 43 sites. Plain TVBox JSON hosted on a shared object store. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-kai-di",
+    "name": "凯弟 配置",
+    "url": "https://jihulab.com/jyqhkd1/kai/-/raw/main/%E6%9C%BA%E7%BC%98%E5%B7%A7%E7%9B%92%E5%87%AF%E5%BC%9F.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 19895 bytes, parsed as a TVBox configuration with 63 sites. GitLab mirror of the same maintainer's main line; the fallback is the 28-site secondary line. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested.",
+    "fallback_urls": [
+      "https://jihulab.com/jyqhkd/kd/-/raw/main/kai.json"
+    ]
+  },
+  {
+    "id": "backup-ha-ji-mi",
+    "name": "哈吉米 配置",
+    "url": "https://17264.kstore.space/%E5%93%88%E5%9F%BA%E7%B1%B3.png",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 65497 bytes, parsed as a TVBox configuration with 174 sites. Answers with a PNG content type and a JSON document pasted after the image bytes; read as a config, not as an image. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-yingm-dm",
+    "name": "动漫 配置",
+    "url": "https://www.yingm.cc/dm/dm.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 8737 bytes, parsed as a TVBox configuration with 27 sites. Animation-oriented site list. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-xing-wei",
+    "name": "星微VIP 配置",
+    "url": "https://7337.kstore.vip/xw/%E6%B5%8B%E8%AF%95%E5%8B%BF%E4%BC%A0",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 40751 bytes, parsed as a TVBox configuration with 78 sites. Undeclared content type on a shared object store; body parses as a config with a warning banner. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
+  },
+  {
+    "id": "backup-gao-tian-liu-yun",
+    "name": "高天流云 配置",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 51621 bytes, parsed as a TVBox configuration with 298 sites. The largest single site list in this batch. The fallbacks are the same maintainer's XYQ (49 sites) and FongMI (33 sites) variants. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested.",
+    "fallback_urls": [
+      "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json"
+    ]
+  },
+  {
+    "id": "backup-x4-children",
+    "name": "X4少儿频道 配置",
+    "url": "https://0.wudaozhe.net/5/tv%E5%B0%91%E5%84%BF.json",
+    "format": "tvbox-json",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this configuration. The backup index only relinks a third-party URL; the host, the spider/parser components the config references, and everything it points at stay under their own maintainers' terms.",
+    "notes": "Listed in the 点播 (VOD) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 35203 bytes, parsed as a TVBox configuration with 25 sites. Children's-channel oriented site list. Reachability and shape only: the row is neither a quality nor a legality verdict, its spider is hosted elsewhere and was not run, and no client import or playback was tested."
   }
 ]

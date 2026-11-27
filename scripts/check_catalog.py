@@ -45,6 +45,10 @@ MAX_BODY = 512 * 1024
 # structural XMLTV validation. This is still a bounded metadata check, not a mirror.
 MAX_EPG_BODY = 32 * 1024 * 1024
 MAX_LOGO_BODY = 16 * 1024 * 1024
+# Community live lists are often a megabyte or two of channel records, which is normal for the
+# format rather than a broken response; M3U and TXT get their own bound so the 512 KiB default
+# keeps guarding configurations and web pages.
+MAX_LIVE_BODY = 4 * 1024 * 1024
 TIMEOUT = 12
 
 
@@ -455,9 +459,13 @@ def tvbox_json_document(body: bytes) -> dict:  # noqa: C901 - four short respons
             raise ValueError(f"{magic} image response carries no JSON document")
         attempts.append((f"{magic}-wrapped JSON", text[start:]))
     else:
-        if not text.isascii():
+        # Chinese comments and headings are ordinary in shipped configurations, so binary is
+        # recognised by control bytes rather than by the presence of non-ASCII text.
+        controls = sum(1 for char in text[:4096] if ord(char) < 9 or 13 < ord(char) < 32)
+        if controls > 8:
             raise ValueError("config body is binary and carries no JSON document")
         attempts.append(("body", text))
+        attempts.append(("body", _drop_trailing_commas(_strip_jsonc(text))))
         stripped = text.strip()
         if stripped and "{" not in text[:64]:
             try:
@@ -484,7 +492,14 @@ def tvbox_json_document(body: bytes) -> dict:  # noqa: C901 - four short respons
 
 def validate_remote(category: str, entry: dict, opener=None, request_profile: str = "catalog") -> str:
     format_name = entry.get("format")
-    max_body = MAX_EPG_BODY if format_name == "epg-xml" else MAX_LOGO_BODY if format_name == "logo-library" else MAX_BODY
+    if format_name == "epg-xml":
+        max_body = MAX_EPG_BODY
+    elif format_name == "logo-library":
+        max_body = MAX_LOGO_BODY
+    elif format_name in {"m3u", "txt"}:
+        max_body = MAX_LIVE_BODY
+    else:
+        max_body = MAX_BODY
     body, content_type, status = fetch_bounded(entry["url"], opener=opener, request_profile=request_profile, max_body=max_body)
     if not 200 <= status < 300:
         raise ValueError(f"HTTP status {status}")

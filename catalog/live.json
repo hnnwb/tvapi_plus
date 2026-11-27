@@ -169,5 +169,329 @@
       "status": "caution",
       "checked_at": "2026-10-10"
     }
+  },
+  {
+    "id": "backup-clun-iptv",
+    "name": "Clun IPTV 直播",
+    "url": "https://clun.top/lib/iptv.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 335 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested.",
+    "fallback_urls": [
+      "https://clun.top/lib/iptv_test.m3u"
+    ]
+  },
+  {
+    "id": "backup-ottiptv-huyayu",
+    "name": "虎牙一起看",
+    "url": "https://sub.ottiptv.cc/huyayqk.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 312 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-ottiptv-douyu",
+    "name": "斗鱼一起看",
+    "url": "https://sub.ottiptv.cc/douyuyqk.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 315 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-ottiptv-bili",
+    "name": "B站直播",
+    "url": "https://sub.ottiptv.cc/bililive.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 297 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-ottiptv-yy",
+    "name": "YY轮播",
+    "url": "https://sub.ottiptv.cc/yylunbo.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 282 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-ottiptv-mgtv",
+    "name": "歌手直播",
+    "url": "https://mgtv.ottiptv.cc/mglist.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 157 #EXTINF records. The index records a required user agent (okhttp/3.15) for this row. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-kimentanm-aptv",
+    "name": "Aptv 直播源",
+    "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 120 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-suxuang-ipv4",
+    "name": "suxuang IPv4",
+    "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 297 #EXTINF records. The repository also publishes an IPv6 list that was not measured. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-guovin-iptv",
+    "name": "Guovin iptv-api",
+    "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 268 #EXTINF records. Generated output branch of a self-hosted collecting project. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-mlzlzj-tv",
+    "name": "mlzlzj TV",
+    "url": "https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 260 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-gambiarras-legal",
+    "name": "legal-iptv",
+    "url": "https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 249 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-wirili-iptv",
+    "name": "Wirili IPTV",
+    "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 573 channel lines. TVBox TXT format with #genre# group headers. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-supprise-tvbox-live",
+    "name": "Supprise TVBox_live",
+    "url": "https://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 706 channel lines. TVBox TXT format with #genre# group headers. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-youhun-zb",
+    "name": "游魂直播",
+    "url": "https://www.iyouhun.com/tv/zb",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 765 channel lines. The backup index lists the maintainer's own domain, not a GitHub mirror. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-yang-gather",
+    "name": "YanG Gather",
+    "url": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 123 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-yoursmile-live",
+    "name": "南风直播源",
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 684 channel lines. The same maintainer publishes an encrypted VOD config; this row is the plain live list. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-zhoujck-ext-mobile",
+    "name": "周J 移动线路",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E7%A7%BB%E5%8A%A8",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 308 channel lines. Carrier-specific list split out of the same maintainer's repository. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-zhoujck-ext-unicom",
+    "name": "周J 联通线路",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E8%81%94%E9%80%9A",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 148 channel lines. Carrier-specific list split out of the same maintainer's repository. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-zhoujck-ext-live",
+    "name": "周J 优选线路",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 299 channel lines. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-wangziduoqing-zb",
+    "name": "王子多情 直播",
+    "url": "http://wangziduoqing.com/yuan/zb.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 809 channel lines. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-vinkerq-iptv",
+    "name": "vinkerq iptv-api",
+    "url": "https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 739 channel lines. Generated output of a self-hosted collecting project. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-tv-iptv-php",
+    "name": "综合直播（iptv.php）",
+    "url": "http://193.123.86.190:14888/TV/iptv.php",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 222 #EXTINF records. Plain HTTP host on a non-standard port; the path is a script, not a file. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-fanmingming-ipv6",
+    "name": "范明明 IPv6 直播",
+    "url": "https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 67 #EXTINF records. IPv6-only mirror of the maintainer's list. The maintainer's own host refused this cataloger's TLS handshake at check time, so the mirror URL is primary. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested.",
+    "fallback_urls": [
+      "https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u"
+    ]
+  },
+  {
+    "id": "backup-eastscreen-migu",
+    "name": "咪咕TV直播",
+    "url": "https://eastscreen.tv/iptvlist.php?token=N1pcBwAGHwkCAx8OTFhABgEFAA",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 196 #EXTINF records. The URL carries a query token the operator publishes on its own page; the catalog stores it as published, not as a secret. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-kulao-iptv",
+    "name": "裤佬IPTV直播",
+    "url": "https://iptv.445569.xyz/live.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 166 #EXTINF records. One of a family of per-platform hosts under the same maintainer; only the general list is catalogued here. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-kulao-sports",
+    "name": "裤佬体育直播",
+    "url": "https://jsnzkpg.de5.net/all.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 99 #EXTINF records. Sports-only list from the same maintainer. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested.",
+    "fallback_urls": [
+      "https://stymei.pages.dev/live.m3u"
+    ]
+  },
+  {
+    "id": "backup-xiaoma-live",
+    "name": "小马直播",
+    "url": "https://szyyds.cn/tv/live/x.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 580 channel lines. Live companion of the 小马 configuration already in this catalog. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-xhz-live",
+    "name": "小盒子直播",
+    "url": "http://xhztv.top/xhz/live.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 691 channel lines. Live companion of the 小盒子 configuration already in this catalog. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-chuqiuyu-list",
+    "name": "高天流云 直播清单",
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 205 channel lines. Live companion of the 高天流云 configuration in this batch. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-shandong-difang",
+    "name": "山东地方台",
+    "url": "https://sd.shandong.bbroot.com/xk/zb.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 557 channel lines. Regional list; local channels may be geo-limited. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-yifa-tv",
+    "name": "易发TV直播",
+    "url": "https://445569.pages.dev/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 609 channel lines. Served through the maintainer's proxy host. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-huashi-tv",
+    "name": "华视TV直播",
+    "url": "https://445569.pages.dev/https://raw.githubusercontent.com/swhtv/111/refs/heads/main/%E5%8D%8E%E8%A7%86box%E5%8D%8E%E8%A7%86%E5%A4%A7%E5%85%A8swtv",
+    "format": "txt",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 611 channel lines. Served through the maintainer's proxy host. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-ppv-sports",
+    "name": "PPV 体育赛事",
+    "url": "https://jsnzkpg4.pages.dev/https://www.korice.eu.org/ppv_m3u.php",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 161 #EXTINF records. Event-oriented PPV list; entries rotate with the sports calendar. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-panda-kr",
+    "name": "韩国 Panda 直播",
+    "url": "https://jsnzkpg4.pages.dev/https://xiongmao.caonizuzong.indevs.in/all.m3u",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 101 #EXTINF records. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
+  },
+  {
+    "id": "backup-wula-tv",
+    "name": "乌拉TV直播",
+    "url": "https://jsnzkpg4.pages.dev/https://ilook.epg.one/5CM5SY98BF24PL/2",
+    "format": "m3u",
+    "source": "https://lubin776.github.io/tvbox-api-backup/",
+    "license": "No licence found for this playlist. The backup index only relinks a third-party URL; each channel stream keeps its broadcaster's rights and terms, and the index asserts no redistribution right of its own.",
+    "notes": "Listed in the 直播 (live) tab of the tvbox-api-backup index; re-checked 2026-11-27 with one bounded GET: HTTP 200, 282 #EXTINF records. The path is an operator-issued code rather than a filename. Counts describe the playlist at check time and not channel health: dead entries, geo-blocks and unlicensed re-streaming are common in this ecosystem, and no playback or client import was tested."
   }
 ]

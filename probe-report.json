@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T01:09:31.584268+00:00",
+  "generated_at": "2026-11-27T13:07:11.048079+00:00",
   "schema_version": 2,
   "probes": [
     {
@@ -3946,6 +3946,888 @@
         }
       ],
       "previous_last_success_at": "2026-11-26T15:34:12.476246+00:00"
+    },
+    {
+      "id": "backup-xingfu-niannian",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.817734+00:00",
+      "last_success_at": "2026-11-27T13:06:36.817734+00:00",
+      "configured_url": "http://150.158.52.248/tgyg/bbm.json",
+      "used_endpoint": "http://150.158.52.248/tgyg/bbm.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "http://150.158.52.248/tgyg/bbm.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-lao-zhang",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.818086+00:00",
+      "last_success_at": "2026-11-27T13:06:36.818086+00:00",
+      "configured_url": "https://zhangqun1818.serv00.net/zq/api.json",
+      "used_endpoint": "https://zhangqun1818.serv00.net/zq/api.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://zhangqun1818.serv00.net/zq/api.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-zhou-j",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.818206+00:00",
+      "last_success_at": "2026-11-27T13:06:36.818206+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/box",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/box",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/box",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xiao-mi",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.818265+00:00",
+      "last_success_at": "2026-11-27T13:06:36.818265+00:00",
+      "configured_url": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo...",
+      "used_endpoint": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo...",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo...",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xin-mo",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.818313+00:00",
+      "last_success_at": "2026-11-27T13:06:36.818313+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-jun-yu",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.818354+00:00",
+      "last_success_at": "2026-11-27T13:06:36.818354+00:00",
+      "configured_url": "http://home.jundie.top:81/top98.json",
+      "used_endpoint": "http://home.jundie.top:81/top98.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "http://home.jundie.top:81/top98.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-clun",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.925070+00:00",
+      "last_success_at": "2026-11-27T13:06:36.925070+00:00",
+      "configured_url": "https://clun.top/box.json",
+      "used_endpoint": "https://clun.top/box.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://clun.top/box.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xia-xia",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:36.975122+00:00",
+      "last_success_at": "2026-11-27T13:06:36.975122+00:00",
+      "configured_url": "https://11405.kstore.space/xiaye/qk4k.json",
+      "used_endpoint": "https://11405.kstore.space/xiaye/qk4k.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://11405.kstore.space/xiaye/qk4k.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-kai-di",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:37.937900+00:00",
+      "last_success_at": "2026-11-27T13:06:37.937900+00:00",
+      "configured_url": "https://jihulab.com/jyqhkd1/kai/-/raw/main/%E6%9C%BA%E7%BC%98%E5%B7%A7%E7%9B%92%E5%87%AF%EF%BF%BD%9...",
+      "used_endpoint": "https://jihulab.com/jyqhkd1/kai/-/raw/main/%E6%9C%BA%E7%BC%98%E5%B7%A7%E7%9B%92%E5%87%AF%EF%BF%BD%9...",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://jihulab.com/jyqhkd1/kai/-/raw/main/%E6%9C%BA%E7%BC%98%E5%B7%A7%E7%9B%92%E5%87%AF%EF%BF%BD%9...",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ha-ji-mi",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.051263+00:00",
+      "last_success_at": "2026-11-27T13:06:38.051263+00:00",
+      "configured_url": "https://17264.kstore.space/%E5%93%88%E5%9F%BA%E7%B1%B3.png",
+      "used_endpoint": "https://17264.kstore.space/%E5%93%88%E5%9F%BA%E7%B1%B3.png",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://17264.kstore.space/%E5%93%88%E5%9F%BA%E7%B1%B3.png",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-yingm-dm",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.319011+00:00",
+      "last_success_at": "2026-11-27T13:06:38.319011+00:00",
+      "configured_url": "https://www.yingm.cc/dm/dm.json",
+      "used_endpoint": "https://www.yingm.cc/dm/dm.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://www.yingm.cc/dm/dm.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xing-wei",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.369470+00:00",
+      "last_success_at": "2026-11-27T13:06:38.369470+00:00",
+      "configured_url": "https://7337.kstore.vip/xw/%E6%B5%8B%E8%AF%95%E5%8B%BF%E4%BC%A0",
+      "used_endpoint": "https://7337.kstore.vip/xw/%E6%B5%8B%E8%AF%95%E5%8B%BF%E4%BC%A0",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://7337.kstore.vip/xw/%E6%B5%8B%E8%AF%95%E5%8B%BF%E4%BC%A0",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-gao-tian-liu-yun",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.434905+00:00",
+      "last_success_at": "2026-11-27T13:06:38.434905+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-x4-children",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.522670+00:00",
+      "last_success_at": "2026-11-27T13:06:38.522670+00:00",
+      "configured_url": "https://0.wudaozhe.net/5/tv%E5%B0%91%E5%84%BF.json",
+      "used_endpoint": "https://0.wudaozhe.net/5/tv%E5%B0%91%E5%84%BF.json",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://0.wudaozhe.net/5/tv%E5%B0%91%E5%84%BF.json",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-clun-iptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:38.840912+00:00",
+      "last_success_at": "2026-11-27T13:06:38.840912+00:00",
+      "configured_url": "https://clun.top/lib/iptv.m3u",
+      "used_endpoint": "https://clun.top/lib/iptv.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://clun.top/lib/iptv.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ottiptv-huyayu",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:39.621039+00:00",
+      "last_success_at": "2026-11-27T13:06:39.621039+00:00",
+      "configured_url": "https://sub.ottiptv.cc/huyayqk.m3u",
+      "used_endpoint": "https://sub.ottiptv.cc/huyayqk.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://sub.ottiptv.cc/huyayqk.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ottiptv-douyu",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:39.834861+00:00",
+      "last_success_at": "2026-11-27T13:06:39.834861+00:00",
+      "configured_url": "https://sub.ottiptv.cc/douyuyqk.m3u",
+      "used_endpoint": "https://sub.ottiptv.cc/douyuyqk.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://sub.ottiptv.cc/douyuyqk.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ottiptv-bili",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:40.173733+00:00",
+      "last_success_at": "2026-11-27T13:06:40.173733+00:00",
+      "configured_url": "https://sub.ottiptv.cc/bililive.m3u",
+      "used_endpoint": "https://sub.ottiptv.cc/bililive.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://sub.ottiptv.cc/bililive.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ottiptv-yy",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:40.488650+00:00",
+      "last_success_at": "2026-11-27T13:06:40.488650+00:00",
+      "configured_url": "https://sub.ottiptv.cc/yylunbo.m3u",
+      "used_endpoint": "https://sub.ottiptv.cc/yylunbo.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://sub.ottiptv.cc/yylunbo.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ottiptv-mgtv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:40.904505+00:00",
+      "last_success_at": "2026-11-27T13:06:40.904505+00:00",
+      "configured_url": "https://mgtv.ottiptv.cc/mglist.m3u",
+      "used_endpoint": "https://mgtv.ottiptv.cc/mglist.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://mgtv.ottiptv.cc/mglist.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-kimentanm-aptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:42.613718+00:00",
+      "last_success_at": "2026-11-27T13:06:42.613718+00:00",
+      "configured_url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "used_endpoint": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-suxuang-ipv4",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:42.838562+00:00",
+      "last_success_at": "2026-11-27T13:06:42.838562+00:00",
+      "configured_url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "used_endpoint": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-guovin-iptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:43.165998+00:00",
+      "last_success_at": "2026-11-27T13:06:43.165998+00:00",
+      "configured_url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "used_endpoint": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-mlzlzj-tv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:43.212072+00:00",
+      "last_success_at": "2026-11-27T13:06:43.212072+00:00",
+      "configured_url": "https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u",
+      "used_endpoint": "https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-gambiarras-legal",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:43.550801+00:00",
+      "last_success_at": "2026-11-27T13:06:43.550801+00:00",
+      "configured_url": "https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u",
+      "used_endpoint": "https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-wirili-iptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:44.219250+00:00",
+      "last_success_at": "2026-11-27T13:06:44.219250+00:00",
+      "configured_url": "https://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt",
+      "used_endpoint": "https://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-supprise-tvbox-live",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:45.452416+00:00",
+      "last_success_at": "2026-11-27T13:06:45.452416+00:00",
+      "configured_url": "https://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
+      "used_endpoint": "https://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-youhun-zb",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:45.716618+00:00",
+      "last_success_at": "2026-11-27T13:06:45.716618+00:00",
+      "configured_url": "https://www.iyouhun.com/tv/zb",
+      "used_endpoint": "https://www.iyouhun.com/tv/zb",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://www.iyouhun.com/tv/zb",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-yang-gather",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:45.934938+00:00",
+      "last_success_at": "2026-11-27T13:06:45.934938+00:00",
+      "configured_url": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "used_endpoint": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-yoursmile-live",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:46.053102+00:00",
+      "last_success_at": "2026-11-27T13:06:46.053102+00:00",
+      "configured_url": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+      "used_endpoint": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-zhoujck-ext-mobile",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:46.161976+00:00",
+      "last_success_at": "2026-11-27T13:06:46.161976+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E7%A7%BB%E5%8A%A8",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E7%A7%BB%E5%8A%A8",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E7%A7%BB%E5%8A%A8",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-zhoujck-ext-unicom",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:46.283673+00:00",
+      "last_success_at": "2026-11-27T13:06:46.283673+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E8%81%94%E9%80%9A",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E8%81%94%E9%80%9A",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/%E8%81%94%E9%80%9A",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-zhoujck-ext-live",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:47.618574+00:00",
+      "last_success_at": "2026-11-27T13:06:47.618574+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-wangziduoqing-zb",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:47.699363+00:00",
+      "last_success_at": "2026-11-27T13:06:47.699363+00:00",
+      "configured_url": "http://wangziduoqing.com/yuan/zb.txt",
+      "used_endpoint": "http://wangziduoqing.com/yuan/zb.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "http://wangziduoqing.com/yuan/zb.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-vinkerq-iptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:48.034412+00:00",
+      "last_success_at": "2026-11-27T13:06:48.034412+00:00",
+      "configured_url": "https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+      "used_endpoint": "https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-tv-iptv-php",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:48.083281+00:00",
+      "last_success_at": "2026-11-27T13:06:48.083281+00:00",
+      "configured_url": "http://193.123.86.190:14888/TV/iptv.php",
+      "used_endpoint": "http://193.123.86.190:14888/TV/iptv.php",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "http://193.123.86.190:14888/TV/iptv.php",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-fanmingming-ipv6",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:49.155260+00:00",
+      "last_success_at": "2026-11-27T13:06:49.155260+00:00",
+      "configured_url": "https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+      "used_endpoint": "https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-eastscreen-migu",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:49.405404+00:00",
+      "last_success_at": "2026-11-27T13:06:49.405404+00:00",
+      "configured_url": "https://eastscreen.tv/iptvlist.php?token=%5BREDACTED%5D",
+      "used_endpoint": "https://eastscreen.tv/iptvlist.php?token=%5BREDACTED%5D",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://eastscreen.tv/iptvlist.php?token=%5BREDACTED%5D",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-kulao-iptv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:49.543042+00:00",
+      "last_success_at": "2026-11-27T13:06:49.543042+00:00",
+      "configured_url": "https://iptv.445569.xyz/live.m3u",
+      "used_endpoint": "https://iptv.445569.xyz/live.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://iptv.445569.xyz/live.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-kulao-sports",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:49.851795+00:00",
+      "last_success_at": "2026-11-27T13:06:49.851795+00:00",
+      "configured_url": "https://jsnzkpg.de5.net/all.m3u",
+      "used_endpoint": "https://jsnzkpg.de5.net/all.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://jsnzkpg.de5.net/all.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xiaoma-live",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:50.322204+00:00",
+      "last_success_at": "2026-11-27T13:06:50.322204+00:00",
+      "configured_url": "https://szyyds.cn/tv/live/x.txt",
+      "used_endpoint": "https://szyyds.cn/tv/live/x.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://szyyds.cn/tv/live/x.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-xhz-live",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:51.571264+00:00",
+      "last_success_at": "2026-11-27T13:06:51.571264+00:00",
+      "configured_url": "http://xhztv.top/xhz/live.txt",
+      "used_endpoint": "http://xhztv.top/xhz/live.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "http://xhztv.top/xhz/live.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-chuqiuyu-list",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:52.907031+00:00",
+      "last_success_at": "2026-11-27T13:06:52.907031+00:00",
+      "configured_url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
+      "used_endpoint": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-shandong-difang",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:52.987850+00:00",
+      "last_success_at": "2026-11-27T13:06:52.987850+00:00",
+      "configured_url": "https://sd.shandong.bbroot.com/xk/zb.txt",
+      "used_endpoint": "https://sd.shandong.bbroot.com/xk/zb.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://sd.shandong.bbroot.com/xk/zb.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-yifa-tv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:54.140578+00:00",
+      "last_success_at": "2026-11-27T13:06:54.140578+00:00",
+      "configured_url": "https://445569.pages.dev/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+      "used_endpoint": "https://445569.pages.dev/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://445569.pages.dev/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-huashi-tv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:54.385642+00:00",
+      "last_success_at": "2026-11-27T13:06:54.385642+00:00",
+      "configured_url": "https://445569.pages.dev/https://raw.githubusercontent.com/swhtv/111/refs/heads/main/%E5%8D%8E%EF%BF%BD%...",
+      "used_endpoint": "https://445569.pages.dev/https://raw.githubusercontent.com/swhtv/111/refs/heads/main/%E5%8D%8E%EF%BF%BD%...",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://445569.pages.dev/https://raw.githubusercontent.com/swhtv/111/refs/heads/main/%E5%8D%8E%EF%BF%BD%...",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-ppv-sports",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:55.200843+00:00",
+      "last_success_at": "2026-11-27T13:06:55.200843+00:00",
+      "configured_url": "https://jsnzkpg4.pages.dev/https://www.korice.eu.org/ppv_m3u.php",
+      "used_endpoint": "https://jsnzkpg4.pages.dev/https://www.korice.eu.org/ppv_m3u.php",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://jsnzkpg4.pages.dev/https://www.korice.eu.org/ppv_m3u.php",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-panda-kr",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:56.435049+00:00",
+      "last_success_at": "2026-11-27T13:06:56.435049+00:00",
+      "configured_url": "https://jsnzkpg4.pages.dev/https://xiongmao.caonizuzong.indevs.in/all.m3u",
+      "used_endpoint": "https://jsnzkpg4.pages.dev/https://xiongmao.caonizuzong.indevs.in/all.m3u",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://jsnzkpg4.pages.dev/https://xiongmao.caonizuzong.indevs.in/all.m3u",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
+    },
+    {
+      "id": "backup-wula-tv",
+      "status": "ok",
+      "stale": false,
+      "checked_at": "2026-11-27T13:06:56.673120+00:00",
+      "last_success_at": "2026-11-27T13:06:56.673120+00:00",
+      "configured_url": "https://jsnzkpg4.pages.dev/https://ilook.epg.one/5CM5SY98BF24PL/2",
+      "used_endpoint": "https://jsnzkpg4.pages.dev/https://ilook.epg.one/5CM5SY98BF24PL/2",
+      "used_fallback": false,
+      "attempts": [
+        {
+          "endpoint": "https://jsnzkpg4.pages.dev/https://ilook.epg.one/5CM5SY98BF24PL/2",
+          "attempt": 1,
+          "result": "ok"
+        }
+      ],
+      "previous_last_success_at": null
     }
   ]
 }
