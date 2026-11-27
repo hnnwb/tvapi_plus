@@ -1,8 +1,55 @@
 {
-  "generated_at": "2026-11-26T15:28:37.493306+00:00",
+  "generated_at": "2026-11-27T01:04:23.596202+00:00",
   "errors": [],
   "changed": [],
-  "added": [],
+  "added": [
+    {
+      "id": "github-com-66",
+      "name": "Mimi",
+      "url": "https://github.com/yuxino/mimi",
+      "source": "awesome-zhuiju-free",
+      "probe": {
+        "status": "failed",
+        "reason": "KeyError: 'format'"
+      }
+    },
+    {
+      "id": "101movies-pages-dev-62",
+      "name": "101Movies",
+      "url": "https://101movies.pages.dev/",
+      "source": "awesome-zhuiju-free",
+      "probe": {
+        "status": "failed",
+        "reason": "KeyError: 'format'"
+      }
+    },
+    {
+      "id": "github-com-59",
+      "name": "CineFlow",
+      "url": "https://github.com/incldue/CineFlow",
+      "source": "awesome-zhuiju-free",
+      "probe": {
+        "status": "failed",
+        "reason": "KeyError: 'format'"
+      }
+    }
+  ],
   "removed": [],
-  "imported": []
+  "imported": [
+    {
+      "source": "awesome-zhuiju-free",
+      "file": "online.json",
+      "rows": 1
+    },
+    {
+      "source": "awesome-zhuiju-free",
+      "file": "search.json",
+      "rows": 1
+    },
+    {
+      "source": "awesome-zhuiju-free",
+      "file": "tools.json",
+      "rows": 1
+    }
+  ]
 }

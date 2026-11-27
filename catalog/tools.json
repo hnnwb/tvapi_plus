@@ -382,5 +382,26 @@
     "source": "https://github.com/youhunwl/TVAPP",
     "license": "The repository declares Apache License 2.0 for its own repository content. That does not grant rights to third-party APKs, modified/unlocked apps, media, IPTV streams, trademarks, or linked configurations; review each item and its own terms. This catalog links to the index only and does not redistribute its binaries or content.",
     "notes": "Upstream description: TV 应用、TVBox/影视仓配置与 IPTV 直播列表的社区收集目录. Source repository reference; README and Apache-2.0 LICENSE checked 2026-11-25. The README includes third-party and modified APK links and expressly restricts use; entries are not endorsed or individually verified. Use the repository as a reference index only, not as a source of authorized software or media."
+  },
+  {
+    "id": "zhuiju-github-com-59",
+    "name": "CineFlow",
+    "url": "https://github.com/incldue/CineFlow",
+    "format": "project",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0; it does not license the linked project. Software, trademarks, bundled data, and any content a project retrieves remain governed by that project's own terms.",
+    "notes": "Upstream description: 核心解决普通无115网盘等点播资源的用户、学生群体等的观影问题，提供沉浸式观影体. Upstream self-assessment status: recommended; the rating shown here is the upstream score, not a local measurement. Source repository reference; nothing is built, executed, or mirrored by this catalog. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-11-13.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "recommended",
+      "checked_at": "2026-11-13"
+    }
   }
 ]

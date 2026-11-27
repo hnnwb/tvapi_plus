@@ -355,5 +355,26 @@
       "status": "caution",
       "checked_at": "2026-07-12"
     }
+  },
+  {
+    "id": "zhuiju-github-com-66",
+    "name": "Mimi",
+    "url": "https://github.com/yuxino/mimi",
+    "format": "web",
+    "source": "https://github.com/laoma528/awesome-zhuiju-free",
+    "license": "The upstream directory is CC BY 4.0, which covers its directory text only. This entry links to a third-party site; its operator is solely responsible for content, availability, terms of service, and whether material offered there is licensed for distribution.",
+    "notes": "Upstream description: 开源免费，看生肉实时出双语字幕. Upstream self-assessment status: caution; the rating shown here is the upstream score, not a local measurement. Subtitle site only; subtitle files have their own translator and distributor terms and are not bundled here. Bounded GET on 2026-11-23 failed with: not-probed. Upstream self-assessment (more 4 / speed 4 / clean 4 / stable 4 / ease 4); checked 2026-11-26.",
+    "rating": {
+      "average": 4.0,
+      "scores": {
+        "more": 4,
+        "speed": 4,
+        "clean": 4,
+        "stable": 4,
+        "ease": 4
+      },
+      "status": "caution",
+      "checked_at": "2026-11-26"
+    }
   }
 ]
