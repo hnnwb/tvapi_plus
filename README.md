@@ -94,6 +94,16 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 默认只做离线元数据检查。`--check-urls` 仅联系解析到公网地址的第三方主机，使用有超时和响应体大小限制的 GET 请求；跳转目标也必须是公网 HTTP(S)，不执行响应内容。它会对 TVBox JSON、多仓 `urls`、M3U/TXT、直播 JSON 和 EPG XML 做基本结构检查。网络探测失败只记录在报告中，不会自动删除或改写目录条目。不同地区、网络、User-Agent 和上游策略可能导致结果不同。刷新脚本默认用项目标识 UA；可选 `--request-profile tvbox` 只模拟 TVBox 风格的配置拉取请求头（`okhttp/3.15` 和 `X-Requested-With: com.github.tvbox.osc`），用来观察服务端兼容性差异，不会运行客户端、Spider 或播放器，也不代表实际导入/播放测试。
 
+### 本地自定义直播清单（实验性）
+
+```sh
+python3 scripts/build_custom_live.py --output-dir /tmp/tvapi-custom-live
+# 可选：最多取样解码 160 个频道；需要本机 ffmpeg，不会连接或启动 TVBox 客户端
+python3 scripts/build_custom_live.py --probe-channels --max-probes 160 --output-dir /tmp/tvapi-custom-live
+```
+
+频道来源在 `config/custom-live-sources.json` 中显式列出；输出按央视、卫视、地方、特色、港澳台、国际等分组，生成 M3U、TVBox TXT 与状态 JSON。默认只读取目录中的直播清单，不检测频道；启用探测时才会对有限公网响应样本做有界下载及本机 FFmpeg 解码。`sample-decoded` 仅说明某次有限字节样本成功解码，不等于持续直播、客户端兼容、版权或转载授权。完整候选清单仍保留未测与失败频道；样本解码版单独输出，任何失败都不会自动删除候选。本地结果仅写入指定目录。GitHub Actions 另有独立的每日工作流（UTC 06:23，也可手动运行）：在短期运行环境内生成同样的清单，最多探测 160 个频道，并上传 14 天保留的运行附件；不会提交生成文件、改写目录数据或部署 Pages。附件可能对仓库有访问权限的用户可见。源列表和频道 URL 属外部不可信输入，生成结果请先审阅。
+
 ## GitHub Actions
 
 - push 和 Pull Request 对目录、Schema、脚本或工作流文件的变更触发离线元数据检查。

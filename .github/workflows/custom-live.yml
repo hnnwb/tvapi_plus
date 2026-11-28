@@ -1,0 +1,53 @@
+name: Custom live playlist
+
+on:
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: custom-live-playlist
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate catalog and source selection
+        run: |
+          python scripts/check_catalog.py
+          python scripts/build_custom_live.py --validate-only
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends ffmpeg
+      - name: Build grouped playlists and probe a bounded sample
+        run: >-
+          python scripts/build_custom_live.py
+          --probe-channels
+          --max-probes 160
+          --workers 8
+          --output-dir dist/custom-live
+      - name: Upload generated playlists and redacted status report
+        if: ${{ !cancelled() && hashFiles('dist/custom-live/reports/custom-live-status.json') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom-live-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            dist/custom-live/custom-live.m3u
+            dist/custom-live/custom-live.txt
+            dist/custom-live/custom-live-sample-decoded.m3u
+            dist/custom-live/custom-live-sample-decoded.txt
+            dist/custom-live/reports/custom-live-status.json
+          if-no-files-found: warn
+          retention-days: 14

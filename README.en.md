@@ -93,6 +93,16 @@ python3 scripts/refresh_status.py --request-profile tvbox --report /tmp/probe-re
 
 The default command performs offline metadata validation. `--check-urls` contacts only public third-party hosts using GET requests with timeouts and a response-size limit. Redirects are restricted to public HTTP(S) targets, and response content is never executed. Basic structural checks cover TVBox JSON, multi-repository `urls`, M3U/TXT, live JSON, and EPG XML. Probe failures are written to the report; they do not delete or rewrite catalog entries. Results can differ by network, location, User-Agent, or upstream policy. The refresh script uses a project-identifying UA by default; optional `--request-profile tvbox` simulates only TVBox-style configuration-fetch headers (`okhttp/3.15` and `X-Requested-With: com.github.tvbox.osc`) to compare server compatibility. It does not run a client, Spider, or player and is not an import/playback test.
 
+### Experimental local custom live playlists
+
+```sh
+python3 scripts/build_custom_live.py --output-dir /tmp/tvapi-custom-live
+# Optional: sample-decode up to 160 channels with local ffmpeg; no TVBox client is launched
+python3 scripts/build_custom_live.py --probe-channels --max-probes 160 --output-dir /tmp/tvapi-custom-live
+```
+
+Sources are explicitly listed in `config/custom-live-sources.json`. Outputs are grouped into CCTV, satellite, regional, special, Hong Kong/Taiwan/Macau, international, and other, and include M3U, TVBox TXT, and a status JSON. By default, the script only parses catalog feeds; channel probes run only when explicitly requested. `sample-decoded` means a bounded sample decoded locally once; it does not establish sustained stream availability, client compatibility, copyright, or redistribution rights. The full candidate playlist retains untested and failed rows; a sample-decoded-only playlist is separate, and no failure automatically removes a candidate. Local outputs go only to the requested directory. A separate GitHub Actions workflow runs daily at 06:23 UTC (or manually), builds the same playlists in an ephemeral runner, probes at most 160 channels, and uploads a 14-day artifact. It does not commit generated files, modify catalog data, or deploy Pages. The artifact may be visible to repository readers. Review generated data; source feeds and channel URLs are untrusted external input.
+
 ## GitHub Actions
 
 - Pushes and pull requests affecting catalog, schema, checker, or workflow files run offline metadata checks.

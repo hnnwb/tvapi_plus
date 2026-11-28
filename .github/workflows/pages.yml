@@ -38,6 +38,8 @@ concurrency:
 
 jobs:
   build:
+    # Artifact-only custom-live commits use [skip-pages]; manual workflow_dispatch remains enabled.
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip-pages]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
